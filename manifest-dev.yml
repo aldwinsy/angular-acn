@@ -1,0 +1,9 @@
+---
+applications:
+  - name: sasi-ui
+    host: sasi-ui-dev
+    buildpack: nodejs_buildpack
+    memory: 256MB
+    command: node app.js
+    env:
+        NODE_ENV : production
