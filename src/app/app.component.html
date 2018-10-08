@@ -1,8 +1,13 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
+<div fxFlexFill fxLayout="column" fxLayoutAlign="stretch">
+  <app-nav fxFlex="10%"></app-nav>
+  <div fxFlex="90%">
+    <router-outlet></router-outlet>
+  </div>
+  <app-footer fxFlex></app-footer>
 </div>
 
-<router-outlet></router-outlet>
+<!-- <div fxLayout="column-reverse">
+    <div fxFlex="20" style="background: red">1. One</div>
+    <div fxFlex="60" style="background: blue">2. Two</div>
+    <div fxFlex style="background: green">3. Three</div>
+</div> -->
