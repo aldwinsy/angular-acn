@@ -1,5 +1,13 @@
-<p>
-  search works!
-</p>
-<app-search-panel></app-search-panel>
-<app-summary-panel></app-summary-panel>
+<div class="container"
+  fxLayout
+  fxLayout.xs="column"
+  fxLayoutAlign="center"
+  fxLayoutGap="20px"
+  fxLayoutGap.xs="20px">
+  <div class="div-scroll-body box-shadow" fxFlex="30">
+    <app-summary-panel></app-summary-panel>
+  </div>
+  <div class="div-scroll-body box-shadow" fxFlex="70">
+    <app-search-panel></app-search-panel>
+  </div>
+</div>
