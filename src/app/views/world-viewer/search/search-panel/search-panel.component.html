@@ -1,3 +1,77 @@
-<p>
-  search-panel works!
-</p>
+<mat-card>
+    <div style="height:inherit"
+      fxLayout="column"
+      fxLayoutGap="20px"
+      fxLayoutGap.xs="0">
+      <div fxFlex="5">
+        Simple Card
+        <mat-slide-toggle color="primary" [checked]="true">Slide me!</mat-slide-toggle>
+      </div>
+      
+      <div fxFlex="85" class="div-scroll-body div-property-body">
+        <mat-form-field>
+          <mat-select [(value)]="selected" required>
+            <mat-option value="option1">Option 1</mat-option>
+            <mat-option value="option2">Option 2</mat-option>
+            <mat-option value="option3">Option 3</mat-option>
+          </mat-select>
+        </mat-form-field>  
+        <div [formGroup]="propertyForm">
+          <div [formGroup]="propertyForm" formArrayName="propertyNames"
+            *ngFor="let propertyName of propertyForm.get('propertyNames')['controls']; let i = index;">
+            <div [formGroupName]="i" fxLayout fxLayout.xs="column" fxLayoutGap="15px" fxLayoutGap.xs="0">
+              <div fxFlex="15">
+                <mat-form-field>
+                  <input matInput
+                    [formControl]="propertyName.controls.property"
+                    type="text" required
+                    placeholder="Property Name"
+                    [matAutocomplete]="auto" 
+                    (keyup)="_filter($event.target.value)">
+                  <mat-error>
+                      Valid property name is required
+                  </mat-error>
+                  <mat-autocomplete #auto="matAutocomplete"
+                    (opened)="propertyName.controls.property.setValue(null)"
+                    (optionSelected)="propertyName.controls.property.setValue($event.option.value)">
+                    <mat-option *ngFor="let option of filteredOptions" [value]="option">
+                      {{option}}
+                    </mat-option>
+                  </mat-autocomplete>
+                </mat-form-field>
+              </div>
+              <div fxFlex="75">
+                <mat-form-field *ngIf="!propertyName.controls.property.hasError('required')" fxFlexFill>
+                  <mat-chip-list #chipList>
+                    <mat-chip *ngFor="let value of propertyName.controls.values.value" removable="true" (removed)="remove(value, i)">
+                      {{value}}
+                      <mat-icon matChipRemove>cancel</mat-icon>
+                    </mat-chip>
+                    <input placeholder="Values"
+                      [matChipInputFor]="chipList"
+                      [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                      matChipInputAddOnBlur="true"
+                      (matChipInputTokenEnd)="add($event, i)">
+                  </mat-chip-list>
+                  <mat-error>
+                      Valid property value is required
+                  </mat-error>
+                </mat-form-field>
+              </div>
+              <div fxFlex="3">
+                <button mat-icon-button color="primary" (click)="removeProperty(i)"><mat-icon>delete</mat-icon></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <button mat-icon-button disableRipple="true" color="primary" (click)="addNewProperty()"><mat-icon>add</mat-icon> Add Another</button>
+      </div>
+
+      <div fxFlex="5" fxFlexAlign="end">
+        <button mat-raised-button color="primary" [disabled]="propertyForm.invalid">Search</button>
+      </div>
+
+    </div>
+  </mat-card>
