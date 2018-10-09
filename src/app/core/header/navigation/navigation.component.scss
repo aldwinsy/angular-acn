@@ -1,0 +1,19 @@
+.nav-item {
+  font-size: 12px;
+  color: #525156;
+  cursor: pointer;
+  outline: none;
+  // @extend .font-shadow;
+}
+
+.nav-item:hover {
+  @extend .font-shadow;
+}
+
+.nav-active {
+  @extend .font-shadow;
+}
+
+.font-shadow {
+  text-shadow: 0px 2px 3px rgba(0,0,0,0.3)
+}

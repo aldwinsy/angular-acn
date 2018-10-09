@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 
 import { CoreRoutingModule } from 'sasi/core/core-routing.module';
 import { MaterialsModule } from 'sasi/shared/materials/materials.module'; // Check if this can be moved to SharedModule
+import { FlexLayoutModule } from '@angular/flex-layout'; // Put this he re for now
 
 import { SasiStatusModule } from 'sasi/views/sasi-status/sasi-status.module';
 import { WorldViewerModule } from 'sasi/views/world-viewer/world-viewer.module';
@@ -13,13 +14,15 @@ import { LoginComponent } from 'sasi/core/login/login.component';
 import { HeaderComponent } from 'sasi/core/header/header.component';
 import { FooterComponent } from 'sasi/core/footer/footer.component';
 import { PageNotFoundComponent } from 'sasi/core/page-not-found/page-not-found.component';
+import { NavigationComponent } from './header/navigation/navigation.component';
 
 @NgModule({
   declarations: [
     LoginComponent,
     HeaderComponent,
     FooterComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    NavigationComponent
   ],
 
   imports: [
@@ -27,6 +30,7 @@ import { PageNotFoundComponent } from 'sasi/core/page-not-found/page-not-found.c
     HttpClientModule,
     CoreRoutingModule,
     MaterialsModule, // Temporarily add here for now
+    FlexLayoutModule,
 
     /* SASI Modules */
     SasiStatusModule, // Do this for now. Should not be here since
@@ -36,7 +40,8 @@ import { PageNotFoundComponent } from 'sasi/core/page-not-found/page-not-found.c
   exports: [
     RouterModule,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    FlexLayoutModule
   ],
 
   providers: [

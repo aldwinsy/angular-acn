@@ -1,3 +1,4 @@
+import { SasiMatTableModule } from './components/sasi-mat-table/sasi-mat-table.module';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 // import { FlexLayoutModule } from '@angular/flex-layout';
@@ -18,12 +19,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   imports: [
     FormsModule,
     ReactiveFormsModule,
+    SasiMatTableModule
     // FlexLayoutModule
   ],
 
   exports: [
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SasiMatTableModule
   ]
 })
 export class SharedModule { }

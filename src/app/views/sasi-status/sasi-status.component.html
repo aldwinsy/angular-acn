@@ -1,6 +1,6 @@
-<p>
-  sasi-status works!
-</p>
-<app-banner></app-banner>
-<app-data-status></app-data-status>
-<app-data-report></app-data-report>
+<!-- <app-banner></app-banner> -->
+<div fxFlexFill fxLayout="row" fxLayoutAlign="space-around center" fxLayoutGap="20px" fxLayoutGap.xs="20px">
+  <app-data-status fxFlex="70" [data1]="data1" [data2]="data2"></app-data-status>
+  <app-data-report fxFlex></app-data-report>
+</div>
+

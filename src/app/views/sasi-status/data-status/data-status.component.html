@@ -1,3 +1,12 @@
-<p>
-  data-status works!
-</p>
+<div class="div-scroll-body default-panel data-status-panel">
+  <app-sasi-mat-table 
+    [columnObjects]="sasiStatusTimeColumnObj"
+    [isSortDisabled]="true"
+    [data]="data1">
+  </app-sasi-mat-table>
+  <app-sasi-mat-table 
+    [columnObjects]="sasiStatusWorldColumnObj"
+    [isSortDisabled]="true"
+    [data]="data2">
+  </app-sasi-mat-table>
+</div>

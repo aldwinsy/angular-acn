@@ -1,0 +1,18 @@
+:host ::ng-deep {
+  span.span-width-3v {
+    display: inline-block;
+    width: 2.9vw;
+  }
+}
+
+.default-panel {
+  border-style: solid;
+  margin-left: 20px;
+  border-radius: 25px;
+  border-color:#2b5ea2;
+  border-width: 7px;
+}
+
+.data-status-panel {
+  height: 62vh;
+}

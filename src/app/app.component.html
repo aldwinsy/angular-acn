@@ -1,13 +1,7 @@
-<div fxFlexFill fxLayout="column" fxLayoutAlign="stretch">
-  <app-nav fxFlex="10%"></app-nav>
-  <div fxFlex="90%">
+<div class="main" fxFlexFill fxLayout="column" fxLayoutAlign="stretch">
+  <app-header fxFlex="9"></app-header>
+  <div fxFlex="71" class="sasi-core-body">
     <router-outlet></router-outlet>
   </div>
   <app-footer fxFlex></app-footer>
 </div>
-
-<!-- <div fxLayout="column-reverse">
-    <div fxFlex="20" style="background: red">1. One</div>
-    <div fxFlex="60" style="background: blue">2. Two</div>
-    <div fxFlex style="background: green">3. Three</div>
-</div> -->

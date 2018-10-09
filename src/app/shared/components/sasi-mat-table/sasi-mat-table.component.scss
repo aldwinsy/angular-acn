@@ -1,0 +1,65 @@
+table {
+  width: 100%;
+  box-shadow: none;
+}
+
+tr {
+  height: 30px !important;
+}
+
+th.mat-column-select {
+  width: 5vw;
+}
+
+th.mat-column-propertyName, td.mat-column-propertyName {
+  width: 10vw;
+}
+
+th.mat-column-purgatoryTime {
+  width: 8vw;
+}
+
+th.mat-column-purgatoryEvents, th.mat-column-purgatoryObj {
+  width: 4vw;
+}
+
+th.mat-column-qSize {
+  width: 12vw;
+}
+
+th.mat-column-validationIEPM, th.mat-column-validationExcl,
+th.mat-column-validationFixed, th.mat-column-validationOEPM {
+  width: 3vw;
+}
+
+th.mat-column-paradiseTime {
+  width: 8vw;
+}
+
+th.mat-column-paradiseEvents, th.mat-column-paradiseObj {
+  width: 4vw;
+}
+
+th.mat-column-publish_0_Time {
+  width: 8vw;
+}
+
+th.mat-column-publish_0_Events, th.mat-column-publish_0_Obj {
+  width: 4vw;
+}
+
+th.mat-column-publish_1_Time {
+  width: 8vw;
+}
+
+th.mat-column-publish_1_Events, th.mat-column-publish_1_Obj {
+  width: 4vw;
+}
+
+th.mat-column-publish_2_Time {
+  width: 8vw;
+}
+
+th.mat-column-publish_2_Events, th.mat-column-publish_2_Obj {
+  width: 4vw;
+}

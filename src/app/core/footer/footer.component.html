@@ -1,7 +1,32 @@
-<div class="footer-container">
-  <mat-toolbar color="primary">
-    <mat-toolbar-row>
-      <span>FOOTER</span>
-    </mat-toolbar-row>
-  </mat-toolbar>
-</div>
+<mat-toolbar class="footer-mat-toolbar" color="primary">
+  <div fxFlexFill fxLayout="column" fxLayoutAlign="space-evenly center">
+    <div fxFlex="96">
+      <!-- inner flex -->
+      <div class="footer-upper-section" fxFlexFill fxLayout="row" fxLayoutAlign="space-between start" fxLayoutGap="5vw">
+        <div fxFlex="25">
+          <img class="ge-logo-img" src="http://www.stickpng.com/assets/images/5847f7ffcef1014c0b5e48a6.png">
+        </div>
+        <div fxFlex="25">
+            <span>INTEGRITY AT GE</span>
+            <span>COOKIES</span>
+            <span>TERMS</span>
+            <span>PRIVACY</span>
+        </div>
+        <div fxFlex="25">
+            <span>SITEMAP</span>
+            <span>INVESTOR CONTACTS</span>
+            <span>CONTACT US</span>
+            <span></span>
+        </div>
+        <div fxFlex>
+            <mat-icon></mat-icon>
+            <mat-icon></mat-icon>
+        </div>
+      </div>
+      <!-- /inner flex -->
+    </div>
+    <div class="footer-lower-section" fxFlex fxLayoutAlign="center">
+      <span>� 2018 GENERAL ELECTRIC</span>
+    </div>
+  </div>
+</mat-toolbar>

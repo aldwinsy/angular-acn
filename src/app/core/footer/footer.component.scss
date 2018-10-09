@@ -1,10 +1,25 @@
-.footer-container {
-  align-content: center;
-}
-.nav-icon {
-  padding: 0 14px;
+.footer-mat-toolbar {
+  background: #2b5ea2;
+  height: 17vh;
 }
 
-.nav-spacer {
-  flex: 1 1 auto;
+span {
+  display: block;
+} 
+
+.footer-upper-section {
+  font-size: 1.2vh;
+  padding-top: .5vh;
+}
+
+.footer-lower-section {
+  font-size: 1vh;
+  color: #525156;
+}
+
+.ge-logo-img {
+  height: 56px;
+  width: 56px;
+  margin-top: .5vh;
+  filter: invert(100%);
 }
