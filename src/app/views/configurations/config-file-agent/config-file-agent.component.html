@@ -1,0 +1,90 @@
+<div class="container"
+  fxLayout="row"
+  fxLayoutGap="1.5rem"
+  fxLayout.xs="column"
+  fxLayoutAlign="center"
+  fxLayoutGap.xs="1rem">
+  <div fxFlex>
+    <div fxLayout="column" fxLayoutAlign="center stretch" class="default-panel file-agent-panel">
+      <div fxFlex="4" class="file-agent-header">
+        <span>Processing Parameters</span>
+      </div>
+      <div fxFlex class="file-agent-body div-scroll-body">
+        <div fxLayout="column" fxLayoutGap="20px" fxLayoutAlign="center stretch" fxLayoutGap.xs="5px">
+          <div fxFlex>
+            <div fxLayout="row" fxLayoutGap="20px" fxLayout.xs="column" fxLayoutGap.xs="10px">
+              <div fxFlex="30" fxFlexAlign="center">SASI Host</div>
+              <div fxFlex>
+                <mat-form-field>
+                  <input matInput placeholder="Host" autocomplete="off" required>
+                  <mat-error>Valid host is required</mat-error>
+                </mat-form-field>
+              </div>
+            </div>
+            <div fxLayout="row" fxLayoutGap="20px" fxLayout.xs="column" fxLayoutGap.xs="10px">
+              <div fxFlex="30" fxFlexAlign="center">Agent Name</div>
+              <div fxFlex>
+                <mat-form-field>
+                  <input matInput placeholder="Name" autocomplete="off" required>
+                  <mat-error>Valid name is required</mat-error>
+                </mat-form-field>
+              </div>
+            </div>
+            <div fxLayout="row" fxLayoutGap="20px" fxLayout.xs="column" fxLayoutGap.xs="10px">
+              <div fxFlex="30" fxFlexAlign="center">World/Reference File</div>
+              <div fxFlex>
+                <mat-form-field>
+                  <input matInput placeholder="File" autocomplete="off" required>
+                  <mat-error>Valid file is required</mat-error>
+                </mat-form-field>
+              </div>
+            </div>
+            <div fxLayout="row" fxLayoutGap="20px" fxLayout.xs="column" fxLayoutGap.xs="10px">
+              <div fxFlex="30" fxFlexAlign="center">Event Source Directiory</div>
+              <div fxFlex>
+                <mat-form-field>
+                  <input matInput placeholder="Source" autocomplete="off" required>
+                  <mat-error>Valid source is required</mat-error>
+                </mat-form-field>
+              </div>
+            </div>
+          </div>
+          <mat-divider></mat-divider>
+          <div fxFlex>
+            <span>Note</span>
+            <ul>
+              <li>The directory must be in the same machine where the agent is running.</li>
+              <li>The agent name must be in the list of Data Agents found in the SASI Admin Page</li>
+              <li>The agent 'Can Initiate Restart' must be set to Yes in the SASI Admin page if the World/Reference file has value</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div fxFlex="5" fxFlexAlign="end" fxLayoutGap="20px" class="div-file-agent-footer">
+        <button mat-raised-button color="warn">Stop</button>
+        <button mat-raised-button color="primary">Start</button>
+      </div>
+    </div>      
+  </div>
+  <div fxFlex>
+    <div fxLayout="column" fxLayoutAlign="center stretch" class="default-panel file-agent-panel">
+      <div fxFlex="4" class="file-agent-header">
+        <span>Processing Information</span>
+      </div>
+      <div fxFlex class="file-agent-body div-scroll-body">
+        <mat-list>
+          <h3 mat-subheader>Data Agent Status</h3>
+          <mat-list-item *ngFor="let agent of agentStatus">
+            <mat-icon mat-list-icon>warning</mat-icon>
+            <h4 mat-line>{{agent.name}}</h4>
+            <p mat-line> {{agent.status}} </p>
+          </mat-list-item>
+        </mat-list>
+      </div>
+      <div fxFlex="5" fxFlexAlign="end" fxLayoutGap="20px" class="div-file-agent-footer">
+        <button mat-raised-button color="accent">Restart Agent</button>
+        <button mat-raised-button color="primary">Process Files</button>
+      </div>
+    </div>      
+  </div>
+</div>
