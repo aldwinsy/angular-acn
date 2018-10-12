@@ -1,7 +1,35 @@
-mat-card {
-  height: calc(100vh - 5rem - 128px);
+.default-panel {
+  border-radius: 10px;
+  border-color:#C4C4C4;
 }
 
-.div-property-body {
-  height: calc(100vh - 128px - 10rem);
+.world-search-panel {
+  height: 100%;
+  background: #C4C4C4;
+  @extend .thin-box-shadow;
+}
+
+.world-search-header {
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-left: 20px;
+  font-family: GE Inspira Sans, sans-serif;
+  font-weight: bold;
+  color: white;
+}
+
+.search-panel-body {
+  margin: 20px;
+  padding: 20px;
+  background: #EBEFF2;
+  border-radius: 5px;
+}
+
+.world-search-footer {
+  margin: 0 20px 20px 0;
+  padding-bottom: 30px;
+}
+
+.thin-box-shadow {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }

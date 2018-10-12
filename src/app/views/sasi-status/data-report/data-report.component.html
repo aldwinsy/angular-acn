@@ -1,3 +1,25 @@
-<div class="default-panel data-report-panel">
-  <h1 style="text-align: center">Data Agent Report</h1>
+<div fxLayout="column" fxLayoutAlign="start stretch" class="default-panel data-report-panel">
+  <div fxFlex="7">
+    <div class="data-report-header">
+      <span matBadge="{{dataAgentList.length}}" matBadgeColor="primary" matBadgeOverlap="false" matBadgePosition="above after">Data Agent Report</span>
+    </div>
+  </div>
+  <div fxFlex class="report-panel-body div-scroll-body">
+    <mat-card class="agent-card" *ngFor="let dataAgent of dataAgentList">
+      <mat-card-header>
+        <mat-card-title>{{dataAgent.name}}</mat-card-title>
+        <mat-card-subtitle>{{dataAgent.type}}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <!-- <span>Status:</span>
+        <span>Context:</span> -->
+        <button color="primary" mat-flat-button>Status: {{dataAgent.status}}</button>
+        <button color="accent" mat-flat-button>Context: {{dataAgent.context}}</button>
+      </mat-card-content>
+      <!-- <mat-card-actions>
+          Status:<button color="primary" mat-flat-button>{{dataAgent.status}}</button>
+          Context:<button color="accent" mat-flat-button>{{dataAgent.context}}</button>
+      </mat-card-actions> -->
+    </mat-card>
+  </div>
 </div>

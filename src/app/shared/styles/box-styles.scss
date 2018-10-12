@@ -1,7 +1,9 @@
 .div-scroll-body {
   overflow: hidden;
-  overflow-y: overlay;
+}
 
+.div-scroll-body:hover {
+  overflow-y: overlay;
   &::-webkit-scrollbar {
     width: 8px;
   }

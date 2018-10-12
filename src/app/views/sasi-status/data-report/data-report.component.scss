@@ -1,13 +1,39 @@
 .default-panel {
-  border-style: solid;
-  margin-right: 20px;
-  border-radius:25px;
-  border-color:#2b5ea2;
-  border-width: 7px;
-  background: #EBEFF2;
+  border-radius: 10px;
+  border-color:#C4C4C4;
 }
+
 .data-report-panel {
-  height: 62vh;
+  height: 100%;
+  background: #C4C4C4;
+  @extend .thin-box-shadow;
+}
+
+.data-report-header {
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-left: 20px;
+  font-family: GE Inspira Sans, sans-serif;
+  font-weight: bold;
+  color: white;
+}
+
+.report-panel-body {
+  margin: 10px;
+  background: #C4C4C4;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.agent-card {
+  margin-bottom: 10px;
+}
+.agent-card:hover {
+  background: #f4f5f7;
+}
+
+.thin-box-shadow {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 

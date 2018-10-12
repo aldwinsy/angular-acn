@@ -1,4 +1,38 @@
-<div class="div-scroll-body default-panel data-status-panel">
+<div fxLayout="column" fxLayoutAlign="center stretch" class="default-panel data-status-panel">
+    <div fxFlex="7">
+        <div class="data-status-header">
+            <span>Data Status</span>
+        </div>
+          <!-- <mat-toolbar class="data-status-mat-toolbar" color="primary">
+            <span>Data Status</span>
+          </mat-toolbar> -->
+    </div>
+    <div fxFlex class="status-panel-body div-scroll-body">
+      <div class="table-holder">
+        <app-sasi-mat-table 
+          [columnObjects]="sasiStatusTimeColumnObj"
+          [isSortDisabled]="true"
+          [data]="data1">
+        </app-sasi-mat-table>
+        <app-sasi-mat-table 
+          [columnObjects]="sasiStatusWorldColumnObj"
+          [isSortDisabled]="true"
+          [data]="data2">
+        </app-sasi-mat-table>
+      </div>
+      
+    </div>
+    <!-- <div fxFlex fxLayoutAlign="center center" class="data-status-footer">
+      <div>Panel Footer</div>
+    </div> -->
+ </div>
+
+<!-- <div class="div-scroll-body default-panel data-status-panel">
+  <div>
+        <mat-toolbar class="data-status-mat-toolbar" color="primary">
+          <span>Data Status</span>
+        </mat-toolbar>
+  </div>
   <app-sasi-mat-table 
     [columnObjects]="sasiStatusTimeColumnObj"
     [isSortDisabled]="true"
@@ -9,4 +43,4 @@
     [isSortDisabled]="true"
     [data]="data2">
   </app-sasi-mat-table>
-</div>
+</div> -->

@@ -1,13 +1,9 @@
 <div class="container"
-  fxLayout
+  fxLayout="row"
+  fxLayoutGap="1.5rem"
   fxLayout.xs="column"
   fxLayoutAlign="center"
-  fxLayoutGap="20px"
-  fxLayoutGap.xs="20px">
-  <div class="div-scroll-body box-shadow" fxFlex="30">
-    <app-summary-panel></app-summary-panel>
-  </div>
-  <div class="div-scroll-body box-shadow" fxFlex="70">
-    <app-search-panel></app-search-panel>
-  </div>
+  fxLayoutGap.xs="1rem">
+  <app-summary-panel fxFlex="20" [worldSummaryData]="worldSummaryData"></app-summary-panel>
+  <app-search-panel fxFlex [worldSummaryData]="worldSummaryData"></app-search-panel>
 </div>

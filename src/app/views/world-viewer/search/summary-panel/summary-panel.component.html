@@ -1,7 +1,18 @@
-<mat-card> 
-  <div style="text-align:center">
-    <h1>
-      Display Something Here
-    </h1>
+<div fxLayout="column" fxLayoutAlign="center stretch" class="default-panel world-summary-panel">
+  <div fxFlex="7">
+      <div class="world-summary-header">
+          <span>World View</span>
+      </div>
   </div>
-</mat-card>
+  <div fxFlex class="summary-panel-body div-scroll-body">
+      <div class="table-holder">
+        <app-sasi-mat-table 
+          [columnObjects]="worldSummaryColumnObjects"
+          [data]="worldSummaryData"
+          sortedColumn="propertyName">
+        </app-sasi-mat-table>
+      </div>
+      
+    </div>
+</div>
+

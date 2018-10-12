@@ -3,10 +3,6 @@ table {
   box-shadow: none;
 }
 
-tr {
-  height: 30px !important;
-}
-
 th.mat-column-select {
   width: 5vw;
 }
@@ -63,3 +59,19 @@ th.mat-column-publish_2_Time {
 th.mat-column-publish_2_Events, th.mat-column-publish_2_Obj {
   width: 4vw;
 }
+
+th.mat-header-cell {
+  background: #3573c5;
+  color: #FFF;
+  ::ng-deep .mat-sort-header-arrow {
+    color: #FFF;
+  }
+}
+
+tr.mat-row:hover {
+  background: -webkit-linear-gradient(top, #ebeff2, #fff);
+}
+
+// td.mat-cell:first-of-type {
+//   padding-left: 5px;
+// }

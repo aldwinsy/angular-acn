@@ -1,11 +1,7 @@
-.default-shadow {
-  box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
-}
-
 .header-mat-toolbar {
   background: transparent;
-  height: 10.3vh;
-  @extend .default-shadow;
+  height: 10.1vh;
+  @extend .thin-box-shadow;
 }
 
 .user-img {
@@ -16,7 +12,7 @@
   border-radius: 28px;
   margin-top: 1vh;
   margin-left: 1vw;
-  @extend .default-shadow;
+  @extend .thick-box-shadow;
 }
 
 .brand-icon {
@@ -30,4 +26,12 @@
 
 .nav-spacer {
   flex: 1 1 auto;
+}
+
+.thin-box-shadow {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.thick-box-shadow {
+  box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
 }

@@ -3,16 +3,42 @@
     display: inline-block;
     width: 2.9vw;
   }
+
+  tr {
+    height: 19px !important;
+  }
+  
+  .mat-cell {
+    font-size: x-small;
+  }
 }
 
 .default-panel {
-  border-style: solid;
-  margin-left: 20px;
-  border-radius: 25px;
-  border-color:#2b5ea2;
-  border-width: 7px;
+  border-radius: 10px;
+  border-color:#C4C4C4;
 }
 
 .data-status-panel {
-  height: 62vh;
+  height: 100%;
+  background: #C4C4C4;
+  @extend .thin-box-shadow;
+}
+
+.data-status-header {
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-left: 20px;
+  font-family: GE Inspira Sans, sans-serif;
+  font-weight: bold;
+  color: white;
+}
+
+.status-panel-body {
+  margin: 20px;
+  background: #EBEFF2;
+  border-radius: 5px;
+}
+
+.thin-box-shadow {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }

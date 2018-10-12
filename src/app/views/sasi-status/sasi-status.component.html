@@ -1,6 +1,10 @@
 <!-- <app-banner></app-banner> -->
-<div fxFlexFill fxLayout="row" fxLayoutAlign="space-around center" fxLayoutGap="20px" fxLayoutGap.xs="20px">
+<div class="container"
+  fxLayout="row"
+  fxLayoutGap="1.5rem"
+  fxLayout.xs="column"
+  fxLayoutAlign="center"
+  fxLayoutGap.xs="1rem">
   <app-data-status fxFlex="70" [data1]="data1" [data2]="data2"></app-data-status>
-  <app-data-report fxFlex></app-data-report>
+  <app-data-report fxFlex="30"></app-data-report>
 </div>
-
