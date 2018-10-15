@@ -1,46 +1,30 @@
 <div fxLayout="column" fxLayoutAlign="center stretch" class="default-panel data-status-panel">
     <div fxFlex="7">
-        <div class="data-status-header">
+        <div id="data-status-header" class="data-status-header">
             <span>Data Status</span>
         </div>
-          <!-- <mat-toolbar class="data-status-mat-toolbar" color="primary">
-            <span>Data Status</span>
-          </mat-toolbar> -->
     </div>
     <div fxFlex class="status-panel-body div-scroll-body">
-      <div class="table-holder">
-        <app-sasi-mat-table 
-          [columnObjects]="sasiStatusTimeColumnObj"
+      <div *ngIf="!!statusTime.length && !!worldObjects.length; else noRecords">
+        <app-sasi-mat-table id="status-time-table"
+          [columnObjects]="sasiStatusTimeColumns"
           [isSortDisabled]="true"
-          [data]="data1">
+          [data]="statusTime">
         </app-sasi-mat-table>
-        <app-sasi-mat-table 
-          [columnObjects]="sasiStatusWorldColumnObj"
+        <app-sasi-mat-table id="status-world-table"
+          [columnObjects]="sasiStatusWorldColumns"
           [isSortDisabled]="true"
-          [data]="data2">
+          [data]="worldObjects">
         </app-sasi-mat-table>
       </div>
+
+      <ng-template #noRecords>
+        <!-- NO RESULT -->
+        <app-no-records-found></app-no-records-found>
+      </ng-template>
       
     </div>
     <!-- <div fxFlex fxLayoutAlign="center center" class="data-status-footer">
       <div>Panel Footer</div>
     </div> -->
  </div>
-
-<!-- <div class="div-scroll-body default-panel data-status-panel">
-  <div>
-        <mat-toolbar class="data-status-mat-toolbar" color="primary">
-          <span>Data Status</span>
-        </mat-toolbar>
-  </div>
-  <app-sasi-mat-table 
-    [columnObjects]="sasiStatusTimeColumnObj"
-    [isSortDisabled]="true"
-    [data]="data1">
-  </app-sasi-mat-table>
-  <app-sasi-mat-table 
-    [columnObjects]="sasiStatusWorldColumnObj"
-    [isSortDisabled]="true"
-    [data]="data2">
-  </app-sasi-mat-table>
-</div> -->

@@ -26,11 +26,10 @@ export class SearchPanelComponent implements OnInit {
 
   disableAddNewProperty = false;
 
-  constructor(private formBuilder: FormBuilder) {
-    this.initializeForm();
-  }
+  constructor(private formBuilder: FormBuilder) {}
 
   ngOnInit() {
+    this.initializeForm();
     this.worldQueries = this.worldSummaryData.map(data => data.propertyName);
     this.propertyForm.valueChanges.subscribe(form => console.log(this.propertyForm, form));
 

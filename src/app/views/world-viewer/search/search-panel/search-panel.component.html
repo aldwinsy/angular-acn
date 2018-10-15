@@ -13,7 +13,7 @@
             
       <div fxFlex>
         <mat-form-field>
-          <mat-select [(value)]="selectedQuery" (selectionChange)="initializeForm()" required>
+          <mat-select id="property-dropdown" [(value)]="selectedQuery" (selectionChange)="initializeForm()" required>
             <mat-option *ngFor="let query of worldQueries" [value]="query">{{query}}</mat-option>
           </mat-select>
         </mat-form-field>  
@@ -23,7 +23,7 @@
             <div [formGroupName]="i" fxLayout fxLayout.xs="column" fxLayoutGap="15px" fxLayoutGap.xs="0">
               <div fxFlex="15">
                 <mat-form-field>
-                  <input matInput
+                  <input id="property-name-input" matInput
                     [formControl]="propertyName.controls.property"
                     type="text" required
                     placeholder="Property Name"
@@ -32,7 +32,7 @@
                   <mat-error>
                       Valid property name is required
                   </mat-error>
-                  <mat-autocomplete #auto="matAutocomplete"
+                  <mat-autocomplete id="property-autocomplete" #auto="matAutocomplete"
                     (opened)="propertyName.controls.property.setValue(null)"
                     (optionSelected)="propertyName.controls.property.setValue($event.option.value)">
                     <mat-option *ngFor="let option of displayedOptions" [value]="option">
@@ -43,7 +43,7 @@
               </div>
               <div fxFlex="75">
                 <mat-form-field *ngIf="propertyName.controls.property.valid" fxFlexFill>
-                  <mat-chip-list #chipList>
+                  <mat-chip-list id="chip-list" #chipList>
                     <mat-chip *ngFor="let value of propertyName.controls.values.value" removable="true" (removed)="remove(value, i)">
                       {{value}}
                       <mat-icon matChipRemove>cancel</mat-icon>

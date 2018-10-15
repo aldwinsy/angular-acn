@@ -7,17 +7,21 @@ import { SasiStatusService } from 'sasi/views/sasi-status/sasi-status.service';
   styleUrls: ['./sasi-status.component.scss']
 })
 export class SasiStatusComponent implements OnInit {
-  data1 = [];
-  data2 = [];
+  statusTime = [];
+  worldObjects = [];
+  dataAgentList = [];
 
   constructor(private sasiStatusService: SasiStatusService) { }
 
   ngOnInit() {
     this.sasiStatusService.getSasiStatusTime()
-      .subscribe(data => this.data1 = data);
+      .subscribe(data => this.statusTime = data);
 
-      this.sasiStatusService.getSasiStatusWorldObjects()
-      .subscribe(data => this.data2 = data);
+    this.sasiStatusService.getSasiStatusWorldObjects()
+      .subscribe(data => this.worldObjects = data);
+
+    this.sasiStatusService.getSasiStatusAgentList()
+      .subscribe(data => this.dataAgentList = data);
   }
 
 }

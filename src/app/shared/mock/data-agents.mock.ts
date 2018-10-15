@@ -1,6 +1,6 @@
-// import { DataAgent } from 'sasi/shared/models/data-agent.model';
+import { DataAgent } from 'sasi/shared/models/data-agent.model';
 
-export const DataAgentsMock: any[] = [
+export const dataAgentsMock: DataAgent[] = [
   {
     name: 'XML File Agent',
     context: 'Oct 6 to 12',

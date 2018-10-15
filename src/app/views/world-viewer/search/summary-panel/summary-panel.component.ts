@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { worldSummaryColumns } from 'sasi/shared/variables/global-variables';
 
 @Component({
   selector: 'app-summary-panel',
@@ -9,18 +10,9 @@ import { Component, OnInit, Input } from '@angular/core';
   ]
 })
 export class SummaryPanelComponent implements OnInit {
-  worldSummaryColumnObjects = [
-    {
-      propName: 'propertyName',
-      label: 'World Summary'
-    },
-    {
-      propName: 'count',
-      label: 'Total'
-    },
-   ];
+  worldSummaryColumns = worldSummaryColumns;
 
-  @Input() worldSummaryData;
+  @Input() worldSummaryData = [];
 
 
   constructor() { }

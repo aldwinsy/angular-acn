@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { DataAgent } from 'sasi/shared/models/data-agent.model';
-import { DataAgentsMock } from 'sasi-mock/data-agents.mock';
 
 @Component({
   selector: 'app-data-report',
@@ -12,13 +11,12 @@ import { DataAgentsMock } from 'sasi-mock/data-agents.mock';
 })
 export class DataReportComponent implements OnInit {
 
-  dataAgentList: DataAgent[] = DataAgentsMock;
+  @Input() dataAgentList: DataAgent[] = [];
 
   constructor() { }
 
   ngOnInit() {
 
   }
-
 
 }

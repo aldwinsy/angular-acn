@@ -14,14 +14,14 @@ export const routes: Routes = [
         pathMatch: 'full'
     },
     {
-        path: 'login',
-        component: LoginComponent
-    },
-    {
         path: 'sasi-status',
         /* Do this for now. Need to do lazy loading. */
         // loadChildren: '../views/sasi-status/sasi-status.module#SasiStatusModule'
         component: SasiStatusComponent
+    },
+    {
+        path: 'login',
+        component: LoginComponent
     },
     {
         path: 'world-viewer',

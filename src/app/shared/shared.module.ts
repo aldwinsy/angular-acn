@@ -6,6 +6,7 @@ import { SasiMatTableComponent } from 'sasi/shared/components/sasi-mat-table/sas
 
 
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { NoRecordsFoundComponent } from './components/no-records-found/no-records-found.component';
 
 /* Best practice not to import Shared Module to Core or App Module
    Only import it to the components (via feature module) who will use it */
@@ -15,7 +16,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     /* Directive */
 
     /* Components */
-    SasiMatTableComponent
+    SasiMatTableComponent,
+    NoRecordsFoundComponent
     /* Pipes */
 
   ],
@@ -29,6 +31,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     ReactiveFormsModule,
     MaterialsModule,
     SasiMatTableComponent,
+    NoRecordsFoundComponent,
     FlexLayoutModule
   ]
 })

@@ -1,5 +1,10 @@
 <div class="nav-container" fxLayout="row" fxLayoutGap="35px" fxLayoutGap.xs="5px">
     <div fxFlex *ngFor="let item of navItems">
-        <div class="nav-item" routerLinkActive="nav-active" routerLink="{{item.id}}">{{item.label}}</div>
+        <div
+            id="nav-item"
+            class="nav-item"
+            routerLinkActive="nav-active"
+            routerLink="{{item.id}}"
+            routerLinkActiveOptions="{ exact:true }">{{item.label}}</div>
     </div>
 </div>

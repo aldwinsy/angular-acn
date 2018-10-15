@@ -5,13 +5,18 @@
       </div>
   </div>
   <div fxFlex class="summary-panel-body div-scroll-body">
-      <div class="table-holder">
-        <app-sasi-mat-table 
-          [columnObjects]="worldSummaryColumnObjects"
+      <div *ngIf="!!worldSummaryData.length; else noRecords">
+        <app-sasi-mat-table id="world-summary-table"
+          [columnObjects]="worldSummaryColumns"
           [data]="worldSummaryData"
           sortedColumn="propertyName">
         </app-sasi-mat-table>
       </div>
+
+      <ng-template #noRecords>
+        <!-- NO RESULT -->
+        <app-no-records-found></app-no-records-found>
+      </ng-template>
       
     </div>
 </div>

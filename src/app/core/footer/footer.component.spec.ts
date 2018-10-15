@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { FooterComponent } from './footer.component';
+import { MaterialsModule } from 'sasi/shared/materials/materials.module';
 
 describe('FooterComponent', () => {
   let component: FooterComponent;
@@ -8,6 +9,9 @@ describe('FooterComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [
+        MaterialsModule
+      ],
       declarations: [ FooterComponent ]
     })
     .compileComponents();
@@ -19,7 +23,7 @@ describe('FooterComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create footer component', () => {
     expect(component).toBeTruthy();
   });
 });

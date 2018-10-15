@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { headerNavItems } from 'sasi/shared/variables/global-variables';
+
 
 @Component({
   selector: 'app-nav',
@@ -9,28 +11,7 @@ export class NavigationComponent implements OnInit {
 
   constructor() { }
 
-  private navItems = [
-    {
-      id: 'sasi-status',
-      label: 'STATUS'
-    },
-    {
-      id: 'world-viewer',
-      label: 'WORLD VIEWER'
-    },
-    {
-      id: 'dps',
-      label: 'DPS'
-    },
-    {
-      id: 'config',
-      label: 'CONFIG'
-    },
-    {
-      id: 'documentation',
-      label: 'DOCUMENTATION'
-    }
-  ];
+  private navItems = headerNavItems;
 
   ngOnInit() {
   }
