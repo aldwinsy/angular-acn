@@ -5,7 +5,7 @@ import { SharedModule } from 'sasi/shared/shared.module';
 import { worldSummaryData } from 'sasi-mock/world-summary-mock';
 import { By } from '@angular/platform-browser';
 
-fdescribe('SearchPanelComponent', () => {
+describe('SearchPanelComponent', () => {
   let component: SearchPanelComponent;
   let fixture: ComponentFixture<SearchPanelComponent>;
 
