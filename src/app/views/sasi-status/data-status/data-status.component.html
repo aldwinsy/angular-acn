@@ -1,3 +1,30 @@
-<p>
-  data-status works!
-</p>
+<div fxLayout="column" fxLayoutAlign="center stretch" class="default-panel data-status-panel">
+    <div fxFlex="7">
+        <div id="data-status-header" class="data-status-header">
+            <span>Data Status</span>
+        </div>
+    </div>
+    <div fxFlex class="status-panel-body div-scroll-body">
+      <div *ngIf="!!statusTime.length && !!worldObjects.length; else noRecords">
+        <app-sasi-mat-table id="status-time-table"
+          [columnObjects]="sasiStatusTimeColumns"
+          [isSortDisabled]="true"
+          [data]="statusTime">
+        </app-sasi-mat-table>
+        <app-sasi-mat-table id="status-world-table"
+          [columnObjects]="sasiStatusWorldColumns"
+          [isSortDisabled]="true"
+          [data]="worldObjects">
+        </app-sasi-mat-table>
+      </div>
+
+      <ng-template #noRecords>
+        <!-- NO RESULT -->
+        <app-no-records-found></app-no-records-found>
+      </ng-template>
+      
+    </div>
+    <!-- <div fxFlex fxLayoutAlign="center center" class="data-status-footer">
+      <div>Panel Footer</div>
+    </div> -->
+ </div>

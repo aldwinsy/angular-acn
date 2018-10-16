@@ -1,0 +1,40 @@
+.nav-container {
+  text-align: center;
+}
+.nav-item {
+  font-size: 12px;
+  color: #525156;
+  cursor: pointer;
+  outline: none;
+  // @extend .font-shadow;
+}
+
+.nav-item:hover {
+  @extend .font-shadow;
+}
+
+.nav-active {
+  @extend .font-shadow;
+        
+  /* &::before {
+      position: absolute;
+      content: '';
+      height: 2px;
+      top: 6.5vh;
+      @extend .default-shadow;
+      background-color: #2b5ea2;
+      width: 48px;
+  } */
+
+  border-bottom-color: #2b5ea2;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+}
+
+.default-shadow {
+  box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+}
+
+.font-shadow {
+  text-shadow: 0px 5px 3px rgba(0, 0, 0, 0.3);
+}

@@ -1,14 +1,15 @@
-<div class="header-container">
-  <mat-toolbar role="heading" color="primary">
-    <mat-toolbar-row>
-      <div>STATUS</div>
-      <div>WORLD VIEWER</div>
-      <div>DPS</div>
-      <div>CONFIG</div>
-      <div>DOCUMENTATION</div>
-      <span class="nav-spacer"></span>
-      <mat-icon class="nav-icon">favorite</mat-icon>
-      <mat-icon class="nav-icon">delete</mat-icon>
-    </mat-toolbar-row>
-  </mat-toolbar>
-</div>
+<mat-toolbar class="header-mat-toolbar" role="heading" color="primary">
+  <div fxFlexFill fxLayout="row" fxLayoutAlign="space-evenly center" fxLayout.xs="column">
+    <div fxFlex="10">
+      <img id="user-img" class="user-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZnBi17vS8RANwumOO0F7EanudIUIfE6fs0RRjH0IFWckH7nJEaQ">
+    </div>
+    <div fxFlex="30">
+      <app-nav></app-nav>
+    </div>
+    <div fxFlex="30" class="spacer">
+    </div>
+    <div fxFlex class="brand-icon">
+       <!-- Inser brand icon here -->
+    </div>
+  </div>
+</mat-toolbar>

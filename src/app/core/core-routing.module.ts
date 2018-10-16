@@ -5,6 +5,7 @@ import { LoginComponent } from 'sasi/core/login/login.component';
 import { PageNotFoundComponent } from 'sasi/core/page-not-found/page-not-found.component';
 import { SasiStatusComponent } from 'sasi/views/sasi-status/sasi-status.component';
 import { SearchComponent } from 'sasi/views/world-viewer/search/search.component';
+import { ConfigComponent } from 'sasi/views/configurations/config.component';
 
 export const routes: Routes = [
     {
@@ -13,14 +14,14 @@ export const routes: Routes = [
         pathMatch: 'full'
     },
     {
-        path: 'login',
-        component: LoginComponent
-    },
-    {
         path: 'sasi-status',
         /* Do this for now. Need to do lazy loading. */
         // loadChildren: '../views/sasi-status/sasi-status.module#SasiStatusModule'
         component: SasiStatusComponent
+    },
+    {
+        path: 'login',
+        component: LoginComponent
     },
     {
         path: 'world-viewer',
@@ -28,6 +29,11 @@ export const routes: Routes = [
         // loadChildren: '../views/world-viewer/world-viewer.module#WorldViewerModule'
         component: SearchComponent
     },
+    // {
+        // path: '',
+        // component: ConfigComponent,
+        // loadChildren: 'app/views/configuarations/config.module#ConfigModule'
+    // },
     {
         path: '**',
         component: PageNotFoundComponent

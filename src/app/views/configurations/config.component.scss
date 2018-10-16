@@ -1,0 +1,23 @@
+.nav-container {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.nav-item {
+  color: #525156;
+  cursor: pointer;
+  outline: none;
+  font-family: GE Inspira Sans, sans-serif;
+}
+
+.nav-item:hover {
+  @extend .font-shadow;
+}
+
+.nav-active {
+  @extend .font-shadow;
+}
+
+.font-shadow {
+  text-shadow: 0px 5px 3px rgba(0, 0, 0, 0.3);
+}

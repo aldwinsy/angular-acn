@@ -1,0 +1,9 @@
+<nav class="nav-container" mat-tab-nav-bar backgroundColor="">
+        <a mat-tab-link *ngFor="let link of configNavItems"
+           class="nav-item"
+           (click)="activeLink = link.id"
+           [active]="activeLink === link.id"
+           routerLinkActive="nav-active" [routerLink]="[link.id]"> {{link.label}} </a>
+      </nav>
+
+<router-outlet></router-outlet>

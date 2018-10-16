@@ -1,0 +1,84 @@
+<div class="container"
+  fxLayout="row"
+  fxLayoutGap="1.5rem"
+  fxLayout.xs="column"
+  fxLayoutAlign="center"
+  fxLayoutGap.xs="1rem">
+  <div fxFlex>
+    <div fxLayout="column" fxLayoutAlign="center stretch" class="default-panel restart-agent-panel">
+      <div fxFlex="4" class="restart-agent-header">
+        <span>Status</span>
+      </div>
+      <div fxFlex class="restart-agent-body div-scroll-body">
+        <div fxLayout="column" fxLayoutGap="20px" fxLayoutAlign="center stretch" fxLayoutGap.xs="5px">
+          <div fxFlex>
+            <div fxLayout="row" fxLayoutGap="20px" fxLayout.xs="column" fxLayoutGap.xs="10px">
+              <div fxFlex="30" fxFlexAlign="center">Current Server Time</div>
+              <div fxFlex> 2018-09-12 19:32</div>
+            </div>
+          </div>
+          <div fxFlex>
+            <div fxLayout="row" fxLayoutGap="20px" fxLayout.xs="column" fxLayoutGap.xs="10px">
+              <div fxFlex="30" fxFlexAlign="center">Next Restart Time</div>
+              <div fxFlex> 2018-09-12 19:32</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>      
+  </div>
+  <div fxFlex>
+    <div fxLayout="column" fxLayoutAlign="center stretch" class="default-panel restart-agent-panel">
+      <div fxFlex="4" class="restart-agent-header">
+        <span>Configuration</span>
+      </div>
+      <div fxFlex class="restart-agent-body div-scroll-body">
+        <div fxLayout="column" fxLayoutGap="20px" fxLayoutAlign="center stretch" fxLayoutGap.xs="5px">
+          <div fxFlex>
+            <div fxLayout="row" fxLayoutGap="20px" fxLayout.xs="column" fxLayoutGap.xs="10px">
+              <div fxFlex="30" fxFlexAlign="center">SASI Data Sefver URL</div>
+              <div fxFlex>/sasi-server/data</div>
+            </div>
+          </div>
+          <div fxFlex>
+            <div fxLayout="row" fxLayoutGap="20px" fxLayout.xs="column" fxLayoutGap.xs="10px">
+              <div fxFlex="30" fxFlexAlign="center">Agent Name</div>
+              <div fxFlex>Restart Agent</div>
+            </div>
+          </div>
+          <div fxFlex>
+            <div fxLayout="row" fxLayoutGap="20px" fxLayout.xs="column" fxLayoutGap.xs="10px">
+              <div fxFlex="30" fxFlexAlign="center">Restart Option</div>
+              <div fxFlex>
+                <mat-form-field>
+                  <mat-select placeholder="Option">
+                    <mat-option value="daily">
+                      Daily (24-hour clock)
+                    </mat-option>
+                    <mat-option value="periodically">
+                      Periodically (Everty HH:mm)
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+            </div>
+          </div>
+          <div fxFlex>
+              <div fxLayout="row" fxLayoutGap="20px" fxLayout.xs="column" fxLayoutGap.xs="10px">
+                <div fxFlex="30" fxFlexAlign="center">Restart Option</div>
+                <div fxFlex>
+                  <mat-form-field>
+                    <input matInput placeholder="HH:mm"/>
+                  </mat-form-field>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div fxFlex="5" fxFlexAlign="end" fxLayoutGap="20px" class="div-restart-agent-footer">
+        <button mat-raised-button color="accent">Save</button>
+        <button mat-raised-button color="primary">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>

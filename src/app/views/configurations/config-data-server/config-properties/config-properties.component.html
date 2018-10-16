@@ -1,0 +1,88 @@
+<div fxLayout="column" fxLayoutAlign="center stretch" class="default-panel config-properties-panel">
+    <div fxFlex="4" class="config-properties-header">
+      <span>Data Server Administration</span>
+    </div>
+    <div fxFlex class="config-properties-body div-scroll-body">
+      <div fxLayout="column" fxLayoutGap="20px" fxLayoutAlign="center stretch">              
+        <div fxFlex>
+          <div fxLayout="column" fxLayoutGap="20px" fxLayoutGap.xs="5px">
+            <div fxLayout="row" fxLayoutGap="20px" fxLayout.xs="column" fxLayoutGap.xs="10px">
+                <button mat-raised-button color="warn">Restart</button>
+                <button mat-raised-button color="accent">Refresh</button>
+            </div>
+            <div fxFlex>
+              <span class="span-label">SASI Configuration Properties</span>
+              <div class="padding-top-10" fxLayout="row" fxLayoutGap="20px" fxLayout.xs="column" fxLayoutGap.xs="10px">
+                <div fxFlex="30">
+                  <mat-form-field>
+                    <mat-select placeholder="Property">
+                      <mat-option value="fileSourcePath">
+                        File Source Path
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+                <div fxFlex>
+                  <mat-form-field>
+                    <input matInput placeholder="Value" autocomplete="off" required>
+                  </mat-form-field>
+                </div>
+              </div>
+                <div fxLayout="row" fxLayoutGap="20px" fxLayout.xs="column" fxLayoutGap.xs="10px">
+                  <div fxFlex="30" fxFlexAlign="center">
+                    Base Date/time
+                  </div>
+                  <div fxFlex>
+                    <mat-form-field>
+                      <input matInput placeholder="yyyy-MM-dd HH:mm" autocomplete="off" required>
+                    </mat-form-field>
+                  </div>
+                </div>
+                <div fxLayout="row" fxLayoutGap="20px" fxLayout.xs="column" fxLayoutGap.xs="10px">
+                  <div fxFlex="30" fxFlexAlign="center">
+                    Time Mode
+                  </div>
+                  <div fxFlex>
+                      <mat-form-field>
+                        <mat-select placeholder="Property">
+                          <mat-option value="static">
+                            Static
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                  </div>
+                </div>
+            </div>
+            
+            <div fxFlex>
+              <span class="span-label">Data Window Settings</span>
+              <div fxLayout="row" fxLayoutGap="20px" fxLayout.xs="column" fxLayoutGap.xs="10px">
+                <div fxFlex="30" fxFlexAlign="center">
+                  Days Backward
+                </div>
+                <div fxFlex>
+                  <mat-form-field>
+                    <input matInput autocomplete="off" required>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div fxLayout="row" fxLayoutGap="20px" fxLayout.xs="column" fxLayoutGap.xs="10px">
+                <div fxFlex="30" fxFlexAlign="center">
+                  Days Forward
+                </div>
+                <div fxFlex>
+                  <mat-form-field>
+                    <input matInput autocomplete="off" required>
+                  </mat-form-field>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div fxFlex="5" fxFlexAlign="end" class="div-config-properties-footer">
+      <button mat-raised-button color="primary">Save</button>
+    </div>
+  </div>
+  

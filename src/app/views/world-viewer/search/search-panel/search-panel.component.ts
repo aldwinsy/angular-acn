@@ -1,4 +1,4 @@
-import { Component, ViewChildren, OnInit } from '@angular/core';
+import { Component, ViewChildren, OnInit, Input } from '@angular/core';
 import { FormControl, Validators, FormBuilder, FormGroup, FormArray } from '@angular/forms';
 import {COMMA, ENTER} from '@angular/cdk/keycodes';
 import { MatChipInputEvent } from '@angular/material';
@@ -12,27 +12,38 @@ import { MatChipInputEvent } from '@angular/material';
   ]
 })
 export class SearchPanelComponent implements OnInit {
-
   @ViewChildren('chipList') chipList;
-  selected = 'option1';
+  @Input() worldSummaryData;
+  worldGroup = 'paradise';
+  selectedQuery = 'Fleet';
   readonly separatorKeysCodes: number[] = [ENTER, COMMA];
   values = [];
   propertyForm: FormGroup;
-  options: string[] = ['Option 1', 'Option 2', 'Option 3'];
+  worldQueries = [];
+  options: string[] = ['AirlineSpecificProperties', 'CrewFleetName', 'FleetID', 'Identiefier', 'OpsFleetName', 'Version'];
   filteredOptions = this.options;
+  displayedOptions = this.options;
 
-  constructor(private formBuilder: FormBuilder) {
+  disableAddNewProperty = false;
+
+  constructor(private formBuilder: FormBuilder) {}
+
+  ngOnInit() {
+    this.initializeForm();
+    this.worldQueries = this.worldSummaryData.map(data => data.propertyName);
+    this.propertyForm.valueChanges.subscribe(form => console.log(this.propertyForm, form));
+
+  }
+
+  initializeForm() {
     this.propertyForm = this.formBuilder.group({
       propertyNames: this.formBuilder.array([ this.createNewProperty() ])
     });
   }
 
-  ngOnInit() {
-  }
-
   private _filter(value: string) {
     const filterValue = value.toLowerCase();
-    this.filteredOptions = this.options.filter(option => option.toLowerCase().includes(filterValue));
+    this.displayedOptions = this.filteredOptions.filter(option => option.toLowerCase().includes(filterValue));
   }
 
   createNewProperty(): FormGroup  {
@@ -57,14 +68,25 @@ export class SearchPanelComponent implements OnInit {
     };
   }
 
+  filterProperyTypeAhead() {
+    // filter out properties already selected
+    const addedProperties = this.propertyForm.value.propertyNames.map(propertyName => propertyName.property);
+    this.filteredOptions = this.options.filter(property => !addedProperties.includes(property));
+    this.displayedOptions = this.filteredOptions;
+  }
+
   addNewProperty() {
     const control = <FormArray>this.propertyForm.controls['propertyNames'];
     control.push(this.createNewProperty());
+    this.filterProperyTypeAhead();
+    this.disableAddNewProperty = this.displayedOptions.length <= 1;
   }
 
   removeProperty(index: number) {
     const control = <FormArray>this.propertyForm.controls['propertyNames'];
     control.removeAt(index);
+    this.filterProperyTypeAhead();
+    this.disableAddNewProperty = false;
   }
 
   add(event: MatChipInputEvent, index) {
@@ -82,8 +104,6 @@ export class SearchPanelComponent implements OnInit {
     if (input) {
       input.value = '';
     }
-
-    console.log(this.propertyForm);
   }
 
   remove(value, index) {
@@ -98,7 +118,6 @@ export class SearchPanelComponent implements OnInit {
         this.chipList._results[index].errorState = true;
       }
     }
-    console.log(this.propertyForm);
   }
 
 }
