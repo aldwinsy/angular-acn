@@ -11,7 +11,7 @@ export class NavigationComponent implements OnInit {
 
   constructor() { }
 
-  private navItems = headerNavItems;
+  public navItems = headerNavItems;
 
   ngOnInit() {
   }
