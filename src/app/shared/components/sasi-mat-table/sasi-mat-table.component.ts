@@ -10,17 +10,17 @@ import { SelectionModel } from '@angular/cdk/collections';
 export class SasiMatTableComponent implements OnInit, AfterViewInit {
   @ViewChild(MatSort) sort: MatSort;
 
-  @Input() private data: any;
-  @Input() private columnObjects: any; // object containing the details of the column (label, propName, type)
-  @Input() private hasSelectAll: any = true;
-  @Input() private sortedColumn: string; // set initially sorted column
-  @Input() private isSortDisabled = false;
+  @Input() public data: any;
+  @Input() public columnObjects: any; // object containing the details of the column (label, propName, type)
+  @Input() public hasSelectAll: any = true;
+  @Input() public sortedColumn: string; // set initially sorted column
+  @Input() public isSortDisabled = false;
 
   @Output() private selectionEvent: any = new EventEmitter<any>();
   @Output() private sortChange: any = new EventEmitter<any>();
 
-  private columnObjectsNoSelect: any;
-  private displayedColumns: string[];
+  public columnObjectsNoSelect: any;
+  public displayedColumns: string[];
 
   dataSource: MatTableDataSource<any>;
   selection = new SelectionModel<any>(true, []);
