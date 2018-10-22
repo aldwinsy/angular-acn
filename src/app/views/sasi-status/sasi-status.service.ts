@@ -49,6 +49,16 @@ export class SasiStatusService {
     return of(dataAgentsMock);
   }
 
+  getData(): Observable<any[]> {
+    // @TODO: uncomment when actual endpoint is available
+    return this.http.get('https://api.myjson.com/bins/nu78o').pipe(
+      tap((data: any) => {
+        console.log('get response: ', data);
+      }),
+      catchError(this.handleError)
+    );
+  }
+
   private handleError(error: Response) {
     console.log('SasiStatusService::handleError::', error);
     const message = `Error status code ${error.status} at ${error.url}`;

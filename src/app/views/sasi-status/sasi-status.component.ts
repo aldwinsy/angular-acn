@@ -22,6 +22,9 @@ export class SasiStatusComponent implements OnInit {
 
     this.sasiStatusService.getSasiStatusAgentList()
       .subscribe(data => this.dataAgentList = data);
+
+    this.sasiStatusService.getData()
+      .subscribe(() => console.log('Got it!'));
   }
 
 }

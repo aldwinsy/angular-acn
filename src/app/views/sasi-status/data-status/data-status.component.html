@@ -5,8 +5,102 @@
         </div>
     </div>
     <div fxFlex class="status-panel-body div-scroll-body">
-      <div *ngIf="!!statusTime.length && !!worldObjects.length; else noRecords">
-        <app-sasi-mat-table id="status-time-table"
+      <!-- <div style="height: 100%!important;" *ngIf="!!statusTime.length && !!worldObjects.length; else noRecords"> -->
+          <div style="height: 100%!important;" fxLayout fxLayoutAlign="space-between stretch" fxLayoutGap="20px">
+                <mat-card fxLayout="column" fxLayoutAlign="center stretch" style="height: 100%!important" class="data-status-card" fxFlex="50">
+                    <mat-card-header fxFlex="35">
+                      <div mat-card-avatar class="purgatory-header-image"></div>
+                      <div fxLayout="column" fxLayoutAlign="center stretch">
+                          <div fxFlex="35" class="mat-card-title">Purgatory</div>
+                          <div fxFlex>
+                            <div style="height: 100%" fxLayout="row" fxLayoutGap="5px" fxLayout.xs="column" fxLayoutGap.xs="5px">
+                              <div fxFlex="70">
+                                <div fxFlexFill fxLayout="column" fxLayoutAlign="stretch">
+                                  <div style="color: #2b5ea2" fxFlex="30">Total</div>
+                                  <div style="font-size: 5.5vh;color: #3573c5;" fxFlex="70">33,110</div>
+                                </div>
+                              </div>
+                              <div fxFlex="30">
+                                <div fxFlexFill fxLayout="column" fxLayoutAlign="stretch">
+                                  <div style="color: #2b5ea2" fxFlex="30">Delta</div>
+                                  <div style="font-size: 5.5vh;color: #3573c5;" fxFlex="70">150</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+                    </mat-card-header>
+                    
+                    <mat-card-content style="margin-top: 4vh" fxLayout="row" fxFlex>
+                        <div fxFlex="20">
+                          <div fxLayout="column" fxLayoutAlign="start start"  style="height: 100%!important;">
+                              <mat-icon fxFlex="33" class="clock-icon">access_time</mat-icon>
+                              <mat-icon fxFlex="33" class="clock-icon">restore</mat-icon>
+                              <mat-icon fxFlex class="clock-icon">flight_takeoff</mat-icon>
+                          </div>
+                        </div>
+                        <div style="height:100%" fxFlex="80">
+                          <div fxLayout="column" fxLayoutAlign="end start" style="height: 100%!important;margin-top: 2vh;">
+                              <div class="time-value" fxFlex="33">2015-03-18 11:10Z</div>
+                              <div class="time-value" fxFlex="33">2015-03-18 11:10Z</div>
+                              <div class="time-value" fxFlex>2015-03-18 11:10Z</div>
+                          </div>
+                        </div>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button mat-button color="primary">See Details</button>
+                    </mat-card-actions>
+                  </mat-card>
+
+                <mat-card fxLayout="column" fxLayoutAlign="center stretch" style="height: 100%!important;" class="data-status-card" fxFlex="50">
+                    <mat-card-header fxFlex="35">
+                      <div mat-card-avatar class="paradise-header-image"></div>
+                      <div fxLayout="column" fxLayoutAlign="center stretch">
+                          <div fxFlex="35" class="mat-card-title">Paradise</div>
+                          <div fxFlex>
+                            <div style="height: 100%" fxLayout="row" fxLayoutGap="5px" fxLayout.xs="column" fxLayoutGap.xs="5px">
+                              <div fxFlex="70">
+                                <div fxFlexFill fxLayout="column" fxLayoutAlign="stretch">
+                                  <div style="color: #2b5ea2" fxFlex="30">Total</div>
+                                  <div style="font-size: 5.5vh;color: #3573c5;" fxFlex="70">27,658</div>
+                                </div>
+                              </div>
+                              <div fxFlex="30">
+                                <div fxFlexFill fxLayout="column" fxLayoutAlign="stretch">
+                                  <div style="color: #2b5ea2" fxFlex="30">Delta</div>
+                                  <div style="font-size: 5.5vh;color: #3573c5;" fxFlex="70">1,223</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+                    </mat-card-header>
+                    
+                    <mat-card-content style="margin-top: 4vh" fxLayout="row" fxFlex>
+                        <div fxFlex="20">
+                          <div fxLayout="column" fxLayoutAlign="start start"  style="height: 100%!important;">
+                              <mat-icon fxFlex="33" class="clock-icon">access_time</mat-icon>
+                              <mat-icon fxFlex="33" class="clock-icon">restore</mat-icon>
+                              <mat-icon fxFlex class="clock-icon">flight_takeoff</mat-icon>
+                          </div>
+                        </div>
+                        <div style="height:100%" fxFlex="80">
+                          <div fxLayout="column" fxLayoutAlign="end start" style="height: 100%!important;margin-top: 2vh;">
+                              <div class="time-value" fxFlex="33">2015-03-18 11:10Z</div>
+                              <div class="time-value" fxFlex="33">2015-03-18 11:10Z</div>
+                              <div class="time-value" fxFlex>2015-03-18 11:10Z</div>
+                          </div>
+                        </div>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button mat-button color="primary">See Details</button>
+                    </mat-card-actions>
+                  </mat-card>
+            <!-- </div> -->
+
+          </div>
+
+        <!-- <app-sasi-mat-table id="status-time-table"
           [columnObjects]="sasiStatusTimeColumns"
           [isSortDisabled]="true"
           [data]="statusTime">
@@ -15,8 +109,8 @@
           [columnObjects]="sasiStatusWorldColumns"
           [isSortDisabled]="true"
           [data]="worldObjects">
-        </app-sasi-mat-table>
-      </div>
+        </app-sasi-mat-table> -->
+      <!-- </div> -->
 
       <ng-template #noRecords>
         <!-- NO RESULT -->

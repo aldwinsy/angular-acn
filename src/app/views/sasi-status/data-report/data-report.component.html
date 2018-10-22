@@ -1,7 +1,8 @@
 <div fxLayout="column" fxLayoutAlign="start stretch" class="default-panel data-report-panel">
   <div fxFlex="7">
     <div class="data-report-header">
-      <span id="agent-count" matBadge="{{dataAgentList.length}}" matBadgeColor="primary" matBadgeOverlap="false" matBadgePosition="above after">Data Agent Report</span>
+      <span id="agent-count" matBadge="{{dataAgentList.length}}" matBadgeColor="primary"
+        matBadgeOverlap="false" matBadgePosition="above after">Data Agent Report</span>
     </div>
   </div>
   <div *ngIf="!!dataAgentList.length; else noRecords" fxFlex class="report-panel-body div-scroll-body">
