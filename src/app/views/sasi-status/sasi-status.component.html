@@ -1,10 +1,16 @@
 <!-- <app-banner></app-banner> -->
-<div class="container"
+<div style="padding:40px!important"  class="container"
   fxLayout="row"
-  fxLayoutGap="1.5rem"
+  fxLayoutGap="2rem"
+  fxFlexFill
   fxLayout.xs="column"
   fxLayoutAlign="center"
   fxLayoutGap.xs="1rem">
-  <app-data-status fxFlex="70" [statusTime]="statusTime" [worldObjects]="worldObjects"></app-data-status>
+  <div fxFlex="60">
+    <router-outlet></router-outlet>
+  </div>
+  <!-- <app-data-status  [statusTime]="statusTime" [worldObjects]="worldObjects"></app-data-status> -->
+  <div class="panel-line-divider" ></div>
   <app-data-report fxFlex="30" [dataAgentList]="dataAgentList"></app-data-report>
 </div>
+

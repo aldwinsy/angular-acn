@@ -21,7 +21,7 @@ import { ConfigRestartAgentComponent } from './config-restart-agent/config-resta
     SharedModule,
     ConfigRoutingModule
   ],
-  exports: [ConfigRoutingModule, ConfigDataServerComponent],
+  exports: [ConfigRoutingModule],
   providers: []
 })
 export class ConfigModule { }

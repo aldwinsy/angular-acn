@@ -14,31 +14,108 @@
 }
 
 .default-panel {
-  border-radius: 10px;
-  border-color:#C4C4C4;
+  // border-radius: 10px;
+  // border-color:#C4C4C4;
 }
 
 .data-status-panel {
   height: 100%;
-  background: #C4C4C4;
-  @extend .thin-box-shadow;
+  // background: #C4C4C4;
+  // @extend .thin-box-shadow;
+}
+
+.data-status-card:hover {
+  box-shadow: 0 4px 13px rgba(0, 0, 0, 0.3)!important;
 }
 
 .data-status-header {
-  border-radius: 10px;
-  margin-top: 20px;
-  margin-left: 20px;
+  // border-radius: 10px;
+  // margin-top: 20px;
+  // margin-left: 20px;
   font-family: GE Inspira Sans, sans-serif;
   font-weight: bold;
-  color: white;
+  // color: white;
 }
 
 .status-panel-body {
-  margin: 20px;
-  background: #EBEFF2;
-  border-radius: 5px;
+  // margin: 20px;
+  // background: #EBEFF2;
+  // border-radius: 5px;
 }
 
 .thin-box-shadow {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.paradise-header-image {
+  background-image: url('https://i.pinimg.com/originals/a6/31/a4/a631a41b301d90ad8eba89937ed1d5da.jpg');
+  background-size: cover;
+}
+
+.purgatory-header-image {
+  background-image: url('http://images.wikia.com/uncyclopedia/images/thumb/f/fa/Purgatory.jpg/400px-Purgatory.jpg');
+  background-size: cover;
+}
+
+.mat-card-avatar {
+  height: 19vh;
+  width: 19vh;
+}
+
+.mat-card-title {
+  font-size: 4vh;
+}
+
+.clock-icon {
+  font-size: 7vh;
+}
+
+.time-value {
+  font-size: 3vh;
+}
+
+.span-base-time {
+  // margin-top: -8px;
+  padding-bottom: 20px;
+  color: gray;
+}
+
+.mat-divider {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.mat-card-content {
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: rgba(0, 0, 0, 0.12);;
+  background-color: aliceblue;
+  margin-bottom: 0px;
+}
+
+mat-card {
+  padding: 0px;
+  max-width: 350px !important;
+}
+
+mat-card-title {
+  margin-bottom: 0px;
+}
+
+#card-footer {
+  font-size: 1vw;
+  border-radius: 0px;
+}
+
+#card-footer:hover {
+  background-color: #4aa0e4;
+}
+
+.span-count {
+  padding-top: 5px;
+}
+
+#previous-world-card {
+  opacity: 0.5;
+  pointer-events: none;
 }

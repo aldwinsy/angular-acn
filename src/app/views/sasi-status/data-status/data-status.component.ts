@@ -16,11 +16,17 @@ export class DataStatusComponent implements OnInit {
   @Input() statusTime = [];
   @Input() worldObjects = [];
 
+  purgatoryParadiseLink = '/sasi-status/purgatory-paradise';
+
 
   constructor() { }
 
   ngOnInit() {
 
+  }
+
+  gotToDetails(type: string) {
+    console.log('type:', type);
   }
 
 }

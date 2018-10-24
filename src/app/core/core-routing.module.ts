@@ -5,30 +5,31 @@ import { LoginComponent } from 'sasi/core/login/login.component';
 import { PageNotFoundComponent } from 'sasi/core/page-not-found/page-not-found.component';
 import { SasiStatusComponent } from 'sasi/views/sasi-status/sasi-status.component';
 import { SearchComponent } from 'sasi/views/world-viewer/search/search.component';
-import { ConfigComponent } from 'sasi/views/configurations/config.component';
+import { DataStatusComponent } from 'sasi/views/sasi-status/data-status/data-status.component';
 
 export const routes: Routes = [
-    {
-        path: '',
-        redirectTo: 'sasi-status',
-        pathMatch: 'full'
-    },
-    {
-        path: 'sasi-status',
-        /* Do this for now. Need to do lazy loading. */
-        // loadChildren: '../views/sasi-status/sasi-status.module#SasiStatusModule'
-        component: SasiStatusComponent
-    },
+    { path: '', redirectTo: '/sasi-status', pathMatch: 'full' },
+    // {
+    //     path: 'sasi-status',
+    //     /* Do this for now. Need to do lazy loading. */
+    //     // loadChildren: '../views/sasi-status/sasi-status.module#SasiStatusModule'
+    //     component: SasiStatusComponent,
+    //     // children: [
+    //     //     { path: '', component: DataStatusComponent },
+    //     //     { path: 'purgatory', component: PurgatoryComponent },
+    //     //     { path: 'paradise', component: ParadiseComponent }
+    //     // ]
+    // },
     {
         path: 'login',
         component: LoginComponent
     },
-    {
-        path: 'world-viewer',
-        /* Do this for now. Need to do lazy loading. */
-        // loadChildren: '../views/world-viewer/world-viewer.module#WorldViewerModule'
-        component: SearchComponent
-    },
+    // {
+    //     path: 'world-viewer',
+    //     /* Do this for now. Need to do lazy loading. */
+    //     // loadChildren: '../views/world-viewer/world-viewer.module#WorldViewerModule'
+    //     component: SearchComponent
+    // },
     // {
         // path: '',
         // component: ConfigComponent,

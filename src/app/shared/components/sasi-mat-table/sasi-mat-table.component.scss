@@ -3,64 +3,64 @@ table {
   box-shadow: none;
 }
 
-th.mat-column-select {
-  width: 5vw;
-}
-
-th.mat-column-propertyName, td.mat-column-propertyName {
-  width: 10vw;
-}
-
-th.mat-column-purgatoryTime {
-  width: 8vw;
-}
-
-th.mat-column-purgatoryEvents, th.mat-column-purgatoryObj {
-  width: 4vw;
-}
-
-th.mat-column-qSize {
-  width: 12vw;
-}
-
-th.mat-column-validationIEPM, th.mat-column-validationExcl,
-th.mat-column-validationFixed, th.mat-column-validationOEPM {
+.mat-column-select {
   width: 3vw;
 }
 
-th.mat-column-paradiseTime {
+.mat-column-propertyName {
+  width: 10vw;
+}
+
+.mat-column-purgatoryTime {
   width: 8vw;
 }
 
-th.mat-column-paradiseEvents, th.mat-column-paradiseObj {
+.mat-column-purgatoryEvents, .mat-column-purgatoryObj {
   width: 4vw;
 }
 
-th.mat-column-publish_0_Time {
+.mat-column-qSize {
+  width: 10vw;
+}
+
+.mat-column-validationIEPM, .mat-column-validationExcl,
+.mat-column-validationFixed, .mat-column-validationOEPM {
+  width: 2vw;
+}
+
+.mat-column-paradiseTime {
   width: 8vw;
 }
 
-th.mat-column-publish_0_Events, th.mat-column-publish_0_Obj {
+.mat-column-paradiseEvents, .mat-column-paradiseObj {
   width: 4vw;
 }
 
-th.mat-column-publish_1_Time {
+.mat-column-publish_0_Time {
   width: 8vw;
 }
 
-th.mat-column-publish_1_Events, th.mat-column-publish_1_Obj {
+.mat-column-publish_0_Events, .mat-column-publish_0_Obj {
   width: 4vw;
 }
 
-th.mat-column-publish_2_Time {
+.mat-column-publish_1_Time {
   width: 8vw;
 }
 
-th.mat-column-publish_2_Events, th.mat-column-publish_2_Obj {
+.mat-column-publish_1_Events, .mat-column-publish_1_Obj {
   width: 4vw;
 }
 
-th.mat-header-cell {
+.mat-column-publish_2_Time {
+  width: 8vw;
+}
+
+.mat-column-publish_2_Events, .mat-column-publish_2_Obj {
+  width: 4vw;
+}
+
+.mat-header-cell {
   background: #3573c5;
   color: #FFF;
   ::ng-deep .mat-sort-header-arrow {
