@@ -18,45 +18,38 @@ export class SasiStatusService {
 
   getSasiStatusTime(): Observable<any[]> {
     // @TODO: uncomment when actual endpoint is available
-    // return this.http.get(url).pipe(
-    //   tap((data: any) => {
-    //     console.log('getSasiStatusTime: ', data);
-    //   }),
-    //   catchError(this.handleError)
-    // );
-    return of(dataStatus);
+    const url = 'https://api.myjson.com/bins/1hhimc';
+    return this.http.get(url).pipe(
+      tap((data: any) => {
+        console.log('getSasiStatusTime: ', data);
+      }),
+      catchError(this.handleError)
+    );
+    // return of(dataStatus);
   }
 
   getSasiStatusWorldObjects(): Observable<any[]> {
     // @TODO: uncomment when actual endpoint is available
-    // return this.http.get(url).pipe(
-    //   tap((data: any) => {
-    //     console.log('getSasiStatusWorldObjects: ', data);
-    //   }),
-    //   catchError(this.handleError)
-    // );
-    return of(sasiWorldObjects);
+    const url = 'https://api.myjson.com/bins/1blbqc';
+    return this.http.get(url).pipe(
+      tap((data: any) => {
+        console.log('getSasiStatusWorldObjects: ', data);
+      }),
+      catchError(this.handleError)
+    );
+    // return of(sasiWorldObjects);
   }
 
   getSasiStatusAgentList(): Observable<any[]> {
     // @TODO: uncomment when actual endpoint is available
-    // return this.http.get(url).pipe(
-    //   tap((data: any) => {
-    //     console.log('getSasiStatusAgentList: ', data);
-    //   }),
-    //   catchError(this.handleError)
-    // );
-    return of(dataAgentsMock);
-  }
-
-  getData(): Observable<any[]> {
-    // @TODO: uncomment when actual endpoint is available
-    return this.http.get('https://api.myjson.com/bins/nu78o').pipe(
+    const url = 'https://api.myjson.com/bins/1ezxb8';
+    return this.http.get(url).pipe(
       tap((data: any) => {
-        console.log('get response: ', data);
+        console.log('getSasiStatusAgentList: ', data);
       }),
       catchError(this.handleError)
     );
+    // return of(dataAgentsMock);
   }
 
   private handleError(error: Response) {

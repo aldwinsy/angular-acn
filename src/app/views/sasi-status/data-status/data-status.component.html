@@ -6,12 +6,45 @@
     </div>
     <div fxFlex class="status-panel-body div-scroll-body">
       <!-- <div style="height: 100%!important;" *ngIf="!!statusTime.length && !!worldObjects.length; else noRecords"> -->
-          <div style="height: 100%!important;" fxLayout fxLayoutAlign="space-between stretch" fxLayoutGap="20px">
-                <mat-card fxLayout="column" fxLayoutAlign="center stretch" style="height: 100%!important" class="data-status-card" fxFlex="50">
-                    <mat-card-header fxFlex="35">
-                      <div mat-card-avatar class="purgatory-header-image"></div>
-                      <div fxLayout="column" fxLayoutAlign="center stretch">
-                          <div fxFlex="35" class="mat-card-title">Purgatory</div>
+          <div style="height: 100%!important;" fxLayout fxLayoutAlign="center" fxLayoutGap="25px" fxLayout.xs="column">
+              <mat-card fxFlex="30" fxLayout="column" class="data-status-card">
+                  <img fxFlex="45" src="http://images.wikia.com/uncyclopedia/images/thumb/f/fa/Purgatory.jpg/400px-Purgatory.jpg">
+                  <div fxFlex fxFlexFill fxLayout="column" fxLayoutAlign="center center">
+                    <div fxFlex="25"></div>
+                    <mat-card-header fxFlex="36" id="card-header">
+                      <mat-card-title>Purgatory</mat-card-title>
+                    </mat-card-header>
+                    <span class="span-base-time" fxFlex>2015-03-18 11:10Z</span>
+                  </div>
+
+                  <mat-card-content fxFlex="20" fxLayout fxLayoutAlign="center" fxLayout.xs="column" fxLayoutGap.xs="10px">
+                    <div fxFlex="49" fxLayout="column" fxLayoutAlign="center">
+                      <span fxFlexAlign="center" style="font-size: 2vw;color: #3573c5;">23,234</span>
+                      <span class="span-count" fxFlexAlign="center" style="color: #2b5ea2">Total</span>
+                    </div>
+                    <mat-divider fxFlex="1" [vertical]="true"></mat-divider>
+                    <div fxFlex="49" fxLayout="column" fxLayoutAlign="center">
+                      <span fxFlexAlign="center" style="font-size: 2vw;color: #3573c5;">510</span>
+                      <span class="span-count" fxFlexAlign="center" style="color: #2b5ea2">Delta</span>
+                    </div>
+                  </mat-card-content>
+                  <button id="card-footer"
+                    fxFlex="10"
+                    fxFlexAlign="center"
+                    fxFlexFill
+                    mat-flat-button
+                    color="primary"
+                    [routerLink]="purgatoryParadiseLink">See Details</button>
+                </mat-card>
+                <!-- <mat-card fxLayout="column" style="height: 100%!important" class="data-status-card" fxFlex="50">
+                    <img fxFlex="40" mat-card-image src="http://images.wikia.com/uncyclopedia/images/thumb/f/fa/Purgatory.jpg/400px-Purgatory.jpg">  
+                    <mat-card-header fxFlex="10" fxFlexAlign="center">
+                      <div fxLayout="column">
+                        <div fxFlex="20">
+                          <mat-card-title>Purgatory</mat-card-title>
+                          <mat-card-subtitle>2015-03-18 11:10Z</mat-card-subtitle>
+                        </div>
+                        <div fxLayout="column" fxLayoutAlign="center stretch">
                           <div fxFlex>
                             <div style="height: 100%" fxLayout="row" fxLayoutGap="5px" fxLayout.xs="column" fxLayoutGap.xs="5px">
                               <div fxFlex="70">
@@ -28,6 +61,7 @@
                               </div>
                             </div>
                           </div>
+                        </div>
                       </div>
                     </mat-card-header>
                     
@@ -48,55 +82,71 @@
                         </div>
                     </mat-card-content>
                     <mat-card-actions>
-                        <button mat-button color="primary">See Details</button>
+                        <a routerLink="/sasi-status/purgatory">
+                          <button mat-button color="primary">See Details</button>
+                        </a>
                     </mat-card-actions>
+                  </mat-card> -->
+
+                  <mat-card fxFlex="30" fxLayout="column" class="data-status-card">
+                    <img fxFlex="45" src="https://i.pinimg.com/originals/a6/31/a4/a631a41b301d90ad8eba89937ed1d5da.jpg">
+                    <div fxFlex fxFlexFill fxLayout="column" fxLayoutAlign="center center">
+                      <div fxFlex="25"></div>
+                      <mat-card-header fxFlex="36" id="card-header">
+                        <mat-card-title>Paradise</mat-card-title>
+                      </mat-card-header>
+                      <span class="span-base-time" fxFlex>2015-03-18 11:10Z</span>
+                    </div>
+  
+                    <mat-card-content fxFlex="20" fxLayout fxLayoutAlign="center" fxLayout.xs="column" fxLayoutGap.xs="10px">
+                      <div fxFlex="49" fxLayout="column" fxLayoutAlign="center">
+                        <span fxFlexAlign="center" style="font-size: 2vw;color: #3573c5;">12,584</span>
+                        <span class="span-count" style="padding-top: 10px" fxFlexAlign="center" style="color: #2b5ea2">Total</span>
+                      </div>
+                      <mat-divider fxFlex="1" [vertical]="true"></mat-divider>
+                      <div fxFlex="49" fxLayout="column" fxLayoutAlign="center">
+                        <span fxFlexAlign="center" style="font-size: 2vw;color: #3573c5;">330</span>
+                        <span class="span-count" fxFlexAlign="center" style="color: #2b5ea2">Delta</span>
+                      </div>
+                    </mat-card-content>
+                    <button id="card-footer"
+                      fxFlex="10"
+                      fxFlexAlign="center"
+                      fxFlexFill
+                      mat-flat-button
+                      color="primary"
+                      [routerLink]="purgatoryParadiseLink">See Details</button>
                   </mat-card>
 
-                <mat-card fxLayout="column" fxLayoutAlign="center stretch" style="height: 100%!important;" class="data-status-card" fxFlex="50">
-                    <mat-card-header fxFlex="35">
-                      <div mat-card-avatar class="paradise-header-image"></div>
-                      <div fxLayout="column" fxLayoutAlign="center stretch">
-                          <div fxFlex="35" class="mat-card-title">Paradise</div>
-                          <div fxFlex>
-                            <div style="height: 100%" fxLayout="row" fxLayoutGap="5px" fxLayout.xs="column" fxLayoutGap.xs="5px">
-                              <div fxFlex="70">
-                                <div fxFlexFill fxLayout="column" fxLayoutAlign="stretch">
-                                  <div style="color: #2b5ea2" fxFlex="30">Total</div>
-                                  <div style="font-size: 5.5vh;color: #3573c5;" fxFlex="70">27,658</div>
-                                </div>
-                              </div>
-                              <div fxFlex="30">
-                                <div fxFlexFill fxLayout="column" fxLayoutAlign="stretch">
-                                  <div style="color: #2b5ea2" fxFlex="30">Delta</div>
-                                  <div style="font-size: 5.5vh;color: #3573c5;" fxFlex="70">1,223</div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
+                  <mat-card id="previous-world-card" fxFlex="30" fxLayout="column" class="data-status-card">
+                      <img fxFlex="45" src="https://www.geoguessr.com/images/fa5e7ffbe2ef226c4f8e6eaa38cf4aba.jpg">
+                      <!-- <img fxFlex="45" src="https://cdn126.picsart.com/217889827009202.gif?r1024x1024"> -->
+                      <div fxFlex fxFlexFill fxLayout="column" fxLayoutAlign="center center">
+                        <div fxFlex="25"></div>
+                        <mat-card-header fxFlex="36" id="card-header">
+                          <mat-card-title>Previous World</mat-card-title>
+                        </mat-card-header>
+                        <span class="span-base-time" fxFlex>2015-03-18 11:10Z</span>
                       </div>
-                    </mat-card-header>
-                    
-                    <mat-card-content style="margin-top: 4vh" fxLayout="row" fxFlex>
-                        <div fxFlex="20">
-                          <div fxLayout="column" fxLayoutAlign="start start"  style="height: 100%!important;">
-                              <mat-icon fxFlex="33" class="clock-icon">access_time</mat-icon>
-                              <mat-icon fxFlex="33" class="clock-icon">restore</mat-icon>
-                              <mat-icon fxFlex class="clock-icon">flight_takeoff</mat-icon>
-                          </div>
+    
+                      <mat-card-content fxFlex="20" fxLayout fxLayoutAlign="center" fxLayout.xs="column" fxLayoutGap.xs="10px">
+                        <div fxFlex="49" fxLayout="column" fxLayoutAlign="center">
+                          <span fxFlexAlign="center" style="font-size: 2vw;color: #3573c5;">13,234</span>
+                          <span class="span-count" style="padding-top: 10px" fxFlexAlign="center" style="color: #2b5ea2">Total</span>
                         </div>
-                        <div style="height:100%" fxFlex="80">
-                          <div fxLayout="column" fxLayoutAlign="end start" style="height: 100%!important;margin-top: 2vh;">
-                              <div class="time-value" fxFlex="33">2015-03-18 11:10Z</div>
-                              <div class="time-value" fxFlex="33">2015-03-18 11:10Z</div>
-                              <div class="time-value" fxFlex>2015-03-18 11:10Z</div>
-                          </div>
+                        <mat-divider fxFlex="1" [vertical]="true"></mat-divider>
+                        <div fxFlex="49" fxLayout="column" fxLayoutAlign="center">
+                          <span fxFlexAlign="center" style="font-size: 2vw;color: #3573c5;">345</span>
+                          <span class="span-count" fxFlexAlign="center" style="color: #2b5ea2">Delta</span>
                         </div>
-                    </mat-card-content>
-                    <mat-card-actions>
-                        <button mat-button color="primary">See Details</button>
-                    </mat-card-actions>
-                  </mat-card>
-            <!-- </div> -->
+                      </mat-card-content>
+                      <button id="card-footer"
+                        fxFlex="10"
+                        fxFlexAlign="center"
+                        fxFlexFill
+                        mat-flat-button
+                        color="primary">See Details</button>
+                    </mat-card>
 
           </div>
 

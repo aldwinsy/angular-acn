@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'sasi-ui';
+  darkTheme = false;
+
+  changeTheme(value) {
+    this.darkTheme = value;
+  }
 }

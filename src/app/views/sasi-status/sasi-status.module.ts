@@ -8,10 +8,10 @@ import { SasiStatusComponent } from 'sasi/views/sasi-status/sasi-status.componen
 import { BannerComponent } from 'sasi/views/sasi-status/banner/banner.component';
 import { DataReportComponent } from 'sasi/views/sasi-status/data-report/data-report.component';
 import { DataStatusComponent } from 'sasi/views/sasi-status/data-status/data-status.component';
-// import { FlexLayoutModule } from '@angular/flex-layout';
-import { SasiStatusService } from 'sasi/views/sasi-status/sasi-status.service';
+import { PurgatoryParadiseComponent } from './data-status/purgatory-paradise/purgatory-paradise.component';
 
 /* Services */
+import { SasiStatusService } from 'sasi/views/sasi-status/sasi-status.service';
 
 @NgModule({
   declarations: [
@@ -19,6 +19,7 @@ import { SasiStatusService } from 'sasi/views/sasi-status/sasi-status.service';
     BannerComponent,
     DataReportComponent,
     DataStatusComponent,
+    PurgatoryParadiseComponent
     // SasiMatTableComponent
   ],
 

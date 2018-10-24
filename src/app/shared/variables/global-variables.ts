@@ -101,30 +101,30 @@ export const sasiStatusWorldColumns = [
     propName: 'paradiseObj',
     label: 'Objects'
   },
-  {
-    propName: 'published_0_Events',
-    label: 'Events'
-  },
-  {
-    propName: 'published_0_Obj',
-    label: 'Objects'
-  },
-  {
-    propName: 'published_1_Events',
-    label: 'Events'
-  },
-  {
-    propName: 'published_1_Obj',
-    label: 'Objects'
-  },
-  {
-    propName: 'published_2_Events',
-    label: 'Events'
-  },
-  {
-    propName: 'published_2_Obj',
-    label: 'Objects'
-  }
+  // {
+  //   propName: 'published_0_Events',
+  //   label: 'Events'
+  // },
+  // {
+  //   propName: 'published_0_Obj',
+  //   label: 'Objects'
+  // },
+  // {
+  //   propName: 'published_1_Events',
+  //   label: 'Events'
+  // },
+  // {
+  //   propName: 'published_1_Obj',
+  //   label: 'Objects'
+  // },
+  // {
+  //   propName: 'published_2_Events',
+  //   label: 'Events'
+  // },
+  // {
+  //   propName: 'published_2_Obj',
+  //   label: 'Objects'
+  // }
 ];
 
 export const worldSummaryColumns = [
@@ -136,4 +136,122 @@ export const worldSummaryColumns = [
     propName: 'count',
     label: 'Total'
   },
+];
+
+export const purgatoryTimeColumns = [
+  {
+    propName: 'propertyName',
+    label: 'World'
+  },
+  {
+    propName: 'purgatoryTime',
+    label: 'Purgatory'
+  },
+  {
+    propName: 'qSize',
+    label: 'Validation',
+    type: 'html'
+  },
+  {
+    propName: 'paradiseTime',
+    label: 'Paradise'
+  }
+];
+
+export const paradiseTimeColumns = [
+  {
+    propName: 'propertyName',
+    label: 'World'
+  },
+  {
+    propName: 'purgatoryTime',
+    label: 'Purgatory'
+  },
+  {
+    propName: 'qSize',
+    label: 'Validation',
+    type: 'html'
+  },
+  {
+    propName: 'paradiseTime',
+    label: 'Paradise'
+  }
+];
+
+export const purgatoryWorldColumns = [
+  {
+    propName: 'propertyName',
+    label: ''
+  },
+  {
+    propName: 'purgatoryEvents',
+    label: 'Events'
+  },
+  {
+    propName: 'purgatoryObj',
+    label: 'Objects'
+  },
+  {
+    propName: 'validationIEPM',
+    label: 'IEPM'
+  },
+  {
+    propName: 'validationExcl',
+    label: 'Excl.'
+  },
+  {
+    propName: 'validationFixed',
+    label: 'Fixed'
+  },
+  {
+    propName: 'validationOEPM',
+    label: 'OEPM'
+  },
+  {
+    propName: 'paradiseEvents',
+    label: 'Events'
+  },
+  {
+    propName: 'paradiseObj',
+    label: 'Objects'
+  }
+];
+
+export const paradiseWorldColumns = [
+  {
+    propName: 'propertyName',
+    label: ''
+  },
+  {
+    propName: 'purgatoryEvents',
+    label: 'Events'
+  },
+  {
+    propName: 'purgatoryObj',
+    label: 'Objects'
+  },
+  {
+    propName: 'validationIEPM',
+    label: 'IEPM'
+  },
+  {
+    propName: 'validationExcl',
+    label: 'Excl.'
+  },
+  {
+    propName: 'validationFixed',
+    label: 'Fixed'
+  },
+  {
+    propName: 'validationOEPM',
+    label: 'OEPM'
+  },
+  {
+    propName: 'paradiseEvents',
+    label: 'Events'
+  },
+  {
+    propName: 'paradiseObj',
+    label: 'Objects'
+  }
 ];
