@@ -42,7 +42,7 @@ export class SasiStatusService {
 
   getSasiStatusAgentList(): Observable<any[]> {
     // @TODO: uncomment when actual endpoint is available
-    const url = 'https://api.myjson.com/bins/1ezxb8';
+    const url = 'https://api.myjson.com/bins/1bq978';
     return this.http.get(url).pipe(
       tap((data: any) => {
         console.log('getSasiStatusAgentList: ', data);
