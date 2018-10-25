@@ -13,6 +13,12 @@ export class DataReportComponent implements OnInit {
 
   @Input() dataAgentList: DataAgent[] = [];
 
+
+  get loadingAgentsCount() {
+    return this.dataAgentList.filter((agent) => agent.status === 'LOADING').length;
+  }
+
+
   constructor() { }
 
   ngOnInit() {

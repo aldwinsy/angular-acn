@@ -12,6 +12,7 @@ import { PurgatoryParadiseComponent } from './data-status/purgatory-paradise/pur
 
 /* Services */
 import { SasiStatusService } from 'sasi/views/sasi-status/sasi-status.service';
+import { PublishedComponent } from './data-status/published/published.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { SasiStatusService } from 'sasi/views/sasi-status/sasi-status.service';
     BannerComponent,
     DataReportComponent,
     DataStatusComponent,
-    PurgatoryParadiseComponent
+    PurgatoryParadiseComponent,
+    PublishedComponent
     // SasiMatTableComponent
   ],
 

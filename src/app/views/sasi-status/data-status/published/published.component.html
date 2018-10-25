@@ -1,0 +1,28 @@
+<div fxLayout="column" fxLayoutAlign="center stretch" class="default-panel purgatory-panel">
+  <div fxFlex="7">
+      <div id="purgatory-header" class="purgatory-header">
+        <span id="span-nav" [routerLink]="sasiStatusLink">Data Status</span>
+        <span> > </span>
+        <span>Published</span>
+      </div>
+  </div>
+  <div fxFlex class="purgatory-body div-scroll-body">
+    <div *ngIf="!!statusTime.length && !!worldObjects.length; else noRecords">
+
+      <app-sasi-mat-table id="status-time-table"
+        [columnObjects]="publishedTimeColumns"
+        [isSortDisabled]="true"
+        [data]="statusTime">
+      </app-sasi-mat-table>
+      <app-sasi-mat-table id="status-world-table"
+        [columnObjects]="publishedWorldColumns"
+        [isSortDisabled]="true"
+        [data]="worldObjects">
+      </app-sasi-mat-table>
+    </div>
+    <ng-template #noRecords>
+      <!-- NO RESULT -->
+      <app-no-records-found></app-no-records-found>
+    </ng-template>
+  </div>
+</div>
