@@ -9,6 +9,10 @@ table {
 
 .mat-column-propertyName {
   width: 10vw;
+  font-weight: bold;
+  &.mat-header-cell {
+    font-weight: normal;
+  }
 }
 
 .mat-column-purgatoryTime {

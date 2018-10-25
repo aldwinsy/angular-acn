@@ -26,7 +26,7 @@
 }
 
 .agent-card {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 .agent-card:hover {
   background: #f4f5f7;
@@ -41,6 +41,10 @@
   color: #424242;
 }
 
+#span-agent-total {
+  float: right;
+}
+
 .thin-font-shadow {
   text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
 }
@@ -49,6 +53,7 @@
 mat-card {
   height: 36%;
   padding: 0px;
+  min-height: 10vh;
   mat-card-header {
     padding: 33px 24px 0 24px;
   }

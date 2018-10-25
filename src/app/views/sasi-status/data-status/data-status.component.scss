@@ -1,18 +1,3 @@
-:host ::ng-deep {
-  span.span-width-3v {
-    display: inline-block;
-    width: 2.9vw;
-  }
-
-  tr {
-    height: 19px !important;
-  }
-  
-  .mat-cell {
-    font-size: x-small;
-  }
-}
-
 .default-panel {
   // border-radius: 10px;
   // border-color:#C4C4C4;
@@ -48,7 +33,7 @@
 }
 
 .paradise-header-image {
-  background-image: url('https://i.pinimg.com/originals/a6/31/a4/a631a41b301d90ad8eba89937ed1d5da.jpg');
+  background-image: url('https://www.artranked.com/images/f5/f504b573c8da602a2b4e31370e34656e.jpeg');
   background-size: cover;
 }
 
@@ -57,27 +42,31 @@
   background-size: cover;
 }
 
+.published-header-image {
+  background-image: url('https://www.geoguessr.com/images/fa5e7ffbe2ef226c4f8e6eaa38cf4aba.jpg');
+  background-size: cover;
+}
+
 .mat-card-avatar {
-  height: 19vh;
-  width: 19vh;
+  height: 6vw;
+  width: 6vw;
 }
 
 .mat-card-title {
-  font-size: 4vh;
+  font-size: 2vw;
 }
 
 .clock-icon {
-  font-size: 7vh;
+  font-size: 7vw;
 }
 
 .time-value {
-  font-size: 3vh;
+  font-size: 3vw;
 }
 
 .span-base-time {
-  // margin-top: -8px;
-  padding-bottom: 20px;
-  color: gray;
+  padding-top: 10px;
+  color: darkgray;
 }
 
 .mat-divider {
@@ -95,11 +84,20 @@
 
 mat-card {
   padding: 0px;
-  max-width: 350px !important;
+  min-height: 23vh;
 }
 
 mat-card-title {
   margin-bottom: 0px;
+}
+
+#card-header {
+  padding: 0 24px 0 24px;
+  background-color: aliceblue;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: rgba(0, 0, 0, 0.12);
+  background-color: aliceblue;
 }
 
 #card-footer {
@@ -112,10 +110,18 @@ mat-card-title {
 }
 
 .span-count {
-  padding-top: 5px;
+  padding-top: 7px;
 }
 
-#previous-world-card {
-  opacity: 0.5;
-  pointer-events: none;
+.div-card-time {
+  font-size: 1.2vw;
+  padding: 15px;
+}
+
+.span-padding-10px {
+  padding-left: 10px;
+}
+
+mat-icon.card-time-icon.mat-icon.material-icons.mat-icon-inline {
+  font-size: 3.35vw;
 }

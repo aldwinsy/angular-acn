@@ -1,19 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-import { purgatoryParadiseWorldColumns, purgatoryParadiseTimeColumns } from 'sasi/shared/variables/global-variables';
 import { SasiStatusService } from 'sasi/views/sasi-status/sasi-status.service';
+import { publishedTimeColumns, publishedWorldColumns } from 'sasi/shared/variables/global-variables';
 
 @Component({
-  selector: 'app-purgatory',
-  templateUrl: './purgatory-paradise.component.html',
+  selector: 'app-published',
+  templateUrl: './published.component.html',
   styleUrls: [
-    './purgatory-paradise.component.scss',
+    './published.component.scss',
     '../../../../shared/styles/box-styles.scss'
   ]
 })
-export class PurgatoryParadiseComponent implements OnInit {
+export class PublishedComponent implements OnInit {
 
-  sasiStatusTimeColumns = purgatoryParadiseTimeColumns;
-  sasiStatusWorldColumns = purgatoryParadiseWorldColumns;
+  publishedTimeColumns = publishedTimeColumns;
+  publishedWorldColumns = publishedWorldColumns;
 
   readonly sasiStatusLink = '/sasi-status';
 
@@ -30,5 +30,4 @@ export class PurgatoryParadiseComponent implements OnInit {
     this.sasiStatusService.getSasiStatusWorldObjects()
       .subscribe(data => this.worldObjects = data);
   }
-
 }
