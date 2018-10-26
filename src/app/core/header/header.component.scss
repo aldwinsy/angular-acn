@@ -1,5 +1,5 @@
 .header-mat-toolbar {
-  background: transparent;
+  background: #2b5ea2;;
   height: 10.1vh;
   @extend .thin-box-shadow;
 }
@@ -7,7 +7,7 @@
 .user-img {
   height: 50px;
   width: 50px;
-  border-color: #525156;
+  border-color: #fff;
   border-style: solid;
   border-radius: 28px;
   margin-top: 1vh;
@@ -21,7 +21,7 @@
 
 .nav-icon {
   padding: 0 14px;
-  color: #525156;
+  color: #fff;
 }
 
 .nav-spacer {
