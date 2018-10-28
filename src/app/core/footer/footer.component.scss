@@ -1,7 +1,12 @@
 .footer-mat-toolbar {
   background: #2b5ea2;
   height: 100%;
-  @extend .thin-top-shadow;
+  // @extend .thin-top-shadow;
+}
+
+.footer-container {
+  background: #2b5ea2;
+  height: 100%;
 }
 
 span {
