@@ -1,3 +1,33 @@
-<p>
-  login works!
-</p>
+<div class="login-container" fxFlexFill fxLayout="column" fxLayoutAlign="center center">
+  <div fxFlex="13">
+      <div fxFlexFill fxFlexLayout="column" fxLayoutAlign="center center">
+        <span fxFlex >Are you a robot?</span>
+      </div>
+  </div>
+  <div fxFlex="20" fxFlexFill fxFlexLayout fxLayoutGap="3vw" fxLayoutAlign="space-evenly stretch">
+    <div fxFlex="40"></div>
+    <div fxFlex="8"
+      cdkDropList
+      [cdkDropListData]="toBeConfirmedList"
+      (cdkDropListDropped)="drop($event)"
+      [cdkDropListConnectedTo]="otherList"
+      #firstList="cdkDropList" class="drag-container">
+      <div cdkDrag class="item" *ngFor="let item of toBeConfirmedList">
+          <mat-icon class="icon-to-drag">{{item}}</mat-icon>
+      </div>
+    </div>
+    <div  fxFlex="8"
+      cdkDropList
+      [cdkDropListData]="confirmedList"
+      (cdkDropListDropped)="drop($event)"
+      [cdkDropListConnectedTo]="firstList"
+      #otherList="cdkDropList" [ngClass]="{ 'user-accepts' : !!confirmedList.length }" class="drag-container">
+      <div cdkDrag class="item" *ngFor="let item of confirmedList" >
+          <mat-icon style="font-size: 15vh; color: green">{{item}}</mat-icon>
+      </div>
+    </div>
+    <div fxFlex="44"></div>
+  </div>
+  <span class="drag-instruction-text" fxFlex="25">Drag the icon from left to right.</span>
+  <button mat-flat-button class="proceed-to-login-button" color="primary" *ngIf="!!confirmedList.length">Proceed to login</button>
+</div>
