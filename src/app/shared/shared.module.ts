@@ -1,6 +1,7 @@
 import { MaterialsModule } from './materials/materials.module';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 import { SasiMatTableComponent } from 'sasi/shared/components/sasi-mat-table/sasi-mat-table.component';
 
@@ -23,7 +24,9 @@ import { NoRecordsFoundComponent } from './components/no-records-found/no-record
   ],
 
   imports: [
-    MaterialsModule
+    MaterialsModule,
+    DragDropModule,
+    FlexLayoutModule
   ],
 
   exports: [
@@ -32,7 +35,8 @@ import { NoRecordsFoundComponent } from './components/no-records-found/no-record
     MaterialsModule,
     SasiMatTableComponent,
     NoRecordsFoundComponent,
-    FlexLayoutModule
+    FlexLayoutModule,
+    DragDropModule
   ]
 })
 export class SharedModule { }
