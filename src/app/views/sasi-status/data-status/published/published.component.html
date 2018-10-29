@@ -22,7 +22,7 @@
     </div>
     <ng-template #noRecords>
       <!-- NO RESULT -->
-      <app-no-records-found></app-no-records-found>
+      <app-no-records-found *ngIf="!isDataLoading"></app-no-records-found>
     </ng-template>
   </div>
 </div>
