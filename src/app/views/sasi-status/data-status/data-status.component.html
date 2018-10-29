@@ -5,9 +5,8 @@
       </div>
     </div>
     <div fxFlex class="status-panel-body div-scroll-body">
-      <!-- <div style="height: 100%!important;" *ngIf="!!statusTime.length && !!worldObjects.length; else noRecords"> -->
-      <div style="height: 100%!important;" fxLayout fxLayoutAlign="space-between stretch" fxLayoutGap="25px" fxLayout.xs="column">
-        <mat-card fxFlex="30" fxLayout="column" class="data-status-card">
+      <div class="div-card-body" fxLayout fxLayoutAlign="space-between stretch" fxLayoutGap="25px" fxLayout.xs="column">
+        <mat-card id="purgatory-card" fxFlex="30" fxLayout="column" class="data-status-card">
           <mat-card-header id="card-header" fxFlex="40" fxLayoutAlign="space-around center">
             <div mat-card-avatar class="purgatory-header-image"></div>
             <div fxLayout="column">
@@ -28,17 +27,17 @@
           <mat-card-content fxFlex="20" fxLayout fxLayoutAlign="center">
             <div fxFlex fxLayout fxLayoutAlign="center">
               <div fxFlex="49" fxLayout="column" fxLayoutAlign="center">
-                <span fxFlexAlign="center" style="font-size: 2vw;color: #3573c5;">23,234</span>
-                <span class="span-count" fxFlexAlign="center" style="color: #2b5ea2">Count</span>
+                <span class="span-count"fxFlexAlign="center">23,234</span>
+                <span class="span-label" fxFlexAlign="center">Count</span>
               </div>
               <mat-divider fxFlex="1" [vertical]="true"></mat-divider>
               <div fxFlex="49" fxLayout="column" fxLayoutAlign="center">
-                <span fxFlexAlign="center" style="font-size: 2vw;color: #3573c5;">510</span>
-                <span class="span-count" fxFlexAlign="center" style="color: #2b5ea2">Δ</span>
+                <span  class="span-count" fxFlexAlign="center">510</span>
+                <span class="span-label" fxFlexAlign="center">Δ</span>
               </div>
             </div>
           </mat-card-content>
-          <button id="card-footer"
+          <button id="purgatory-footer-button" class="card-footer"
             fxFlex="10"
             fxFlexAlign="center"
             fxFlexFill
@@ -47,7 +46,7 @@
             [routerLink]="purgatoryParadiseLink">See Details</button>
         </mat-card>
 
-        <mat-card fxFlex="30" fxLayout="column" class="data-status-card">
+        <mat-card id="paradise-card" fxFlex="30" fxLayout="column" class="data-status-card">
           <mat-card-header id="card-header" fxFlex="40" fxLayoutAlign="space-around center">
             <div mat-card-avatar class="paradise-header-image"></div>
             <div fxLayout="column">
@@ -67,16 +66,16 @@
           </div>
           <mat-card-content fxFlex="20" fxLayout fxLayoutAlign="center">
             <div fxFlex="49" fxLayout="column" fxLayoutAlign="center">
-              <span fxFlexAlign="center" style="font-size: 2vw;color: #3573c5;">12,584</span>
-              <span class="span-count" style="padding-top: 10px" fxFlexAlign="center" style="color: #2b5ea2">Count</span>
+              <span  class="span-count" fxFlexAlign="center">12,584</span>
+              <span class="span-label" fxFlexAlign="center">Count</span>
             </div>
             <mat-divider fxFlex="1" [vertical]="true"></mat-divider>
             <div fxFlex="49" fxLayout="column" fxLayoutAlign="center">
-              <span fxFlexAlign="center" style="font-size: 2vw;color: #3573c5;">330</span>
-              <span class="span-count" fxFlexAlign="center" style="color: #2b5ea2">Δ</span>
+              <span  class="span-count" fxFlexAlign="center">330</span>
+              <span class="span-label" fxFlexAlign="center">Δ</span>
             </div>
           </mat-card-content>
-          <button id="card-footer"
+          <button id="paradise-footer-button" class="card-footer"
             fxFlex="10"
             fxFlexAlign="center"
             fxFlexFill
@@ -106,16 +105,16 @@
 
           <mat-card-content fxFlex="20" fxLayout fxLayoutAlign="center">
             <div fxFlex="49" fxLayout="column" fxLayoutAlign="center">
-              <span fxFlexAlign="center" style="font-size: 2vw;color: #3573c5;">13,234</span>
-              <span class="span-count" style="padding-top: 10px" fxFlexAlign="center" style="color: #2b5ea2">Count</span>
+              <span class="span-count" fxFlexAlign="center">13,234</span>
+              <span class="span-label" fxFlexAlign="center">Count</span>
             </div>
             <mat-divider fxFlex="1" [vertical]="true"></mat-divider>
             <div fxFlex="49" fxLayout="column" fxLayoutAlign="center">
-              <span fxFlexAlign="center" style="font-size: 2vw;color: #3573c5;">345</span>
-              <span class="span-count" fxFlexAlign="center" style="color: #2b5ea2">Δ</span>
+              <span class="span-count" fxFlexAlign="center">345</span>
+              <span class="span-label" fxFlexAlign="center">Δ</span>
             </div>
           </mat-card-content>
-          <button id="card-footer"
+          <button id="published-footer-button" class="card-footer"
             fxFlex="10"
             fxFlexAlign="center"
             fxFlexFill
@@ -123,15 +122,6 @@
             color="primary"
             [routerLink]="publishedLink">See Details</button>
         </mat-card>
-      </div>
-
-      <ng-template #noRecords>
-        <!-- NO RESULT -->
-        <app-no-records-found></app-no-records-found>
-      </ng-template>
-      
+      </div>     
     </div>
-    <!-- <div fxFlex fxLayoutAlign="center center" class="data-status-footer">
-      <div>Panel Footer</div>
-    </div> -->
  </div>
