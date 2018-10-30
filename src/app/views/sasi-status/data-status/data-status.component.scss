@@ -3,7 +3,7 @@
   // border-color:#C4C4C4;
 }
 
-.data-status-panel {
+.data-status-panel, .div-card-body {
   height: 100%;
   // background: #C4C4C4;
   // @extend .thin-box-shadow;
@@ -100,17 +100,23 @@ mat-card-title {
   background-color: aliceblue;
 }
 
-#card-footer {
+.card-footer {
   font-size: 1vw;
   border-radius: 0px;
 }
 
-#card-footer:hover {
+.card-footer:hover {
   background-color: #4aa0e4;
 }
 
 .span-count {
+  font-size: 2vw;
+  color: #3573c5;
+}
+
+.span-label {
   padding-top: 7px;
+  color: #2b5ea2;
 }
 
 .div-card-time {

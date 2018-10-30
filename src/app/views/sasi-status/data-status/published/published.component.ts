@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SasiStatusService } from 'sasi/views/sasi-status/sasi-status.service';
 import { publishedTimeColumns, publishedWorldColumns } from 'sasi/shared/variables/global-variables';
+import { combineLatest } from 'rxjs';
 
 @Component({
   selector: 'app-published',
@@ -19,15 +20,19 @@ export class PublishedComponent implements OnInit {
 
   statusTime = [];
   worldObjects = [];
-  dataAgentList = [];
+  isDataLoading = false;
 
   constructor(private sasiStatusService: SasiStatusService) { }
 
   ngOnInit() {
-    this.sasiStatusService.getSasiStatusTime()
-      .subscribe(data => this.statusTime = data);
-
-    this.sasiStatusService.getSasiStatusWorldObjects()
-      .subscribe(data => this.worldObjects = data);
+    this.isDataLoading = true;
+    combineLatest(
+      this.sasiStatusService.getSasiStatusTime(),
+      this.sasiStatusService.getSasiStatusWorldObjects()
+    ).subscribe(data => {
+      this.statusTime = data[0];
+      this.worldObjects = data[1];
+      this.isDataLoading = false;
+    });
   }
 }

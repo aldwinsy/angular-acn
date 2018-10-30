@@ -35,8 +35,7 @@ describe('NavigationComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  // @TODO: empty path redirecting to SasiStatusComponent but not updating url
-  xit('should navigate', () => {
+  it('should navigate', () => {
     router.navigate(['/'])
     .then(() => {
       expect(router.url).toEqual('/sasi-status');
