@@ -1,10 +1,7 @@
-<div class="footer-container" fxFlexLayout fxLayoutAlign="start center">
-  <div fxFlex="40"></div>
-  <div fxFlex="20">
-      <mat-toolbar class="footer-mat-toolbar" color="primary">
-          <div fxLayout="column" fxLayoutAlign="space-evenly center">
-            <div class="footer-upper-section" fxFlex="96">
-              <!-- inner flex -->
+<!-- <div class="footer-container" fxFlexLayout="column" fxLayoutAlign="center">
+  <div fxFlex>
+      <mat-toolbar class="footer-mat-toolbar" color="primary" fxLayout="column" fxLayoutAlign="space-evenly center">
+            <div class="footer-upper-section" fxFlex>
               <div fxLayout="row" fxLayoutAlign="space-around start" fxLayoutGap="6vw">
                 <div fxFlex="20"> </div>
                 <div fxFlex="10">
@@ -27,13 +24,40 @@
                     <mat-icon></mat-icon>
                 </div>
               </div>
-              <!-- /inner flex -->
             </div>
-            <div class="footer-lower-section" fxFlex fxLayoutAlign="center">
-              <!-- <span>© 2018 GENERAL ELECTRIC</span> -->
-            </div>
-          </div>
       </mat-toolbar>
+
   </div>
-  <div fxFlex="40"></div>
+  <div class="footer-lower-section" fxFlex="10">
+    <span>© 2018 GENERAL ELECTRIC</span>
+  </div>
+</div> -->
+
+<div fxFlexFill class="footer-container" fxLayout="column">
+<mat-toolbar fxFlex="85" color="primary"> 
+    <mat-toolbar-row fxLayout="row" fxLayoutAlign="center">
+      <div fxFlex="13"></div>
+      <div fxFlex="7">
+        <img class="ge-logo-img" src="http://www.stickpng.com/assets/images/5847f7ffcef1014c0b5e48a6.png">
+      </div>
+      <div fxFlex="35" fxLayout="column">
+        <span>INTEGRITY AT GE</span>
+        <span>COOKIES</span>
+        <span>TERMS</span>
+        <span>PRIVACY</span>
+      </div>
+      <div fxFlex="30" fxLayout="column">
+          <span>SITE MAP</span>
+          <span>INVESTOR CONTACTS</span>
+          <span>CONTACT US</span>
+      </div>
+      <div fxFlex="5"></div>
+      <div fxFlex="10">
+          <mat-icon svgIcon="facebook"></mat-icon>
+          <mat-icon svgIcon="twitter"></mat-icon>
+          <mat-icon svgIcon="tumblr"></mat-icon>
+      </div>
+    </mat-toolbar-row>
+</mat-toolbar>
+<div fxFlex="5" fxFlexAlign="center" class="footer-lower-section">© 2018 GENERAL ELECTRIC</div>
 </div>
