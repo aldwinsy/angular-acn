@@ -30,9 +30,10 @@
   box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1)
 }
 
-mat-toolbar {
-  padding-top: 20px;
-  font-size: 15px;
+.footer-mat-toolbar {
+  padding-top: 10px;
+  font-size: 12px;
+  background: #2b5ea2;
 }
 
 mat-icon {
