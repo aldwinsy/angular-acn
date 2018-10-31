@@ -15,6 +15,7 @@ export class SasiMatTableComponent implements OnInit, AfterViewInit {
   @Input() public hasSelectAll: any = true;
   @Input() public sortedColumn: string; // set initially sorted column
   @Input() public isSortDisabled = false;
+  @Input() public stickyHeader = true;
 
   @Output() private selectionEvent: any = new EventEmitter<any>();
   @Output() private sortChange: any = new EventEmitter<any>();

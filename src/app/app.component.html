@@ -1,7 +1,7 @@
-<div class="main" fxFlexFill fxLayout="column" fxLayoutAlign="stretch">
+<div class="main" fxFlexFill fxLayout="column" fxLayoutAlign="space-between">
   <app-header fxFlex="10" (changeTheme)="changeTheme($event)"></app-header>
-  <div fxFlex="75" class="sasi-core-body" [ngClass]="{'sasi-dark-theme': darkTheme}">
+  <div fxFlex class="sasi-core-body" [ngClass]="{'sasi-dark-theme': darkTheme}">
     <router-outlet></router-outlet>
   </div>
-  <app-footer fxFlex></app-footer>
+  <app-footer fxFlex="30"></app-footer>
 </div>

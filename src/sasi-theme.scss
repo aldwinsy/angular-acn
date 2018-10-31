@@ -1,10 +1,14 @@
 @import '~@angular/material/theming';
 // Plus imports for other components in your app.
 
+$custom-typography: mat-typography-config(
+    $font-family: 'GE Inspira sans, sans-serif;'
+);
+
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
 // **Be sure that you only ever include this mixin once!**
-@include mat-core();
+@include mat-core($custom-typography);
 
 // Define the default theme (same as the example above).
 $sasi-app-primary: mat-palette($mat-blue);
@@ -25,4 +29,8 @@ $dark-theme:   mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
 // `.sasi-dark-theme` will be affected by this alternate dark theme instead of the default theme.
 .sasi-dark-theme {
   @include angular-material-theme($dark-theme);
+  .div-header {
+    color: white;
+  }
+  
 }

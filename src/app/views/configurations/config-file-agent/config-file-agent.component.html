@@ -1,90 +1,117 @@
-<div class="container"
-  fxLayout="row"
-  fxLayoutGap="1.5rem"
+<div fxLayout="row"
+  fxLayoutGap="3rem"
   fxLayout.xs="column"
   fxLayoutAlign="center"
   fxLayoutGap.xs="1rem">
-  <div fxFlex>
-    <div fxLayout="column" fxLayoutAlign="center stretch" class="default-panel file-agent-panel">
-      <div fxFlex="4" class="file-agent-header">
-        <span>Processing Parameters</span>
-      </div>
-      <div fxFlex class="file-agent-body div-scroll-body">
-        <div fxLayout="column" fxLayoutGap="20px" fxLayoutAlign="center stretch" fxLayoutGap.xs="5px">
-          <div fxFlex>
-            <div fxLayout="row" fxLayoutGap="20px" fxLayout.xs="column" fxLayoutGap.xs="10px">
-              <div fxFlex="30" fxFlexAlign="center">SASI Host</div>
-              <div fxFlex>
-                <mat-form-field>
-                  <input matInput placeholder="Host" autocomplete="off" required>
-                  <mat-error>Valid host is required</mat-error>
-                </mat-form-field>
-              </div>
-            </div>
-            <div fxLayout="row" fxLayoutGap="20px" fxLayout.xs="column" fxLayoutGap.xs="10px">
-              <div fxFlex="30" fxFlexAlign="center">Agent Name</div>
-              <div fxFlex>
-                <mat-form-field>
-                  <input matInput placeholder="Name" autocomplete="off" required>
-                  <mat-error>Valid name is required</mat-error>
-                </mat-form-field>
-              </div>
-            </div>
-            <div fxLayout="row" fxLayoutGap="20px" fxLayout.xs="column" fxLayoutGap.xs="10px">
-              <div fxFlex="30" fxFlexAlign="center">World/Reference File</div>
-              <div fxFlex>
-                <mat-form-field>
-                  <input matInput placeholder="File" autocomplete="off" required>
-                  <mat-error>Valid file is required</mat-error>
-                </mat-form-field>
-              </div>
-            </div>
-            <div fxLayout="row" fxLayoutGap="20px" fxLayout.xs="column" fxLayoutGap.xs="10px">
-              <div fxFlex="30" fxFlexAlign="center">Event Source Directiory</div>
-              <div fxFlex>
-                <mat-form-field>
-                  <input matInput placeholder="Source" autocomplete="off" required>
-                  <mat-error>Valid source is required</mat-error>
-                </mat-form-field>
-              </div>
-            </div>
+  <div fxFlex="50" fxLayout="column" fxLayoutGap="1vw" fxLayoutAlign="start">
+    <div fxFlex="5" class="div-header">
+      <span>Data Server Administration</span>
+    </div>
+    <mat-card fxFlex class="box-shadow">
+      <mat-card-header>
+        <mat-card-title>SASI Configuration Properties</mat-card-title>
+      </mat-card-header>
+      <mat-card-content fxLayout="column" fxLayoutAlign="center">
+        <div fxLayout="row" fxLayoutGap="20px" fxLayoutGap.xs="10px">
+          <div fxFlex="40">
+            <mat-form-field>
+              <mat-select placeholder="Property">
+                <mat-option value="fileSourcePath">
+                  File Source Path
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
           </div>
-          <mat-divider></mat-divider>
           <div fxFlex>
-            <span>Note</span>
-            <ul>
-              <li>The directory must be in the same machine where the agent is running.</li>
-              <li>The agent name must be in the list of Data Agents found in the SASI Admin Page</li>
-              <li>The agent 'Can Initiate Restart' must be set to Yes in the SASI Admin page if the World/Reference file has value</li>
-            </ul>
+            <mat-form-field>
+              <input matInput placeholder="Value" autocomplete="off" required>
+            </mat-form-field>
           </div>
         </div>
-      </div>
-      <div fxFlex="5" fxFlexAlign="end" fxLayoutGap="20px" class="div-file-agent-footer">
-        <button mat-raised-button color="warn">Stop</button>
-        <button mat-raised-button color="primary">Start</button>
-      </div>
-    </div>      
+        <div fxLayout="row" fxLayoutGap="20px" fxLayoutGap.xs="10px">
+          <div fxFlex="40" fxFlexAlign="center">
+            Base Date/time
+          </div>
+          <div fxFlex>
+            <mat-form-field>
+              <input matInput placeholder="yyyy-MM-dd HH:mm" autocomplete="off" required>
+            </mat-form-field>
+          </div>
+        </div>
+        <div fxLayout="row" fxLayoutGap="20px" fxLayoutGap.xs="10px">
+          <div fxFlex="40" fxFlexAlign="center">
+            Time Mode
+          </div>
+          <div fxFlex>
+              <mat-form-field>
+                <mat-select placeholder="Property">
+                  <mat-option value="static">
+                    Static
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+    <mat-card fxFlex class="box-shadow">
+      <mat-card-header>
+        <mat-card-title>Data Window Settings</mat-card-title>
+      </mat-card-header>
+      <mat-card-content fxLayout="column">
+        <div fxLayout="row" fxLayoutGap="20px" fxLayoutGap.xs="10px">
+          <div fxFlex="40" fxFlexAlign="center">
+            Days Backward
+          </div>
+          <div fxFlex>
+            <mat-form-field>
+              <input matInput autocomplete="off" required>
+            </mat-form-field>
+          </div>
+        </div>
+        <div fxLayout="row" fxLayoutGap="20px" fxLayoutGap.xs="10px">
+          <div fxFlex="40" fxFlexAlign="center">
+            Days Forward
+          </div>
+          <div fxFlex>
+            <mat-form-field>
+              <input matInput autocomplete="off" required>
+            </mat-form-field>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+    <div fxFlex="5" fxFlexAlign="end" fxLayoutGap="20px" class="div-file-agent-footer">
+      <button mat-raised-button color="warn">Stop</button>
+      <button mat-raised-button color="primary">Start</button>
+    </div>
   </div>
-  <div fxFlex>
-    <div fxLayout="column" fxLayoutAlign="center stretch" class="default-panel file-agent-panel">
-      <div fxFlex="4" class="file-agent-header">
-        <span>Processing Information</span>
-      </div>
-      <div fxFlex class="file-agent-body div-scroll-body">
+
+  <mat-divider vertical="true"></mat-divider>
+
+  <div fxFlex="50" fxLayout="column" fxLayoutGap="1vw" fxLayoutGap.xs="1vw">
+    <div fxFlex="4" class="div-header">
+      <span>Processing Information</span>
+    </div>
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>
+          Data Agent Status
+        </mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
         <mat-list>
-          <h3 mat-subheader>Data Agent Status</h3>
           <mat-list-item *ngFor="let agent of agentStatus">
             <mat-icon mat-list-icon>warning</mat-icon>
             <h4 mat-line>{{agent.name}}</h4>
             <p mat-line> {{agent.status}} </p>
           </mat-list-item>
         </mat-list>
-      </div>
-      <div fxFlex="5" fxFlexAlign="end" fxLayoutGap="20px" class="div-file-agent-footer">
-        <button mat-raised-button color="accent">Restart Agent</button>
-        <button mat-raised-button color="primary">Process Files</button>
-      </div>
-    </div>      
+      </mat-card-content>
+    </mat-card>
+    <div fxFlex="5" fxFlexAlign="end" fxLayoutGap="20px" class="div-file-agent-footer">
+      <button mat-raised-button color="accent">Restart Agent</button>
+      <button mat-raised-button color="primary">Process Files</button>
+    </div>
   </div>
 </div>
