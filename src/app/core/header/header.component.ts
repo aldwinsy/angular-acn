@@ -13,7 +13,6 @@ export class HeaderComponent implements OnInit {
   }
 
   themeToggle(value) {
-    console.log(value);
     this.changeTheme.emit(value);
   }
 

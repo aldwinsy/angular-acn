@@ -1,27 +1,26 @@
 <div fxLayout="column" fxLayoutAlign="center stretch" class="default-panel data-status-panel">
     <div fxFlex="7">
       <div id="data-status-header" class="data-status-header">
-          <span>Data Status</span>
+          <span>{{dataStatusLabel}}</span>
       </div>
     </div>
     <div fxFlex class="status-panel-body div-scroll-body">
-      <!-- <div style="height: 100%!important;" *ngIf="!!statusTime.length && !!worldObjects.length; else noRecords"> -->
-      <div style="height: 100%!important;" fxLayout fxLayoutAlign="space-between stretch" fxLayoutGap="25px" fxLayout.xs="column">
+      <div fxFlexFill fxLayout fxLayoutAlign="space-between stretch" fxLayoutGap="25px" fxLayout.xs="column">
         <mat-card fxFlex="30" fxLayout="column" class="data-status-card">
           <mat-card-header id="card-header" fxFlex="40" fxLayoutAlign="space-around center">
             <div mat-card-avatar class="purgatory-header-image"></div>
             <div fxLayout="column">
-              <mat-card-title>Purgatory</mat-card-title>
+              <mat-card-title>{{sasiStatusCardLabels.purgatory}}</mat-card-title>
               <span class="span-base-time">2015-03-18 11:10Z</span>
             </div>
           </mat-card-header>
           <div class="div-card-time" fxFlex fxLayout="column" fxLayoutAlign="center center">
             <div fxFlex fxFlexAlign="center" fxLayout fxLayoutAlign="space-evenly">
-                <mat-icon class="card-time-icon" fxFlexAlign="center" inline="true">schedule</mat-icon>
+                <mat-icon class="card-time-icon" fxFlexAlign="center" inline="true">{{sasiStatusCardLabels.lastUpdateTimeIcon}}</mat-icon>
                 <span class="span-padding-10px" fxFlexAlign="center">2015-03-18 11:10Z</span>
             </div>
             <div fxFlex fxLayout fxFlexAlign="center" fxLayoutAlign="center center">
-              <mat-icon class="card-time-icon" fxFlexAlign="center" inline="true">flight_takeoff</mat-icon>
+              <mat-icon class="card-time-icon" fxFlexAlign="center" inline="true">{{sasiStatusCardLabels.latestFlightTimeIcon}}</mat-icon>
               <span class="span-padding-10px" fxFlexAlign="center">2018-01-20 22:19Z</span>
             </div>
           </div>
@@ -29,12 +28,12 @@
             <div fxFlex fxLayout fxLayoutAlign="center">
               <div fxFlex="49" fxLayout="column" fxLayoutAlign="center">
                 <span fxFlexAlign="center" style="font-size: 2vw;color: #3573c5;">23,234</span>
-                <span class="span-count" fxFlexAlign="center" style="color: #2b5ea2">Count</span>
+                <span class="span-count" fxFlexAlign="center" style="color: #2b5ea2">{{sasiStatusCardLabels.count}}</span>
               </div>
               <mat-divider fxFlex="1" [vertical]="true"></mat-divider>
               <div fxFlex="49" fxLayout="column" fxLayoutAlign="center">
                 <span fxFlexAlign="center" style="font-size: 2vw;color: #3573c5;">510</span>
-                <span class="span-count" fxFlexAlign="center" style="color: #2b5ea2">Δ</span>
+                <span class="span-count" fxFlexAlign="center" style="color: #2b5ea2">{{sasiStatusCardLabels.changes}}</span>
               </div>
             </div>
           </mat-card-content>
@@ -44,36 +43,36 @@
             fxFlexFill
             mat-flat-button
             color="primary"
-            [routerLink]="purgatoryParadiseLink">See Details</button>
+            [routerLink]="purgatoryParadiseLink">{{sasiStatusCardLabels.detailsButton}}</button>
         </mat-card>
 
         <mat-card fxFlex="30" fxLayout="column" class="data-status-card">
           <mat-card-header id="card-header" fxFlex="40" fxLayoutAlign="space-around center">
             <div mat-card-avatar class="paradise-header-image"></div>
             <div fxLayout="column">
-              <mat-card-title>Paradise</mat-card-title>
+              <mat-card-title>{{sasiStatusCardLabels.paradise}}</mat-card-title>
               <span class="span-base-time">2015-03-18 11:10Z</span>
             </div>
           </mat-card-header>
           <div class="div-card-time" fxFlex fxLayout="column" fxLayoutAlign="space-evenly">
             <div fxFlex fxFlexAlign="center" fxLayout fxfxLayoutAlign="space-evenly">
-                <mat-icon class="card-time-icon" fxFlexAlign="center" inline="true">schedule</mat-icon>
+                <mat-icon class="card-time-icon" fxFlexAlign="center" inline="true">{{sasiStatusCardLabels.lastUpdateTimeIcon}}</mat-icon>
                 <span class="span-padding-10px" fxFlexAlign="center">2015-03-18 11:10Z</span>
             </div>
             <div fxFlex fxLayout fxFlexAlign="center" fxLayoutAlign="center center">
-              <mat-icon class="card-time-icon" fxFlexAlign="center" inline="true">flight_takeoff</mat-icon>
+              <mat-icon class="card-time-icon" fxFlexAlign="center" inline="true">{{sasiStatusCardLabels.latestFlightTimeIcon}}</mat-icon>
               <span class="span-padding-10px" fxFlexAlign="center">2018-01-20 22:19Z</span>
             </div>
           </div>
           <mat-card-content fxFlex="20" fxLayout fxLayoutAlign="center">
             <div fxFlex="49" fxLayout="column" fxLayoutAlign="center">
               <span fxFlexAlign="center" style="font-size: 2vw;color: #3573c5;">12,584</span>
-              <span class="span-count" style="padding-top: 10px" fxFlexAlign="center" style="color: #2b5ea2">Count</span>
+              <span class="span-count" style="padding-top: 10px" fxFlexAlign="center" style="color: #2b5ea2">{{sasiStatusCardLabels.count}}</span>
             </div>
             <mat-divider fxFlex="1" [vertical]="true"></mat-divider>
             <div fxFlex="49" fxLayout="column" fxLayoutAlign="center">
               <span fxFlexAlign="center" style="font-size: 2vw;color: #3573c5;">330</span>
-              <span class="span-count" fxFlexAlign="center" style="color: #2b5ea2">Δ</span>
+              <span class="span-count" fxFlexAlign="center" style="color: #2b5ea2">{{sasiStatusCardLabels.changes}}</span>
             </div>
           </mat-card-content>
           <button id="card-footer"
@@ -82,24 +81,24 @@
             fxFlexFill
             mat-flat-button
             color="primary"
-            [routerLink]="purgatoryParadiseLink">See Details</button>
+            [routerLink]="purgatoryParadiseLink">{{sasiStatusCardLabels.detailsButton}}</button>
         </mat-card>
 
         <mat-card id="published-card" fxFlex="30" fxLayout="column" class="data-status-card">
           <mat-card-header id="card-header" fxFlex="40" fxLayoutAlign="space-around center">
             <div mat-card-avatar class="published-header-image"></div>
             <div fxLayout="column">
-              <mat-card-title>Published</mat-card-title>
+              <mat-card-title>{{sasiStatusCardLabels.published}}</mat-card-title>
               <span class="span-base-time">2015-03-18 11:10Z</span>
             </div>
           </mat-card-header>
           <div class="div-card-time" fxFlex fxLayout="column" fxLayoutAlign="space-evenly">
             <div fxFlex fxFlexAlign="center" fxLayout fxLayoutAlign="space-evenly">
-                <mat-icon class="card-time-icon" fxFlexAlign="center" inline="true">schedule</mat-icon>
+                <mat-icon class="card-time-icon" fxFlexAlign="center" inline="true">{{sasiStatusCardLabels.lastUpdateTimeIcon}}</mat-icon>
                 <span class="span-padding-10px" fxFlexAlign="center">2015-03-18 11:10Z</span>
             </div>
             <div fxFlex fxLayout fxFlexAlign="center" fxLayoutAlign="center center">
-              <mat-icon class="card-time-icon" fxFlexAlign="center" inline="true">flight_takeoff</mat-icon>
+              <mat-icon class="card-time-icon" fxFlexAlign="center" inline="true">{{sasiStatusCardLabels.latestFlightTimeIcon}}</mat-icon>
               <span class="span-padding-10px" fxFlexAlign="center">2018-01-20 22:19Z</span>
             </div>
           </div>
@@ -107,12 +106,12 @@
           <mat-card-content fxFlex="20" fxLayout fxLayoutAlign="center">
             <div fxFlex="49" fxLayout="column" fxLayoutAlign="center">
               <span fxFlexAlign="center" style="font-size: 2vw;color: #3573c5;">13,234</span>
-              <span class="span-count" style="padding-top: 10px" fxFlexAlign="center" style="color: #2b5ea2">Count</span>
+              <span class="span-count" style="padding-top: 10px" fxFlexAlign="center" style="color: #2b5ea2">{{sasiStatusCardLabels.count}}</span>
             </div>
             <mat-divider fxFlex="1" [vertical]="true"></mat-divider>
             <div fxFlex="49" fxLayout="column" fxLayoutAlign="center">
               <span fxFlexAlign="center" style="font-size: 2vw;color: #3573c5;">345</span>
-              <span class="span-count" fxFlexAlign="center" style="color: #2b5ea2">Δ</span>
+              <span class="span-count" fxFlexAlign="center" style="color: #2b5ea2">{{sasiStatusCardLabels.changes}}</span>
             </div>
           </mat-card-content>
           <button id="card-footer"
@@ -121,7 +120,7 @@
             fxFlexFill
             mat-flat-button
             color="primary"
-            [routerLink]="publishedLink">See Details</button>
+            [routerLink]="publishedLink">{{sasiStatusCardLabels.detailsButton}}</button>
         </mat-card>
       </div>
 

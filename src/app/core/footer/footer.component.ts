@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
+import { geLogoImgSrc, geFooter } from 'sasi/shared/variables/global-variables';
 
 @Component({
   selector: 'app-footer',
@@ -8,6 +9,9 @@ import { DomSanitizer } from '@angular/platform-browser';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent {
+
+  readonly geLogoSrc = geLogoImgSrc;
+  readonly geFooter = geFooter;
 
   constructor(
     private matIconRegistry: MatIconRegistry,

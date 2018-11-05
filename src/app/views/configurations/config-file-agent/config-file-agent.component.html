@@ -5,17 +5,17 @@
   fxLayoutGap.xs="1rem">
   <div fxFlex="50" fxLayout="column" fxLayoutGap="1vw" fxLayoutAlign="start">
     <div fxFlex="5" class="div-header">
-      <span>Data Server Administration</span>
+      <span>{{sasiConfigLabels.dataServerAdmin}}</span>
     </div>
     <mat-card fxFlex class="box-shadow">
       <mat-card-header>
-        <mat-card-title>SASI Configuration Properties</mat-card-title>
+        <mat-card-title>{{fileAgentServerAdminLabels.sasiConfigTitle}}</mat-card-title>
       </mat-card-header>
       <mat-card-content fxLayout="column" fxLayoutAlign="center">
         <div fxLayout="row" fxLayoutGap="20px" fxLayoutGap.xs="10px">
           <div fxFlex="40">
             <mat-form-field>
-              <mat-select placeholder="Property">
+              <mat-select [placeholder]="fileAgentServerAdminLabels.propertyDropdownPlaceholder">
                 <mat-option value="fileSourcePath">
                   File Source Path
                 </mat-option>
@@ -24,27 +24,27 @@
           </div>
           <div fxFlex>
             <mat-form-field>
-              <input matInput placeholder="Value" autocomplete="off" required>
+              <input matInput [placeholder]="fileAgentServerAdminLabels.propertyValuePlaceholder" autocomplete="off" required>
             </mat-form-field>
           </div>
         </div>
         <div fxLayout="row" fxLayoutGap="20px" fxLayoutGap.xs="10px">
           <div fxFlex="40" fxFlexAlign="center">
-            Base Date/time
+            {{fileAgentServerAdminLabels.baseDateTime}}
           </div>
           <div fxFlex>
             <mat-form-field>
-              <input matInput placeholder="yyyy-MM-dd HH:mm" autocomplete="off" required>
+              <input matInput [placeholder]="fileAgentServerAdminLabels.baseDateTimePlaceholder" autocomplete="off" required>
             </mat-form-field>
           </div>
         </div>
         <div fxLayout="row" fxLayoutGap="20px" fxLayoutGap.xs="10px">
           <div fxFlex="40" fxFlexAlign="center">
-            Time Mode
+            {{fileAgentServerAdminLabels.timeMode}}
           </div>
           <div fxFlex>
               <mat-form-field>
-                <mat-select placeholder="Property">
+                <mat-select [placeholder]="fileAgentServerAdminLabels.timeModeDropdownPlaceHolder">
                   <mat-option value="static">
                     Static
                   </mat-option>
@@ -56,34 +56,34 @@
     </mat-card>
     <mat-card fxFlex class="box-shadow">
       <mat-card-header>
-        <mat-card-title>Data Window Settings</mat-card-title>
+        <mat-card-title>{{fileAgentServerAdminLabels.dataWindowSettingsTitle}}</mat-card-title>
       </mat-card-header>
       <mat-card-content fxLayout="column">
         <div fxLayout="row" fxLayoutGap="20px" fxLayoutGap.xs="10px">
           <div fxFlex="40" fxFlexAlign="center">
-            Days Backward
+            {{fileAgentServerAdminLabels.daysBackward}}
           </div>
           <div fxFlex>
             <mat-form-field>
-              <input matInput autocomplete="off" required>
+              <input matInput type="number" min="0" autocomplete="off" required>
             </mat-form-field>
           </div>
         </div>
         <div fxLayout="row" fxLayoutGap="20px" fxLayoutGap.xs="10px">
           <div fxFlex="40" fxFlexAlign="center">
-            Days Forward
+            {{fileAgentServerAdminLabels.daysForward}}
           </div>
           <div fxFlex>
             <mat-form-field>
-              <input matInput autocomplete="off" required>
+              <input matInput type="number" min="0" autocomplete="off" required>
             </mat-form-field>
           </div>
         </div>
       </mat-card-content>
     </mat-card>
     <div fxFlex="5" fxFlexAlign="end" fxLayoutGap="20px" class="div-file-agent-footer">
-      <button mat-raised-button color="warn">Stop</button>
-      <button mat-raised-button color="primary">Start</button>
+      <button mat-raised-button color="warn">{{fileAgentServerAdminLabels.stopBtn}}</button>
+      <button mat-raised-button color="primary">{{fileAgentServerAdminLabels.startBtn}}</button>
     </div>
   </div>
 
@@ -91,18 +91,20 @@
 
   <div fxFlex="50" fxLayout="column" fxLayoutGap="1vw" fxLayoutGap.xs="1vw">
     <div fxFlex="4" class="div-header">
-      <span>Processing Information</span>
+      <span>{{sasiConfigLabels.processingInfo}}</span>
     </div>
     <mat-card>
       <mat-card-header>
         <mat-card-title>
-          Data Agent Status
+          {{fileAgentProcessingInfoLabels.title}}
         </mat-card-title>
       </mat-card-header>
       <mat-card-content>
         <mat-list>
           <mat-list-item *ngFor="let agent of agentStatus">
-            <mat-icon mat-list-icon>warning</mat-icon>
+            <mat-icon *ngIf="agent.status === 'STOPPED'" color="warn" mat-list-icon>{{fileAgentProcessingInfoLabels.stoppedStatusIcon}}</mat-icon>
+            <mat-icon *ngIf="agent.status === 'RUNNING'" color="primary" mat-list-icon>{{fileAgentProcessingInfoLabels.runningStatusIcon}}</mat-icon>
+            <mat-icon *ngIf="agent.status === 'IDLE'" color="accent" mat-list-icon>{{fileAgentProcessingInfoLabels.idleStatusIcon}}</mat-icon>
             <h4 mat-line>{{agent.name}}</h4>
             <p mat-line> {{agent.status}} </p>
           </mat-list-item>
@@ -110,8 +112,8 @@
       </mat-card-content>
     </mat-card>
     <div fxFlex="5" fxFlexAlign="end" fxLayoutGap="20px" class="div-file-agent-footer">
-      <button mat-raised-button color="accent">Restart Agent</button>
-      <button mat-raised-button color="primary">Process Files</button>
+      <button mat-raised-button color="accent">{{fileAgentProcessingInfoLabels.restartBtn}}</button>
+      <button mat-raised-button color="primary">{{fileAgentProcessingInfoLabels.processBtn}}</button>
     </div>
   </div>
 </div>

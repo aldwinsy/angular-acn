@@ -2,36 +2,36 @@
   <div fxFlex="7">
     <div class="data-report-header">
       <span id="agent-count" [matBadge]="loadingAgentsCount" matBadgeColor="primary"
-        matBadgeOverlap="false" matBadgePosition="above after">Data Agent Report</span>
+        matBadgeOverlap="false" matBadgePosition="above after">{{dataReportLabel}}</span>
       <span id="span-agent-total">Total {{dataAgentList.length}}</span>
     </div>
   </div>
   <div *ngIf="!!dataAgentList.length; else noRecords" fxFlex class="report-panel-body div-scroll-body">
     <mat-card id="agent-card" class="agent-card" *ngFor="let dataAgent of dataAgentList" fxLayout="column" fxLayoutAlign="center">
       <mat-card-header fxFlex="55" fxLayout fxFlexAlign="start center">
-        <mat-icon fxFlex="11" *ngIf="dataAgent.name === 'XML File Agent'" mat-card-avatar style="font-size: 2.5vw;">description</mat-icon>
-        <mat-icon fxFlex="11" *ngIf="dataAgent.name === 'Custom Agent' || dataAgent.name === 'Flight Agent'" mat-card-avatar style="font-size: 2.5vw;">flight_takeoff</mat-icon>
-        <mat-icon fxFlex="11" *ngIf="dataAgent.name === 'Restart Agent'" mat-card-avatar style="font-size: 2.5vw;">history</mat-icon>
+        <mat-icon fxFlex="11" *ngIf="dataAgent.name === 'XML File Agent'" mat-card-avatar style="font-size: 2.5vw;">{{dataAgentCardLabels.xmlAgentIcon}}</mat-icon>
+        <mat-icon fxFlex="11" *ngIf="dataAgent.name === 'Custom Agent' || dataAgent.name === 'Flight Agent'" mat-card-avatar style="font-size: 2.5vw;">{{dataAgentCardLabels.customAgentIcon}}</mat-icon>
+        <mat-icon fxFlex="11" *ngIf="dataAgent.name === 'Restart Agent'" mat-card-avatar style="font-size: 2.5vw;">{{dataAgentCardLabels.restartAgentIcon}}</mat-icon>
         <div fxFlex>
           <mat-card-title style="font-size: 1.5vw;">{{dataAgent.name}}</mat-card-title>
           <mat-card-subtitle>{{dataAgent.type}}</mat-card-subtitle>
         </div>
-        <mat-icon *ngIf="dataAgent.status === 'FAILED'" fxFlex="10" style="font-size: 2.5vw;" color="warn">error_outline</mat-icon>
+        <mat-icon *ngIf="dataAgent.status === 'FAILED'" fxFlex="10" style="font-size: 2.5vw;" color="warn">{{dataAgentCardLabels.errorIcon}}</mat-icon>
       </mat-card-header>
       
       <mat-card-content fxFlex fxLayout fxLayoutAlign="center" fxLayout.xs="column" fxLayoutGap.xs="10px">
         <div fxFlex="32" fxLayout="column" fxLayoutAlign="center">
-          <span class="span-count" fxFlexAlign="center" style="color: #2b5ea2;">Status</span>
+          <span class="span-count" fxFlexAlign="center" style="color: #2b5ea2;">{{dataAgentCardLabels.status}}</span>
           <span fxFlexAlign="center" style="font-size: 1vw;color: #3573c5; padding-top: 10px;">{{dataAgent.status}}</span>
         </div>
         <mat-divider fxFlex="1" [vertical]="true"></mat-divider>
         <div fxFlex="32" fxLayout="column" fxLayoutAlign="center">
-          <span class="span-count" fxFlexAlign="center" style="color: #2b5ea2;">Context</span>
+          <span class="span-count" fxFlexAlign="center" style="color: #2b5ea2;">{{dataAgentCardLabels.context}}</span>
           <span fxFlexAlign="center" style="font-size: 1vw;color: #3573c5; padding-top: 10px;">{{dataAgent.context}}</span>
         </div>
         <mat-divider fxFlex="1" [vertical]="true"></mat-divider>
         <div fxFlex="32" fxLayout="column" fxLayoutAlign="center">
-            <span class="span-count" fxFlexAlign="center" style="color: #2b5ea2;">Last Request</span>
+            <span class="span-count" fxFlexAlign="center" style="color: #2b5ea2;">{{dataAgentCardLabels.lastRequest}}</span>
           <span fxFlexAlign="center" style="font-size: 1vw;color: #3573c5; padding-top: 10px;">{{dataAgent.lastRequest}}</span>
           
         </div>
