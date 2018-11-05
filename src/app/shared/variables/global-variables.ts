@@ -167,7 +167,7 @@ export const sasiStatusCardLabels = {
   purgatory: 'Purgatory',
   paradise: 'Paradise',
   published: 'Published',
-  count: 'count',
+  count: 'Count',
   changes: 'Δ',
   lastUpdateTimeIcon: 'schedule',
   latestFlightTimeIcon: 'flight_takeoff',
