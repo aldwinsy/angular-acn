@@ -1,9 +1,14 @@
-<nav class="nav-container" mat-tab-nav-bar backgroundColor="">
-        <a mat-tab-link *ngFor="let link of configNavItems"
-           class="nav-item"
-           (click)="activeLink = link.id"
-           [active]="activeLink === link.id"
-           routerLinkActive="nav-active" [routerLink]="[link.id]"> {{link.label}} </a>
+<div class="container" fxLayout="column" fxLayoutAlign="space-between stretch">
+      <nav fxFlex="7" class="nav-container" mat-tab-nav-bar backgroundColor="">
+            <a mat-tab-link *ngFor="let link of configNavItems"
+            class="nav-item"
+            (click)="activeLink = link.id"
+            [active]="activeLink === link.id"
+            routerLinkActive="nav-active" [routerLink]="[link.id]"> {{link.label}} </a>
       </nav>
+      <div class="padding-40 div-scroll-body" fxFlex>
+            <router-outlet></router-outlet>
+      </div>
+</div>
 
-<router-outlet></router-outlet>
+

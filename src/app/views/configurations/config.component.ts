@@ -4,7 +4,10 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-config',
   templateUrl: './config.component.html',
-  styleUrls: ['./config.component.scss']
+  styleUrls: [
+    './config.component.scss',
+    '../../shared/styles/box-styles.scss'
+  ]
 })
 export class ConfigComponent implements OnInit {
   activeLink = '';
