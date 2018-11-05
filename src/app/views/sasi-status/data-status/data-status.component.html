@@ -37,7 +37,7 @@
               </div>
             </div>
           </mat-card-content>
-          <button id="card-footer"
+          <button id="purgatory-footer-button" class="card-footer"
             fxFlex="10"
             fxFlexAlign="center"
             fxFlexFill
@@ -46,7 +46,7 @@
             [routerLink]="purgatoryParadiseLink">{{sasiStatusCardLabels.detailsButton}}</button>
         </mat-card>
 
-        <mat-card fxFlex="30" fxLayout="column" class="data-status-card">
+        <mat-card id="paradise-card" fxFlex="30" fxLayout="column" class="data-status-card">
           <mat-card-header id="card-header" fxFlex="40" fxLayoutAlign="space-around center">
             <div mat-card-avatar class="paradise-header-image"></div>
             <div fxLayout="column">
@@ -75,7 +75,7 @@
               <span class="span-count" fxFlexAlign="center" style="color: #2b5ea2">{{sasiStatusCardLabels.changes}}</span>
             </div>
           </mat-card-content>
-          <button id="card-footer"
+          <button id="paradise-footer-button" class="card-footer"
             fxFlex="10"
             fxFlexAlign="center"
             fxFlexFill
@@ -114,7 +114,7 @@
               <span class="span-count" fxFlexAlign="center" style="color: #2b5ea2">{{sasiStatusCardLabels.changes}}</span>
             </div>
           </mat-card-content>
-          <button id="card-footer"
+          <button id="published-footer-button" class="card-footer"
             fxFlex="10"
             fxFlexAlign="center"
             fxFlexFill
@@ -122,15 +122,6 @@
             color="primary"
             [routerLink]="publishedLink">{{sasiStatusCardLabels.detailsButton}}</button>
         </mat-card>
-      </div>
-
-      <ng-template #noRecords>
-        <!-- NO RESULT -->
-        <app-no-records-found></app-no-records-found>
-      </ng-template>
-      
+      </div>     
     </div>
-    <!-- <div fxFlex fxLayoutAlign="center center" class="data-status-footer">
-      <div>Panel Footer</div>
-    </div> -->
  </div>

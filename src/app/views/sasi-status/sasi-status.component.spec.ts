@@ -1,12 +1,13 @@
 import { HttpClientModule } from '@angular/common/http';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 
+import { SasiStatusModule } from 'sasi/views/sasi-status/sasi-status.module';
 import { SasiStatusComponent } from './sasi-status.component';
-import { DataStatusComponent } from 'sasi/views/sasi-status/data-status/data-status.component';
-import { DataReportComponent } from 'sasi/views/sasi-status/data-report/data-report.component';
 import { SharedModule } from 'sasi/shared/shared.module';
-import { SasiStatusService } from 'sasi/views/sasi-status/sasi-status.service';
+
 import { By } from '@angular/platform-browser';
+
 
 describe('SasiStatusComponent', () => {
   let component: SasiStatusComponent;
@@ -16,13 +17,10 @@ describe('SasiStatusComponent', () => {
     TestBed.configureTestingModule({
       imports: [
         HttpClientModule,
-        SharedModule
-       ],
-      declarations: [
-        SasiStatusComponent,
-        DataStatusComponent,
-        DataReportComponent
-      ]
+        SharedModule,
+        SasiStatusModule,
+        RouterTestingModule
+       ]
     })
     .compileComponents();
   }));
@@ -37,9 +35,9 @@ describe('SasiStatusComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should contain data status panel', () => {
-    const dataStatus = fixture.debugElement.query(By.css('app-data-status'));
-    expect(dataStatus).toBeTruthy();
+  it('should contain router outlet', () => {
+    const routerOutlet = fixture.debugElement.query(By.css('router-outlet'));
+    expect(routerOutlet).toBeTruthy();
   });
 
   it('should contain data report panel', () => {

@@ -13,7 +13,7 @@
         <mat-icon fxFlex="11" *ngIf="dataAgent.name === 'Custom Agent' || dataAgent.name === 'Flight Agent'" mat-card-avatar style="font-size: 2.5vw;">{{dataAgentCardLabels.customAgentIcon}}</mat-icon>
         <mat-icon fxFlex="11" *ngIf="dataAgent.name === 'Restart Agent'" mat-card-avatar style="font-size: 2.5vw;">{{dataAgentCardLabels.restartAgentIcon}}</mat-icon>
         <div fxFlex>
-          <mat-card-title style="font-size: 1.5vw;">{{dataAgent.name}}</mat-card-title>
+          <mat-card-title>{{dataAgent.name}}</mat-card-title>
           <mat-card-subtitle>{{dataAgent.type}}</mat-card-subtitle>
         </div>
         <mat-icon *ngIf="dataAgent.status === 'FAILED'" fxFlex="10" style="font-size: 2.5vw;" color="warn">{{dataAgentCardLabels.errorIcon}}</mat-icon>
@@ -41,6 +41,6 @@
   </div>
   <ng-template #noRecords>
       <!-- NO RESULT -->
-      <app-no-records-found></app-no-records-found>
+      <app-no-records-found *ngIf="!isDataLoading"></app-no-records-found>
   </ng-template>
 </div>

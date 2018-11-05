@@ -6,7 +6,7 @@ import { DataStatusComponent } from 'sasi/views/sasi-status/data-status/data-sta
 import { PurgatoryParadiseComponent } from 'sasi/views/sasi-status/data-status/purgatory-paradise/purgatory-paradise.component';
 import { PublishedComponent } from 'sasi/views/sasi-status/data-status/published/published.component';
 
-const routes: Routes = [
+export const routes: Routes = [
     { path: 'sasi-status', component: SasiStatusComponent,
         children: [
             { path: '', component: DataStatusComponent },

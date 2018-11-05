@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { purgatoryParadiseWorldColumns, purgatoryParadiseTimeColumns, sasiStatusLabels } from 'sasi/shared/variables/global-variables';
 import { SasiStatusService } from 'sasi/views/sasi-status/sasi-status.service';
+import { combineLatest } from 'rxjs';
 
 @Component({
   selector: 'app-purgatory',
@@ -26,17 +27,14 @@ export class PurgatoryParadiseComponent implements OnInit {
 
   ngOnInit() {
     this.isDataLoading = true;
-    this.sasiStatusService.getSasiStatusTime()
-      .subscribe(data => {
-        this.statusTime = data;
-        this.isDataLoading = false;
-      });
-
-    this.sasiStatusService.getSasiStatusWorldObjects()
-      .subscribe(data => {
-        this.worldObjects = data;
-        this.isDataLoading = false;
-      });
+    combineLatest(
+      this.sasiStatusService.getSasiStatusTime(),
+      this.sasiStatusService.getSasiStatusWorldObjects()
+    ).subscribe(data => {
+      this.statusTime = data[0];
+      this.worldObjects = data[1];
+      this.isDataLoading = false;
+    });
   }
 
 }
