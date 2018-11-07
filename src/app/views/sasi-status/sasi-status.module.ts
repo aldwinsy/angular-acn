@@ -5,7 +5,6 @@ import { SasiStatusRoutingModule } from 'sasi/views/sasi-status/sasi-status-rout
 
 /* Components */
 import { SasiStatusComponent } from 'sasi/views/sasi-status/sasi-status.component';
-import { BannerComponent } from 'sasi/views/sasi-status/banner/banner.component';
 import { DataReportComponent } from 'sasi/views/sasi-status/data-report/data-report.component';
 import { DataStatusComponent } from 'sasi/views/sasi-status/data-status/data-status.component';
 import { PurgatoryParadiseComponent } from './data-status/purgatory-paradise/purgatory-paradise.component';
@@ -17,7 +16,6 @@ import { PublishedComponent } from './data-status/published/published.component'
 @NgModule({
   declarations: [
     SasiStatusComponent,
-    BannerComponent,
     DataReportComponent,
     DataStatusComponent,
     PurgatoryParadiseComponent,

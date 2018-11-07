@@ -1,9 +1,9 @@
 <div fxLayout="column" fxLayoutAlign="center stretch" class="default-panel purgatory-panel">
   <div fxFlex="7">
-      <div id="purgatory-header" class="purgatory-header">
-        <span id="span-nav" [routerLink]="sasiStatusLink">Data Status</span>
+      <div id="purgatory-header" class="div-header">
+        <span id="span-nav" [routerLink]="sasiStatusLink">{{sasiStatusLabels.dataStatus}}</span>
         <span> > </span>
-        <span>Published</span>
+        <span>{{sasiStatusLabels.published}}</span>
       </div>
   </div>
   <div fxFlex class="purgatory-body div-scroll-body">

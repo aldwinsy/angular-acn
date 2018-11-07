@@ -1,28 +1,28 @@
 <div fxFlexFill class="footer-container" fxLayout="column">
-<mat-toolbar fxFlex="85" color="primary" class="footer-mat-toolbar"> 
-    <mat-toolbar-row fxLayout="row" fxLayoutAlign="center">
-      <div fxFlex="13"></div>
-      <div fxFlex="7">
-        <img class="ge-logo-img" src="http://www.stickpng.com/assets/images/5847f7ffcef1014c0b5e48a6.png">
-      </div>
-      <div fxFlex="35" fxLayout="column">
-        <span>INTEGRITY AT GE</span>
-        <span>COOKIES</span>
-        <span>TERMS</span>
-        <span>PRIVACY</span>
-      </div>
-      <div fxFlex="30" fxLayout="column">
-          <span>SITE MAP</span>
-          <span>INVESTOR CONTACTS</span>
-          <span>CONTACT US</span>
-      </div>
-      <div fxFlex="5"></div>
-      <div fxFlex="10">
-          <mat-icon svgIcon="facebook"></mat-icon>
-          <mat-icon svgIcon="twitter"></mat-icon>
-          <mat-icon svgIcon="tumblr"></mat-icon>
-      </div>
-    </mat-toolbar-row>
-</mat-toolbar>
-<div fxFlex="5" fxFlexAlign="center" class="footer-lower-section">© 2018 GENERAL ELECTRIC</div>
+  <mat-toolbar fxFlex="90" color="primary" class="footer-mat-toolbar"> 
+      <mat-toolbar-row fxLayout="row" fxLayoutAlign="center">
+        <div fxFlex="13"></div>
+        <div fxFlex="7">
+          <img class="ge-logo-img" [src]="geLogoSrc">
+        </div>
+        <div fxFlex="20" fxLayout="column">
+          <span>INTEGRITY AT GE</span>
+          <span>COOKIES</span>
+          <span>TERMS</span>
+          <span>PRIVACY</span>
+        </div>
+        <div fxFlex="15" fxLayout="column">
+            <span>SITE MAP</span>
+            <span>INVESTOR CONTACTS</span>
+            <span>CONTACT US</span>
+        </div>
+        <div fxFlex="5"></div>
+        <div fxFlex="10">
+            <mat-icon svgIcon="facebook"></mat-icon>
+            <mat-icon svgIcon="twitter"></mat-icon>
+            <mat-icon svgIcon="tumblr"></mat-icon>
+        </div>
+      </mat-toolbar-row>
+  </mat-toolbar>
+  <div fxFlex="10" fxLayoutAlign="center center" class="footer-lower-section">{{geFooter}}</div>
 </div>

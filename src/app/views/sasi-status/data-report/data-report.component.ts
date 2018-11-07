@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { DataAgent } from 'sasi/shared/models/data-agent.model';
+import { sasiStatusLabels, dataAgentCardLabels } from 'sasi/shared/variables/global-variables';
 import { SasiStatusService } from 'sasi/views/sasi-status/sasi-status.service';
 
 @Component({
@@ -11,6 +12,8 @@ import { SasiStatusService } from 'sasi/views/sasi-status/sasi-status.service';
   ]
 })
 export class DataReportComponent implements OnInit {
+  readonly dataReportLabel = sasiStatusLabels.dataAgent;
+  readonly dataAgentCardLabels = dataAgentCardLabels;
 
   dataAgentList: DataAgent[] = [];
   isDataLoading = false;

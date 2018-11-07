@@ -5,47 +5,47 @@
   fxLayoutGap.xs="5rem">
   <div fxFlex="40" fxLayout="column" fxLayoutGap="1vw" fxLayoutAlign="start">
     <div fxFlex="5" class="div-header">
-      <span>Processing Parameters</span>
+      <span>{{sasiConfigLabels.processingParameters}}</span>
     </div>
     <mat-card>
       <mat-card-header>
-        <mat-card-title>SASI Parameter</mat-card-title>
+        <mat-card-title>{{dataServerParametersLabels.title}}</mat-card-title>
       </mat-card-header>
       <mat-card-content>
         <div fxLayout="column" fxLayoutGap="20px" fxLayoutAlign="center" fxLayoutGap.xs="5px">
           <div fxLayout="row" fxLayoutGap="20px" fxLayoutGap.xs="10px">
-            <div fxFlex="40" fxFlexAlign="center">SASI Host</div>
+            <div fxFlex="40" fxFlexAlign="center">{{dataServerParametersLabels.sasiHost}}</div>
             <div fxFlex>
               <mat-form-field>
-                <input matInput placeholder="Host" autocomplete="off" required>
-                <mat-error>Valid host is required</mat-error>
+                <input matInput [placeholder]="dataServerParametersLabels.sasiHostPlaceHolder" autocomplete="off" required>
+                <mat-error>{{dataServerParametersLabels.sasiHostErrMsg}</mat-error>
               </mat-form-field>
             </div>
           </div>
           <div fxLayout="row" fxLayoutGap="20px" fxLayoutGap.xs="10px">
-            <div fxFlex="40" fxFlexAlign="center">Agent Name</div>
+            <div fxFlex="40" fxFlexAlign="center">{{dataServerParametersLabels.agentName}}</div>
             <div fxFlex>
               <mat-form-field>
-                <input matInput placeholder="Name" autocomplete="off" required>
-                <mat-error>Valid name is required</mat-error>
+                <input matInput [placeholder]="dataServerParametersLabels.agentNamePlaceholder" autocomplete="off" required>
+                <mat-error>{{dataServerParametersLabels.agentNameErrMsg}}</mat-error>
               </mat-form-field>
             </div>
           </div>
           <div fxLayout="row" fxLayoutGap="20px" fxLayoutGap.xs="10px">
-            <div fxFlex="40" fxFlexAlign="center">World/Reference File</div>
+            <div fxFlex="40" fxFlexAlign="center">{{dataServerParametersLabels.worldRefFile}}</div>
             <div fxFlex>
               <mat-form-field>
-                <input matInput placeholder="File" autocomplete="off" required>
-                <mat-error>Valid file is required</mat-error>
+                <input matInput [placeholder]="dataServerParametersLabels.worldRefFilePlaceholder" autocomplete="off" required>
+                <mat-error>{{dataServerParametersLabels.worldRefFileErrMsg}}</mat-error>
               </mat-form-field>
             </div>
           </div>
           <div fxLayout="row" fxLayoutGap="20px" fxLayoutGap.xs="10px">
-            <div fxFlex="40" fxFlexAlign="center">Event Source Directiory</div>
+            <div fxFlex="40" fxFlexAlign="center">{{dataServerParametersLabels.eventSrcDirectory}}</div>
             <div fxFlex>
               <mat-form-field>
-                <input matInput placeholder="Source" autocomplete="off" required>
-                <mat-error>Valid source is required</mat-error>
+                <input matInput [placeholder]="dataServerParametersLabels.eventSrcDirectoryPlaceHolder" autocomplete="off" required>
+                <mat-error>{{dataServerParametersLabels.eventSrcDirectoryErrMsg}}</mat-error>
               </mat-form-field>
             </div>
           </div>
@@ -55,20 +55,18 @@
     <mat-card>
       <mat-card-header>
         <mat-card-title>
-          Note
+          {{dataServerParametersLabels.noteTitle}}
         </mat-card-title>
       </mat-card-header>
       <mat-card-content>
         <ul>
-          <li>The directory must be in the same machine where the agent is running.</li>
-          <li>The agent name must be in the list of Data Agents found in the SASI Admin Page</li>
-          <li>The agent 'Can Initiate Restart' must be set to Yes in the SASI Admin page if the World/Reference file has value</li>
+          <li *ngFor="let note of dataServerParametersLabels.notes">{{note}}</li>
         </ul>
       </mat-card-content>
     </mat-card>
     <div fxFlex="5" fxFlexAlign="end" fxLayoutGap="20px">
-      <button mat-raised-button color="warn">Stop</button>
-      <button mat-raised-button color="primary">Start</button>
+      <button mat-raised-button color="warn">{{dataServerParametersLabels.stopBtn}}</button>
+      <button mat-raised-button color="primary">{{dataServerParametersLabels.startBtn}}</button>
     </div>
   </div>
 
@@ -76,7 +74,7 @@
 
   <div fxFlexAlign="start" fxFlex fxLayout="column" fxLayoutGap="1vw" fxLayoutGap.xs="0.3vw" fxLayoutAlign="center">
     <div fxFlex="4" class="div-header">
-      <span>Data Agents</span>
+      <span>{{dataServerAgentsLabels.title}}</span>
     </div>
       <app-sasi-mat-table 
         [columnObjects]="dataAgentColumnObjects"
@@ -86,8 +84,8 @@
         stickyHeader="false">
       </app-sasi-mat-table>
     <div fxFlex="5" fxFlexAlign="end" fxLayoutGap="20px">
-      <button mat-raised-button color="accent">Restart Agent</button>
-      <button mat-raised-button color="primary">Process Files</button>
+      <button mat-raised-button color="accent">{{dataServerAgentsLabels.restartBtn}}</button>
+      <button mat-raised-button color="primary">{{dataServerAgentsLabels.processBtn}}</button>
     </div>
   </div>
 </div>

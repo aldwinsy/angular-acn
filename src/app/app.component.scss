@@ -1,5 +1,6 @@
 .main {
   overflow-y: hidden;
+  font-family: GE Inspira Sans, sans-serif;
 }
 
 .sasi-core-body {
@@ -7,9 +8,13 @@
 }
 
 .sasi-dark-theme {
-  background: black;
+  background: #151E29;
 }
 
 app-header {
   z-index: 1;
+}
+
+app-footer {
+  min-height: 141px;
 }

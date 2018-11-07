@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { configNavItems } from 'sasi/shared/variables/global-variables';
 
 @Component({
   selector: 'app-config',
@@ -10,25 +11,9 @@ import { ActivatedRoute } from '@angular/router';
   ]
 })
 export class ConfigComponent implements OnInit {
+  readonly configNavItems = configNavItems;
+
   activeLink = '';
-  configNavItems = [
-    {
-      id: '/config/data-server',
-      label: 'DATA SERVER'
-    },
-    {
-      id: '/config/file-agent',
-      label: 'XML FILE AGENT'
-    },
-    {
-      id: '/config/restart-agent',
-      label: 'RESTART AGENT'
-    },
-    {
-      id: '/config/file-upload',
-      label: 'FILE UPLOAD'
-    }
-  ];
 
   constructor(
     private router: ActivatedRoute

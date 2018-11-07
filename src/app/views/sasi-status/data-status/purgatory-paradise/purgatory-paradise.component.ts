@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { purgatoryParadiseWorldColumns, purgatoryParadiseTimeColumns } from 'sasi/shared/variables/global-variables';
+import { purgatoryParadiseWorldColumns, purgatoryParadiseTimeColumns, sasiStatusLabels } from 'sasi/shared/variables/global-variables';
 import { SasiStatusService } from 'sasi/views/sasi-status/sasi-status.service';
 import { combineLatest } from 'rxjs';
 
@@ -13,13 +13,14 @@ import { combineLatest } from 'rxjs';
 })
 export class PurgatoryParadiseComponent implements OnInit {
 
-  sasiStatusTimeColumns = purgatoryParadiseTimeColumns;
-  sasiStatusWorldColumns = purgatoryParadiseWorldColumns;
-
+  readonly sasiStatusTimeColumns = purgatoryParadiseTimeColumns;
+  readonly sasiStatusWorldColumns = purgatoryParadiseWorldColumns;
+  readonly sasiStatusLabels = sasiStatusLabels;
   readonly sasiStatusLink = '/sasi-status';
 
   statusTime = [];
   worldObjects = [];
+  dataAgentList = [];
   isDataLoading = false;
 
   constructor(private sasiStatusService: SasiStatusService) { }

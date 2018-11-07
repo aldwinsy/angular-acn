@@ -1,12 +1,12 @@
 <div class="container" fxLayout="column" fxLayoutAlign="space-between stretch">
-      <nav fxFlex="7" class="nav-container" mat-tab-nav-bar backgroundColor="">
+      <nav fxFlex="7" class="nav-container" mat-tab-nav-bar>
             <a mat-tab-link *ngFor="let link of configNavItems"
             class="nav-item"
             (click)="activeLink = link.id"
             [active]="activeLink === link.id"
             routerLinkActive="nav-active" [routerLink]="[link.id]"> {{link.label}} </a>
       </nav>
-      <div class="padding-40 div-scroll-body" fxFlex>
+      <div class="padding-2vw div-scroll-body" fxFlex>
             <router-outlet></router-outlet>
       </div>
 </div>
