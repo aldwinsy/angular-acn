@@ -1,5 +1,6 @@
 .main {
   overflow-y: hidden;
+  font-family: GE Inspira Sans, sans-serif;
 }
 
 .sasi-core-body {
@@ -12,4 +13,8 @@
 
 app-header {
   z-index: 1;
+}
+
+app-footer {
+  min-height: 141px;
 }

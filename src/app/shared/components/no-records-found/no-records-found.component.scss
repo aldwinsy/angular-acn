@@ -1,0 +1,11 @@
+$icon-size: calc(20px + 5vw);
+
+mat-icon {
+  font-size: $icon-size;
+  width: $icon-size;
+  height: $icon-size;
+}
+
+.no-records-text{
+  font-size: 20px;
+}

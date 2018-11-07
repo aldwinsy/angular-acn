@@ -1,33 +1,26 @@
 
 .data-report-panel {
   height: 100%;
-  // background: #C4C4C4;
-  // @extend .thin-box-shadow;
 }
 
-.data-report-header {
-  // border-radius: 10px;
-  // margin-top: 20px;
-  // margin-left: 20px;
-  font-family: GE Inspira Sans, sans-serif;
-  font-weight: bold;
-  // color: white;
+.div-header-container {
+  min-height: 30px;
+  .div-header {
+    font-weight: bold;
+  }
 }
 
-.agent-card {
+.mat-card {
   margin-bottom: 20px;
 }
-.agent-card:hover {
-  background: #f4f5f7;
-  box-shadow: 0 4px 13px rgba(0, 0, 0, 0.4)!important;
+
+.mat-card:hover {
+  cursor: pointer;
+  box-shadow: 0 4px 13px rgba(0, 0, 0, 0.4);
 }
 
 .thin-box-shadow {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-#agent-count {
-  color: #424242;
 }
 
 #span-agent-total {
@@ -43,19 +36,20 @@
 }
 
 .span-detail {
-  font-size: 1vw;
+  font-size: calc(15px + 0.3vw);
   color: #3573c5;
-  padding-top: 10px;
+  padding-top: 7px;
 }
 
 mat-card {
   height: 36%;
   padding: 0px;
-  min-height: 10vh;
+  min-height: 165px;
   mat-card-header {
     padding: 33px 24px 0 24px;
+    min-height: 110px;
     mat-card-title {
-      font-size: 1.5vw;
+      font-size: calc(17px + 0.7vw);
     }
   }
   mat-card-content {
@@ -66,8 +60,9 @@ mat-card {
     border-top-color: rgba(0, 0, 0, 0.12);;
     background-color: aliceblue;
     margin-bottom: 0px;
+    min-height: 80px;
   }
   mat-icon {
-    font-size: 2.5vw;
+    font-size: 52px;
   }
 }

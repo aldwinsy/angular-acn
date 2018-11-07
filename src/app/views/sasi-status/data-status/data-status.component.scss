@@ -1,31 +1,16 @@
-.default-panel {
-  // border-radius: 10px;
-  // border-color:#C4C4C4;
-}
-
 .data-status-panel, .div-card-body {
   height: 100%;
-  // background: #C4C4C4;
-  // @extend .thin-box-shadow;
 }
 
-.data-status-card:hover {
-  box-shadow: 0 4px 13px rgba(0, 0, 0, 0.4)!important;
+.mat-card:hover {
+  box-shadow: 0 4px 13px rgba(0, 0, 0, 0.4);
 }
 
-.data-status-header {
-  // border-radius: 10px;
-  // margin-top: 20px;
-  // margin-left: 20px;
-  font-family: GE Inspira Sans, sans-serif;
-  font-weight: bold;
-  // color: white;
-}
-
-.status-panel-body {
-  // margin: 20px;
-  // background: #EBEFF2;
-  // border-radius: 5px;
+.div-header-container {
+  min-height: 30px;
+  .div-header {
+    font-weight: bold;
+  }
 }
 
 .thin-box-shadow {
@@ -33,27 +18,23 @@
 }
 
 .paradise-header-image {
-  background-image: url('https://www.artranked.com/images/f5/f504b573c8da602a2b4e31370e34656e.jpeg');
+  border-radius: 0;
   background-size: cover;
 }
 
 .purgatory-header-image {
-  background-image: url('http://images.wikia.com/uncyclopedia/images/thumb/f/fa/Purgatory.jpg/400px-Purgatory.jpg');
+  border-radius: 0;
   background-size: cover;
 }
 
 .published-header-image {
-  background-image: url('https://www.geoguessr.com/images/fa5e7ffbe2ef226c4f8e6eaa38cf4aba.jpg');
+  border-radius: 0;
   background-size: cover;
 }
 
 .mat-card-avatar {
-  height: 6vw;
-  width: 6vw;
-}
-
-.mat-card-title {
-  font-size: 2vw;
+  height: calc(45px + 3vw);
+  width: calc(45px + 3vw);
 }
 
 .clock-icon {
@@ -84,11 +65,11 @@
 
 mat-card {
   padding: 0px;
-  min-height: 23vh;
-}
-
-mat-card-title {
-  margin-bottom: 0px;
+  min-height: 340px;
+  mat-card-title {
+    font-size: calc(20px + 1vw);
+    margin-bottom: 0px;
+  }
 }
 
 #card-header {
@@ -101,7 +82,7 @@ mat-card-title {
 }
 
 .card-footer {
-  font-size: 1vw;
+  font-size: 20px;
   border-radius: 0px;
 }
 
@@ -110,7 +91,7 @@ mat-card-title {
 }
 
 .span-count {
-  font-size: 2vw;
+  font-size: calc(20px + 1vw);
   color: #3573c5;
 }
 
@@ -120,7 +101,7 @@ mat-card-title {
 }
 
 .div-card-time {
-  font-size: 1.2vw;
+  font-size: calc(14px + 0.5vw);
   padding: 15px;
 }
 
@@ -129,5 +110,5 @@ mat-card-title {
 }
 
 mat-icon.card-time-icon.mat-icon.material-icons.mat-icon-inline {
-  font-size: 3.35vw;
+  font-size: calc(15px + 2vw);
 }

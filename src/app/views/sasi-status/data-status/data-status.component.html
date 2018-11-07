@@ -1,16 +1,17 @@
-<div fxLayout="column" fxLayoutAlign="center stretch" class="default-panel data-status-panel">
-    <div fxFlex="7">
-      <div id="data-status-header" class="data-status-header">
+<div fxLayout="column" fxLayoutAlign="center stretch" class="data-status-panel">
+    <div fxFlex="7" class="div-header-container">
+      <div id="data-status-header" class="div-header">
           <span>{{dataStatusLabel}}</span>
       </div>
     </div>
     <div fxFlex class="status-panel-body div-scroll-body">
       <div fxFlexFill fxLayout fxLayoutAlign="space-between stretch" fxLayoutGap="25px" fxLayout.xs="column">
-        <mat-card fxFlex="30" fxLayout="column" class="data-status-card">
+        <mat-card fxFlex="30" fxLayout="column">
           <mat-card-header id="card-header" fxFlex="40" fxLayoutAlign="space-around center">
-            <div mat-card-avatar class="purgatory-header-image"></div>
+            <!-- image from https://www.flaticon.com/ -->
+            <img mat-card-avatar src="assets/purgatory.png" class="purgatory-header-image" href="http://www.freepik.com" title="Freepik"/>
             <div fxLayout="column">
-              <mat-card-title>{{sasiStatusCardLabels.purgatory}}</mat-card-title>
+              <mat-card-title class="status-card-title">{{sasiStatusCardLabels.purgatory}}</mat-card-title>
               <span class="span-base-time">2015-03-18 11:10Z</span>
             </div>
           </mat-card-header>
@@ -48,9 +49,10 @@
 
         <mat-card id="paradise-card" fxFlex="30" fxLayout="column" class="data-status-card">
           <mat-card-header id="card-header" fxFlex="40" fxLayoutAlign="space-around center">
-            <div mat-card-avatar class="paradise-header-image"></div>
+            <!-- image from https://www.flaticon.com/ -->
+            <img mat-card-avatar src="assets/paradise.png" class="paradise-header-image" href="http://www.freepik.com" title="Freepik"/>
             <div fxLayout="column">
-              <mat-card-title>{{sasiStatusCardLabels.paradise}}</mat-card-title>
+              <mat-card-title class="status-card-title">{{sasiStatusCardLabels.paradise}}</mat-card-title>
               <span class="span-base-time">2015-03-18 11:10Z</span>
             </div>
           </mat-card-header>
@@ -86,9 +88,10 @@
 
         <mat-card id="published-card" fxFlex="30" fxLayout="column" class="data-status-card">
           <mat-card-header id="card-header" fxFlex="40" fxLayoutAlign="space-around center">
-            <div mat-card-avatar class="published-header-image"></div>
+            <!-- image from https://www.flaticon.com/ -->
+            <img mat-card-avatar class="published-header-image" src="assets/published.png" href="http://www.freepik.com" title="Freepik"/>
             <div fxLayout="column">
-              <mat-card-title>{{sasiStatusCardLabels.published}}</mat-card-title>
+              <mat-card-title class="status-card-title">{{sasiStatusCardLabels.published}}</mat-card-title>
               <span class="span-base-time">2015-03-18 11:10Z</span>
             </div>
           </mat-card-header>

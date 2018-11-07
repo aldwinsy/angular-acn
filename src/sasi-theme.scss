@@ -32,5 +32,13 @@ $dark-theme:   mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
   .div-header {
     color: white;
   }
-  
+  .status-card-title {
+    color: rgba(0, 0, 0, 0.87);
+  }
+  .mat-card:hover {
+    box-shadow: 0 4px 13px darkgray !important;
+  }
+  tr.mat-row:hover {
+    background: -webkit-linear-gradient(top, #585858, #42423E) !important;
+  }
 }

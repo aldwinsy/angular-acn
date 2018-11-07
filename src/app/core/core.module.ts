@@ -14,12 +14,14 @@ import { PageNotFoundComponent } from 'sasi/core/page-not-found/page-not-found.c
 import { NavigationComponent } from './header/navigation/navigation.component';
 import { SharedModule } from 'sasi/shared/shared.module';
 import { ConfigModule } from 'sasi/views/configurations/config.module';
+import { BannerComponent } from 'sasi/views/sasi-status/banner/banner.component';
 
 
 @NgModule({
   declarations: [
     LoginComponent,
     HeaderComponent,
+    BannerComponent,
     FooterComponent,
     PageNotFoundComponent,
     NavigationComponent
@@ -39,6 +41,7 @@ import { ConfigModule } from 'sasi/views/configurations/config.module';
     RouterModule,
     HeaderComponent,
     FooterComponent,
+    BannerComponent,
     SharedModule
   ],
 
