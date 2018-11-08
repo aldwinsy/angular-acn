@@ -1,43 +1,17 @@
-.default-panel {
-  border-radius: 10px;
-  border-color:#C4C4C4;
-}
-
 .world-search-panel {
   height: 100%;
-  background: #C4C4C4;
-  @extend .thin-box-shadow;
+  min-height: 100px;
 }
 
-.world-search-header {
-  border-radius: 10px;
-  margin-top: 20px;
-  margin-left: 20px;
-  font-family: GE Inspira Sans, sans-serif;
+.div-header {
   font-weight: bold;
-  color: white;
+  min-height: 30px
 }
 
-.search-panel-body {
-  margin: 20px;
-  padding: 20px;
-  background: #EBEFF2;
-  border-radius: 5px;
-}
+// #property-name-input {
+//   margin-top: 1.6vh!important;
+// }
 
-.world-search-footer {
-  margin: 0 20px 20px 0;
-  padding-bottom: 30px;
-}
-
-.thin-box-shadow {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-#property-name-input {
-  margin-top: 1.6vh!important;
-}
-
-#property-value-input {
-  margin-top: 1.98vh!important;
-}
+// #property-value-input {
+//   margin-top: 1.98vh!important;
+// }

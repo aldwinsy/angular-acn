@@ -15,7 +15,7 @@ const routes: Routes = [
             { path: '', component: SearchComponent },
             { path: 'search-results', component: SearchResultsComponent },
             { path: 'object-view', component: ObjectViewComponent },
-            { path: 'object-view-component', component: CompareObjectViewComponent },
+            { path: 'object-view-compare', component: CompareObjectViewComponent },
             { path: '**', component: PageNotFoundComponent }
         ]
     }

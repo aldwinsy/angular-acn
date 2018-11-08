@@ -1,3 +1,4 @@
+import { worldViewerLabels } from 'sasi/shared/variables/global-variables';
 import { Component, ViewChildren, OnInit, Input } from '@angular/core';
 import { FormControl, Validators, FormBuilder, FormGroup, FormArray } from '@angular/forms';
 import {COMMA, ENTER} from '@angular/cdk/keycodes';
@@ -12,11 +13,13 @@ import { MatChipInputEvent } from '@angular/material';
   ]
 })
 export class SearchPanelComponent implements OnInit {
+  readonly worldViewerLabels = worldViewerLabels;
+  readonly separatorKeysCodes: number[] = [ENTER, COMMA];
+
   @ViewChildren('chipList') chipList;
   @Input() worldSummaryData;
   worldGroup = 'paradise';
   selectedQuery = 'Fleet';
-  readonly separatorKeysCodes: number[] = [ENTER, COMMA];
   values = [];
   propertyForm: FormGroup;
   worldQueries = [];

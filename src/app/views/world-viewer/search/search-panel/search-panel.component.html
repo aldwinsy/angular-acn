@@ -1,28 +1,32 @@
-<div fxLayout="column" fxLayoutAlign="center stretch" class="default-panel world-search-panel">
-  <div fxFlex="4" class="world-search-header">
-    <span>World Search</span>
+<div fxLayout="column" fxLayoutGap="1vw" fxLayoutGap.xs="1vw" fxLayoutAlign="center stretch" class="world-search-panel">
+  <div fxFlex="4" class="div-header">
+    <span>{{worldViewerLabels.worldSearch}}</span>
   </div>
-  <div fxFlex class="search-panel-body div-scroll-body">
-    <div fxLayout="column" fxLayoutAlign="center stretch">
-      <div fxFlex="5">
-        <mat-button-toggle-group name="world" [(value)]="worldGroup">
-          <mat-button-toggle value="paradise">Paradise</mat-button-toggle>
-          <mat-button-toggle value="purgatory">Purgatory</mat-button-toggle>
-        </mat-button-toggle-group>
-      </div>
-            
-      <div fxFlex>
-        <mat-form-field>
+  <mat-card fxFlex fxLayout="column" fxLayoutGap="15px">
+    <mat-card-header fxFlex="7">
+      <mat-card-title>Search Parameters</mat-card-title>
+    </mat-card-header>
+    <div fxFlex="10">
+      <mat-button-toggle-group name="world" [(value)]="worldGroup">
+        <mat-button-toggle value="paradise">Paradise</mat-button-toggle>
+        <mat-button-toggle value="purgatory">Purgatory</mat-button-toggle>
+      </mat-button-toggle-group>
+    </div>
+    <div fxFlex="10">
+      <mat-form-field>
           <mat-select id="property-dropdown" [(value)]="selectedQuery" (selectionChange)="initializeForm()" required>
             <mat-option *ngFor="let query of worldQueries" [value]="query">{{query}}</mat-option>
           </mat-select>
         </mat-form-field>  
-        <div [formGroup]="propertyForm" class="div-scroll-body">
+    </div>
+    <mat-card-content fxFlex class="div-scroll-body">
+      <div fxFlexFill fxLayout="column" fxLayoutGap="1rem" fxLayoutAlign="center stretch"> 
+        <div fxFlex [formGroup]="propertyForm" class="div-scroll-body">
           <div formArrayName="propertyNames"
             *ngFor="let propertyName of propertyForm.get('propertyNames')['controls']; let i = index;">
             <div [formGroupName]="i" fxLayout fxLayout.xs="column" fxLayoutGap="15px" fxLayoutGap.xs="0">
               <div fxFlex="15">
-                <mat-form-field>
+                <mat-form-field floatLabel="never">
                   <input id="property-name-input" matInput
                     [formControl]="propertyName.controls.property"
                     type="text" required
@@ -42,7 +46,7 @@
                 </mat-form-field>
               </div>
               <div fxFlex="75">
-                <mat-form-field *ngIf="propertyName.controls.property.valid" fxFlexFill>
+                <mat-form-field *ngIf="propertyName.controls.property.valid" fxFlexFill floatLabel="never">
                   <mat-chip-list id="chip-list" #chipList>
                     <mat-chip *ngFor="let value of propertyName.controls.values.value" removable="true" (removed)="remove(value, i)">
                       {{value}}
@@ -65,11 +69,11 @@
             </div>
           </div>
         </div>
-        <button [disabled]="disableAddNewProperty || propertyForm.invalid" mat-icon-button disableRipple="true" color="primary" (click)="addNewProperty()"><mat-icon>add</mat-icon> Add Another</button>
       </div>
-    </div>
-  </div>
-  <div fxFlex="4" fxFlexAlign="end" class="world-search-footer">
+    </mat-card-content>
+    <button [disabled]="disableAddNewProperty || propertyForm.invalid" mat-icon-button disableRipple="true" color="primary" (click)="addNewProperty()"><mat-icon>add</mat-icon> Add Another</button>
+  </mat-card>
+  <div fxFlex="4" fxFlexAlign="end">
     <button id="world-search-button" mat-raised-button color="primary" [disabled]="propertyForm.invalid || !!!propertyForm.value.propertyNames.length">Search</button>
   </div>
 </div>

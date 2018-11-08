@@ -42,8 +42,14 @@ export const worldSummaryColumns = [
     label: 'World Summary'
   },
   {
-    propName: 'count',
-    label: 'Total'
+    propName: 'purgatoryCount',
+    label: 'Purgatory',
+    clickable: true,
+  },
+  {
+    propName: 'paradiseCount',
+    label: 'Paradise',
+    clickable: true,
   },
 ];
 
@@ -283,3 +289,790 @@ export const restartAgentConfigLabels = {
   saveBtn: 'Save',
   cancelBtn: 'Cancel'
 };
+
+export const worldViewerLabels = {
+  worldView: 'World View',
+  worldSearch: 'World Search'
+};
+
+export const fleetResultsColumn = [
+  {
+    propName: 'fleetID',
+    label: 'fleetID'
+  },
+  {
+    propName: 'crewFleetName',
+    label: 'crewFleetName'
+  },
+  {
+    propName: 'identifier',
+    label: 'identifier'
+  },
+  {
+    propName: 'opsFleetName',
+    label: 'opsFleetName'
+  },
+  {
+    propName: 'version',
+    label: 'version'
+  },
+  {
+    propName: 'withinFleetSwapCost',
+    label: 'withinFleetSwapCost'
+  }
+];
+
+export const atcControlledStationResultsColumn = [
+  {
+    propName: 'version',
+    label: 'version'
+  }
+];
+
+export const aircraftResultsColumn = [
+  {
+    propName: 'aircraftID',
+    label: 'aircraftID'
+  },
+  {
+    propName: 'identifier',
+    label: 'identifier'
+  },
+  {
+    propName: 'isCorrectiveActionRequired',
+    label: 'isCorrectiveActionRequired'
+  },
+  {
+    propName: 'subfleetID',
+    label: 'subfleetID'
+  },
+  {
+    propName: 'tail',
+    label: 'tail'
+  },
+  {
+    propName: 'version',
+    label: 'version'
+  }
+];
+
+export const airportResultsColumn = [
+  {
+    propName: 'airportID',
+    label: 'airportID'
+  },
+  {
+    propName: 'airportGroupID',
+    label: 'airportGroupID'
+  },
+  {
+    propName: 'city',
+    label: 'city',
+  },
+  {
+    propName: 'code',
+    label: 'code'
+  },
+  {
+    propName: 'country',
+    label: 'country'
+  },
+  {
+    propName: 'identifier',
+    label: 'identifier'
+  },
+  {
+    propName: 'isAllowableSubfleets',
+    label: 'isAllowableSubfleets'
+  },
+  {
+    propName: 'isCrewCustomsCheckRequired',
+    label: 'isCrewCustomsCheckRequired'
+  },
+  {
+    propName: 'isHub',
+    label: 'isHub'
+  },
+  {
+    propName: 'isInternational',
+    label: 'isInternational'
+  },
+  {
+    propName: 'isServiced',
+    label: 'isServiced'
+  },
+  {
+    propName: 'name',
+    label: 'name'
+  },
+  {
+    propName: 'offsetGMT',
+    label: 'offsetGMT'
+  },
+  {
+    propName: 'version',
+    label: 'version'
+  }
+];
+
+export const airportGroupResultsColumn = [
+  {
+    propName: 'airportGroupID',
+    label: 'airportGroupID'
+  },
+  {
+    propName: 'identifier',
+    label: 'identifier'
+  },
+  {
+    propName: 'version',
+    label: 'version'
+  }
+];
+
+export const airportGroupRelationshipResultsColumn = [
+  {
+    propName: 'airportGroupRelationshipID',
+    label: 'airportGroupRelationshipID'
+  },
+  {
+    propName: 'identifier',
+    label: 'identifier'
+  },
+  {
+    propName: 'inflightTokens',
+    label: 'inflightTokens'
+  },
+  {
+    propName: 'operationalTokens',
+    label: 'operationalTokens'
+  },
+  {
+    propName: 'pilotTokens',
+    label: 'pilotTokens'
+  },
+  {
+    propName: 'version',
+    label: 'version'
+  }
+];
+
+export const crewResultsColumn = [
+  {
+    propName: 'crewID',
+    label: 'Crew ID'
+  },
+  {
+    propName: 'dateOfBirth',
+    label: 'dateOfBirth'
+  },
+  {
+    propName: 'employeeID',
+    label: 'employeeId'
+  },
+  {
+    propName: 'identifier',
+    label: 'identifier'
+  },
+  {
+    propName: 'name',
+    label: 'name'
+  },
+  {
+    propName: 'positionType',
+    label: 'positionType'
+  },
+  {
+    propName: 'version',
+    label: 'version'
+  }
+];
+
+export const crewBaseResultsColumn = [
+  {
+    propName: 'baseID',
+    label: 'baseID'
+  },
+  {
+    propName: 'code',
+    label: 'code'
+  },
+  {
+    propName: 'identifier',
+    label: 'identifier'
+  },
+  {
+    propName: 'name',
+    label: 'name'
+  },
+  {
+    propName: 'version',
+    label: 'version'
+  }
+];
+
+export const fleetCompatibilityResultsColumn = [
+  {
+    propName: 'fleetCompatibilityID',
+    label: 'fleetCompatibilityID'
+  },
+  {
+    propName: 'fleetCompatibilityType',
+    label: 'fleetCompatibilityType'
+  },
+  {
+    propName: 'fleetID',
+    label: 'fleetID'
+  },
+  {
+    propName: 'identifier',
+    label: 'identifier'
+  },
+  {
+    propName: 'version',
+    label: 'version'
+  }
+];
+
+export const flightResultsColumn = [
+  {
+    propName: 'flightID',
+    label: 'flightID'
+  },
+  {
+    propName: 'aircraftID',
+    label: 'aircraftID'
+  },
+  {
+    propName: 'arrDateTimeAct',
+    label: 'arrDateTimeAct'
+  },
+  {
+    propName: 'arrDateTimeEst',
+    label: 'arrDateTimeEst'
+  },
+  {
+    propName: 'arrDateTimeSch',
+    label: 'arrDateTimeSch'
+  },
+  {
+    propName: 'arrDate',
+    label: 'arrDate'
+  },
+  {
+    propName: 'canDeadHead',
+    label: 'canDeadHead'
+  },
+  {
+    propName: 'carriedCode',
+    label: 'carriedCode'
+  },
+  {
+    propName: 'destAirportID',
+    label: 'destAirportID'
+  },
+  {
+    propName: 'dptDateTimeAct',
+    label: 'dptDateTimeAct'
+  },
+  {
+    propName: 'dptDateTimeEst',
+    label: 'dptDateTimeEst'
+  },
+  {
+    propName: 'dptDateTimeSch',
+    label: 'dptDateTimeSch'
+  },
+  {
+    propName: 'dptGate',
+    label: 'dptGate'
+  },
+  {
+    propName: 'flightClass',
+    label: 'flightClass'
+  },
+  {
+    propName: 'flightNumber',
+    label: 'flightNumber'
+  },
+  {
+    propName: 'flightState',
+    label: 'flightState'
+  },
+  {
+    propName: 'identifier',
+    label: 'identifier'
+  },
+  {
+    propName: 'inControl',
+    label: 'inControl'
+  },
+  {
+    propName: 'isCancelled',
+    label: 'isCancelled'
+  },
+  {
+    propName: 'multiDepartureCode',
+    label: 'multiDepartureCode'
+  },
+  {
+    propName: 'offDateTime',
+    label: 'offDateTime'
+  },
+  {
+    propName: 'onDateTime',
+    label: 'onDateTime'
+  },
+  {
+    propName: 'operationDate',
+    label: 'operationDate'
+  },
+  {
+    propName: 'origAirportID',
+    label: 'origAirportID'
+  },
+  {
+    propName: 'serviceType',
+    label: 'serviceType'
+  },
+  {
+    propName: 'subfleetID',
+    label: 'subfleetID'
+  },
+  {
+    propName: 'version',
+    label: 'version'
+  }
+];
+
+export const flightActivityResultsColumn = [
+  {
+    propName: 'flightActivityID',
+    label: 'flightActivityID'
+  },
+  {
+    propName: 'category',
+    label: 'category'
+  },
+  {
+    propName: 'identifier',
+    label: 'identifier'
+  },
+  {
+    propName: 'type',
+    label: 'type'
+  },
+  {
+    propName: 'version',
+    label: 'version'
+  }
+];
+
+export const interSegmentTimeResultsColumn = [
+  {
+    propName: 'version',
+    label: 'version'
+  }
+];
+
+export const maintenanceResultsColumn = [
+  {
+    propName: 'maintenanceID',
+    label: 'maintenanceID'
+  },
+  {
+    propName: 'priority',
+    label: 'priority'
+  },
+  {
+    propName: 'airportID',
+    label: 'airportID'
+  },
+  {
+    propName: 'aircraftID',
+    label: 'aircraftID'
+  },
+  {
+    propName: 'identifier',
+    label: 'identifier'
+  },
+  {
+    propName: 'startDateTime',
+    label: 'startDateTime'
+  },
+  {
+    propName: 'endDateTime',
+    label: 'endDateTime'
+  },
+  {
+    propName: 'version',
+    label: 'version'
+  }
+];
+
+export const marketResultsColumn = [
+  {
+    propName: 'marketID',
+    label: 'marketID'
+  },
+  {
+    propName: 'origAirportID',
+    label: 'origAirportID'
+  },
+  {
+    propName: 'destAirportID',
+    label: 'destAirportID'
+  },
+  {
+    propName: 'distance',
+    label: 'distance'
+  },
+  {
+    propName: 'identifier',
+    label: 'identifier'
+  },
+  {
+    propName: 'version',
+    label: 'version'
+  }
+];
+
+export const nonFlyResultsColumn = [
+  {
+    propName: 'nonflyID',
+    label: 'nonflyID'
+  },
+  {
+    propName: 'changeability',
+    label: 'changeability'
+  },
+  {
+    propName: 'code',
+    label: 'code'
+  },
+  {
+    propName: 'destAirportID',
+    label: 'destAirportID'
+  },
+  {
+    propName: 'endDateTime',
+    label: 'endDateTime'
+  },
+  {
+    propName: 'identifier',
+    label: 'identifier'
+  },
+  {
+    propName: 'isDutyTime',
+    label: 'isDutyTime'
+  },
+  {
+    propName: 'label',
+    label: 'label'
+  },
+  {
+    propName: 'origAirportID',
+    label: 'origAirportID'
+  },
+  {
+    propName: 'startDateTime',
+    label: 'startDateTime'
+  },
+  {
+    propName: 'version',
+    label: 'version'
+  }
+];
+
+export const offlineTransportationResultsColumn = [
+  {
+    propName: 'offlineTransportationID',
+    label: 'offlineTransportationID'
+  },
+  {
+    propName: 'cost',
+    label: 'cost'
+  },
+  {
+    propName: 'destAirportID',
+    label: 'destAirportID'
+  },
+  {
+    propName: 'durationInMinutes',
+    label: 'durationInMinutes'
+  },
+  {
+    propName: 'identifier',
+    label: 'identifier'
+  },
+  {
+    propName: 'isCancelled',
+    label: 'isCancelled'
+  },
+  {
+    propName: 'isPenalized',
+    label: 'isPenalized'
+  },
+  {
+    propName: 'isSchedulingResource',
+    label: 'isSchedulingResource'
+  },
+  {
+    propName: 'name',
+    label: 'name'
+  },
+  {
+    propName: 'offlineTransportationType',
+    label: 'offlineTransportationType'
+  },
+  {
+    propName: 'origAirportID',
+    label: 'origAirportID'
+  },
+  {
+    propName: 'positionType',
+    label: 'positionType'
+  },
+  {
+    propName: 'startDateTime',
+    label: 'startDateTime'
+  },
+  {
+    propName: 'version',
+    label: 'version'
+  }
+];
+
+export const pairingResultsColumn = [
+  {
+    propName: 'pairingID',
+    label: 'pairingID'
+  },
+  {
+    propName: 'baseID',
+    label: 'baseID'
+  },
+  {
+    propName: 'destAirportID',
+    label: 'destAirportID'
+  },
+  {
+    propName: 'identifier',
+    label: 'identifier'
+  },
+  {
+    propName: 'name',
+    label: 'name'
+  },
+  {
+    propName: 'origAirportID',
+    label: 'origAirportID'
+  },
+  {
+    propName: 'positionType',
+    label: 'positionType'
+  },
+  {
+    propName: 'startDate',
+    label: 'startDate'
+  },
+  {
+    propName: 'version',
+    label: 'version'
+  }
+];
+
+export const passengerConnectionResultsColumn = [
+  {
+    propName: 'version',
+    label: 'version'
+  }
+];
+
+export const positionResultsColumn = [
+  {
+    propName: 'positionID',
+    label: 'positionID'
+  },
+  {
+    propName: 'code',
+    label: 'code'
+  },
+  {
+    propName: 'identifier',
+    label: 'identifier'
+  },
+  {
+    propName: 'name',
+    label: 'name'
+  },
+  {
+    propName: 'rank',
+    label: 'rank'
+  },
+  {
+    propName: 'type',
+    label: 'type'
+  },
+  {
+    propName: 'version',
+    label: 'version'
+  }
+];
+
+export const qualificationResultsColumn = [
+  {
+    propName: 'qualificationID',
+    label: 'qualificationID'
+  },
+  {
+    propName: 'identifier',
+    label: 'identifier'
+  },
+  {
+    propName: 'name',
+    label: 'name'
+  },
+  {
+    propName: 'problemLevel',
+    label: 'problemLevel'
+  },
+  {
+    propName: 'problemType',
+    label: 'problemType'
+  },
+  {
+    propName: 'semantics',
+    label: 'semantics'
+  },
+  {
+    propName: 'verifyIsInEffectAt',
+    label: 'verifyIsInEffectAt'
+  },
+  {
+    propName: 'version',
+    label: 'version'
+  }
+];
+
+export const subfleetResultsColumn = [
+  {
+    propName: 'subfleetID',
+    label: 'subfleetID'
+  },
+  {
+    propName: 'airspeed',
+    label: 'airspeed'
+  },
+  {
+    propName: 'bodyType',
+    label: 'bodyType'
+  },
+  {
+    propName: 'code',
+    label: 'code'
+  },
+  {
+    propName: 'domesticToInternationalTurnTime',
+    label: 'domesticToInternationalTurnTime'
+  },
+  {
+    propName: 'domesticTurnTime',
+    label: 'domesticTurnTime'
+  },
+  {
+    propName: 'fleetID',
+    label: 'fleetID'
+  },
+  {
+    propName: 'iataTypeDefault',
+    label: 'iataTypeDefault'
+  },
+  {
+    propName: 'identifier',
+    label: 'identifier'
+  },
+  {
+    propName: 'InternationalToDomesticTurnTime',
+    label: 'InternationalToDomesticTurnTime'
+  },
+  {
+    propName: 'internationalTurnTime',
+    label: 'internationalTurnTime'
+  },
+  {
+    propName: 'range',
+    label: 'range'
+  },
+  {
+    propName: 'restFacility',
+    label: 'restFacility'
+  },
+  {
+    propName: 'version',
+    label: 'version'
+  }
+];
+
+export const trainingResultsColumn = [
+  {
+    propName: 'trainingID',
+    label: 'trainingID'
+  },
+  {
+    propName: 'identifier',
+    label: 'identifier'
+  },
+  {
+    propName: 'isAssignable',
+    label: 'isAssignable'
+  },
+  {
+    propName: 'isFlightSpecific',
+    label: 'isFlightSpecific'
+  },
+  {
+    propName: 'isTraineePartOfComplement',
+    label: 'isTraineePartOfComplement'
+  },
+  {
+    propName: 'isTrainerPartOfComplement',
+    label: 'isTrainerPartOfComplement'
+  },
+  {
+    propName: 'name',
+    label: 'name'
+  },
+  {
+    propName: 'version',
+    label: 'version'
+  }
+];
+
+export const worldSummaryProperties = {
+  atcControlledStation: 'ATCControlledStation',
+  aircraft: 'Aircraft',
+  airport: 'Airport',
+  airportGroup: 'AirportGroup',
+  airportGroupRelationship: 'AirportGroupRelationship',
+  crew: 'Crew',
+  crewBase: 'CrewBase',
+  fleet: 'Fleet',
+  fleetCompatibility: 'FleetCompatibility',
+  flight: 'Flight',
+  flightActivity: 'FlightActivity',
+  interSegmentTime: 'InterSegmentTime',
+  maintenance: 'Maintenance',
+  market: 'Market',
+  nonFly: 'NonFly',
+  offlineTansportation: 'OfflineTransportation',
+  pairing: 'Pairing',
+  passsengerConnection: 'PassengerConnection',
+  position: 'Position',
+  qualification: 'Qualification',
+  sublfeet: 'Subfleet',
+  training: 'Training'
+};
+
+
+

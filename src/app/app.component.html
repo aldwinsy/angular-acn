@@ -2,7 +2,7 @@
   <app-header fxFlex="10" (changeTheme)="changeTheme($event)"></app-header>
   
   <div (scroll)="showBanner = false" fxFlex class="sasi-core-body div-scroll-body" [ngClass]="{'sasi-dark-theme': darkTheme}">
-    <app-banner [@showHideBanner]="showBanner ? 'show' : 'hide'"></app-banner>
+    <!-- <app-banner [@showHideBanner]="showBanner ? 'show' : 'hide'"></app-banner> -->
     <router-outlet></router-outlet>
   </div>
   <app-footer fxFlex="15"></app-footer>
