@@ -100,7 +100,7 @@ export class WorldViewerService {
       case worldSummaryProperties.nonFly:
         data = nonFlyMock;
         break;
-      case worldSummaryProperties.offlineTansportation:
+      case worldSummaryProperties.offlineTransportation:
         data = offlineTransportationMock;
         break;
       case worldSummaryProperties.pairing:

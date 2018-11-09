@@ -1,3 +1,4 @@
+import { RouterTestingModule } from '@angular/router/testing';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SummaryPanelComponent } from './summary-panel.component';
@@ -22,8 +23,11 @@ describe('SummaryPanelTestHostComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [ SharedModule ],
-      declarations: [ SummaryPanelComponent, TestHostComponent ]
+      imports: [
+        SharedModule,
+        RouterTestingModule
+      ],
+      declarations: [ SummaryPanelComponent, TestHostComponent ],
     })
     .compileComponents();
   }));
@@ -54,7 +58,10 @@ describe('SummaryPanelComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [ SharedModule ],
+      imports: [
+        SharedModule,
+        RouterTestingModule
+      ],
       declarations: [ SummaryPanelComponent ]
     })
     .compileComponents();
@@ -63,11 +70,28 @@ describe('SummaryPanelComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(SummaryPanelComponent);
     component = fixture.componentInstance;
+    component.worldSummaryData = worldSummaryData;
     fixture.detectChanges();
   });
 
   it('should create world summary panel component', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should navigate to results component when cell from table is clicked', () => {
+    const summaryTable = fixture.debugElement.query(By.css('#world-summary-table'));
+    const eventDetails = {
+      cellColumn: 'Purgatory',
+      rowDetails: {
+        propertyName: 'Fleet'
+      }
+    };
+    const navigateSpy = spyOn((<any>component).router, 'navigate');
+    spyOn(component, 'goToResults').and.callThrough();
+    summaryTable.triggerEventHandler('cellClicked', eventDetails);
+    expect(navigateSpy).toHaveBeenCalledWith(
+      [ 'world-viewer/search-results', Object({ world: 'Purgatory', resultsToBeViewed: 'Fleet' }) ]
+    );
   });
 
 });

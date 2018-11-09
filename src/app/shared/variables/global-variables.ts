@@ -1065,7 +1065,7 @@ export const worldSummaryProperties = {
   maintenance: 'Maintenance',
   market: 'Market',
   nonFly: 'NonFly',
-  offlineTansportation: 'OfflineTransportation',
+  offlineTransportation: 'OfflineTransportation',
   pairing: 'Pairing',
   passsengerConnection: 'PassengerConnection',
   position: 'Position',

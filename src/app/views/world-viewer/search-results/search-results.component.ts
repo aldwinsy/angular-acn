@@ -50,7 +50,7 @@ export class SearchResultsComponent implements OnInit {
       if (params) {
         this.world = params['world'];
         this.object = params['resultsToBeViewed'];
-        this.getResultsColumn();
+        this.resultsColumns = this.getResultsColumn(this.object);
       }
     });
   }
@@ -61,74 +61,52 @@ export class SearchResultsComponent implements OnInit {
     });
   }
 
-  getResultsColumn() {
-    switch (this.object) {
+  getResultsColumn(objecttype) {
+    switch (objecttype) {
       case worldSummaryProperties.aircraft:
-        this.resultsColumns = aircraftResultsColumn;
-        break;
+        return aircraftResultsColumn;
       case worldSummaryProperties.airport:
-        this.resultsColumns = airportResultsColumn;
-        break;
+        return airportResultsColumn;
       case worldSummaryProperties.airportGroup:
-        this.resultsColumns = airportGroupResultsColumn;
-        break;
+        return airportGroupResultsColumn;
       case worldSummaryProperties.airportGroupRelationship:
-        this.resultsColumns = airportGroupRelationshipResultsColumn;
-        break;
+        return airportGroupRelationshipResultsColumn;
       case worldSummaryProperties.atcControlledStation:
-        this.resultsColumns = atcControlledStationResultsColumn;
-        break;
+        return atcControlledStationResultsColumn;
       case worldSummaryProperties.crew:
-        this.resultsColumns = crewResultsColumn;
-        break;
+        return crewResultsColumn;
       case worldSummaryProperties.crewBase:
-        this.resultsColumns = crewBaseResultsColumn;
-        break;
+        return crewBaseResultsColumn;
       case worldSummaryProperties.fleetCompatibility:
-        this.resultsColumns = fleetCompatibilityResultsColumn;
-        break;
+        return fleetCompatibilityResultsColumn;
       case worldSummaryProperties.fleet:
-        this.resultsColumns = fleetResultsColumn;
-        break;
+        return fleetResultsColumn;
       case worldSummaryProperties.flight:
-        this.resultsColumns = flightResultsColumn;
-        break;
+        return flightResultsColumn;
       case worldSummaryProperties.flightActivity:
-        this.resultsColumns = flightActivityResultsColumn;
-        break;
+        return flightActivityResultsColumn;
       case worldSummaryProperties.interSegmentTime:
-        this.resultsColumns = interSegmentTimeResultsColumn;
-        break;
+        return interSegmentTimeResultsColumn;
       case worldSummaryProperties.maintenance:
-        this.resultsColumns = maintenanceResultsColumn;
-        break;
+        return maintenanceResultsColumn;
       case worldSummaryProperties.market:
-        this.resultsColumns = marketResultsColumn;
-        break;
+        return marketResultsColumn;
       case worldSummaryProperties.nonFly:
-        this.resultsColumns = nonFlyResultsColumn;
-        break;
-      case worldSummaryProperties.offlineTansportation:
-        this.resultsColumns = offlineTransportationResultsColumn;
-        break;
+        return nonFlyResultsColumn;
+      case worldSummaryProperties.offlineTransportation:
+        return offlineTransportationResultsColumn;
       case worldSummaryProperties.pairing:
-        this.resultsColumns = pairingResultsColumn;
-        break;
+        return pairingResultsColumn;
       case worldSummaryProperties.passsengerConnection:
-        this.resultsColumns = passengerConnectionResultsColumn;
-        break;
+        return passengerConnectionResultsColumn;
       case worldSummaryProperties.position:
-        this.resultsColumns = positionResultsColumn;
-        break;
+        return positionResultsColumn;
       case worldSummaryProperties.qualification:
-        this.resultsColumns = qualificationResultsColumn;
-        break;
+        return qualificationResultsColumn;
       case worldSummaryProperties.sublfeet:
-        this.resultsColumns = subfleetResultsColumn;
-        break;
+        return subfleetResultsColumn;
       case worldSummaryProperties.training:
-        this.resultsColumns = trainingResultsColumn;
-        break;
+        return trainingResultsColumn;
     }
   }
 
