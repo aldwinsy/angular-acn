@@ -29,6 +29,11 @@ export const headerNavItems = [
   }
 ];
 
+export const worldGroup = {
+  paradise: 'Paradise',
+  purgatory: 'Purgatory'
+};
+
 // @TODO: change to actual urls when endpoints are available
 export const urls = {
   dataStatus: 'api/v1/data-status',
@@ -324,6 +329,30 @@ export const fleetResultsColumn = [
 
 export const atcControlledStationResultsColumn = [
   {
+    propName: 'atcControlledStationID',
+    label: 'atcControlledStationID'
+  },
+  {
+    propName: 'airportID',
+    label: 'airportID'
+  },
+  {
+    propName: 'stationCode',
+    label: 'stationCode'
+  },
+  {
+    propName: 'stationControlType',
+    label: 'stationControlType'
+  },
+  {
+    propName: 'identifier',
+    label: 'identifier'
+  },
+  {
+    propName: 'isSubstitutionAllowed',
+    label: 'isSubstitutionAllowed'
+  },
+  {
     propName: 'version',
     label: 'version'
   }
@@ -460,7 +489,7 @@ export const airportGroupRelationshipResultsColumn = [
 export const crewResultsColumn = [
   {
     propName: 'crewID',
-    label: 'Crew ID'
+    label: 'crewID'
   },
   {
     propName: 'dateOfBirth',
@@ -564,8 +593,8 @@ export const flightResultsColumn = [
     label: 'canDeadHead'
   },
   {
-    propName: 'carriedCode',
-    label: 'carriedCode'
+    propName: 'carrierCode',
+    label: 'carrierCode'
   },
   {
     propName: 'destAirportID',
@@ -608,8 +637,8 @@ export const flightResultsColumn = [
     label: 'inControl'
   },
   {
-    propName: 'isCancelled',
-    label: 'isCancelled'
+    propName: 'isCanceled',
+    label: 'isCanceled'
   },
   {
     propName: 'multiDepartureCode',
@@ -806,8 +835,8 @@ export const offlineTransportationResultsColumn = [
     label: 'identifier'
   },
   {
-    propName: 'isCancelled',
-    label: 'isCancelled'
+    propName: 'isCanceled',
+    label: 'isCanceled'
   },
   {
     propName: 'isPenalized',
@@ -883,6 +912,22 @@ export const pairingResultsColumn = [
 ];
 
 export const passengerConnectionResultsColumn = [
+  {
+    propName: 'passengerConnectionID',
+    label: 'passengerConnectionID'
+  },
+  {
+    propName: 'identifier',
+    label: 'identifier'
+  },
+  {
+    propName: 'connectToFlightID',
+    label: 'connectToFlightID'
+  },
+  {
+    propName: 'connectFromFlightID',
+    label: 'connectFromFlightID'
+  },
   {
     propName: 'version',
     label: 'version'
@@ -1050,28 +1095,257 @@ export const trainingResultsColumn = [
 ];
 
 export const worldSummaryProperties = {
-  atcControlledStation: 'ATCControlledStation',
-  aircraft: 'Aircraft',
-  airport: 'Airport',
-  airportGroup: 'AirportGroup',
-  airportGroupRelationship: 'AirportGroupRelationship',
-  crew: 'Crew',
-  crewBase: 'CrewBase',
-  fleet: 'Fleet',
-  fleetCompatibility: 'FleetCompatibility',
-  flight: 'Flight',
-  flightActivity: 'FlightActivity',
-  interSegmentTime: 'InterSegmentTime',
-  maintenance: 'Maintenance',
-  market: 'Market',
-  nonFly: 'NonFly',
-  offlineTransportation: 'OfflineTransportation',
-  pairing: 'Pairing',
-  passsengerConnection: 'PassengerConnection',
-  position: 'Position',
-  qualification: 'Qualification',
-  sublfeet: 'Subfleet',
-  training: 'Training'
+  atcControlledStation: 'atcControlledStation',
+  aircraft: 'aircraft',
+  airport: 'airport',
+  airportGroup: 'airportGroup',
+  airportGroupRelationship: 'airportGroupRelationship',
+  crew: 'crew',
+  crewBase: 'crewBase',
+  fleet: 'fleet',
+  fleetCompatibility: 'fleetCompatibility',
+  flight: 'flight',
+  flightActivity: 'flightActivity',
+  interSegmentTime: 'interSegmentTime',
+  maintenance: 'maintenance',
+  market: 'market',
+  nonFly: 'monfly',
+  offlineTransportation: 'offlineTransportation',
+  pairing: 'pairing',
+  passsengerConnection: 'passengerConnection',
+  position: 'position',
+  qualification: 'qualification',
+  sublfeet: 'subfleet',
+  training: 'training'
+};
+
+export const worldObjectProperties = {
+  atcControlledStation: [
+    'atcControlledStationID',
+    'airportID',
+    'stationCode',
+    'stationControlType',
+    'identifier',
+    'isSubstitutionAllowed',
+    'version'
+  ],
+  aircraft: [
+    'aircraftID',
+    'identifier',
+    'isCorrectiveActionRequired',
+    'subfleetID',
+    'tail',
+    'version'
+  ],
+  airport: [
+    'airportID',
+    'airportGroupID',
+    'city',
+    'code',
+    'country',
+    'identifier',
+    'isAllowableSubfleets',
+    'isCrewCustomCheckRequired',
+    'isHub',
+    'isInternational',
+    'isServiced',
+    'name',
+    'offsetGMT',
+    'version'
+  ],
+  airportGroup: [
+    'airportGroupID',
+    'identifier',
+    'vaersion'
+  ],
+  airportGroupRelationship: [
+    'airportGroupRelationshipID',
+    'identifier',
+    'inflightTokens',
+    'operationalTokens',
+    'pilotTokens',
+    'version'
+  ],
+  crew: [
+    'crewID',
+    'dateOfBirth',
+    'employeeID',
+    'identifier',
+    'name',
+    'positionType',
+    'version'
+  ],
+  crewBase: [
+    'baseID',
+    'code',
+    'identifier',
+    'name',
+    'version'
+  ],
+  fleet: [
+    'fleetID',
+    'crewFleetName',
+    'identifier',
+    'opsFleetName',
+    'version',
+    'withinFleetSwapCost'
+  ],
+  fleetCompatibility: [
+    'fleetCompatibilityID',
+    'fleetCompatibilityType',
+    'fleetID',
+    'identifier',
+    'version'
+  ],
+  flight: [
+    'flightID',
+    'aircraftID',
+    'arrDateTimeAct',
+    'arrDatetieSch',
+    'arrDate',
+    'canDeadHead',
+    'carriedCode',
+    'destAirportID',
+    'dptDateTimeAct',
+    'dptDateTimeEst',
+    'dptDateTimeSch',
+    'dptGate',
+    'flightClass',
+    'flightNumber',
+    'flightState',
+    'identifier',
+    'inControl',
+    'isCanceled',
+    'multiDepartureCode',
+    'offDateTime',
+    'onDateTime',
+    'operationDate',
+    'origAirportID',
+    'serviceType',
+    'subfleetID',
+    'version'
+  ],
+  flightActivity: [
+    'flightActivityID',
+    'category',
+    'identifier',
+    'type',
+    'version'
+  ],
+  interSegmentTime: [
+    'interSegmentTimeID',
+    'identifier',
+    'version'
+  ],
+  maintenance: [
+    'maintenanceID',
+    'prioroty',
+    'airportID',
+    'aircraftID',
+    'identifier',
+    'startDateTime',
+    'endDateTime',
+    'version'
+  ],
+  market: [
+    'marketID',
+    'origAirportID',
+    'destAirportID',
+    'distance',
+    'identifier',
+    'version'
+  ],
+  nonfly: [
+    'nonflyID',
+    'changeability',
+    'code',
+    'destAirportID',
+    'endDateTime',
+    'identifier',
+    'isDutyTime',
+    'label',
+    'origAirportID',
+    'startDateTime',
+    'version'
+  ],
+  offlineTransportation: [
+    'offlineTransportationID',
+    'cost',
+    'destAirportID',
+    'durationInMinutes',
+    'identifier',
+    'isCanceled',
+    'isPenalized',
+    'isSchedulingResource',
+    'name',
+    'offlineTransportationType',
+    'origAirportID',
+    'positiontype',
+    'startDateTime',
+    'version'
+  ],
+  pairing: [
+    'pairingID',
+    'baseID',
+    'destAirportID',
+    'identifier',
+    'name',
+    'origAirportID',
+    'positionType',
+    'startDate',
+    'startDate',
+    'version'
+  ],
+  passengerConnection: [
+    'passengerConnectionID',
+    'identifier',
+    'version'
+  ],
+  position: [
+    'positionID',
+    'code',
+    'identifier',
+    'name',
+    'rank',
+    'type',
+    'version'
+  ],
+  qualification: [
+    'qualificationID',
+    'identifier',
+    'name',
+    'problemLevel',
+    'problemType',
+    'semantics',
+    'verifiyIsInEffectAt',
+    'version'
+  ],
+  subfleet: [
+    'subfleetID',
+    'airspeed',
+    'bodyType',
+    'code',
+    'domesticeToInternationalturnTime',
+    'domesticTurnTime',
+    'fleetID',
+    'iataTypeDefault',
+    'identifier',
+    'internationToDomesticturnTime',
+    'internationalturntime',
+    'range',
+    'restFacility',
+    'version'
+  ],
+  training: [
+    'trainingID',
+    'identifier',
+    'isAssignable',
+    'isFlightSpecific',
+    'isTraineePartOfComplement',
+    'isTrainerPartOfComplement',
+    'name',
+    'version',
+  ]
 };
 
 

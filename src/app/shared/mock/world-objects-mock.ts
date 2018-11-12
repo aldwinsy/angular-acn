@@ -81,7 +81,3572 @@ export const fleetMock = [
   }
 ];
 
-export const ATCControlledStationMOck = [];
+export const ATCControlledStationMOck = [
+  {
+    version: 1,
+    slotList: {
+      slot: [
+        {
+          flightID: 'FL-CO-20181112-BCN-EWR-121',
+          atcSlotID: 'SL-EWR.241829A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T18:29:00.000+0000',
+          arrivalSlotName: 'EWR.241829A',
+          dptDateTimeCtrl: '2018-11-12T10:30:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'BCN',
+          initialGateTimeDeparture: '240845',
+          airlineCodeAndFlightNumber: 'COA0121'
+        },
+        {
+          flightID: 'FL-CO-20181112-DEN-EWR-1029',
+          atcSlotID: 'SL-EWR.241830A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T18:30:00.000+0000',
+          arrivalSlotName: 'EWR.241830A',
+          dptDateTimeCtrl: '2018-11-12T14:45:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'DEN',
+          initialGateTimeDeparture: '241420',
+          airlineCodeAndFlightNumber: 'COA1029'
+        },
+        {
+          flightID: 'FL-CO-20181112-CDG-EWR-55',
+          atcSlotID: 'SL-EWR.241831A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T18:31:00.000+0000',
+          arrivalSlotName: 'EWR.241831A',
+          dptDateTimeCtrl: '2018-11-12T11:06:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'CDG',
+          initialGateTimeDeparture: '241055',
+          airlineCodeAndFlightNumber: 'COA0055'
+        },
+        {
+          flightID: 'FL-CO-20181112-FLL-EWR-700',
+          atcSlotID: 'SL-EWR.241833A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T18:33:00.000+0000',
+          arrivalSlotName: 'EWR.241833A',
+          dptDateTimeCtrl: '2018-11-12T15:08:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'FLL',
+          initialGateTimeDeparture: '241455',
+          airlineCodeAndFlightNumber: 'COA0700'
+        },
+        {
+          flightID: 'FL-CO-20181112-MAD-EWR-63',
+          atcSlotID: 'SL-EWR.241835A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T18:35:00.000+0000',
+          arrivalSlotName: 'EWR.241835A',
+          dptDateTimeCtrl: '2018-11-12T10:45:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'MAD',
+          initialGateTimeDeparture: '240935',
+          airlineCodeAndFlightNumber: 'COA0063'
+        },
+        {
+          atcSlotID: 'SL-EWR.241836A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T18:36:00.000+0000',
+          arrivalSlotName: 'EWR.241836A',
+          dptDateTimeCtrl: '2018-11-12T16:04:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'ATL',
+          initialGateTimeDeparture: '241600',
+          airlineCodeAndFlightNumber: 'BTA2084'
+        },
+        {
+          flightID: 'FL-CO-20181112-EDI-EWR-109',
+          atcSlotID: 'SL-EWR.241840A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T18:40:00.000+0000',
+          arrivalSlotName: 'EWR.241840A',
+          dptDateTimeCtrl: '2018-11-12T11:54:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'EDI',
+          initialGateTimeDeparture: '241110',
+          airlineCodeAndFlightNumber: 'COA0109'
+        },
+        {
+          flightID: 'FL-CO-20181112-MCO-EWR-56',
+          atcSlotID: 'SL-EWR.241843A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T18:43:00.000+0000',
+          arrivalSlotName: 'EWR.241843A',
+          dptDateTimeCtrl: '2018-11-12T15:55:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'MCO',
+          initialGateTimeDeparture: '241535',
+          airlineCodeAndFlightNumber: 'COA0056'
+        },
+        {
+          flightID: 'FL-CO-20181112-TPA-EWR-619',
+          atcSlotID: 'SL-EWR.241845A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T18:45:00.000+0000',
+          arrivalSlotName: 'EWR.241845A',
+          dptDateTimeCtrl: '2018-11-12T16:07:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'TPA',
+          initialGateTimeDeparture: '241600',
+          airlineCodeAndFlightNumber: 'COA0619'
+        },
+        {
+          flightID: 'FL-CO-20181112-LHR-EWR-111',
+          atcSlotID: 'SL-EWR.241846A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T18:46:00.000+0000',
+          arrivalSlotName: 'EWR.241846A',
+          dptDateTimeCtrl: '2018-11-12T11:31:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'LHR',
+          initialGateTimeDeparture: '241105',
+          airlineCodeAndFlightNumber: 'COA0111'
+        },
+        {
+          flightID: 'FL-CO-20181112-HKG-EWR-98',
+          atcSlotID: 'SL-EWR.241848A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T18:48:00.000+0000',
+          arrivalSlotName: 'EWR.241848A',
+          dptDateTimeCtrl: '2018-11-12T03:54:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'HKG',
+          initialGateTimeDeparture: '240225',
+          airlineCodeAndFlightNumber: 'COA0098'
+        },
+        {
+          atcSlotID: 'SL-EWR.241850A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T18:50:00.000+0000',
+          arrivalSlotName: 'EWR.241850A',
+          dptDateTimeCtrl: '2018-11-12T16:13:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'SAV',
+          initialGateTimeDeparture: '241607',
+          airlineCodeAndFlightNumber: 'BTA2543'
+        },
+        {
+          atcSlotID: 'SL-EWR.241853A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T18:53:00.000+0000',
+          arrivalSlotName: 'EWR.241853A',
+          dptDateTimeCtrl: '2018-11-12T16:16:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'MSP',
+          initialGateTimeDeparture: '241556',
+          airlineCodeAndFlightNumber: 'BTA2470'
+        },
+        {
+          flightID: 'FL-CO-20181112-PHX-EWR-734',
+          atcSlotID: 'SL-EWR.241855A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T18:55:00.000+0000',
+          arrivalSlotName: 'EWR.241855A',
+          dptDateTimeCtrl: '2018-11-12T14:20:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'PHX',
+          initialGateTimeDeparture: '241410',
+          airlineCodeAndFlightNumber: 'COA0734'
+        },
+        {
+          flightID: 'FL-CO-20181112-NAS-EWR-691',
+          atcSlotID: 'SL-EWR.241856A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T18:56:00.000+0000',
+          arrivalSlotName: 'EWR.241856A',
+          dptDateTimeCtrl: '2018-11-12T15:56:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'NAS',
+          initialGateTimeDeparture: '241550',
+          airlineCodeAndFlightNumber: 'COA0691'
+        },
+        {
+          flightID: 'FL-CO-20181112-MEX-EWR-1741',
+          atcSlotID: 'SL-EWR.241858A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T18:58:00.000+0000',
+          arrivalSlotName: 'EWR.241858A',
+          dptDateTimeCtrl: '2018-11-12T14:15:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'MEX',
+          initialGateTimeDeparture: '241405',
+          airlineCodeAndFlightNumber: 'COA1741'
+        },
+        {
+          flightID: 'FL-CO-20181112-MCO-EWR-693',
+          atcSlotID: 'SL-EWR.241901A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T19:01:00.000+0000',
+          arrivalSlotName: 'EWR.241901A',
+          dptDateTimeCtrl: '2018-11-12T16:49:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'MCO',
+          initialGateTimeDeparture: '241435',
+          airlineCodeAndFlightNumber: 'COA0693'
+        },
+        {
+          flightID: 'FL-CO-20181112-DFW-EWR-1134',
+          atcSlotID: 'SL-EWR.241903A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T19:03:00.000+0000',
+          arrivalSlotName: 'EWR.241903A',
+          dptDateTimeCtrl: '2018-11-12T15:34:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'DFW',
+          initialGateTimeDeparture: '241530',
+          airlineCodeAndFlightNumber: 'COA1134'
+        },
+        {
+          atcSlotID: 'SL-EWR.241905A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T19:05:00.000+0000',
+          arrivalSlotName: 'EWR.241905A',
+          dptDateTimeCtrl: '2018-11-12T17:05:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'BNA',
+          initialGateTimeDeparture: '241659',
+          airlineCodeAndFlightNumber: 'BTA2148'
+        },
+        {
+          flightID: 'FL-CO-20181112-SJO-EWR-1797',
+          atcSlotID: 'SL-EWR.241908A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T19:08:00.000+0000',
+          arrivalSlotName: 'EWR.241908A',
+          dptDateTimeCtrl: '2018-11-12T14:11:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'SJO',
+          initialGateTimeDeparture: '241400',
+          airlineCodeAndFlightNumber: 'COA1797'
+        },
+        {
+          flightID: 'FL-CO-20181112-FLL-EWR-1400',
+          atcSlotID: 'SL-EWR.241910A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T19:10:00.000+0000',
+          arrivalSlotName: 'EWR.241910A',
+          dptDateTimeCtrl: '2018-11-12T16:18:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'FLL',
+          initialGateTimeDeparture: '241610',
+          airlineCodeAndFlightNumber: 'COA1400'
+        },
+        {
+          flightID: 'FL-CO-20181112-IAH-EWR-106',
+          atcSlotID: 'SL-EWR.241915A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T19:15:00.000+0000',
+          arrivalSlotName: 'EWR.241915A',
+          dptDateTimeCtrl: '2018-11-12T15:52:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'IAH',
+          initialGateTimeDeparture: '241545',
+          airlineCodeAndFlightNumber: 'COA0106'
+        },
+        {
+          flightID: 'FL-CO-20181112-LAS-EWR-569',
+          atcSlotID: 'SL-EWR.241916A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T19:16:00.000+0000',
+          arrivalSlotName: 'EWR.241916A',
+          dptDateTimeCtrl: '2018-11-12T14:32:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'LAS',
+          initialGateTimeDeparture: '241415',
+          airlineCodeAndFlightNumber: 'COA0569'
+        },
+        {
+          atcSlotID: 'SL-EWR.241923A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T19:23:00.000+0000',
+          arrivalSlotName: 'EWR.241923A',
+          dptDateTimeCtrl: '2018-11-12T16:39:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'OMA',
+          initialGateTimeDeparture: '241636',
+          airlineCodeAndFlightNumber: 'BTA2916'
+        },
+        {
+          atcSlotID: 'SL-EWR.241930A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T19:30:00.000+0000',
+          arrivalSlotName: 'EWR.241930A',
+          dptDateTimeCtrl: '2018-11-12T17:49:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'TYS',
+          initialGateTimeDeparture: '241740',
+          airlineCodeAndFlightNumber: 'BTA2736'
+        },
+        {
+          flightID: 'FL-CO-20181112-LAX-EWR-40',
+          atcSlotID: 'SL-EWR.241931A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T19:31:00.000+0000',
+          arrivalSlotName: 'EWR.241931A',
+          dptDateTimeCtrl: '2018-11-12T14:26:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'LAX',
+          initialGateTimeDeparture: '241400',
+          airlineCodeAndFlightNumber: 'COA0040'
+        },
+        {
+          atcSlotID: 'SL-EWR.241933A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T19:33:00.000+0000',
+          arrivalSlotName: 'EWR.241933A',
+          dptDateTimeCtrl: '2018-11-12T19:12:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'ABE',
+          initialGateTimeDeparture: '241825',
+          airlineCodeAndFlightNumber: 'BTA3064'
+        },
+        {
+          atcSlotID: 'SL-EWR.241935A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T19:35:00.000+0000',
+          arrivalSlotName: 'EWR.241935A',
+          dptDateTimeCtrl: '2018-11-12T17:25:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'STL',
+          initialGateTimeDeparture: '241725',
+          airlineCodeAndFlightNumber: 'BTA2670'
+        },
+        {
+          flightID: 'FL-CO-20181112-SFO-EWR-349',
+          atcSlotID: 'SL-EWR.241940A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T19:40:00.000+0000',
+          arrivalSlotName: 'EWR.241940A',
+          dptDateTimeCtrl: '2018-11-12T14:32:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'SFO',
+          initialGateTimeDeparture: '241415',
+          airlineCodeAndFlightNumber: 'COA0349'
+        },
+        {
+          flightID: 'FL-CO-20181112-SEA-EWR-1580',
+          atcSlotID: 'SL-EWR.241941A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T19:41:00.000+0000',
+          arrivalSlotName: 'EWR.241941A',
+          dptDateTimeCtrl: '2018-11-12T14:31:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'SEA',
+          initialGateTimeDeparture: '241430',
+          airlineCodeAndFlightNumber: 'COA1580'
+        },
+        {
+          flightID: 'FL-CO-20181112-AMS-EWR-71',
+          atcSlotID: 'SL-EWR.241943A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T19:43:00.000+0000',
+          arrivalSlotName: 'EWR.241943A',
+          dptDateTimeCtrl: '2018-11-12T12:11:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'AMS',
+          initialGateTimeDeparture: '241115',
+          airlineCodeAndFlightNumber: 'COA0071'
+        },
+        {
+          flightID: 'FL-CO-20181112-BOG-EWR-880',
+          atcSlotID: 'SL-EWR.241945A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T19:45:00.000+0000',
+          arrivalSlotName: 'EWR.241945A',
+          dptDateTimeCtrl: '2018-11-12T14:14:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'BOG',
+          initialGateTimeDeparture: '241400',
+          airlineCodeAndFlightNumber: 'COA0880'
+        },
+        {
+          flightID: 'FL-CO-20181112-PTY-EWR-886',
+          atcSlotID: 'SL-EWR.241946A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T19:46:00.000+0000',
+          arrivalSlotName: 'EWR.241946A',
+          dptDateTimeCtrl: '2018-11-12T15:10:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'PTY',
+          initialGateTimeDeparture: '241455',
+          airlineCodeAndFlightNumber: 'COA0886'
+        },
+        {
+          atcSlotID: 'SL-EWR.241948A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T19:48:00.000+0000',
+          arrivalSlotName: 'EWR.241948A',
+          dptDateTimeCtrl: '2018-11-12T19:12:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'BWI',
+          initialGateTimeDeparture: '241653',
+          airlineCodeAndFlightNumber: 'BTA2342'
+        },
+        {
+          flightID: 'FL-CO-20181112-AUS-EWR-251',
+          atcSlotID: 'SL-EWR.241950A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T19:50:00.000+0000',
+          arrivalSlotName: 'EWR.241950A',
+          dptDateTimeCtrl: '2018-11-12T16:22:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'AUS',
+          initialGateTimeDeparture: '241609',
+          airlineCodeAndFlightNumber: 'COA0251'
+        },
+        {
+          atcSlotID: 'SL-EWR.241951A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T19:51:00.000+0000',
+          arrivalSlotName: 'EWR.241951A',
+          dptDateTimeCtrl: '2018-11-12T19:09:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'SYR',
+          initialGateTimeDeparture: '241725',
+          airlineCodeAndFlightNumber: 'BTA2880'
+        },
+        {
+          flightID: 'FL-CO-20181112-NAS-EWR-699',
+          atcSlotID: 'SL-EWR.241955A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T19:55:00.000+0000',
+          arrivalSlotName: 'EWR.241955A',
+          dptDateTimeCtrl: '2018-11-12T17:17:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'NAS',
+          initialGateTimeDeparture: '241715',
+          airlineCodeAndFlightNumber: 'COA0699'
+        },
+        {
+          flightID: 'FL-CO-20181112-LAS-EWR-769',
+          atcSlotID: 'SL-EWR.241956A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T19:56:00.000+0000',
+          arrivalSlotName: 'EWR.241956A',
+          dptDateTimeCtrl: '2018-11-12T15:24:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'LAS',
+          initialGateTimeDeparture: '241520',
+          airlineCodeAndFlightNumber: 'COA0769'
+        },
+        {
+          atcSlotID: 'SL-EWR.242001A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T20:01:00.000+0000',
+          arrivalSlotName: 'EWR.242001A',
+          dptDateTimeCtrl: '2018-11-12T19:18:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'PVD',
+          initialGateTimeDeparture: '241720',
+          airlineCodeAndFlightNumber: 'BTA2250'
+        },
+        {
+          atcSlotID: 'SL-EWR.242005A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T20:05:00.000+0000',
+          arrivalSlotName: 'EWR.242005A',
+          dptDateTimeCtrl: '2018-11-12T19:15:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'ROC',
+          initialGateTimeDeparture: '241702',
+          airlineCodeAndFlightNumber: 'BTA2864'
+        },
+        {
+          atcSlotID: 'SL-EWR.242008A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T20:08:00.000+0000',
+          arrivalSlotName: 'EWR.242008A',
+          dptDateTimeCtrl: '2018-11-12T19:15:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'RIC',
+          initialGateTimeDeparture: '241655',
+          airlineCodeAndFlightNumber: 'BTA2188'
+        },
+        {
+          atcSlotID: 'SL-EWR.242010A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T20:10:00.000+0000',
+          arrivalSlotName: 'EWR.242010A',
+          dptDateTimeCtrl: '2018-11-12T17:41:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'MEM',
+          initialGateTimeDeparture: '241715',
+          airlineCodeAndFlightNumber: 'BTA2249'
+        },
+        {
+          flightID: 'FL-CO-20181112-SDQ-EWR-751',
+          atcSlotID: 'SL-EWR.242011A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T20:11:00.000+0000',
+          arrivalSlotName: 'EWR.242011A',
+          dptDateTimeCtrl: '2018-11-12T16:46:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'SDQ',
+          initialGateTimeDeparture: '241620',
+          airlineCodeAndFlightNumber: 'COA0751'
+        },
+        {
+          flightID: 'FL-CO-20181112-SAN-EWR-1827',
+          atcSlotID: 'SL-EWR.242013A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T20:13:00.000+0000',
+          arrivalSlotName: 'EWR.242013A',
+          dptDateTimeCtrl: '2018-11-12T15:24:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'SAN',
+          initialGateTimeDeparture: '241510',
+          airlineCodeAndFlightNumber: 'COA1827'
+        },
+        {
+          flightID: 'FL-CO-20181112-IAH-EWR-60',
+          atcSlotID: 'SL-EWR.242016A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T20:16:00.000+0000',
+          arrivalSlotName: 'EWR.242016A',
+          dptDateTimeCtrl: '2018-11-12T17:13:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'IAH',
+          initialGateTimeDeparture: '241700',
+          airlineCodeAndFlightNumber: 'COA0060'
+        },
+        {
+          flightID: 'FL-CO-20181112-SNA-EWR-186',
+          atcSlotID: 'SL-EWR.242018A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T20:18:00.000+0000',
+          arrivalSlotName: 'EWR.242018A',
+          dptDateTimeCtrl: '2018-11-12T15:25:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'SNA',
+          initialGateTimeDeparture: '241445',
+          airlineCodeAndFlightNumber: 'COA0186'
+        },
+        {
+          flightID: 'FL-CO-20181112-CUN-EWR-1733',
+          atcSlotID: 'SL-EWR.242020A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T20:20:00.000+0000',
+          arrivalSlotName: 'EWR.242020A',
+          dptDateTimeCtrl: '2018-11-12T16:57:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'CUN',
+          initialGateTimeDeparture: '241655',
+          airlineCodeAndFlightNumber: 'COA1733'
+        },
+        {
+          flightID: 'FL-CO-20181112-PEK-EWR-88',
+          atcSlotID: 'SL-EWR.242021A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T20:21:00.000+0000',
+          arrivalSlotName: 'EWR.242021A',
+          dptDateTimeCtrl: '2018-11-12T07:51:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'PEK',
+          initialGateTimeDeparture: '240745',
+          airlineCodeAndFlightNumber: 'COA0088'
+        },
+        {
+          flightID: 'FL-CO-20181112-PDX-EWR-485',
+          atcSlotID: 'SL-EWR.242023A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T20:23:00.000+0000',
+          arrivalSlotName: 'EWR.242023A',
+          dptDateTimeCtrl: '2018-11-12T15:15:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'PDX',
+          initialGateTimeDeparture: '241455',
+          airlineCodeAndFlightNumber: 'COA0485'
+        },
+        {
+          flightID: 'FL-CO-20181112-MIA-EWR-44',
+          atcSlotID: 'SL-EWR.242025A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T20:25:00.000+0000',
+          arrivalSlotName: 'EWR.242025A',
+          dptDateTimeCtrl: '2018-11-12T17:43:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'MIA',
+          initialGateTimeDeparture: '241735',
+          airlineCodeAndFlightNumber: 'COA0044'
+        },
+        {
+          atcSlotID: 'SL-EWR.242026A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T20:26:00.000+0000',
+          arrivalSlotName: 'EWR.242026A',
+          dptDateTimeCtrl: '2018-11-12T19:31:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'YUL',
+          initialGateTimeDeparture: '241820',
+          airlineCodeAndFlightNumber: 'BTA2389'
+        },
+        {
+          flightID: 'FL-CO-20181112-BOS-EWR-1154',
+          atcSlotID: 'SL-EWR.242028A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T20:28:00.000+0000',
+          arrivalSlotName: 'EWR.242028A',
+          dptDateTimeCtrl: '2018-11-12T19:39:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'BOS',
+          initialGateTimeDeparture: '241655',
+          airlineCodeAndFlightNumber: 'COA1154'
+        },
+        {
+          atcSlotID: 'SL-EWR.242030A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T20:30:00.000+0000',
+          arrivalSlotName: 'EWR.242030A',
+          dptDateTimeCtrl: '2018-11-12T19:30:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'YOW',
+          initialGateTimeDeparture: '241827',
+          airlineCodeAndFlightNumber: 'BTA2623'
+        },
+        {
+          atcSlotID: 'SL-EWR.242031A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T20:31:00.000+0000',
+          arrivalSlotName: 'EWR.242031A',
+          dptDateTimeCtrl: '2018-11-12T19:30:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'YYZ',
+          initialGateTimeDeparture: '241720',
+          airlineCodeAndFlightNumber: 'BTA2477'
+        },
+        {
+          atcSlotID: 'SL-EWR.242035A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T20:35:00.000+0000',
+          arrivalSlotName: 'EWR.242035A',
+          dptDateTimeCtrl: '2018-11-12T19:32:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'MHT',
+          initialGateTimeDeparture: '241700',
+          airlineCodeAndFlightNumber: 'BTA2661'
+        },
+        {
+          flightID: 'FL-CO-20181112-RSW-EWR-377',
+          atcSlotID: 'SL-EWR.242040A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T20:40:00.000+0000',
+          arrivalSlotName: 'EWR.242040A',
+          dptDateTimeCtrl: '2018-11-12T18:04:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'RSW',
+          initialGateTimeDeparture: '241800',
+          airlineCodeAndFlightNumber: 'COA0377'
+        },
+        {
+          flightID: 'FL-CO-20181112-PUJ-EWR-879',
+          atcSlotID: 'SL-EWR.242043A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T20:43:00.000+0000',
+          arrivalSlotName: 'EWR.242043A',
+          dptDateTimeCtrl: '2018-11-12T17:15:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'PUJ',
+          initialGateTimeDeparture: '241645',
+          airlineCodeAndFlightNumber: 'COA0879'
+        },
+        {
+          atcSlotID: 'SL-EWR.242046A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T20:46:00.000+0000',
+          arrivalSlotName: 'EWR.242046A',
+          dptDateTimeCtrl: '2018-11-12T19:06:00.000+0000',
+          slotControlType: 'SUB',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'CVG',
+          initialGateTimeDeparture: '241745',
+          airlineCodeAndFlightNumber: 'BTA2612'
+        },
+        {
+          flightID: 'FL-CO-20181112-NRT-EWR-8',
+          atcSlotID: 'SL-EWR.242048A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T20:48:00.000+0000',
+          arrivalSlotName: 'EWR.242048A',
+          dptDateTimeCtrl: '2018-11-12T08:19:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'NRT',
+          initialGateTimeDeparture: '240735',
+          airlineCodeAndFlightNumber: 'COA0008'
+        },
+        {
+          atcSlotID: 'SL-EWR.242100A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T21:00:00.000+0000',
+          arrivalSlotName: 'EWR.242100A',
+          dptDateTimeCtrl: '2018-11-12T19:33:00.000+0000',
+          slotControlType: 'SUB',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'YQB',
+          initialGateTimeDeparture: '241740',
+          airlineCodeAndFlightNumber: 'BTA3072'
+        },
+        {
+          flightID: 'FL-CO-20181112-SXM-EWR-874',
+          atcSlotID: 'SL-EWR.242105A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T21:05:00.000+0000',
+          arrivalSlotName: 'EWR.242105A',
+          dptDateTimeCtrl: '2018-11-12T17:17:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'SXM',
+          initialGateTimeDeparture: '241705',
+          airlineCodeAndFlightNumber: 'COA0874'
+        },
+        {
+          flightID: 'FL-CO-20181112-DFW-EWR-1136',
+          atcSlotID: 'SL-EWR.242106A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T21:06:00.000+0000',
+          arrivalSlotName: 'EWR.242106A',
+          dptDateTimeCtrl: '2018-11-12T17:58:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'DFW',
+          initialGateTimeDeparture: '241755',
+          airlineCodeAndFlightNumber: 'COA1136'
+        },
+        {
+          atcSlotID: 'SL-EWR.242108A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T21:08:00.000+0000',
+          arrivalSlotName: 'EWR.242108A',
+          dptDateTimeCtrl: '2018-11-12T19:45:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'CMH',
+          initialGateTimeDeparture: '241730',
+          airlineCodeAndFlightNumber: 'BTA2838'
+        },
+        {
+          flightID: 'FL-CO-20181112-CLE-EWR-50',
+          atcSlotID: 'SL-EWR.242118A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T21:18:00.000+0000',
+          arrivalSlotName: 'EWR.242118A',
+          dptDateTimeCtrl: '2018-11-12T20:09:00.000+0000',
+          slotControlType: 'BRG',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'CLE',
+          initialGateTimeDeparture: '241850',
+          airlineCodeAndFlightNumber: 'COA0050'
+        },
+        {
+          flightID: 'FL-CO-20181112-BOS-EWR-1191',
+          atcSlotID: 'SL-EWR.242120A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T21:20:00.000+0000',
+          arrivalSlotName: 'EWR.242120A',
+          dptDateTimeCtrl: '2018-11-12T20:32:00.000+0000',
+          slotControlType: 'SUB',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'BOS',
+          initialGateTimeDeparture: '241915',
+          airlineCodeAndFlightNumber: 'COA1191'
+        },
+        {
+          atcSlotID: 'SL-EWR.242121A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T21:21:00.000+0000',
+          arrivalSlotName: 'EWR.242121A',
+          dptDateTimeCtrl: '2018-11-12T19:20:00.000+0000',
+          slotControlType: 'SUB',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'YHZ',
+          initialGateTimeDeparture: '241835',
+          airlineCodeAndFlightNumber: 'BTA2430'
+        },
+        {
+          flightID: 'FL-CO-20181112-SFO-EWR-1049',
+          atcSlotID: 'SL-EWR.242123A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T21:23:00.000+0000',
+          arrivalSlotName: 'EWR.242123A',
+          dptDateTimeCtrl: '2018-11-12T16:12:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'SFO',
+          initialGateTimeDeparture: '241550',
+          airlineCodeAndFlightNumber: 'COA1049'
+        },
+        {
+          flightID: 'FL-CO-20181112-POP-EWR-712',
+          atcSlotID: 'SL-EWR.242125A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T21:25:00.000+0000',
+          arrivalSlotName: 'EWR.242125A',
+          dptDateTimeCtrl: '2018-11-12T18:19:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'POP',
+          initialGateTimeDeparture: '241815',
+          airlineCodeAndFlightNumber: 'COA0712'
+        },
+        {
+          flightID: 'FL-CO-20181112-CLT-EWR-337',
+          atcSlotID: 'SL-EWR.242131A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T21:31:00.000+0000',
+          arrivalSlotName: 'EWR.242131A',
+          dptDateTimeCtrl: '2018-11-12T20:04:00.000+0000',
+          slotControlType: 'SUB',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'CLT',
+          initialGateTimeDeparture: '241910',
+          airlineCodeAndFlightNumber: 'COA0337'
+        },
+        {
+          atcSlotID: 'SL-EWR.242135A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T21:35:00.000+0000',
+          arrivalSlotName: 'EWR.242135A',
+          dptDateTimeCtrl: '2018-11-12T19:49:00.000+0000',
+          slotControlType: 'SUB',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'IND',
+          initialGateTimeDeparture: '241759',
+          airlineCodeAndFlightNumber: 'BTA2064'
+        },
+        {
+          flightID: 'FL-CO-20181112-FLL-EWR-800',
+          atcSlotID: 'SL-EWR.242140A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T21:40:00.000+0000',
+          arrivalSlotName: 'EWR.242140A',
+          dptDateTimeCtrl: '2018-11-12T19:03:00.000+0000',
+          slotControlType: 'SUB',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'FLL',
+          initialGateTimeDeparture: '241820',
+          airlineCodeAndFlightNumber: 'COA0800'
+        },
+        {
+          atcSlotID: 'SL-EWR.242141A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T21:41:00.000+0000',
+          arrivalSlotName: 'EWR.242141A',
+          dptDateTimeCtrl: '2018-11-12T19:35:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'JAX',
+          initialGateTimeDeparture: '241750',
+          airlineCodeAndFlightNumber: 'BTA3086'
+        },
+        {
+          flightID: 'FL-CO-20181112-SJU-EWR-466',
+          atcSlotID: 'SL-EWR.242150A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T21:50:00.000+0000',
+          arrivalSlotName: 'EWR.242150A',
+          dptDateTimeCtrl: '2018-11-12T18:26:00.000+0000',
+          slotControlType: 'SUB',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'SJU',
+          initialGateTimeDeparture: '241800',
+          airlineCodeAndFlightNumber: 'COA0466'
+        },
+        {
+          atcSlotID: 'SL-EWR.242153A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T21:53:00.000+0000',
+          arrivalSlotName: 'EWR.242153A',
+          dptDateTimeCtrl: '2018-11-12T20:01:00.000+0000',
+          slotControlType: 'SUB',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'SAV',
+          initialGateTimeDeparture: '241836',
+          airlineCodeAndFlightNumber: 'BTA2264'
+        },
+        {
+          atcSlotID: 'SL-EWR.242156A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T21:56:00.000+0000',
+          arrivalSlotName: 'EWR.242156A',
+          dptDateTimeCtrl: '2018-11-12T20:08:00.000+0000',
+          slotControlType: 'SUB',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'SDF',
+          initialGateTimeDeparture: '241810',
+          airlineCodeAndFlightNumber: 'BTA2618'
+        },
+        {
+          atcSlotID: 'SL-EWR.242158A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T21:58:00.000+0000',
+          arrivalSlotName: 'EWR.242158A',
+          dptDateTimeCtrl: '2018-11-12T20:06:00.000+0000',
+          slotControlType: 'SUB',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'MKE',
+          initialGateTimeDeparture: '241816',
+          airlineCodeAndFlightNumber: 'BTA2866'
+        },
+        {
+          atcSlotID: 'SL-EWR.242203A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T22:03:00.000+0000',
+          arrivalSlotName: 'EWR.242203A',
+          dptDateTimeCtrl: '2018-11-12T20:04:00.000+0000',
+          slotControlType: 'SUB',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'ORD',
+          initialGateTimeDeparture: '241720',
+          airlineCodeAndFlightNumber: 'BTA3062'
+        },
+        {
+          flightID: 'FL-CO-20181112-CUN-EWR-1731',
+          atcSlotID: 'SL-EWR.242205A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T22:05:00.000+0000',
+          arrivalSlotName: 'EWR.242205A',
+          dptDateTimeCtrl: '2018-11-12T18:42:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'CUN',
+          initialGateTimeDeparture: '241830',
+          airlineCodeAndFlightNumber: 'COA1731'
+        },
+        {
+          atcSlotID: 'SL-EWR.242206A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T22:06:00.000+0000',
+          arrivalSlotName: 'EWR.242206A',
+          dptDateTimeCtrl: '2018-11-12T20:40:00.000+0000',
+          slotControlType: 'SUB',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'GSO',
+          initialGateTimeDeparture: '241900',
+          airlineCodeAndFlightNumber: 'BTA2530'
+        },
+        {
+          flightID: 'FL-CO-20181112-BDA-EWR-1660',
+          atcSlotID: 'SL-EWR.242216A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T22:16:00.000+0000',
+          arrivalSlotName: 'EWR.242216A',
+          dptDateTimeCtrl: '2018-11-12T20:23:00.000+0000',
+          slotControlType: 'BRG',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'BDA',
+          initialGateTimeDeparture: '241855',
+          airlineCodeAndFlightNumber: 'COA1660'
+        },
+        {
+          flightID: 'FL-CO-20181112-MCO-EWR-36',
+          atcSlotID: 'SL-EWR.242218A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T22:18:00.000+0000',
+          arrivalSlotName: 'EWR.242218A',
+          dptDateTimeCtrl: '2018-11-12T20:09:00.000+0000',
+          slotControlType: 'BRG',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'MCO',
+          initialGateTimeDeparture: '241910',
+          airlineCodeAndFlightNumber: 'COA0036'
+        },
+        {
+          atcSlotID: 'SL-EWR.242223A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T22:23:00.000+0000',
+          arrivalSlotName: 'EWR.242223A',
+          dptDateTimeCtrl: '2018-11-12T20:11:00.000+0000',
+          slotControlType: 'SUB',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'MSP',
+          initialGateTimeDeparture: '241852',
+          airlineCodeAndFlightNumber: 'BTA2236'
+        },
+        {
+          flightID: 'FL-CO-20181112-ATL-EWR-82',
+          atcSlotID: 'SL-EWR.242226A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T22:26:00.000+0000',
+          arrivalSlotName: 'EWR.242226A',
+          dptDateTimeCtrl: '2018-11-12T20:32:00.000+0000',
+          slotControlType: 'SUB',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'ATL',
+          initialGateTimeDeparture: '241930',
+          airlineCodeAndFlightNumber: 'COA0082'
+        },
+        {
+          atcSlotID: 'SL-EWR.242235A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T22:35:00.000+0000',
+          arrivalSlotName: 'EWR.242235A',
+          dptDateTimeCtrl: '2018-11-12T21:45:00.000+0000',
+          slotControlType: 'BRG',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'ROC',
+          initialGateTimeDeparture: '241950',
+          airlineCodeAndFlightNumber: 'BTA2415'
+        },
+        {
+          flightID: 'FL-CO-20181112-MSY-EWR-217',
+          atcSlotID: 'SL-EWR.242238A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T22:38:00.000+0000',
+          arrivalSlotName: 'EWR.242238A',
+          dptDateTimeCtrl: '2018-11-12T20:05:00.000+0000',
+          slotControlType: 'SUB',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'MSY',
+          initialGateTimeDeparture: '241910',
+          airlineCodeAndFlightNumber: 'COA0217'
+        },
+        {
+          flightID: 'FL-CO-20181112-FCO-EWR-85',
+          atcSlotID: 'SL-EWR.242243A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T22:43:00.000+0000',
+          arrivalSlotName: 'EWR.242243A',
+          dptDateTimeCtrl: '2018-11-12T14:22:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'FCO',
+          initialGateTimeDeparture: '241240',
+          airlineCodeAndFlightNumber: 'COA0085'
+        },
+        {
+          flightID: 'FL-CO-20181112-PHX-EWR-1434',
+          atcSlotID: 'SL-EWR.242245A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T22:45:00.000+0000',
+          arrivalSlotName: 'EWR.242245A',
+          dptDateTimeCtrl: '2018-11-12T18:22:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'PHX',
+          initialGateTimeDeparture: '241755',
+          airlineCodeAndFlightNumber: 'COA1434'
+        },
+        {
+          flightID: 'FL-CO-20181112-IAH-EWR-38',
+          atcSlotID: 'SL-EWR.242246A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T22:46:00.000+0000',
+          arrivalSlotName: 'EWR.242246A',
+          dptDateTimeCtrl: '2018-11-12T19:51:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'IAH',
+          initialGateTimeDeparture: '241810',
+          airlineCodeAndFlightNumber: 'COA0038'
+        },
+        {
+          flightID: 'FL-CO-20181112-BOS-EWR-1105',
+          atcSlotID: 'SL-EWR.242248A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T22:48:00.000+0000',
+          arrivalSlotName: 'EWR.242248A',
+          dptDateTimeCtrl: '2018-11-12T21:58:00.000+0000',
+          slotControlType: 'SUB',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'BOS',
+          initialGateTimeDeparture: '242040',
+          airlineCodeAndFlightNumber: 'COA1105'
+        },
+        {
+          atcSlotID: 'SL-EWR.242251A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T22:51:00.000+0000',
+          arrivalSlotName: 'EWR.242251A',
+          dptDateTimeCtrl: '2018-11-12T21:11:00.000+0000',
+          slotControlType: 'SUB',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'IND',
+          initialGateTimeDeparture: '242000',
+          airlineCodeAndFlightNumber: 'BTA2036'
+        },
+        {
+          atcSlotID: 'SL-EWR.242253A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T22:53:00.000+0000',
+          arrivalSlotName: 'EWR.242253A',
+          dptDateTimeCtrl: '2018-11-12T20:56:00.000+0000',
+          slotControlType: 'SUB',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'ORD',
+          initialGateTimeDeparture: '241900',
+          airlineCodeAndFlightNumber: 'BTA2337'
+        },
+        {
+          atcSlotID: 'SL-EWR.242256A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T22:56:00.000+0000',
+          arrivalSlotName: 'EWR.242256A',
+          dptDateTimeCtrl: '2018-11-12T21:08:00.000+0000',
+          slotControlType: 'SUB',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'DTW',
+          initialGateTimeDeparture: '241950',
+          airlineCodeAndFlightNumber: 'BTA3054'
+        },
+        {
+          flightID: 'FL-CO-20181112-DEN-EWR-629',
+          atcSlotID: 'SL-EWR.242258A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T22:58:00.000+0000',
+          arrivalSlotName: 'EWR.242258A',
+          dptDateTimeCtrl: '2018-11-12T19:42:00.000+0000',
+          slotControlType: 'SUB',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'DEN',
+          initialGateTimeDeparture: '241835',
+          airlineCodeAndFlightNumber: 'COA0629'
+        },
+        {
+          atcSlotID: 'SL-EWR.242300A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T23:00:00.000+0000',
+          arrivalSlotName: 'EWR.242300A',
+          dptDateTimeCtrl: '2018-11-12T21:20:00.000+0000',
+          slotControlType: 'SUB',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'CVG',
+          initialGateTimeDeparture: '241958',
+          airlineCodeAndFlightNumber: 'BTA2424'
+        },
+        {
+          atcSlotID: 'SL-EWR.242301A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T23:01:00.000+0000',
+          arrivalSlotName: 'EWR.242301A',
+          dptDateTimeCtrl: '2018-11-12T20:36:00.000+0000',
+          slotControlType: 'SUB',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'MCI',
+          initialGateTimeDeparture: '241913',
+          airlineCodeAndFlightNumber: 'BTA3092'
+        },
+        {
+          flightID: 'FL-CO-20181112-LAX-EWR-16',
+          atcSlotID: 'SL-EWR.242303A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T23:03:00.000+0000',
+          arrivalSlotName: 'EWR.242303A',
+          dptDateTimeCtrl: '2018-11-12T18:02:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'LAX',
+          initialGateTimeDeparture: '241725',
+          airlineCodeAndFlightNumber: 'COA0016'
+        },
+        {
+          atcSlotID: 'SL-EWR.242305A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T23:05:00.000+0000',
+          arrivalSlotName: 'EWR.242305A',
+          dptDateTimeCtrl: '2018-11-12T20:43:00.000+0000',
+          slotControlType: 'SUB',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'MEM',
+          initialGateTimeDeparture: '241920',
+          airlineCodeAndFlightNumber: 'BTA2667'
+        },
+        {
+          flightID: 'FL-CO-20181112-IAH-EWR-62',
+          atcSlotID: 'SL-EWR.242306A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T23:06:00.000+0000',
+          arrivalSlotName: 'EWR.242306A',
+          dptDateTimeCtrl: '2018-11-12T19:52:00.000+0000',
+          slotControlType: 'SUB',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'IAH',
+          initialGateTimeDeparture: '241925',
+          airlineCodeAndFlightNumber: 'COA0062'
+        },
+        {
+          flightID: 'FL-CO-20181112-CLE-EWR-110',
+          atcSlotID: 'SL-EWR.242308A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T23:08:00.000+0000',
+          arrivalSlotName: 'EWR.242308A',
+          dptDateTimeCtrl: '2018-11-12T21:57:00.000+0000',
+          slotControlType: 'BRG',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'CLE',
+          initialGateTimeDeparture: '242055',
+          airlineCodeAndFlightNumber: 'COA0110'
+        },
+        {
+          flightID: 'FL-CO-20181112-MEX-EWR-1742',
+          atcSlotID: 'SL-EWR.242315A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T23:15:00.000+0000',
+          arrivalSlotName: 'EWR.242315A',
+          dptDateTimeCtrl: '2018-11-12T18:51:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'MEX',
+          initialGateTimeDeparture: '241835',
+          airlineCodeAndFlightNumber: 'COA1742'
+        },
+        {
+          atcSlotID: 'SL-EWR.242316A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T23:16:00.000+0000',
+          arrivalSlotName: 'EWR.242316A',
+          dptDateTimeCtrl: '2018-11-12T22:26:00.000+0000',
+          slotControlType: 'SUB',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'MHT',
+          initialGateTimeDeparture: '242003',
+          airlineCodeAndFlightNumber: 'BTA2473'
+        },
+        {
+          flightID: 'FL-CO-20181112-AUA-EWR-1643',
+          atcSlotID: 'SL-EWR.242320A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T23:20:00.000+0000',
+          arrivalSlotName: 'EWR.242320A',
+          dptDateTimeCtrl: '2018-11-12T19:02:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'AUA',
+          initialGateTimeDeparture: '241850',
+          airlineCodeAndFlightNumber: 'COA1643'
+        },
+        {
+          flightID: 'FL-CO-20181112-SAT-EWR-761',
+          atcSlotID: 'SL-EWR.242326A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T23:26:00.000+0000',
+          arrivalSlotName: 'EWR.242326A',
+          dptDateTimeCtrl: '2018-11-12T19:51:00.000+0000',
+          slotControlType: 'SUB',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'SAT',
+          initialGateTimeDeparture: '241930',
+          airlineCodeAndFlightNumber: 'COA0761'
+        },
+        {
+          flightID: 'FL-CO-20181112-PBI-EWR-855',
+          atcSlotID: 'SL-EWR.242328A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T23:28:00.000+0000',
+          arrivalSlotName: 'EWR.242328A',
+          dptDateTimeCtrl: '2018-11-12T20:55:00.000+0000',
+          slotControlType: 'SUB',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'PBI',
+          initialGateTimeDeparture: '241930',
+          airlineCodeAndFlightNumber: 'COA0855'
+        },
+        {
+          atcSlotID: 'SL-EWR.242330A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T23:30:00.000+0000',
+          arrivalSlotName: 'EWR.242330A',
+          dptDateTimeCtrl: '2018-11-12T22:20:00.000+0000',
+          slotControlType: 'SUB',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'BTV',
+          initialGateTimeDeparture: '242055',
+          airlineCodeAndFlightNumber: 'BTA2307'
+        },
+        {
+          atcSlotID: 'SL-EWR.242331A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T23:31:00.000+0000',
+          arrivalSlotName: 'EWR.242331A',
+          dptDateTimeCtrl: '2018-11-12T22:53:00.000+0000',
+          slotControlType: 'BRG',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'BWI',
+          initialGateTimeDeparture: '242155',
+          airlineCodeAndFlightNumber: 'BTA2714'
+        },
+        {
+          flightID: 'FL-CO-20181112-LAS-EWR-1579',
+          atcSlotID: 'SL-EWR.242333A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T23:33:00.000+0000',
+          arrivalSlotName: 'EWR.242333A',
+          dptDateTimeCtrl: '2018-11-12T19:03:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'LAS',
+          initialGateTimeDeparture: '241850',
+          airlineCodeAndFlightNumber: 'COA1579'
+        },
+        {
+          flightID: 'FL-CO-20181112-SFO-EWR-449',
+          atcSlotID: 'SL-EWR.242335A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T23:35:00.000+0000',
+          arrivalSlotName: 'EWR.242335A',
+          dptDateTimeCtrl: '2018-11-12T18:27:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'SFO',
+          initialGateTimeDeparture: '241815',
+          airlineCodeAndFlightNumber: 'COA0449'
+        },
+        {
+          flightID: 'FL-CO-20181112-LAX-EWR-1703',
+          atcSlotID: 'SL-EWR.242338A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T23:38:00.000+0000',
+          arrivalSlotName: 'EWR.242338A',
+          dptDateTimeCtrl: '2018-11-12T18:48:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'LAX',
+          initialGateTimeDeparture: '241535',
+          airlineCodeAndFlightNumber: 'COA1703'
+        },
+        {
+          atcSlotID: 'SL-EWR.242340A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T23:40:00.000+0000',
+          arrivalSlotName: 'EWR.242340A',
+          dptDateTimeCtrl: '2018-11-12T21:58:00.000+0000',
+          slotControlType: 'SUB',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'CHS',
+          initialGateTimeDeparture: '242026',
+          airlineCodeAndFlightNumber: 'BTA2074'
+        },
+        {
+          atcSlotID: 'SL-EWR.242345A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T23:45:00.000+0000',
+          arrivalSlotName: 'EWR.242345A',
+          dptDateTimeCtrl: '2018-11-12T22:30:00.000+0000',
+          slotControlType: 'SUB',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'ROC',
+          initialGateTimeDeparture: '242105',
+          airlineCodeAndFlightNumber: 'BTA2516'
+        },
+        {
+          atcSlotID: 'SL-EWR.242346A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T23:46:00.000+0000',
+          arrivalSlotName: 'EWR.242346A',
+          dptDateTimeCtrl: '2018-11-12T22:41:00.000+0000',
+          slotControlType: 'SUB',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'RIC',
+          initialGateTimeDeparture: '242115',
+          airlineCodeAndFlightNumber: 'BTA2505'
+        },
+        {
+          atcSlotID: 'SL-EWR.242348A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T23:48:00.000+0000',
+          arrivalSlotName: 'EWR.242348A',
+          dptDateTimeCtrl: '2018-11-12T22:11:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'ORD',
+          initialGateTimeDeparture: '242030',
+          airlineCodeAndFlightNumber: 'BTA2994'
+        },
+        {
+          atcSlotID: 'SL-EWR.242353A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T23:53:00.000+0000',
+          arrivalSlotName: 'EWR.242353A',
+          dptDateTimeCtrl: '2018-11-12T22:38:00.000+0000',
+          slotControlType: 'SUB',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'YUL',
+          initialGateTimeDeparture: '242115',
+          airlineCodeAndFlightNumber: 'BTA2701'
+        },
+        {
+          atcSlotID: 'SL-EWR.250000A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T00:00:00.000+0000',
+          arrivalSlotName: 'EWR.250000A',
+          dptDateTimeCtrl: '2018-11-12T22:17:00.000+0000',
+          slotControlType: 'BRG',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'SDF',
+          initialGateTimeDeparture: '242120',
+          airlineCodeAndFlightNumber: 'BTA3082'
+        },
+        {
+          flightID: 'FL-CO-20181112-TPA-EWR-119',
+          atcSlotID: 'SL-EWR.250001A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T00:01:00.000+0000',
+          arrivalSlotName: 'EWR.250001A',
+          dptDateTimeCtrl: '2018-11-12T21:25:00.000+0000',
+          slotControlType: 'SUB',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'TPA',
+          initialGateTimeDeparture: '242020',
+          airlineCodeAndFlightNumber: 'COA0119'
+        },
+        {
+          flightID: 'FL-CO-20181112-AUS-EWR-351',
+          atcSlotID: 'SL-EWR.250008A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T00:08:00.000+0000',
+          arrivalSlotName: 'EWR.250008A',
+          dptDateTimeCtrl: '2018-11-12T20:32:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'AUS',
+          initialGateTimeDeparture: '241920',
+          airlineCodeAndFlightNumber: 'COA0351'
+        },
+        {
+          flightID: 'FL-CO-20181112-SEA-EWR-1680',
+          atcSlotID: 'SL-EWR.250010A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T00:10:00.000+0000',
+          arrivalSlotName: 'EWR.250010A',
+          dptDateTimeCtrl: '2018-11-12T19:08:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'SEA',
+          initialGateTimeDeparture: '241855',
+          airlineCodeAndFlightNumber: 'COA1680'
+        },
+        {
+          atcSlotID: 'SL-EWR.250011A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T00:11:00.000+0000',
+          arrivalSlotName: 'EWR.250011A',
+          dptDateTimeCtrl: '2018-11-12T22:57:00.000+0000',
+          slotControlType: 'SUB',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'YOW',
+          initialGateTimeDeparture: '242130',
+          airlineCodeAndFlightNumber: 'BTA2754'
+        },
+        {
+          atcSlotID: 'SL-EWR.250013A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T00:13:00.000+0000',
+          arrivalSlotName: 'EWR.250013A',
+          dptDateTimeCtrl: '2018-11-12T22:26:00.000+0000',
+          slotControlType: 'SUB',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'DTW',
+          initialGateTimeDeparture: '242100',
+          airlineCodeAndFlightNumber: 'BTA2107'
+        },
+        {
+          atcSlotID: 'SL-EWR.250015A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T00:15:00.000+0000',
+          arrivalSlotName: 'EWR.250015A',
+          dptDateTimeCtrl: '2018-11-12T22:32:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'ATL',
+          initialGateTimeDeparture: '242100',
+          airlineCodeAndFlightNumber: 'BTA2452'
+        },
+        {
+          atcSlotID: 'SL-EWR.250016A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T00:16:00.000+0000',
+          arrivalSlotName: 'EWR.250016A',
+          dptDateTimeCtrl: '2018-11-12T23:16:00.000+0000',
+          slotControlType: 'SUB',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'BUF',
+          initialGateTimeDeparture: '242152',
+          airlineCodeAndFlightNumber: 'BTA2683'
+        },
+        {
+          flightID: 'FL-CO-20181112-SJU-EWR-483',
+          atcSlotID: 'SL-EWR.250018A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T00:18:00.000+0000',
+          arrivalSlotName: 'EWR.250018A',
+          dptDateTimeCtrl: '2018-11-12T20:50:00.000+0000',
+          slotControlType: 'SUB',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'SJU',
+          initialGateTimeDeparture: '242030',
+          airlineCodeAndFlightNumber: 'COA0483'
+        },
+        {
+          atcSlotID: 'SL-EWR.250020A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T00:20:00.000+0000',
+          arrivalSlotName: 'EWR.250020A',
+          dptDateTimeCtrl: '2018-11-12T22:55:00.000+0000',
+          slotControlType: 'SUB',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'YQB',
+          initialGateTimeDeparture: '242115',
+          airlineCodeAndFlightNumber: 'BTA2739'
+        },
+        {
+          flightID: 'FL-CO-20181112-CLT-EWR-1408',
+          atcSlotID: 'SL-EWR.250021A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T00:21:00.000+0000',
+          arrivalSlotName: 'EWR.250021A',
+          dptDateTimeCtrl: '2018-11-12T22:55:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'CLT',
+          initialGateTimeDeparture: '242115',
+          airlineCodeAndFlightNumber: 'COA1408'
+        },
+        {
+          flightID: 'FL-CO-20181112-LAX-EWR-90',
+          atcSlotID: 'SL-EWR.250025A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T00:25:00.000+0000',
+          arrivalSlotName: 'EWR.250025A',
+          dptDateTimeCtrl: '2018-11-12T19:26:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'LAX',
+          initialGateTimeDeparture: '241915',
+          airlineCodeAndFlightNumber: 'COA0090'
+        },
+        {
+          flightID: 'FL-CO-20181112-IAH-EWR-210',
+          atcSlotID: 'SL-EWR.250026A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T00:26:00.000+0000',
+          arrivalSlotName: 'EWR.250026A',
+          dptDateTimeCtrl: '2018-11-12T21:22:00.000+0000',
+          slotControlType: 'SUB',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'IAH',
+          initialGateTimeDeparture: '242045',
+          airlineCodeAndFlightNumber: 'COA0210'
+        },
+        {
+          flightID: 'FL-CO-20181112-PBI-EWR-355',
+          atcSlotID: 'SL-EWR.250030A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T00:30:00.000+0000',
+          arrivalSlotName: 'EWR.250030A',
+          dptDateTimeCtrl: '2018-11-12T22:09:00.000+0000',
+          slotControlType: 'BRG',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'PBI',
+          initialGateTimeDeparture: '242050',
+          airlineCodeAndFlightNumber: 'COA0355'
+        },
+        {
+          atcSlotID: 'SL-EWR.250031A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T00:31:00.000+0000',
+          arrivalSlotName: 'EWR.250031A',
+          dptDateTimeCtrl: '2018-11-12T22:52:00.000+0000',
+          slotControlType: 'SUB',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'IND',
+          initialGateTimeDeparture: '242115',
+          airlineCodeAndFlightNumber: 'BTA2022'
+        },
+        {
+          flightID: 'FL-CO-20181112-BOS-EWR-1197',
+          atcSlotID: 'SL-EWR.250033A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T00:33:00.000+0000',
+          arrivalSlotName: 'EWR.250033A',
+          dptDateTimeCtrl: '2018-11-12T23:33:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'BOS',
+          initialGateTimeDeparture: '242154',
+          airlineCodeAndFlightNumber: 'COA1197'
+        },
+        {
+          atcSlotID: 'SL-EWR.250035A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T00:35:00.000+0000',
+          arrivalSlotName: 'EWR.250035A',
+          dptDateTimeCtrl: '2018-11-12T22:56:00.000+0000',
+          slotControlType: 'SUB',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'GSP',
+          initialGateTimeDeparture: '242125',
+          airlineCodeAndFlightNumber: 'BTA2737'
+        },
+        {
+          atcSlotID: 'SL-EWR.250036A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T00:36:00.000+0000',
+          arrivalSlotName: 'EWR.250036A',
+          dptDateTimeCtrl: '2018-11-12T22:47:00.000+0000',
+          slotControlType: 'BRG',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'MKE',
+          initialGateTimeDeparture: '242148',
+          airlineCodeAndFlightNumber: 'BTA2685'
+        },
+        {
+          flightID: 'FL-CO-20181112-MIA-EWR-539',
+          atcSlotID: 'SL-EWR.250038A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T00:38:00.000+0000',
+          arrivalSlotName: 'EWR.250038A',
+          dptDateTimeCtrl: '2018-11-12T22:00:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'MIA',
+          initialGateTimeDeparture: '242035',
+          airlineCodeAndFlightNumber: 'COA0539'
+        },
+        {
+          atcSlotID: 'SL-EWR.250043A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T00:43:00.000+0000',
+          arrivalSlotName: 'EWR.250043A',
+          dptDateTimeCtrl: '2018-11-12T22:17:00.000+0000',
+          slotControlType: 'BRG',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'MSP',
+          initialGateTimeDeparture: '242135',
+          airlineCodeAndFlightNumber: 'BTA2599'
+        },
+        {
+          atcSlotID: 'SL-EWR.250048A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T00:48:00.000+0000',
+          arrivalSlotName: 'EWR.250048A',
+          dptDateTimeCtrl: '2018-11-12T23:26:00.000+0000',
+          slotControlType: 'BRG',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'GSO',
+          initialGateTimeDeparture: '242235',
+          airlineCodeAndFlightNumber: 'BTA2478'
+        },
+        {
+          atcSlotID: 'SL-EWR.250055A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T00:55:00.000+0000',
+          arrivalSlotName: 'EWR.250055A',
+          dptDateTimeCtrl: '2018-11-12T22:59:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'BNA',
+          initialGateTimeDeparture: '242143',
+          airlineCodeAndFlightNumber: 'BTA2567'
+        },
+        {
+          atcSlotID: 'SL-EWR.250058A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T00:58:00.000+0000',
+          arrivalSlotName: 'EWR.250058A',
+          dptDateTimeCtrl: '2018-11-12T23:22:00.000+0000',
+          slotControlType: 'SUB',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'DAY',
+          initialGateTimeDeparture: '242203',
+          airlineCodeAndFlightNumber: 'BTA2774'
+        },
+        {
+          flightID: 'FL-CO-20181112-LHR-EWR-19',
+          atcSlotID: 'SL-EWR.250100A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T01:00:00.000+0000',
+          arrivalSlotName: 'EWR.250100A',
+          dptDateTimeCtrl: '2018-11-12T17:55:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'LHR',
+          initialGateTimeDeparture: '241730',
+          airlineCodeAndFlightNumber: 'COA0019'
+        },
+        {
+          flightID: 'FL-CO-20181112-MCO-EWR-76',
+          atcSlotID: 'SL-EWR.250103A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T01:03:00.000+0000',
+          arrivalSlotName: 'EWR.250103A',
+          dptDateTimeCtrl: '2018-11-12T22:35:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'MCO',
+          initialGateTimeDeparture: '242115',
+          airlineCodeAndFlightNumber: 'COA0076'
+        },
+        {
+          flightID: 'FL-CO-20181112-ORD-EWR-1186',
+          atcSlotID: 'SL-EWR.250110A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T01:10:00.000+0000',
+          arrivalSlotName: 'EWR.250110A',
+          dptDateTimeCtrl: '2018-11-12T23:29:00.000+0000',
+          slotControlType: 'SUB',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'ORD',
+          initialGateTimeDeparture: '242215',
+          airlineCodeAndFlightNumber: 'COA1186'
+        },
+        {
+          atcSlotID: 'SL-EWR.250111A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T01:11:00.000+0000',
+          arrivalSlotName: 'EWR.250111A',
+          dptDateTimeCtrl: '2018-11-12T23:04:00.000+0000',
+          slotControlType: 'SUB',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'JAX',
+          initialGateTimeDeparture: '242200',
+          airlineCodeAndFlightNumber: 'BTA2128'
+        },
+        {
+          atcSlotID: 'SL-EWR.250113A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T01:13:00.000+0000',
+          arrivalSlotName: 'EWR.250113A',
+          dptDateTimeCtrl: '2018-11-12T23:45:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'CVG',
+          initialGateTimeDeparture: '242221',
+          airlineCodeAndFlightNumber: 'BTA2741'
+        },
+        {
+          flightID: 'FL-CO-20181112-MCO-EWR-793',
+          atcSlotID: 'SL-EWR.250116A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T01:16:00.000+0000',
+          arrivalSlotName: 'EWR.250116A',
+          dptDateTimeCtrl: '2018-11-12T22:57:00.000+0000',
+          slotControlType: 'BRG',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'MCO',
+          initialGateTimeDeparture: '242215',
+          airlineCodeAndFlightNumber: 'COA0793'
+        },
+        {
+          atcSlotID: 'SL-EWR.250118A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T01:18:00.000+0000',
+          arrivalSlotName: 'EWR.250118A',
+          dptDateTimeCtrl: '2018-11-12T22:43:00.000+0000',
+          slotControlType: 'SUB',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'OMA',
+          initialGateTimeDeparture: '242123',
+          airlineCodeAndFlightNumber: 'BTA3113'
+        },
+        {
+          atcSlotID: 'SL-EWR.250120A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T01:20:00.000+0000',
+          arrivalSlotName: 'EWR.250120A',
+          dptDateTimeCtrl: '2018-11-13T00:14:00.000+0000',
+          slotControlType: 'SUB',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'IAD',
+          initialGateTimeDeparture: '242252',
+          airlineCodeAndFlightNumber: 'BTA2332'
+        },
+        {
+          flightID: 'FL-CO-20181112-CLE-EWR-624',
+          atcSlotID: 'SL-EWR.250123A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T01:23:00.000+0000',
+          arrivalSlotName: 'EWR.250123A',
+          dptDateTimeCtrl: '2018-11-13T00:07:00.000+0000',
+          slotControlType: 'BRG',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'CLE',
+          initialGateTimeDeparture: '242335',
+          airlineCodeAndFlightNumber: 'COA0624'
+        },
+        {
+          flightID: 'FL-CO-20181112-DFW-EWR-1138',
+          atcSlotID: 'SL-EWR.250125A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T01:25:00.000+0000',
+          arrivalSlotName: 'EWR.250125A',
+          dptDateTimeCtrl: '2018-11-12T22:23:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'DFW',
+          initialGateTimeDeparture: '242045',
+          airlineCodeAndFlightNumber: 'COA1138'
+        },
+        {
+          atcSlotID: 'SL-EWR.250128A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T01:28:00.000+0000',
+          arrivalSlotName: 'EWR.250128A',
+          dptDateTimeCtrl: '2018-11-12T23:23:00.000+0000',
+          slotControlType: 'SUB',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'STL',
+          initialGateTimeDeparture: '242155',
+          airlineCodeAndFlightNumber: 'BTA2868'
+        },
+        {
+          flightID: 'FL-CO-20181112-FLL-EWR-1800',
+          atcSlotID: 'SL-EWR.250131A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T01:31:00.000+0000',
+          arrivalSlotName: 'EWR.250131A',
+          dptDateTimeCtrl: '2018-11-12T22:46:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'FLL',
+          initialGateTimeDeparture: '242130',
+          airlineCodeAndFlightNumber: 'COA1800'
+        },
+        {
+          flightID: 'FL-CO-20181112-SFO-EWR-549',
+          atcSlotID: 'SL-EWR.250133A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T01:33:00.000+0000',
+          arrivalSlotName: 'EWR.250133A',
+          dptDateTimeCtrl: '2018-11-12T20:14:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'SFO',
+          initialGateTimeDeparture: '242000',
+          airlineCodeAndFlightNumber: 'COA0549'
+        },
+        {
+          flightID: 'FL-CO-20181112-BOS-EWR-1101',
+          atcSlotID: 'SL-EWR.250135A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T01:35:00.000+0000',
+          arrivalSlotName: 'EWR.250135A',
+          dptDateTimeCtrl: '2018-11-13T00:43:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'BOS',
+          initialGateTimeDeparture: '242315',
+          airlineCodeAndFlightNumber: 'COA1101'
+        },
+        {
+          atcSlotID: 'SL-EWR.250136A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T01:36:00.000+0000',
+          arrivalSlotName: 'EWR.250136A',
+          dptDateTimeCtrl: '2018-11-12T23:03:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'MCI',
+          initialGateTimeDeparture: '242214',
+          airlineCodeAndFlightNumber: 'BTA2914'
+        },
+        {
+          atcSlotID: 'SL-EWR.250138A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T01:38:00.000+0000',
+          arrivalSlotName: 'EWR.250138A',
+          dptDateTimeCtrl: '2018-11-12T23:56:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'CHS',
+          initialGateTimeDeparture: '242253',
+          airlineCodeAndFlightNumber: 'BTA2085'
+        },
+        {
+          atcSlotID: 'SL-EWR.250145A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T01:45:00.000+0000',
+          arrivalSlotName: 'EWR.250145A',
+          dptDateTimeCtrl: '2018-11-13T00:47:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'YUL',
+          initialGateTimeDeparture: '242335',
+          airlineCodeAndFlightNumber: 'BTA3063'
+        },
+        {
+          atcSlotID: 'SL-EWR.250148A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T01:48:00.000+0000',
+          arrivalSlotName: 'EWR.250148A',
+          dptDateTimeCtrl: '2018-11-13T00:03:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'SAV',
+          initialGateTimeDeparture: '242255',
+          airlineCodeAndFlightNumber: 'BTA2517'
+        },
+        {
+          atcSlotID: 'SL-EWR.250151A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T01:51:00.000+0000',
+          arrivalSlotName: 'EWR.250151A',
+          dptDateTimeCtrl: '2018-11-13T00:03:00.000+0000',
+          slotControlType: 'BRG',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'ATL',
+          initialGateTimeDeparture: '242330',
+          airlineCodeAndFlightNumber: 'BTA2398'
+        },
+        {
+          flightID: 'FL-CO-20181112-LAS-EWR-1469',
+          atcSlotID: 'SL-EWR.250153A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T01:53:00.000+0000',
+          arrivalSlotName: 'EWR.250153A',
+          dptDateTimeCtrl: '2018-11-12T21:19:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'LAS',
+          initialGateTimeDeparture: '242105',
+          airlineCodeAndFlightNumber: 'COA1469'
+        },
+        {
+          flightID: 'FL-CO-20181112-TPA-EWR-1619',
+          atcSlotID: 'SL-EWR.250156A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T01:56:00.000+0000',
+          arrivalSlotName: 'EWR.250156A',
+          dptDateTimeCtrl: '2018-11-12T23:26:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'TPA',
+          initialGateTimeDeparture: '242233',
+          airlineCodeAndFlightNumber: 'COA1619'
+        },
+        {
+          atcSlotID: 'SL-EWR.250158A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T01:58:00.000+0000',
+          arrivalSlotName: 'EWR.250158A',
+          dptDateTimeCtrl: '2018-11-13T00:36:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'CMH',
+          initialGateTimeDeparture: '242345',
+          airlineCodeAndFlightNumber: 'BTA2610'
+        },
+        {
+          atcSlotID: 'SL-EWR.250200A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T02:00:00.000+0000',
+          arrivalSlotName: 'EWR.250200A',
+          dptDateTimeCtrl: '2018-11-13T00:22:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'IND',
+          initialGateTimeDeparture: '242330',
+          airlineCodeAndFlightNumber: 'BTA2298'
+        },
+        {
+          flightID: 'FL-CO-20181112-ORD-EWR-1174',
+          atcSlotID: 'SL-EWR.250203A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T02:03:00.000+0000',
+          arrivalSlotName: 'EWR.250203A',
+          dptDateTimeCtrl: '2018-11-13T00:12:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'ORD',
+          initialGateTimeDeparture: '242315',
+          airlineCodeAndFlightNumber: 'COA1174'
+        },
+        {
+          atcSlotID: 'SL-EWR.250205A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T02:05:00.000+0000',
+          arrivalSlotName: 'EWR.250205A',
+          dptDateTimeCtrl: '2018-11-13T00:32:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'GRR',
+          initialGateTimeDeparture: '242343',
+          airlineCodeAndFlightNumber: 'BTA3073'
+        },
+        {
+          flightID: 'FL-CO-20181112-LAX-EWR-612',
+          atcSlotID: 'SL-EWR.250215A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T02:15:00.000+0000',
+          arrivalSlotName: 'EWR.250215A',
+          dptDateTimeCtrl: '2018-11-12T21:15:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'LAX',
+          initialGateTimeDeparture: '242100',
+          airlineCodeAndFlightNumber: 'COA0612'
+        },
+        {
+          flightID: 'FL-CO-20181112-IAH-EWR-1010',
+          atcSlotID: 'SL-EWR.250216A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T02:16:00.000+0000',
+          arrivalSlotName: 'EWR.250216A',
+          dptDateTimeCtrl: '2018-11-12T23:09:00.000+0000',
+          slotControlType: 'BRG',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'IAH',
+          initialGateTimeDeparture: '242250',
+          airlineCodeAndFlightNumber: 'COA1010'
+        },
+        {
+          flightID: 'FL-CO-20181112-RSW-EWR-577',
+          atcSlotID: 'SL-EWR.250218A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T02:18:00.000+0000',
+          arrivalSlotName: 'EWR.250218A',
+          dptDateTimeCtrl: '2018-11-12T23:45:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'RSW',
+          initialGateTimeDeparture: '242255',
+          airlineCodeAndFlightNumber: 'COA0577'
+        },
+        {
+          atcSlotID: 'SL-EWR.250221A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T02:21:00.000+0000',
+          arrivalSlotName: 'EWR.250221A',
+          dptDateTimeCtrl: '2018-11-13T00:41:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'DTW',
+          initialGateTimeDeparture: '242345',
+          airlineCodeAndFlightNumber: 'BTA2665'
+        },
+        {
+          atcSlotID: 'SL-EWR.250230A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T02:30:00.000+0000',
+          arrivalSlotName: 'EWR.250230A',
+          dptDateTimeCtrl: '2018-11-13T01:43:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'DCA',
+          initialGateTimeDeparture: '250100',
+          airlineCodeAndFlightNumber: 'BTA2710'
+        },
+        {
+          atcSlotID: 'SL-EWR.250231A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T02:31:00.000+0000',
+          arrivalSlotName: 'EWR.250231A',
+          dptDateTimeCtrl: '2018-11-13T00:32:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'MSN',
+          initialGateTimeDeparture: '242355',
+          airlineCodeAndFlightNumber: 'BTA2197'
+        },
+        {
+          atcSlotID: 'SL-EWR.250235A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T02:35:00.000+0000',
+          arrivalSlotName: 'EWR.250235A',
+          dptDateTimeCtrl: '2018-11-13T01:19:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'RDU',
+          initialGateTimeDeparture: '250040',
+          airlineCodeAndFlightNumber: 'BTA2492'
+        },
+        {
+          atcSlotID: 'SL-EWR.250238A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T02:38:00.000+0000',
+          arrivalSlotName: 'EWR.250238A',
+          dptDateTimeCtrl: '2018-11-13T00:12:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'MSP',
+          initialGateTimeDeparture: '242340',
+          airlineCodeAndFlightNumber: 'BTA2121'
+        },
+        {
+          flightID: 'FL-CO-20181112-DFW-EWR-1140',
+          atcSlotID: 'SL-EWR.250240A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T02:40:00.000+0000',
+          arrivalSlotName: 'EWR.250240A',
+          dptDateTimeCtrl: '2018-11-12T23:29:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'DFW',
+          initialGateTimeDeparture: '242250',
+          airlineCodeAndFlightNumber: 'COA1140'
+        },
+        {
+          atcSlotID: 'SL-EWR.250241A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T02:41:00.000+0000',
+          arrivalSlotName: 'EWR.250241A',
+          dptDateTimeCtrl: '2018-11-13T00:09:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'XNA',
+          initialGateTimeDeparture: '242337',
+          airlineCodeAndFlightNumber: 'BTA2808'
+        },
+        {
+          atcSlotID: 'SL-EWR.250243A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T02:43:00.000+0000',
+          arrivalSlotName: 'EWR.250243A',
+          dptDateTimeCtrl: '2018-11-13T00:58:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'CLT',
+          initialGateTimeDeparture: '250025',
+          airlineCodeAndFlightNumber: 'BTA2488'
+        },
+        {
+          atcSlotID: 'SL-EWR.250245A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T02:45:00.000+0000',
+          arrivalSlotName: 'EWR.250245A',
+          dptDateTimeCtrl: '2018-11-13T00:37:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'STL',
+          initialGateTimeDeparture: '250005',
+          airlineCodeAndFlightNumber: 'BTA2521'
+        },
+        {
+          flightID: 'FL-CO-20181112-ORD-EWR-1162',
+          atcSlotID: 'SL-EWR.250246A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T02:46:00.000+0000',
+          arrivalSlotName: 'EWR.250246A',
+          dptDateTimeCtrl: '2018-11-13T01:00:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'ORD',
+          initialGateTimeDeparture: '250015',
+          airlineCodeAndFlightNumber: 'COA1162'
+        },
+        {
+          atcSlotID: 'SL-EWR.250250A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T02:50:00.000+0000',
+          arrivalSlotName: 'EWR.250250A',
+          dptDateTimeCtrl: '2018-11-13T00:33:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'MEM',
+          initialGateTimeDeparture: '250000',
+          airlineCodeAndFlightNumber: 'BTA2944'
+        },
+        {
+          flightID: 'FL-CO-20181112-MCO-EWR-1593',
+          atcSlotID: 'SL-EWR.250300A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T03:00:00.000+0000',
+          arrivalSlotName: 'EWR.250300A',
+          dptDateTimeCtrl: '2018-11-13T00:45:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'MCO',
+          initialGateTimeDeparture: '250015',
+          airlineCodeAndFlightNumber: 'COA1593'
+        },
+        {
+          flightID: 'FL-CO-20181112-FLL-EWR-200',
+          atcSlotID: 'SL-EWR.250301A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T03:01:00.000+0000',
+          arrivalSlotName: 'EWR.250301A',
+          dptDateTimeCtrl: '2018-11-13T00:27:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'FLL',
+          initialGateTimeDeparture: '242357',
+          airlineCodeAndFlightNumber: 'COA0200'
+        },
+        {
+          atcSlotID: 'SL-EWR.250303A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T03:03:00.000+0000',
+          arrivalSlotName: 'EWR.250303A',
+          dptDateTimeCtrl: '2018-11-13T01:16:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'BNA',
+          initialGateTimeDeparture: '250050',
+          airlineCodeAndFlightNumber: 'BTA2882'
+        },
+        {
+          flightID: 'FL-CO-20181112-LAS-EWR-1069',
+          atcSlotID: 'SL-EWR.250305A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T03:05:00.000+0000',
+          arrivalSlotName: 'EWR.250305A',
+          dptDateTimeCtrl: '2018-11-12T22:21:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'LAS',
+          initialGateTimeDeparture: '242208',
+          airlineCodeAndFlightNumber: 'COA1069'
+        },
+        {
+          atcSlotID: 'SL-EWR.250306A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T03:06:00.000+0000',
+          arrivalSlotName: 'EWR.250306A',
+          dptDateTimeCtrl: '2018-11-13T00:33:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'MCI',
+          initialGateTimeDeparture: '250005',
+          airlineCodeAndFlightNumber: 'BTA2058'
+        },
+        {
+          flightID: 'FL-CO-20181112-MIA-EWR-639',
+          atcSlotID: 'SL-EWR.250308A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T03:08:00.000+0000',
+          arrivalSlotName: 'EWR.250308A',
+          dptDateTimeCtrl: '2018-11-13T00:30:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'MIA',
+          initialGateTimeDeparture: '242358',
+          airlineCodeAndFlightNumber: 'COA0639'
+        },
+        {
+          flightID: 'FL-CO-20181112-PBI-EWR-455',
+          atcSlotID: 'SL-EWR.250310A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T03:10:00.000+0000',
+          arrivalSlotName: 'EWR.250310A',
+          dptDateTimeCtrl: '2018-11-13T00:42:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'PBI',
+          initialGateTimeDeparture: '250007',
+          airlineCodeAndFlightNumber: 'COA0455'
+        },
+        {
+          flightID: 'FL-CO-20181112-LAX-EWR-1503',
+          atcSlotID: 'SL-EWR.250330A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T03:30:00.000+0000',
+          arrivalSlotName: 'EWR.250330A',
+          dptDateTimeCtrl: '2018-11-12T22:40:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'LAX',
+          initialGateTimeDeparture: '242230',
+          airlineCodeAndFlightNumber: 'COA1503'
+        },
+        {
+          flightID: 'FL-CO-20181112-IAH-EWR-310',
+          atcSlotID: 'SL-EWR.250331A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T03:31:00.000+0000',
+          arrivalSlotName: 'EWR.250331A',
+          dptDateTimeCtrl: '2018-11-13T00:25:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'IAH',
+          initialGateTimeDeparture: '250005',
+          airlineCodeAndFlightNumber: 'COA0310'
+        },
+        {
+          flightID: 'FL-CO-20181112-SNA-EWR-386',
+          atcSlotID: 'SL-EWR.250343A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T03:43:00.000+0000',
+          arrivalSlotName: 'EWR.250343A',
+          dptDateTimeCtrl: '2018-11-12T22:54:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'SNA',
+          initialGateTimeDeparture: '242245',
+          airlineCodeAndFlightNumber: 'COA0386'
+        },
+        {
+          flightID: 'FL-CO-20181112-SFO-EWR-649',
+          atcSlotID: 'SL-EWR.250346A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T03:46:00.000+0000',
+          arrivalSlotName: 'EWR.250346A',
+          dptDateTimeCtrl: '2018-11-12T22:36:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'SFO',
+          initialGateTimeDeparture: '242225',
+          airlineCodeAndFlightNumber: 'COA0649'
+        },
+        {
+          atcSlotID: 'SL-EWR.242225A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T22:25:00.000+0000',
+          arrivalSlotName: 'EWR.242225A',
+          dptDateTimeCtrl: '2018-11-12T21:07:00.000+0000',
+          slotControlType: 'SUB',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'BUF',
+          initialGateTimeDeparture: '241930',
+          airlineCodeAndFlightNumber: 'CJC3437'
+        },
+        {
+          atcSlotID: 'SL-EWR.242053A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T20:53:00.000+0000',
+          arrivalSlotName: 'EWR.242053A',
+          dptDateTimeCtrl: '2018-11-12T19:40:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'ORF',
+          initialGateTimeDeparture: '241750',
+          airlineCodeAndFlightNumber: 'CJC3326'
+        },
+        {
+          atcSlotID: 'SL-EWR.242113A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T21:13:00.000+0000',
+          arrivalSlotName: 'EWR.242113A',
+          dptDateTimeCtrl: '2018-11-12T20:22:00.000+0000',
+          slotControlType: 'SUB',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'PIT',
+          initialGateTimeDeparture: '241840',
+          airlineCodeAndFlightNumber: 'CJC3366'
+        },
+        {
+          atcSlotID: 'SL-EWR.242148A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T21:48:00.000+0000',
+          arrivalSlotName: 'EWR.242148A',
+          dptDateTimeCtrl: '2018-11-12T20:59:00.000+0000',
+          slotControlType: 'SUB',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'DCA',
+          initialGateTimeDeparture: '241855',
+          airlineCodeAndFlightNumber: 'CJC3396'
+        },
+        {
+          atcSlotID: 'SL-EWR.242310A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T23:10:00.000+0000',
+          arrivalSlotName: 'EWR.242310A',
+          dptDateTimeCtrl: '2018-11-12T22:18:00.000+0000',
+          slotControlType: 'SUB',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'DCA',
+          initialGateTimeDeparture: '242100',
+          airlineCodeAndFlightNumber: 'CJC3398'
+        },
+        {
+          atcSlotID: 'SL-EWR.250201A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T02:01:00.000+0000',
+          arrivalSlotName: 'EWR.250201A',
+          dptDateTimeCtrl: '2018-11-13T00:54:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'PIT',
+          initialGateTimeDeparture: '250000',
+          airlineCodeAndFlightNumber: 'CJC3370'
+        },
+        {
+          atcSlotID: 'SL-EWR.242215A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T22:15:00.000+0000',
+          arrivalSlotName: 'EWR.242215A',
+          dptDateTimeCtrl: '2018-11-12T21:44:00.000+0000',
+          slotControlType: 'SUB',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'AVP',
+          initialGateTimeDeparture: '241944',
+          airlineCodeAndFlightNumber: 'UCA8660'
+        },
+        {
+          atcSlotID: 'SL-EWR.242321A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T23:21:00.000+0000',
+          arrivalSlotName: 'EWR.242321A',
+          dptDateTimeCtrl: '2018-11-12T22:16:00.000+0000',
+          slotControlType: 'SUB',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'PVD',
+          initialGateTimeDeparture: '242100',
+          airlineCodeAndFlightNumber: 'CJC3421'
+        },
+        {
+          atcSlotID: 'SL-EWR.241958A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T19:58:00.000+0000',
+          arrivalSlotName: 'EWR.241958A',
+          dptDateTimeCtrl: '2018-11-12T19:13:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'MDT',
+          initialGateTimeDeparture: '241657',
+          airlineCodeAndFlightNumber: 'UCA8672'
+        },
+        {
+          atcSlotID: 'SL-EWR.250005A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T00:05:00.000+0000',
+          arrivalSlotName: 'EWR.250005A',
+          dptDateTimeCtrl: '2018-11-12T23:36:00.000+0000',
+          slotControlType: 'SUB',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'PHL',
+          initialGateTimeDeparture: '242145',
+          airlineCodeAndFlightNumber: 'UCA8804'
+        },
+        {
+          atcSlotID: 'SL-EWR.250040A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T00:40:00.000+0000',
+          arrivalSlotName: 'EWR.250040A',
+          dptDateTimeCtrl: '2018-11-12T23:39:00.000+0000',
+          slotControlType: 'SUB',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'ALB',
+          initialGateTimeDeparture: '242205',
+          airlineCodeAndFlightNumber: 'UCA8749'
+        },
+        {
+          atcSlotID: 'SL-EWR.242050A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T20:50:00.000+0000',
+          arrivalSlotName: 'EWR.242050A',
+          dptDateTimeCtrl: '2018-11-12T19:43:00.000+0000',
+          slotControlType: 'SUB',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'PWM',
+          initialGateTimeDeparture: '241730',
+          airlineCodeAndFlightNumber: 'CJC3295'
+        },
+        {
+          atcSlotID: 'SL-EWR.242055A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T20:55:00.000+0000',
+          arrivalSlotName: 'EWR.242055A',
+          dptDateTimeCtrl: '2018-11-12T19:41:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'BTV',
+          initialGateTimeDeparture: '241655',
+          airlineCodeAndFlightNumber: 'CJC3283'
+        },
+        {
+          atcSlotID: 'SL-EWR.242341A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T23:41:00.000+0000',
+          arrivalSlotName: 'EWR.242341A',
+          dptDateTimeCtrl: '2018-11-12T22:06:00.000+0000',
+          slotControlType: 'SUB',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'CMH',
+          initialGateTimeDeparture: '242035',
+          airlineCodeAndFlightNumber: 'CJC3352'
+        },
+        {
+          atcSlotID: 'SL-EWR.241918A',
+          isSlotHeld: true,
+          arrDateTimeCtrl: '2018-11-12T19:18:00.000+0000',
+          arrivalSlotName: 'EWR.241918A',
+          dptDateTimeCtrl: '2018-11-12T18:33:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'BDL',
+          initialGateTimeDeparture: '241725',
+          airlineCodeAndFlightNumber: 'UCA8809'
+        },
+        {
+          atcSlotID: 'SL-EWR.242006A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T20:06:00.000+0000',
+          arrivalSlotName: 'EWR.242006A',
+          dptDateTimeCtrl: '2018-11-12T19:12:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'IAD',
+          initialGateTimeDeparture: '241750',
+          airlineCodeAndFlightNumber: 'UCA8774'
+        },
+        {
+          atcSlotID: 'SL-EWR.242111A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T21:11:00.000+0000',
+          arrivalSlotName: 'EWR.242111A',
+          dptDateTimeCtrl: '2018-11-12T19:47:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'BUF',
+          initialGateTimeDeparture: '241735',
+          airlineCodeAndFlightNumber: 'CJC3435'
+        },
+        {
+          atcSlotID: 'SL-EWR.242208A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T22:08:00.000+0000',
+          arrivalSlotName: 'EWR.242208A',
+          dptDateTimeCtrl: '2018-11-12T20:36:00.000+0000',
+          slotControlType: 'SUB',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'RDU',
+          initialGateTimeDeparture: '241855',
+          airlineCodeAndFlightNumber: 'CJC3336'
+        },
+        {
+          atcSlotID: 'SL-EWR.250108A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T01:08:00.000+0000',
+          arrivalSlotName: 'EWR.250108A',
+          dptDateTimeCtrl: '2018-11-12T23:54:00.000+0000',
+          slotControlType: 'SUB',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'PIT',
+          initialGateTimeDeparture: '242226',
+          airlineCodeAndFlightNumber: 'CJC3368'
+        },
+        {
+          atcSlotID: 'SL-EWR.242255A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T22:55:00.000+0000',
+          arrivalSlotName: 'EWR.242255A',
+          dptDateTimeCtrl: '2018-11-12T22:00:00.000+0000',
+          slotControlType: 'SUB',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'ITH',
+          initialGateTimeDeparture: '242002',
+          airlineCodeAndFlightNumber: 'UCA8708'
+        },
+        {
+          atcSlotID: 'SL-EWR.250006A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T00:06:00.000+0000',
+          arrivalSlotName: 'EWR.250006A',
+          dptDateTimeCtrl: '2018-11-12T22:50:00.000+0000',
+          slotControlType: 'SUB',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'ORF',
+          initialGateTimeDeparture: '242105',
+          airlineCodeAndFlightNumber: 'CJC3328'
+        },
+        {
+          atcSlotID: 'SL-EWR.250051A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T00:51:00.000+0000',
+          arrivalSlotName: 'EWR.250051A',
+          dptDateTimeCtrl: '2018-11-12T23:26:00.000+0000',
+          slotControlType: 'SUB',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'YYZ',
+          initialGateTimeDeparture: '242145',
+          airlineCodeAndFlightNumber: 'CJC3309'
+        },
+        {
+          atcSlotID: 'SL-EWR.250206A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T02:06:00.000+0000',
+          arrivalSlotName: 'EWR.250206A',
+          dptDateTimeCtrl: '2018-11-13T01:01:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'YYZ',
+          initialGateTimeDeparture: '250005',
+          airlineCodeAndFlightNumber: 'CJC3319'
+        },
+        {
+          atcSlotID: 'SL-EWR.250003A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T00:03:00.000+0000',
+          arrivalSlotName: 'EWR.250003A',
+          dptDateTimeCtrl: '2018-11-12T23:02:00.000+0000',
+          slotControlType: 'SUB',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'IAD',
+          initialGateTimeDeparture: '242125',
+          airlineCodeAndFlightNumber: 'UCA8820'
+        },
+        {
+          atcSlotID: 'SL-EWR.250115A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T01:15:00.000+0000',
+          arrivalSlotName: 'EWR.250115A',
+          dptDateTimeCtrl: '2018-11-13T00:35:00.000+0000',
+          slotControlType: 'SUB',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'AVP',
+          initialGateTimeDeparture: '242306',
+          airlineCodeAndFlightNumber: 'UCA8822'
+        },
+        {
+          atcSlotID: 'SL-EWR.250023A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T00:23:00.000+0000',
+          arrivalSlotName: 'EWR.250023A',
+          dptDateTimeCtrl: '2018-11-12T22:53:00.000+0000',
+          slotControlType: 'SUB',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'RDU',
+          initialGateTimeDeparture: '242120',
+          airlineCodeAndFlightNumber: 'CJC3338'
+        },
+        {
+          atcSlotID: 'SL-EWR.250106A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T01:06:00.000+0000',
+          arrivalSlotName: 'EWR.250106A',
+          dptDateTimeCtrl: '2018-11-13T00:16:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'DCA',
+          initialGateTimeDeparture: '242300',
+          airlineCodeAndFlightNumber: 'CJC3402'
+        },
+        {
+          atcSlotID: 'SL-EWR.250130A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T01:30:00.000+0000',
+          arrivalSlotName: 'EWR.250130A',
+          dptDateTimeCtrl: '2018-11-13T00:06:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'YYZ',
+          initialGateTimeDeparture: '242245',
+          airlineCodeAndFlightNumber: 'CJC3311'
+        },
+        {
+          atcSlotID: 'SL-EWR.250140A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T01:40:00.000+0000',
+          arrivalSlotName: 'EWR.250140A',
+          dptDateTimeCtrl: '2018-11-13T00:29:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'ORF',
+          initialGateTimeDeparture: '242327',
+          airlineCodeAndFlightNumber: 'CJC3340'
+        },
+        {
+          atcSlotID: 'SL-EWR.242356A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T23:56:00.000+0000',
+          arrivalSlotName: 'EWR.242356A',
+          dptDateTimeCtrl: '2018-11-12T22:46:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'SYR',
+          initialGateTimeDeparture: '242127',
+          airlineCodeAndFlightNumber: 'UCA8690'
+        },
+        {
+          atcSlotID: 'SL-EWR.250056A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T00:56:00.000+0000',
+          arrivalSlotName: 'EWR.250056A',
+          dptDateTimeCtrl: '2018-11-12T23:35:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'PWM',
+          initialGateTimeDeparture: '242220',
+          airlineCodeAndFlightNumber: 'CJC3297'
+        },
+        {
+          atcSlotID: 'SL-EWR.241938A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T19:38:00.000+0000',
+          arrivalSlotName: 'EWR.241938A',
+          dptDateTimeCtrl: '2018-11-12T19:09:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'PHL',
+          initialGateTimeDeparture: '241745',
+          airlineCodeAndFlightNumber: 'UCA8824'
+        }
+      ],
+      slotCount: 219
+    },
+    airportID: 'AP-EWR',
+    identifier: 'CS-EWR-GDP',
+    stationCode: 'EWR',
+    updateHistory: {
+      update: [
+        {
+          updateTime: '2018-11-12T19:51:00.000+0000',
+          updateType: 'GDP'
+        }
+      ],
+      updateCount: 1
+    },
+    stationControlType: 'GDP',
+    isSubstitutionAllowed: true,
+    atcControlledStationID: 'CS-EWR-GDP'
+  },
+  {
+    version: 1,
+    slotList: {
+      slot: [
+        {
+          atcSlotID: 'SL-DEN.242305P',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T23:05:00.000+0000',
+          arrivalSlotName: 'DEN.242305P',
+          dptDateTimeCtrl: '2018-11-12T19:45:00.000+0000',
+          slotControlType: 'UPD',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'EWR',
+          initialGateTimeDeparture: '241845',
+          airlineCodeAndFlightNumber: 'COA0728'
+        },
+        {
+          atcSlotID: 'SL-DEN.250151A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T01:51:00.000+0000',
+          arrivalSlotName: 'DEN.250151A',
+          dptDateTimeCtrl: '2018-11-12T22:15:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'EWR',
+          initialGateTimeDeparture: '241845',
+          airlineCodeAndFlightNumber: 'COA0728'
+        },
+        {
+          atcSlotID: 'SL-DEN.250157P',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T01:57:00.000+0000',
+          arrivalSlotName: 'DEN.250157P',
+          dptDateTimeCtrl: '2018-11-12T22:37:00.000+0000',
+          slotControlType: 'UPD',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'EWR',
+          initialGateTimeDeparture: '241845',
+          airlineCodeAndFlightNumber: 'COA0728'
+        },
+        {
+          flightID: 'FL-CO-20181112-EWR-DEN-728',
+          atcSlotID: 'SL-DEN.242312A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T23:12:00.000+0000',
+          arrivalSlotName: 'DEN.242312A',
+          dptDateTimeCtrl: '2018-11-12T19:49:00.000+0000',
+          slotControlType: 'UPD',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'EWR',
+          initialGateTimeDeparture: '241845',
+          airlineCodeAndFlightNumber: 'COA0728'
+        },
+        {
+          atcSlotID: 'SL-DEN.250650A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T06:50:00.000+0000',
+          arrivalSlotName: 'DEN.250650A',
+          dptDateTimeCtrl: '2018-11-13T04:52:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'IAH',
+          initialGateTimeDeparture: '250155',
+          airlineCodeAndFlightNumber: 'COA0299'
+        },
+        {
+          flightID: 'FL-CO-20181112-IAH-DEN-299',
+          atcSlotID: 'SL-DEN.250621A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T06:21:00.000+0000',
+          arrivalSlotName: 'DEN.250621A',
+          dptDateTimeCtrl: '2018-11-13T04:16:00.000+0000',
+          slotControlType: 'BRG',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'IAH',
+          initialGateTimeDeparture: '250155',
+          airlineCodeAndFlightNumber: 'COA0299'
+        },
+        {
+          atcSlotID: 'SL-DEN.250346A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T03:46:00.000+0000',
+          arrivalSlotName: 'DEN.250346A',
+          dptDateTimeCtrl: '2018-11-13T00:57:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'CLE',
+          initialGateTimeDeparture: '242040',
+          airlineCodeAndFlightNumber: 'COA1421'
+        },
+        {
+          flightID: 'FL-CO-20181112-CLE-DEN-1421',
+          atcSlotID: 'SL-DEN.250218A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T02:18:00.000+0000',
+          arrivalSlotName: 'DEN.250218A',
+          dptDateTimeCtrl: '2018-11-12T23:33:00.000+0000',
+          slotControlType: 'UPD',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'CLE',
+          initialGateTimeDeparture: '242040',
+          airlineCodeAndFlightNumber: 'COA1421'
+        },
+        {
+          flightID: 'FL-CO-20181112-IAH-DEN-599',
+          atcSlotID: 'SL-DEN.242330A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T23:30:00.000+0000',
+          arrivalSlotName: 'DEN.242330A',
+          dptDateTimeCtrl: '2018-11-12T21:34:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'IAH',
+          initialGateTimeDeparture: '241915',
+          airlineCodeAndFlightNumber: 'COA0599'
+        },
+        {
+          atcSlotID: 'SL-DEN.250505A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T05:05:00.000+0000',
+          arrivalSlotName: 'DEN.250505A',
+          dptDateTimeCtrl: '2018-11-13T01:29:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'EWR',
+          initialGateTimeDeparture: '242100',
+          airlineCodeAndFlightNumber: 'COA0228'
+        },
+        {
+          flightID: 'FL-CO-20181112-EWR-DEN-228',
+          atcSlotID: 'SL-DEN.250404A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T04:04:00.000+0000',
+          arrivalSlotName: 'DEN.250404A',
+          dptDateTimeCtrl: '2018-11-13T00:43:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'EWR',
+          initialGateTimeDeparture: '242100',
+          airlineCodeAndFlightNumber: 'COA0228'
+        },
+        {
+          atcSlotID: 'SL-DEN.250445A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T04:45:00.000+0000',
+          arrivalSlotName: 'DEN.250445A',
+          dptDateTimeCtrl: '2018-11-13T02:50:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'IAH',
+          initialGateTimeDeparture: '242245',
+          airlineCodeAndFlightNumber: 'COA0059'
+        },
+        {
+          flightID: 'FL-CO-20181112-IAH-DEN-59',
+          atcSlotID: 'SL-DEN.250408A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T04:08:00.000+0000',
+          arrivalSlotName: 'DEN.250408A',
+          dptDateTimeCtrl: '2018-11-13T01:49:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'IAH',
+          initialGateTimeDeparture: '242245',
+          airlineCodeAndFlightNumber: 'COA0059'
+        }
+      ],
+      slotCount: 13
+    },
+    airportID: 'AP-DEN',
+    identifier: 'CS-DEN-GDP',
+    stationCode: 'DEN',
+    updateHistory: {
+      update: [
+        {
+          updateTime: '2018-11-12T19:51:00.000+0000',
+          updateType: 'GDP'
+        },
+        {
+          updateTime: '2018-11-12T19:51:00.000+0000',
+          updateType: 'GDP'
+        },
+        {
+          updateTime: '2018-11-12T19:51:00.000+0000',
+          updateType: 'GDP'
+        },
+        {
+          updateTime: '2018-11-12T19:51:00.000+0000',
+          updateType: 'GDP'
+        },
+        {
+          updateTime: '2018-11-12T19:51:00.000+0000',
+          updateType: 'GDP'
+        },
+        {
+          updateTime: '2018-11-12T19:51:00.000+0000',
+          updateType: 'GDP'
+        },
+        {
+          updateTime: '2018-11-12T19:51:00.000+0000',
+          updateType: 'GDP'
+        },
+        {
+          updateTime: '2018-11-12T19:51:00.000+0000',
+          updateType: 'GDP'
+        },
+        {
+          updateTime: '2018-11-12T19:51:00.000+0000',
+          updateType: 'GDP'
+        },
+        {
+          updateTime: '2018-11-12T19:51:00.000+0000',
+          updateType: 'GDP'
+        },
+        {
+          updateTime: '2018-11-12T19:51:00.000+0000',
+          updateType: 'GDP'
+        },
+        {
+          updateTime: '2018-11-12T19:51:00.000+0000',
+          updateType: 'GDP'
+        },
+        {
+          updateTime: '2018-11-12T19:51:00.000+0000',
+          updateType: 'GDP'
+        },
+        {
+          updateTime: '2018-11-12T19:51:00.000+0000',
+          updateType: 'GDP'
+        },
+        {
+          updateTime: '2018-11-12T19:51:00.000+0000',
+          updateType: 'GDP'
+        },
+        {
+          updateTime: '2018-11-12T19:51:00.000+0000',
+          updateType: 'GDP'
+        },
+        {
+          updateTime: '2018-11-12T19:51:00.000+0000',
+          updateType: 'GDP'
+        },
+        {
+          updateTime: '2018-11-12T19:51:00.000+0000',
+          updateType: 'GDP'
+        },
+        {
+          updateTime: '2018-11-12T19:51:00.000+0000',
+          updateType: 'GDP'
+        },
+        {
+          updateTime: '2018-11-12T19:51:00.000+0000',
+          updateType: 'GDP'
+        },
+        {
+          updateTime: '2018-11-12T19:51:00.000+0000',
+          updateType: 'GDP'
+        },
+        {
+          updateTime: '2018-11-12T19:51:00.000+0000',
+          updateType: 'GDP'
+        },
+        {
+          updateTime: '2018-11-12T19:51:00.000+0000',
+          updateType: 'GDP'
+        },
+        {
+          updateTime: '2018-11-12T19:51:00.000+0000',
+          updateType: 'GDP'
+        },
+        {
+          updateTime: '2018-11-12T19:51:00.000+0000',
+          updateType: 'GDP'
+        },
+        {
+          updateTime: '2018-11-12T19:51:00.000+0000',
+          updateType: 'GDP'
+        }
+      ],
+      updateCount: 26
+    },
+    stationControlType: 'GDP',
+    isSubstitutionAllowed: true,
+    atcControlledStationID: 'CS-DEN-GDP'
+  },
+  {
+    version: 1,
+    slotList: {
+      slot: [
+        {
+          atcSlotID: 'SL-EWR.241821A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T18:21:00.000+0000',
+          arrivalSlotName: 'EWR.241821A',
+          dptDateTimeCtrl: '2018-11-12T17:31:00.000+0000',
+          slotControlType: 'GS',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'YYZ',
+          initialGateTimeDeparture: '241635',
+          airlineCodeAndFlightNumber: 'BTA2351'
+        },
+        {
+          atcSlotID: 'SL-EWR.241828A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T18:28:00.000+0000',
+          arrivalSlotName: 'EWR.241828A',
+          dptDateTimeCtrl: '2018-11-12T17:31:00.000+0000',
+          slotControlType: 'GS',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'YUL',
+          initialGateTimeDeparture: '241635',
+          airlineCodeAndFlightNumber: 'BTA2643'
+        }
+      ],
+      slotCount: 2
+    },
+    airportID: 'AP-EWR',
+    identifier: 'CS-EWR-GS',
+    stationCode: 'EWR',
+    updateHistory: {
+      update: [
+        {
+          updateTime: '2018-11-12T19:51:00.000+0000',
+          updateType: 'GS'
+        }
+      ],
+      updateCount: 1
+    },
+    stationControlType: 'GS',
+    isSubstitutionAllowed: false,
+    atcControlledStationID: 'CS-EWR-GS'
+  },
+  {
+    version: 1,
+    slotList: {
+      slot: [
+        {
+          flightID: 'FL-CO-20181112-CLE-LGA-1461',
+          atcSlotID: 'SL-LGA.241332A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T13:32:00.000+0000',
+          arrivalSlotName: 'LGA.241332A',
+          dptDateTimeCtrl: '2018-11-12T11:55:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'CLE',
+          initialGateTimeDeparture: '241135',
+          airlineCodeAndFlightNumber: 'COA1461'
+        },
+        {
+          flightID: 'FL-CO-20181112-CLE-LGA-1575',
+          atcSlotID: 'SL-LGA.241347A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T13:47:00.000+0000',
+          arrivalSlotName: 'LGA.241347A',
+          dptDateTimeCtrl: '2018-11-12T12:10:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'CLE',
+          initialGateTimeDeparture: '241205',
+          airlineCodeAndFlightNumber: 'COA1575'
+        },
+        {
+          flightID: 'FL-CO-20181112-IAH-LGA-332',
+          atcSlotID: 'SL-LGA.241606A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T16:06:00.000+0000',
+          arrivalSlotName: 'LGA.241606A',
+          dptDateTimeCtrl: '2018-11-12T13:00:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: true,
+          departureStationCode: 'IAH',
+          initialGateTimeDeparture: '241250',
+          airlineCodeAndFlightNumber: 'COA0332'
+        },
+        {
+          flightID: 'FL-CO-20181112-IAH-LGA-232',
+          atcSlotID: 'SL-LGA.241735P',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T17:35:00.000+0000',
+          arrivalSlotName: 'LGA.241735P',
+          dptDateTimeCtrl: '2018-11-12T14:30:00.000+0000',
+          slotControlType: 'UPD',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'IAH',
+          initialGateTimeDeparture: '241412',
+          airlineCodeAndFlightNumber: 'COA0232'
+        },
+        {
+          flightID: 'FL-CO-20181112-IAH-LGA-432',
+          atcSlotID: 'SL-LGA.242006A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T20:06:00.000+0000',
+          arrivalSlotName: 'LGA.242006A',
+          dptDateTimeCtrl: '2018-11-12T16:45:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'IAH',
+          initialGateTimeDeparture: '241545',
+          airlineCodeAndFlightNumber: 'COA0432'
+        },
+        {
+          flightID: 'FL-CO-20181112-IAH-LGA-1832',
+          atcSlotID: 'SL-LGA.242045A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T20:45:00.000+0000',
+          arrivalSlotName: 'LGA.242045A',
+          dptDateTimeCtrl: '2018-11-12T17:34:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'IAH',
+          initialGateTimeDeparture: '241635',
+          airlineCodeAndFlightNumber: 'COA1832'
+        },
+        {
+          flightID: 'FL-CO-20181112-CLE-LGA-1450',
+          atcSlotID: 'SL-LGA.242128A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T21:28:00.000+0000',
+          arrivalSlotName: 'LGA.242128A',
+          dptDateTimeCtrl: '2018-11-12T20:16:00.000+0000',
+          slotControlType: 'BRG',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'CLE',
+          initialGateTimeDeparture: '241940',
+          airlineCodeAndFlightNumber: 'COA1450'
+        },
+        {
+          flightID: 'FL-CO-20181112-IAH-LGA-532',
+          atcSlotID: 'SL-LGA.242216A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T22:16:00.000+0000',
+          arrivalSlotName: 'LGA.242216A',
+          dptDateTimeCtrl: '2018-11-12T19:01:00.000+0000',
+          slotControlType: 'BRG',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'IAH',
+          initialGateTimeDeparture: '241820',
+          airlineCodeAndFlightNumber: 'COA0532'
+        },
+        {
+          atcSlotID: 'SL-LGA.242330A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T23:30:00.000+0000',
+          arrivalSlotName: 'LGA.242330A',
+          dptDateTimeCtrl: '2018-11-12T22:10:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'CLE',
+          initialGateTimeDeparture: '242100',
+          airlineCodeAndFlightNumber: 'BTA2724'
+        },
+        {
+          flightID: 'FL-CO-20181112-IAH-LGA-632',
+          atcSlotID: 'SL-LGA.250128A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T01:28:00.000+0000',
+          arrivalSlotName: 'LGA.250128A',
+          dptDateTimeCtrl: '2018-11-12T22:08:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'IAH',
+          initialGateTimeDeparture: '242048',
+          airlineCodeAndFlightNumber: 'COA0632'
+        },
+        {
+          atcSlotID: 'SL-LGA.250220A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T02:20:00.000+0000',
+          arrivalSlotName: 'LGA.250220A',
+          dptDateTimeCtrl: '2018-11-13T01:00:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'CLE',
+          initialGateTimeDeparture: '242340',
+          airlineCodeAndFlightNumber: 'BTA2013'
+        },
+        {
+          flightID: 'FL-CO-20181112-IAH-LGA-1632',
+          atcSlotID: 'SL-LGA.250315A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T03:15:00.000+0000',
+          arrivalSlotName: 'LGA.250315A',
+          dptDateTimeCtrl: '2018-11-12T23:59:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'IAH',
+          initialGateTimeDeparture: '242245',
+          airlineCodeAndFlightNumber: 'COA1632'
+        },
+        {
+          flightID: 'FL-CO-20181112-IAH-LGA-732',
+          atcSlotID: 'SL-LGA.250430A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T04:30:00.000+0000',
+          arrivalSlotName: 'LGA.250430A',
+          dptDateTimeCtrl: '2018-11-13T01:22:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'IAH',
+          initialGateTimeDeparture: '242355',
+          airlineCodeAndFlightNumber: 'COA0732'
+        },
+        {
+          atcSlotID: 'SL-LGA.241943A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T19:43:00.000+0000',
+          arrivalSlotName: 'LGA.241943A',
+          dptDateTimeCtrl: '2018-11-12T18:21:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'CLE',
+          initialGateTimeDeparture: '241615',
+          airlineCodeAndFlightNumber: 'CHQ5806'
+        },
+        {
+          atcSlotID: 'SL-LGA.250241A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-13T02:41:00.000+0000',
+          arrivalSlotName: 'LGA.250241A',
+          dptDateTimeCtrl: '2018-11-13T01:25:00.000+0000',
+          slotControlType: 'BRG',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'CLE',
+          initialGateTimeDeparture: '250040',
+          airlineCodeAndFlightNumber: 'CHQ5814'
+        },
+        {
+          atcSlotID: 'SL-LGA.241748A',
+          isSlotHeld: false,
+          arrDateTimeCtrl: '2018-11-12T17:48:00.000+0000',
+          arrivalSlotName: 'LGA.241748A',
+          dptDateTimeCtrl: '2018-11-12T16:30:00.000+0000',
+          slotControlType: 'GDP',
+          isFormerPopUpFlight: false,
+          wasExemptFromDelays: false,
+          departureStationCode: 'CLE',
+          initialGateTimeDeparture: '241452',
+          airlineCodeAndFlightNumber: 'CHQ5804'
+        }
+      ],
+      slotCount: 16
+    },
+    airportID: 'AP-LGA',
+    identifier: 'CS-LGA-GDP',
+    stationCode: 'LGA',
+    updateHistory: {
+      update: [
+        {
+          updateTime: '2018-11-12T19:51:00.000+0000',
+          updateType: 'GDP'
+        }
+      ],
+      updateCount: 1
+    },
+    stationControlType: 'GDP',
+    isSubstitutionAllowed: true,
+    atcControlledStationID: 'CS-LGA-GDP'
+  }
+];
 
 export const aircraftMock = [
   {
@@ -945,7 +4510,459 @@ export const airportGroupRelationshipMock = [
   }
 ];
 
-export const crewMock = [];
+export const crewMock = [
+  {
+    name: 'GILMORE, WILLIAM',
+    crewID: 'CR-0326K',
+    version: 1,
+    bidPeriods: {
+      bidPeriod: [
+        {
+          code: '1005',
+          baseID: 'CB-E',
+          seniority: 90,
+          startDate: '2018-10-22',
+          positionID: 'PO-CA',
+          mtdBlockTime: 3511,
+          blockTimeDate: '2018-11-05',
+          assignmentType: 'LINE_HOLDER'
+        },
+        {
+          code: '1006',
+          baseID: 'CB-E',
+          seniority: 90,
+          startDate: '2018-11-21',
+          positionID: 'PO-CA',
+          mtdBlockTime: 0,
+          assignmentType: 'LINE_HOLDER'
+        }
+      ],
+      bidPeriodCount: 2
+    },
+    employeeID: '0326K',
+    identifier: 'CR-0326K',
+    blockHistory: {
+      dateMinutes: [
+        {
+          date: '2018-10-25',
+          totalMinutes: 783
+        },
+        {
+          date: '2018-10-26',
+          totalMinutes: 25
+        },
+        {
+          date: '2018-10-27',
+          totalMinutes: 752
+        },
+        {
+          date: '2018-11-01',
+          totalMinutes: 478
+        },
+        {
+          date: '2018-11-02',
+          totalMinutes: 470
+        },
+        {
+          date: '2018-11-03',
+          totalMinutes: 88
+        },
+        {
+          date: '2018-11-04',
+          totalMinutes: 915
+        }
+      ],
+      dateMinutesCount: 7
+    },
+    positionType: 'P',
+    qualifications: {
+      qualification: [
+        {
+          dateTimeType: 'GMT',
+          qualificationID: 'QU-SEAT-B777-200-CA',
+          expirationDateTime: '2018-12-20T00:00:00.000+0000'
+        },
+        {
+          dateTimeType: 'GMT',
+          qualificationID: 'QU-SEAT-B777-200-FO',
+          expirationDateTime: '2018-12-20T00:00:00.000+0000'
+        }
+      ],
+      qualificationCount: 2
+    },
+    blockHistorySummaryList: {
+      blockSummary: [
+        {
+          endDate: '2018-10-25',
+          startDate: '2018-10-25',
+          totalMinutes: 783
+        },
+        {
+          endDate: '2018-10-26',
+          startDate: '2018-10-26',
+          totalMinutes: 25
+        },
+        {
+          endDate: '2018-10-27',
+          startDate: '2018-10-27',
+          totalMinutes: 752
+        },
+        {
+          endDate: '2018-11-01',
+          startDate: '2018-11-01',
+          totalMinutes: 478
+        },
+        {
+          endDate: '2018-11-02',
+          startDate: '2018-11-02',
+          totalMinutes: 470
+        },
+        {
+          endDate: '2018-11-03',
+          startDate: '2018-11-03',
+          totalMinutes: 88
+        },
+        {
+          endDate: '2018-11-04',
+          startDate: '2018-11-04',
+          totalMinutes: 915
+        }
+      ],
+      blockSummaryCount: 7
+    }
+  },
+  {
+    name: 'SOMOGYI, LASZLO',
+    crewID: 'CR-0064D',
+    version: 1,
+    bidPeriods: {
+      bidPeriod: [
+        {
+          code: '1005',
+          baseID: 'CB-E',
+          seniority: 535,
+          startDate: '2018-10-22',
+          positionID: 'PO-CA',
+          mtdBlockTime: 4359,
+          blockTimeDate: '2018-11-12',
+          assignmentType: 'LINE_HOLDER'
+        },
+        {
+          code: '1006',
+          baseID: 'CB-E',
+          seniority: 535,
+          startDate: '2018-11-21',
+          positionID: 'PO-CA',
+          mtdBlockTime: 0,
+          assignmentType: 'LINE_HOLDER'
+        }
+      ],
+      bidPeriodCount: 2
+    },
+    employeeID: '0064D',
+    identifier: 'CR-0064D',
+    blockHistory: {
+      dateMinutes: [
+        {
+          date: '2018-10-12',
+          totalMinutes: 779
+        },
+        {
+          date: '2018-10-13',
+          totalMinutes: 111
+        },
+        {
+          date: '2018-10-14',
+          totalMinutes: 886
+        },
+        {
+          date: '2018-10-24',
+          totalMinutes: 318
+        },
+        {
+          date: '2018-10-25',
+          totalMinutes: 129
+        },
+        {
+          date: '2018-10-26',
+          totalMinutes: 558
+        },
+        {
+          date: '2018-10-27',
+          totalMinutes: 445
+        },
+        {
+          date: '2018-10-28',
+          totalMinutes: 267
+        },
+        {
+          date: '2018-10-29',
+          totalMinutes: 771
+        },
+        {
+          date: '2018-11-08',
+          totalMinutes: 518
+        },
+        {
+          date: '2018-11-09',
+          totalMinutes: 446
+        },
+        {
+          date: '2018-11-10',
+          totalMinutes: 100
+        },
+        {
+          date: '2018-11-11',
+          totalMinutes: 807
+        }
+      ],
+      dateMinutesCount: 13
+    },
+    positionType: 'P',
+    qualifications: {
+      qualification: [
+        {
+          dateTimeType: 'GMT',
+          qualificationID: 'QU-SEAT-B777-200-CA',
+          expirationDateTime: '2019-01-12T00:00:00.000+0000'
+        },
+        {
+          dateTimeType: 'GMT',
+          qualificationID: 'QU-SEAT-B777-200-FO',
+          expirationDateTime: '2019-01-12T00:00:00.000+0000'
+        }
+      ],
+      qualificationCount: 2
+    },
+    blockHistorySummaryList: {
+      blockSummary: [
+        {
+          endDate: '2018-10-12',
+          startDate: '2018-10-12',
+          totalMinutes: 779
+        },
+        {
+          endDate: '2018-10-13',
+          startDate: '2018-10-13',
+          totalMinutes: 111
+        },
+        {
+          endDate: '2018-10-14',
+          startDate: '2018-10-14',
+          totalMinutes: 886
+        },
+        {
+          endDate: '2018-10-24',
+          startDate: '2018-10-24',
+          totalMinutes: 318
+        },
+        {
+          endDate: '2018-10-25',
+          startDate: '2018-10-25',
+          totalMinutes: 129
+        },
+        {
+          endDate: '2018-10-26',
+          startDate: '2018-10-26',
+          totalMinutes: 558
+        },
+        {
+          endDate: '2018-10-27',
+          startDate: '2018-10-27',
+          totalMinutes: 445
+        },
+        {
+          endDate: '2018-10-28',
+          startDate: '2018-10-28',
+          totalMinutes: 267
+        },
+        {
+          endDate: '2018-10-29',
+          startDate: '2018-10-29',
+          totalMinutes: 771
+        },
+        {
+          endDate: '2018-11-08',
+          startDate: '2018-11-08',
+          totalMinutes: 518
+        },
+        {
+          endDate: '2018-11-09',
+          startDate: '2018-11-09',
+          totalMinutes: 446
+        },
+        {
+          endDate: '2018-11-10',
+          startDate: '2018-11-10',
+          totalMinutes: 100
+        },
+        {
+          endDate: '2018-11-11',
+          startDate: '2018-11-11',
+          totalMinutes: 807
+        }
+      ],
+      blockSummaryCount: 13
+    }
+  },
+  {
+    name: 'FRAZIER, DEDE',
+    crewID: 'CR-0881N',
+    version: 1,
+    bidPeriods: {
+      bidPeriod: [
+        {
+          code: '1005',
+          baseID: 'CB-H',
+          seniority: 1185,
+          startDate: '2018-10-22',
+          positionID: 'PO-FO',
+          mtdBlockTime: 2758,
+          blockTimeDate: '2018-11-08',
+          assignmentType: 'LINE_HOLDER',
+          pairingAssignments: {
+            pairingAssignment: [
+              {
+                isReserve: false,
+                pairingID: 'PA-CO--P--H5057--2010-05-24',
+                positionID: 'PO-FO',
+                isRequested: false,
+                subpositionID: 'FO01',
+                isRoutedTogether: false
+              }
+            ],
+            pairingAssignmentCount: 1
+          }
+        },
+        {
+          code: '1006',
+          baseID: 'CB-H',
+          seniority: 1185,
+          startDate: '2018-11-21',
+          positionID: 'PO-FO',
+          mtdBlockTime: 0,
+          assignmentType: 'LINE_HOLDER'
+        }
+      ],
+      bidPeriodCount: 2
+    },
+    employeeID: '0881N',
+    identifier: 'CR-0881N',
+    blockHistory: {
+      dateMinutes: [
+        {
+          date: '2018-10-17',
+          totalMinutes: 452
+        },
+        {
+          date: '2018-10-18',
+          totalMinutes: 454
+        },
+        {
+          date: '2018-10-22',
+          totalMinutes: 442
+        },
+        {
+          date: '2018-10-29',
+          totalMinutes: 449
+        },
+        {
+          date: '2018-10-30',
+          totalMinutes: 449
+        },
+        {
+          date: '2018-11-05',
+          totalMinutes: 473
+        },
+        {
+          date: '2018-11-06',
+          totalMinutes: 463
+        },
+        {
+          date: '2018-11-07',
+          totalMinutes: 482
+        }
+      ],
+      dateMinutesCount: 8
+    },
+    positionType: 'P',
+    qualifications: {
+      qualification: [
+        {
+          dateTimeType: 'GMT',
+          qualificationID: 'QU-SEAT-B737-300-FO',
+          expirationDateTime: '2019-02-04T00:00:00.000+0000'
+        },
+        {
+          dateTimeType: 'GMT',
+          qualificationID: 'QU-SEAT-B737-500-FO',
+          expirationDateTime: '2019-02-04T00:00:00.000+0000'
+        },
+        {
+          dateTimeType: 'GMT',
+          qualificationID: 'QU-SEAT-B737-700-FO',
+          expirationDateTime: '2019-02-04T00:00:00.000+0000'
+        },
+        {
+          dateTimeType: 'GMT',
+          qualificationID: 'QU-SEAT-B737-800-FO',
+          expirationDateTime: '2019-02-04T00:00:00.000+0000'
+        },
+        {
+          dateTimeType: 'GMT',
+          qualificationID: 'QU-SEAT-B737-900-FO',
+          expirationDateTime: '2019-02-04T00:00:00.000+0000'
+        }
+      ],
+      qualificationCount: 5
+    },
+    blockHistorySummaryList: {
+      blockSummary: [
+        {
+          endDate: '2018-10-17',
+          startDate: '2018-10-17',
+          totalMinutes: 452
+        },
+        {
+          endDate: '2018-10-18',
+          startDate: '2018-10-18',
+          totalMinutes: 454
+        },
+        {
+          endDate: '2018-10-22',
+          startDate: '2018-10-22',
+          totalMinutes: 442
+        },
+        {
+          endDate: '2018-10-29',
+          startDate: '2018-10-29',
+          totalMinutes: 449
+        },
+        {
+          endDate: '2018-10-30',
+          startDate: '2018-10-30',
+          totalMinutes: 449
+        },
+        {
+          endDate: '2018-11-05',
+          startDate: '2018-11-05',
+          totalMinutes: 473
+        },
+        {
+          endDate: '2018-11-06',
+          startDate: '2018-11-06',
+          totalMinutes: 463
+        },
+        {
+          endDate: '2018-11-07',
+          startDate: '2018-11-07',
+          totalMinutes: 482
+        }
+      ],
+      blockSummaryCount: 8
+    }
+  }
+];
 
 export const crewBaseMock = [
   {
@@ -5505,7 +9522,704 @@ export const offlineTransportationMock = [
   }
 ];
 
-export const pairingMock = [];
+export const pairingMock = [
+  {
+    name: 'H3C52G',
+    baseID: 'CB-H',
+    version: 1,
+    pairingID: 'PA-CO--F--H3C52G--2010-05-21',
+    startDate: '2018-11-09',
+    identifier: 'PA-CO--F--H3C52G--2010-05-21',
+    assignments: {
+      assignment: [
+        {
+          isReserve: false,
+          positionID: 'PO-FA',
+          assignmentID: 'FA01',
+          subpositionID: 'FA01'
+        }
+      ],
+      assignmentCount: 1
+    },
+    positionType: 'F',
+    destAirportID: 'AP-IAH',
+    origAirportID: 'AP-IAH',
+    airlineSpecificProperties: {
+      property: [
+        {
+          name: 'Subpositions',
+          value: 'FA01'
+        }
+      ],
+      propertyCount: 1
+    }
+  },
+  {
+    name: 'H1117',
+    baseID: 'CB-H',
+    version: 1,
+    pairingID: 'PA-CO--F--H1117--2010-05-20',
+    startDate: '2018-11-08',
+    identifier: 'PA-CO--F--H1117--2010-05-20',
+    assignments: {
+      assignment: [
+        {
+          isReserve: false,
+          positionID: 'PO-FA',
+          assignmentID: 'FA01',
+          subpositionID: 'FA01'
+        },
+        {
+          isReserve: false,
+          positionID: 'PO-FA',
+          assignmentID: 'FA02',
+          subpositionID: 'FA02'
+        }
+      ],
+      assignmentCount: 2
+    },
+    positionType: 'F',
+    destAirportID: 'AP-IAH',
+    origAirportID: 'AP-IAH',
+    airlineSpecificProperties: {
+      property: [
+        {
+          name: 'Subpositions',
+          value: 'FA01FA02'
+        }
+      ],
+      propertyCount: 1
+    }
+  },
+  {
+    name: 'H5017',
+    baseID: 'CB-H',
+    version: 1,
+    pairingID: 'PA-CO--F--H5017--2010-05-27',
+    startDate: '2018-11-15',
+    identifier: 'PA-CO--F--H5017--2010-05-27',
+    assignments: {
+      assignment: [
+        {
+          crewID: 'CR-0383A',
+          isReserve: false,
+          positionID: 'PO-FA',
+          assignmentID: 'FA02',
+          subpositionID: 'FA02'
+        },
+        {
+          crewID: 'CR-0426N',
+          isReserve: false,
+          positionID: 'PO-FA',
+          assignmentID: 'FM01',
+          subpositionID: 'FM01'
+        },
+        {
+          crewID: 'CR-0892A',
+          isReserve: false,
+          positionID: 'PO-FA',
+          assignmentID: 'FA01',
+          subpositionID: 'FA01'
+        }
+      ],
+      assignmentCount: 3
+    },
+    positionType: 'F',
+    destAirportID: 'AP-IAH',
+    origAirportID: 'AP-IAH',
+    airlineSpecificProperties: {
+      property: [
+        {
+          name: 'Subpositions',
+          value: 'FA01FA02FM01'
+        }
+      ],
+      propertyCount: 1
+    }
+  },
+  {
+    name: 'H3695',
+    baseID: 'CB-H',
+    version: 1,
+    pairingID: 'PA-CO--F--H3695--2010-05-26',
+    startDate: '2018-11-14',
+    identifier: 'PA-CO--F--H3695--2010-05-26',
+    assignments: {
+      assignment: [
+        {
+          crewID: 'CR-83105',
+          isReserve: false,
+          positionID: 'PO-FA',
+          assignmentID: 'FA01',
+          subpositionID: 'FA01'
+        }
+      ],
+      assignmentCount: 1
+    },
+    positionType: 'F',
+    destAirportID: 'AP-IAH',
+    origAirportID: 'AP-IAH',
+    airlineSpecificProperties: {
+      property: [
+        {
+          name: 'Subpositions',
+          value: 'FA01'
+        }
+      ],
+      propertyCount: 1
+    }
+  },
+  {
+    name: 'H3738',
+    baseID: 'CB-H',
+    duties: {
+      duty: [
+        {
+          hotelID: 'HT-MSY--RDA',
+          restCode: 'S0',
+          segments: {
+            segmentsItem: [
+              {
+                flightSegment: {
+                  flightID: 'FL-CO-20181111-IAH-LAX-1495',
+                  segmentNumber: 1
+                }
+              },
+              {
+                flightSegment: {
+                  flightID: 'FL-CO-20181111-LAX-IAH-46',
+                  segmentNumber: 2
+                }
+              },
+              {
+                flightSegment: {
+                  flightID: 'FL-CO-20181111-IAH-MSY-423',
+                  segmentNumber: 3
+                }
+              }
+            ],
+            segmentsItemCount: 3
+          },
+          sequenceID: '040',
+          isReportTimeFrozen: false,
+          reportDateTimeActual: '2018-11-11T13:05:00.000+0000',
+          releaseDateTimeActual: '2018-11-12T01:47:00.000+0000',
+          reportDateTimeOriginal: '2018-11-11T13:05:00.000+0000',
+          releaseDateTimeOriginal: '2018-11-12T01:45:00.000+0000',
+          reportDateTimeScheduled: '2018-11-11T13:05:00.000+0000',
+          releaseDateTimeScheduled: '2018-11-12T01:45:00.000+0000',
+          isFlightDutyPeriodExtended: false
+        },
+        {
+          hotelID: 'HT-MCO--LQS',
+          restCode: 'S0',
+          segments: {
+            segmentsItem: [
+              {
+                flightSegment: {
+                  flightID: 'FL-CO-20181112-MSY-IAH-322',
+                  segmentNumber: 4
+                }
+              },
+              {
+                flightSegment: {
+                  flightID: 'FL-CO-20181112-IAH-MCO-686',
+                  segmentNumber: 5
+                }
+              }
+            ],
+            segmentsItemCount: 2
+          },
+          sequenceID: '070',
+          isReportTimeFrozen: false,
+          reportDateTimeActual: '2018-11-12T12:15:00.000+0000',
+          releaseDateTimeActual: '2018-11-12T18:11:00.000+0000',
+          reportDateTimeOriginal: '2018-11-12T12:15:00.000+0000',
+          releaseDateTimeOriginal: '2018-11-12T18:08:00.000+0000',
+          reportDateTimeScheduled: '2018-11-12T12:15:00.000+0000',
+          releaseDateTimeScheduled: '2018-11-12T18:08:00.000+0000',
+          isFlightDutyPeriodExtended: false
+        },
+        {
+          hotelID: 'HT-LAX--WES',
+          restCode: 'S0',
+          segments: {
+            segmentsItem: [
+              {
+                flightSegment: {
+                  flightID: 'FL-CO-20181113-MCO-IAH-687',
+                  segmentNumber: 6
+                }
+              },
+              {
+                flightSegment: {
+                  flightID: 'FL-CO-20181113-IAH-LAX-1795',
+                  segmentNumber: 7
+                }
+              }
+            ],
+            segmentsItemCount: 2
+          },
+          sequenceID: '100',
+          isReportTimeFrozen: false,
+          reportDateTimeOriginal: '2018-11-13T18:00:00.000+0000',
+          releaseDateTimeOriginal: '2018-11-14T02:49:00.000+0000',
+          reportDateTimeScheduled: '2018-11-13T18:00:00.000+0000',
+          releaseDateTimeScheduled: '2018-11-14T02:49:00.000+0000',
+          isFlightDutyPeriodExtended: false
+        }
+      ],
+      dutyCount: 3
+    },
+    version: 1,
+    pairingID: 'PA-CO--F--H3738--2010-05-23',
+    startDate: '2018-11-11',
+    identifier: 'PA-CO--F--H3738--2010-05-23',
+    assignments: {
+      assignment: [
+        {
+          crewID: 'CR-C7529',
+          isReserve: false,
+          positionID: 'PO-FA',
+          assignmentID: 'FA01',
+          subpositionID: 'FA01'
+        }
+      ],
+      assignmentCount: 1
+    },
+    positionType: 'F',
+    destAirportID: 'AP-IAH',
+    origAirportID: 'AP-IAH',
+    airlineSpecificProperties: {
+      property: [
+        {
+          name: 'Subpositions',
+          value: 'FA01'
+        }
+      ],
+      propertyCount: 1
+    }
+  },
+  {
+    name: 'H3A62A',
+    baseID: 'CB-H',
+    duties: {
+      duty: [
+        {
+          hotelID: 'HT-SJC--MAR',
+          restCode: 'S0',
+          segments: {
+            segmentsItem: [
+              {
+                flightSegment: {
+                  flightID: 'FL-CO-20181112-IAH-SJC-1991',
+                  segmentNumber: 1
+                }
+              }
+            ],
+            segmentsItemCount: 1
+          },
+          sequenceID: '020',
+          isReportTimeFrozen: false,
+          reportDateTimeOriginal: '2018-11-12T22:50:00.000+0000',
+          releaseDateTimeOriginal: '2018-11-13T04:25:00.000+0000',
+          reportDateTimeScheduled: '2018-11-12T22:50:00.000+0000',
+          releaseDateTimeScheduled: '2018-11-13T04:25:00.000+0000',
+          isFlightDutyPeriodExtended: false
+        },
+        {
+          restCode: 'S0',
+          segments: {
+            segmentsItem: [
+              {
+                flightSegment: {
+                  flightID: 'FL-CO-20181113-SJC-AUS-1929',
+                  segmentNumber: 2
+                }
+              },
+              {
+                flightSegment: {
+                  flightID: 'FL-CO-20181113-AUS-IAH-1941',
+                  segmentNumber: 3,
+                  segmentWorkCodes: {
+                    segmentWorkCode: [
+                      {
+                        code: 'DH'
+                      }
+                    ],
+                    segmentWorkCodeCount: 1
+                  }
+                }
+              }
+            ],
+            segmentsItemCount: 2
+          },
+          sequenceID: '050',
+          isReportTimeFrozen: false,
+          reportDateTimeOriginal: '2018-11-13T15:00:00.000+0000',
+          releaseDateTimeOriginal: '2018-11-13T20:55:00.000+0000',
+          reportDateTimeScheduled: '2018-11-13T15:00:00.000+0000',
+          releaseDateTimeScheduled: '2018-11-13T20:55:00.000+0000',
+          isFlightDutyPeriodExtended: false
+        }
+      ],
+      dutyCount: 2
+    },
+    version: 1,
+    pairingID: 'PA-CO--F--H3A62A--2010-05-24',
+    startDate: '2018-11-12',
+    identifier: 'PA-CO--F--H3A62A--2010-05-24',
+    assignments: {
+      assignment: [
+        {
+          crewID: 'CR-0513Y',
+          isReserve: false,
+          positionID: 'PO-FA',
+          assignmentID: 'FA04',
+          subpositionID: 'FA04'
+        },
+        {
+          crewID: 'CR-45960',
+          isReserve: false,
+          positionID: 'PO-FA',
+          assignmentID: 'FA03',
+          subpositionID: 'FA03'
+        },
+        {
+          crewID: 'CR-91804',
+          isReserve: false,
+          positionID: 'PO-FA',
+          assignmentID: 'FA02',
+          subpositionID: 'FA02'
+        },
+        {
+          crewID: 'CR-98538',
+          isReserve: false,
+          positionID: 'PO-FA',
+          assignmentID: 'FM01',
+          subpositionID: 'FM01'
+        },
+        {
+          crewID: 'CR-A5442',
+          isReserve: false,
+          positionID: 'PO-FA',
+          assignmentID: 'FA01',
+          subpositionID: 'FA01'
+        }
+      ],
+      assignmentCount: 5
+    },
+    positionType: 'F',
+    destAirportID: 'AP-IAH',
+    origAirportID: 'AP-IAH',
+    classifications: {
+      classification: [
+        {
+          value: 'CHARTER'
+        },
+        {
+          value: 'PROTECTED'
+        }
+      ],
+      classificationCount: 2
+    },
+    airlineSpecificProperties: {
+      property: [
+        {
+          name: 'Subpositions',
+          value: 'FA01FA02FA03FA04FM01'
+        }
+      ],
+      propertyCount: 1
+    }
+  },
+  {
+    name: 'H5141',
+    baseID: 'CB-H',
+    version: 1,
+    pairingID: 'PA-CO--F--H5141--2010-05-20',
+    startDate: '2018-11-08',
+    identifier: 'PA-CO--F--H5141--2010-05-20',
+    assignments: {
+      assignment: [
+        {
+          isReserve: false,
+          positionID: 'PO-FA',
+          assignmentID: 'FA01',
+          subpositionID: 'FA01'
+        },
+        {
+          isReserve: false,
+          positionID: 'PO-FA',
+          assignmentID: 'FA02',
+          subpositionID: 'FA02'
+        }
+      ],
+      assignmentCount: 2
+    },
+    positionType: 'F',
+    destAirportID: 'AP-IAH',
+    origAirportID: 'AP-IAH',
+    airlineSpecificProperties: {
+      property: [
+        {
+          name: 'Subpositions',
+          value: 'FA01FA02'
+        }
+      ],
+      propertyCount: 1
+    }
+  },
+  {
+    name: 'H5009',
+    baseID: 'CB-H',
+    version: 1,
+    pairingID: 'PA-CO--F--H5009--2010-05-21',
+    startDate: '2018-11-09',
+    identifier: 'PA-CO--F--H5009--2010-05-21',
+    assignments: {
+      assignment: [
+        {
+          isReserve: false,
+          positionID: 'PO-FA',
+          assignmentID: 'FA01',
+          subpositionID: 'FA01'
+        },
+        {
+          isReserve: false,
+          positionID: 'PO-FA',
+          assignmentID: 'FA02',
+          subpositionID: 'FA02'
+        },
+        {
+          isReserve: false,
+          positionID: 'PO-FA',
+          assignmentID: 'FM01',
+          subpositionID: 'FM01'
+        }
+      ],
+      assignmentCount: 3
+    },
+    positionType: 'F',
+    destAirportID: 'AP-IAH',
+    origAirportID: 'AP-IAH',
+    airlineSpecificProperties: {
+      property: [
+        {
+          name: 'Subpositions',
+          value: 'FA01FA02FM01'
+        }
+      ],
+      propertyCount: 1
+    }
+  },
+  {
+    name: 'H5021',
+    baseID: 'CB-H',
+    version: 1,
+    pairingID: 'PA-CO--F--H5021--2010-05-21',
+    startDate: '2018-11-09',
+    identifier: 'PA-CO--F--H5021--2010-05-21',
+    assignments: {
+      assignment: [
+        {
+          isReserve: false,
+          positionID: 'PO-FA',
+          assignmentID: 'FA01',
+          subpositionID: 'FA01'
+        },
+        {
+          isReserve: false,
+          positionID: 'PO-FA',
+          assignmentID: 'FA02',
+          subpositionID: 'FA02'
+        },
+        {
+          isReserve: false,
+          positionID: 'PO-FA',
+          assignmentID: 'FM01',
+          subpositionID: 'FM01'
+        }
+      ],
+      assignmentCount: 3
+    },
+    positionType: 'F',
+    destAirportID: 'AP-IAH',
+    origAirportID: 'AP-IAH',
+    airlineSpecificProperties: {
+      property: [
+        {
+          name: 'Subpositions',
+          value: 'FA01FA02FM01'
+        }
+      ],
+      propertyCount: 1
+    }
+  },
+  {
+    name: 'H1169',
+    baseID: 'CB-H',
+    duties: {
+      duty: [
+        {
+          hotelID: 'HT-CCS--EUR',
+          restCode: 'S0',
+          segments: {
+            segmentsItem: [
+              {
+                flightSegment: {
+                  flightID: 'FL-CO-20181111-IAH-CCS-1666',
+                  segmentNumber: 1
+                }
+              }
+            ],
+            segmentsItemCount: 1
+          },
+          sequenceID: '020',
+          isReportTimeFrozen: false,
+          reportDateTimeActual: '2018-11-12T03:59:00.000+0000',
+          releaseDateTimeActual: '2018-11-12T10:00:00.000+0000',
+          reportDateTimeOriginal: '2018-11-12T03:59:00.000+0000',
+          releaseDateTimeOriginal: '2018-11-12T10:14:00.000+0000',
+          reportDateTimeScheduled: '2018-11-12T03:59:00.000+0000',
+          releaseDateTimeScheduled: '2018-11-12T10:14:00.000+0000',
+          isFlightDutyPeriodExtended: false
+        },
+        {
+          restCode: 'S0',
+          segments: {
+            segmentsItem: [
+              {
+                flightSegment: {
+                  flightID: 'FL-CO-20181113-CCS-IAH-1667',
+                  segmentNumber: 2
+                }
+              }
+            ],
+            segmentsItemCount: 1
+          },
+          sequenceID: '040',
+          isReportTimeFrozen: false,
+          reportDateTimeOriginal: '2018-11-13T12:10:00.000+0000',
+          releaseDateTimeOriginal: '2018-11-13T18:45:00.000+0000',
+          reportDateTimeScheduled: '2018-11-13T12:10:00.000+0000',
+          releaseDateTimeScheduled: '2018-11-13T18:45:00.000+0000',
+          isFlightDutyPeriodExtended: false
+        }
+      ],
+      dutyCount: 2
+    },
+    version: 1,
+    pairingID: 'PA-CO--F--H1169--2010-05-23',
+    startDate: '2018-11-11',
+    identifier: 'PA-CO--F--H1169--2010-05-23',
+    assignments: {
+      assignment: [
+        {
+          crewID: 'CR-A1793',
+          isReserve: false,
+          positionID: 'PO-FA',
+          assignmentID: 'FA02',
+          subpositionID: 'FA02'
+        },
+        {
+          crewID: 'CR-D2349',
+          isReserve: false,
+          positionID: 'PO-FA',
+          assignmentID: 'FA01',
+          subpositionID: 'FA01'
+        }
+      ],
+      assignmentCount: 2
+    },
+    positionType: 'F',
+    destAirportID: 'AP-IAH',
+    origAirportID: 'AP-IAH',
+    airlineSpecificProperties: {
+      property: [
+        {
+          name: 'Subpositions',
+          value: 'FA01FA02'
+        }
+      ],
+      propertyCount: 1
+    }
+  },
+  {
+    name: 'H3640',
+    baseID: 'CB-H',
+    version: 1,
+    pairingID: 'PA-CO--F--H3640--2010-05-21',
+    startDate: '2018-11-09',
+    identifier: 'PA-CO--F--H3640--2010-05-21',
+    assignments: {
+      assignment: [
+        {
+          isReserve: false,
+          positionID: 'PO-FA',
+          assignmentID: 'FA01',
+          subpositionID: 'FA01'
+        }
+      ],
+      assignmentCount: 1
+    },
+    positionType: 'F',
+    destAirportID: 'AP-IAH',
+    origAirportID: 'AP-IAH',
+    airlineSpecificProperties: {
+      property: [
+        {
+          name: 'Subpositions',
+          value: 'FA01'
+        }
+      ],
+      propertyCount: 1
+    }
+  },
+  {
+    name: 'H5050',
+    baseID: 'CB-H',
+    version: 1,
+    pairingID: 'PA-CO--F--H5050--2010-05-22',
+    startDate: '2018-11-10',
+    identifier: 'PA-CO--F--H5050--2010-05-22',
+    assignments: {
+      assignment: [
+        {
+          isReserve: false,
+          positionID: 'PO-FA',
+          assignmentID: 'FA01',
+          subpositionID: 'FA01'
+        },
+        {
+          isReserve: false,
+          positionID: 'PO-FA',
+          assignmentID: 'FA02',
+          subpositionID: 'FA02'
+        },
+        {
+          isReserve: false,
+          positionID: 'PO-FA',
+          assignmentID: 'FM01',
+          subpositionID: 'FM01'
+        }
+      ],
+      assignmentCount: 3
+    },
+    positionType: 'F',
+    destAirportID: 'AP-IAH',
+    origAirportID: 'AP-IAH',
+    airlineSpecificProperties: {
+      property: [
+        {
+          name: 'Subpositions',
+          value: 'FA01FA02FM01'
+        }
+      ],
+      propertyCount: 1
+    }
+  }
+];
 
 export const passengerConnectionMock = [
   {

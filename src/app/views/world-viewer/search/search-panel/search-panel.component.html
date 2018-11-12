@@ -8,8 +8,8 @@
     </mat-card-header>
     <div fxFlex="10">
       <mat-button-toggle-group name="world" [(value)]="worldGroup">
-        <mat-button-toggle value="paradise">Paradise</mat-button-toggle>
-        <mat-button-toggle value="purgatory">Purgatory</mat-button-toggle>
+        <mat-button-toggle [value]="world.paradise">{{world.paradise}}</mat-button-toggle>
+        <mat-button-toggle [value]="world.purgatory">{{world.purgatory}}</mat-button-toggle>
       </mat-button-toggle-group>
     </div>
     <div fxFlex="10">
@@ -74,6 +74,10 @@
     <button [disabled]="disableAddNewProperty || propertyForm.invalid" mat-icon-button disableRipple="true" color="primary" (click)="addNewProperty()"><mat-icon>add</mat-icon> Add Another</button>
   </mat-card>
   <div fxFlex="4" fxFlexAlign="end">
-    <button id="world-search-button" mat-raised-button color="primary" [disabled]="propertyForm.invalid || !!!propertyForm.value.propertyNames.length">Search</button>
+    <button 
+      id="world-search-button"
+      (click)="search()"
+      mat-raised-button color="primary"
+      [disabled]="propertyForm.invalid || !!!propertyForm.value.propertyNames.length">Search</button>
   </div>
 </div>

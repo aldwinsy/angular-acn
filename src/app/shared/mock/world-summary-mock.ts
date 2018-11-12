@@ -71,7 +71,7 @@ export const worldSummaryData = [
     paradiseCount: 0
   },
   {
-    propertyName: 'NonFly',
+    propertyName: 'Nonfly',
     purgatoryCount: 0,
     paradiseCount: 0
   },
