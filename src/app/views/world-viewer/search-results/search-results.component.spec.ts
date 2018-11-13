@@ -1,3 +1,4 @@
+import { WorldViewerService } from 'sasi/views/world-viewer/world-viewer.service';
 import { RouterTestingModule } from '@angular/router/testing';
 import { async, ComponentFixture, TestBed, inject } from '@angular/core/testing';
 import { Location } from '@angular/common';
@@ -40,7 +41,7 @@ import {
 class ActivatedRouteMock {
   params = of({
     world: 'Purgatory',
-    resultsToBeViewed: 'Fleet'
+    resultsToBeViewed: 'fleet'
   });
 }
 
@@ -65,7 +66,8 @@ describe('SearchResultsComponent', () => {
       ],
       declarations: [ SearchResultsComponent, DummyComponent ],
       providers: [
-        { provide: ActivatedRoute, useClass: ActivatedRouteMock}
+        { provide: ActivatedRoute, useClass: ActivatedRouteMock },
+        WorldViewerService
       ]
     })
     .compileComponents();
@@ -83,11 +85,11 @@ describe('SearchResultsComponent', () => {
 
   it('should set world and results to be viewed on init', () => {
     expect(component.world).toBe('Purgatory');
-    expect(component.object).toBe('Fleet');
+    expect(component.object).toBe('fleet');
     const world = fixture.debugElement.query(By.css('#span-world')).nativeElement;
     const object = fixture.debugElement.query(By.css('#span-object')).nativeElement;
     expect(world.textContent).toContain('Purgatory');
-    expect(object.textContent).toContain('Fleet');
+    expect(object.textContent).toContain('fleet');
   });
 
   // @Note: This a way to test routerLink navigation

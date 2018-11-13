@@ -19,7 +19,6 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 })
 
 export class AppComponent {
-  readonly title = 'sasi-ui';
   darkTheme = false;
   showBanner = true;
 

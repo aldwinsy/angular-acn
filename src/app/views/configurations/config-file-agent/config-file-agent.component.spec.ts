@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ConfigFileAgentComponent } from './config-file-agent.component';
+import { SharedModule } from 'sasi/shared/shared.module';
 
 describe('ConfigFileAgentComponent', () => {
   let component: ConfigFileAgentComponent;
@@ -8,6 +9,7 @@ describe('ConfigFileAgentComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [ SharedModule ],
       declarations: [ ConfigFileAgentComponent ]
     })
     .compileComponents();

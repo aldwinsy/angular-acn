@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 
 import { TestBed, async, ComponentFixture } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
@@ -16,6 +17,7 @@ describe('AppComponent', () => {
     TestBed.configureTestingModule({
       imports: [
         RouterTestingModule,
+        HttpClientModule,
         MaterialsModule
       ],
       declarations: [
@@ -36,11 +38,6 @@ describe('AppComponent', () => {
   it('should create the app', async(() => {
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
-  }));
-
-  it(`should have as title 'sasi-ui'`, async(() => {
-    const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('sasi-ui');
   }));
 
   it('should render header', async(() => {

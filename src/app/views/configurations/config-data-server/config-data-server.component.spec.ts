@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ConfigDataServerComponent } from './config-data-server.component';
+import { SharedModule } from 'sasi/shared/shared.module';
 
 describe('ConfigDataServerComponent', () => {
   let component: ConfigDataServerComponent;
@@ -8,6 +9,7 @@ describe('ConfigDataServerComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [ SharedModule ],
       declarations: [ ConfigDataServerComponent ]
     })
     .compileComponents();

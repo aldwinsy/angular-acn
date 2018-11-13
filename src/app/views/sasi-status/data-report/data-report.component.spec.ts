@@ -22,7 +22,7 @@ describe('DataReportComponent', () => {
       ],
       declarations: [ DataReportComponent ],
       providers: [
-        {provide: SasiStatusService, useValue: mockSasiStatusService}
+        { provide: SasiStatusService, useValue: mockSasiStatusService }
       ]
     })
     .compileComponents();
