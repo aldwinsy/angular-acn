@@ -25,7 +25,6 @@ import { Observable, of, throwError } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { urls, worldSummaryProperties } from 'sasi/shared/variables/global-variables';
-import { worldSummaryData } from 'sasi-mock/world-summary-mock';
 import { tap, catchError } from 'rxjs/operators';
 
 @Injectable({
@@ -34,18 +33,6 @@ import { tap, catchError } from 'rxjs/operators';
 export class WorldViewerService {
 
   constructor(private http: HttpClient) { }
-
-  getWorldSummaryData(): Observable<any> {
-    // @TODO: uncomment when actual endpoint is available
-    const url = 'https://sasi.azure-api.net/sasi/world';
-    return this.http.get(url).pipe(
-      tap((data: any) => {
-        console.log('getWorldSummaryData: ', data);
-      }),
-      catchError(this.handleError)
-    );
-    // return of(worldSummaryData);
-  }
 
   getWorldObjects(type): Observable<any> {
     // @TODO: uncomment when actual endpoint is available

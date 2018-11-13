@@ -1,33 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { WorldViewerService } from 'sasi/views/world-viewer/world-viewer.service';
 import { combineLatest } from 'rxjs';
 import { map } from 'rxjs/operators';
 import * as _ from 'lodash';
-
-interface WorldSummaryInterface {
-  propertyName: string;
-  purgatoryCount: number;
-  paradiseCount: number;
-}
-
-class WorldSummaryModel {
-  worldSummaryData: WorldSummaryInterface[];
-  constructor(purgatory, paradise) {
-    const purgatoryData = purgatory.topLevelObjects.map(object => {
-      return {
-        propertyName: object.objectName,
-        purgatoryCount: object.objectCount
-      };
-    });
-    const paradiseData = paradise.topLevelObjects.map(object => {
-      return {
-        propertyName: object.objectName,
-        paradiseCount: object.objectCount
-      };
-    });
-    this.worldSummaryData = _.merge(purgatoryData, paradiseData);
-  }
-}
+import { CoreService } from 'sasi/core/service/core.service';
+import { WorldSummaryInterface, SasiWorldInterface } from 'sasi/shared/interfaces/world-summary.interface';
 
 @Component({
   selector: 'app-search',
@@ -40,23 +16,39 @@ class WorldSummaryModel {
 export class SearchComponent implements OnInit {
   worldSummaryData: WorldSummaryInterface[];
   isDataLoading = false;
-  constructor(private worldViewerservice: WorldViewerService) {}
+  constructor(private coreService: CoreService) {}
 
   ngOnInit() {
-    this.getWorldSummaryData();
+    this.getWorldSummary();
   }
 
-  getWorldSummaryData() {
+  getWorldSummary() {
     this.isDataLoading = true;
     combineLatest(
-      this.worldViewerservice.getWorldSummaryData(),
-      this.worldViewerservice.getWorldSummaryData()
+      this.coreService.getPurgatorySummary(),
+      this.coreService.getParadiseSummary()
     ).pipe(
-      map(([purgatory, paradise]) => new WorldSummaryModel(purgatory, paradise))
+      map(([purgatory, paradise]) => this.transformWorldSummary(purgatory, paradise))
     ).subscribe(data => {
-      this.worldSummaryData = data.worldSummaryData;
+      this.worldSummaryData = data;
       this.isDataLoading = false;
     });
+  }
+
+  transformWorldSummary(purgatory: SasiWorldInterface, paradise: SasiWorldInterface): WorldSummaryInterface[] {
+    const purgatoryData = purgatory.topLevelObjects.map(object => {
+      return {
+        propertyName: object.objectName,
+        purgatoryCount: object.objectCount
+      };
+    });
+    const paradiseData = paradise.topLevelObjects.map(object => {
+      return {
+        propertyName: object.objectName,
+        paradiseCount: object.objectCount
+      };
+    });
+    return _.merge(purgatoryData, paradiseData);
   }
 
 }

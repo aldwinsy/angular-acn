@@ -1,4 +1,5 @@
-<div *ngIf="!isDataLoading" class="container"
+<mat-progress-bar *ngIf="isDataLoading" mode="indeterminate"></mat-progress-bar>
+<div *ngIf="worldSummaryData" class="container"
   fxLayout="row"
   fxLayoutGap="3rem"
   fxLayout.xs="column"
