@@ -1,3 +1,28 @@
-<p>
-  search-results works!
-</p>
+<div fxLayout="column" fxFlexFill fxLayoutAlign="center stretch" fxLayoutGap="20px" class="container">
+  <div fxFlex="4" class="div-header" fxLayout="row" fxLayoutAlign="start stretch"> 
+    <div fxFlex="20" class="div-breadcrumbs">
+      <span id="span-nav" routerLink="/world-viewer"> World View </span>
+      <span id="span-world"> ({{world}}) </span>
+      <span> > </span>
+      <span> Results </span>
+    </div>
+    <div id="span-object" fxFlex class="div-header-title">{{object}}</div>
+    <div fxFlex="20"></div>
+  </div>
+
+  <div fxFlex="90" class="results-panel div-all-scroll">
+    <app-sasi-mat-table *ngIf="!!resultsData.length; else noRecords"
+      id="results-table"
+      (cellClicked)="true"
+      [columnObjects]="resultsColumns"
+      [data]="resultsData"
+      sortedColumn="fleetID">
+    </app-sasi-mat-table>
+  </div>
+
+</div>
+
+<ng-template #noRecords>
+  <!-- NO RESULT -->
+  <app-no-records-found *ngIf="!isDataLoading" class="results-panel"></app-no-records-found>
+</ng-template>

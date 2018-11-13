@@ -1,9 +1,11 @@
-<div class="container"
+<mat-progress-bar *ngIf="isDataLoading" mode="indeterminate"></mat-progress-bar>
+<div *ngIf="worldSummaryData" class="container"
   fxLayout="row"
-  fxLayoutGap="1.5rem"
+  fxLayoutGap="3rem"
   fxLayout.xs="column"
   fxLayoutAlign="center"
   fxLayoutGap.xs="1rem">
   <app-summary-panel fxFlex="30" [worldSummaryData]="worldSummaryData"></app-summary-panel>
-  <app-search-panel fxFlex [worldSummaryData]="worldSummaryData"></app-search-panel>
+  <mat-divider [vertical]="true"></mat-divider>
+  <app-search-panel fxFlex="70" [worldSummaryData]="worldSummaryData"></app-search-panel>
 </div>

@@ -1,90 +1,113 @@
 export const worldSummaryData = [
   {
     propertyName: 'ATCControlledStation',
-    count: 0
+    purgatoryCount: 0,
+    paradiseCount: 0
+
   },
   {
     propertyName: 'Aircraft',
-    count: 203
+    purgatoryCount: 203,
+    paradiseCount: 203
   },
   {
     propertyName: 'Airport',
-    count: 414
+    purgatoryCount: 414,
+    paradiseCount: 414
   },
   {
     propertyName: 'AirportGroup',
-    count: 7
+    purgatoryCount: 7,
+    paradiseCount: 7
   },
   {
     propertyName: 'AirportGroupRelationship',
-    count: 49
+    purgatoryCount: 49,
+    paradiseCount: 49
   },
   {
     propertyName: 'Crew',
-    count: 6373
+    purgatoryCount: 6373,
+    paradiseCount: 6373
   },
   {
     propertyName: 'CrewBase',
-    count: 6
+    purgatoryCount: 6,
+    paradiseCount: 6
   },
   {
     propertyName: 'Fleet',
-    count: 4
+    purgatoryCount: 4,
+    paradiseCount: 4
   },
   {
     propertyName: 'FleetCompatibility',
-    count: 12
+    purgatoryCount: 12,
+    paradiseCount: 12
   },
   {
     propertyName: 'Flight',
-    count: 12247
+    purgatoryCount: 12247,
+    paradiseCount: 1247
   },
   {
     propertyName: 'FlightActivity',
-    count: 1
+    purgatoryCount: 1,
+    paradiseCount: 1
   },
   {
     propertyName: 'InterSegmentTime',
-    count: 0
+    purgatoryCount: 0,
+    paradiseCount: 0
   },
   {
     propertyName: 'Maintenance',
-    count: 865
+    purgatoryCount: 865,
+    paradiseCount: 865
   },
   {
     propertyName: 'Market',
-    count: 0
+    purgatoryCount: 0,
+    paradiseCount: 0
   },
   {
-    propertyName: 'NonFly',
-    count: 0
+    propertyName: 'Nonfly',
+    purgatoryCount: 0,
+    paradiseCount: 0
   },
   {
     propertyName: 'OfflineTransportation',
-    count: 595
+    purgatoryCount: 595,
+    paradiseCount: 595
   },
   {
     propertyName: 'Pairing',
-    count: 5405
+    purgatoryCount: 5405,
+    paradiseCount: 5405
   },
   {
     propertyName: 'PassengerConnection',
-    count: 0
+    purgatoryCount: 0,
+    paradiseCount: 0
   },
   {
     propertyName: 'Position',
-    count: 3
+    purgatoryCount: 3,
+    paradiseCount: 3
   },
   {
     propertyName: 'Qualification',
-    count: 164
+    purgatoryCount: 164,
+    paradiseCount: 164
   },
   {
     propertyName: 'Subfleet',
-    count: 7
+    purgatoryCount: 7,
+    paradiseCount: 7
   },
   {
     propertyName: 'Training',
-    count: 8
+    purgatoryCount: 8,
+    paradiseCount: 8
   }
 ];

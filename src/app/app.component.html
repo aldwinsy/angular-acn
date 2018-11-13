@@ -1,8 +1,8 @@
-<div class="main" fxFlexFill fxLayout="column" fxLayoutAlign="space-between">
+<div (mousedown)="showBanner = false" class="main" fxFlexFill fxLayout="column" fxLayoutAlign="space-between">
   <app-header fxFlex="10" (changeTheme)="changeTheme($event)"></app-header>
   
-  <div fxFlex class="sasi-core-body div-scroll-body" [ngClass]="{'sasi-dark-theme': darkTheme}">
-    <app-banner></app-banner>
+  <div (scroll)="showBanner = false" fxFlex class="sasi-core-body div-scroll-body" [ngClass]="{'sasi-dark-theme': darkTheme}">
+    <!-- <app-banner [@showHideBanner]="showBanner ? 'show' : 'hide'"></app-banner> -->
     <router-outlet></router-outlet>
   </div>
   <app-footer fxFlex="15"></app-footer>

@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { WorldViewerService } from 'sasi/views/world-viewer/world-viewer.service';
+import { combineLatest } from 'rxjs';
+import { map } from 'rxjs/operators';
+import * as _ from 'lodash';
+import { CoreService } from 'sasi/core/service/core.service';
+import { WorldSummaryInterface, SasiWorldInterface } from 'sasi/shared/interfaces/world-summary.interface';
 
 @Component({
   selector: 'app-search',
@@ -10,17 +14,41 @@ import { WorldViewerService } from 'sasi/views/world-viewer/world-viewer.service
   ]
 })
 export class SearchComponent implements OnInit {
-  worldSummaryData = [];
-
-  constructor(private worldViewerservice: WorldViewerService) {}
+  worldSummaryData: WorldSummaryInterface[];
+  isDataLoading = false;
+  constructor(private coreService: CoreService) {}
 
   ngOnInit() {
-    this.getWorldSummaryData();
+    this.getWorldSummary();
   }
 
-  getWorldSummaryData() {
-    this.worldViewerservice.getWorldSummaryData()
-      .subscribe(data => this.worldSummaryData = data);
+  getWorldSummary() {
+    this.isDataLoading = true;
+    combineLatest(
+      this.coreService.getPurgatorySummary(),
+      this.coreService.getParadiseSummary()
+    ).pipe(
+      map(([purgatory, paradise]) => this.transformWorldSummary(purgatory, paradise))
+    ).subscribe(data => {
+      this.worldSummaryData = data;
+      this.isDataLoading = false;
+    });
+  }
+
+  transformWorldSummary(purgatory: SasiWorldInterface, paradise: SasiWorldInterface): WorldSummaryInterface[] {
+    const purgatoryData = purgatory.topLevelObjects.map(object => {
+      return {
+        propertyName: object.objectName,
+        purgatoryCount: object.objectCount
+      };
+    });
+    const paradiseData = paradise.topLevelObjects.map(object => {
+      return {
+        propertyName: object.objectName,
+        paradiseCount: object.objectCount
+      };
+    });
+    return _.merge(purgatoryData, paradiseData);
   }
 
 }

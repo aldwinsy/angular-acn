@@ -1,7 +1,9 @@
+import { worldViewerLabels, worldGroup, worldObjectProperties } from 'sasi/shared/variables/global-variables';
 import { Component, ViewChildren, OnInit, Input } from '@angular/core';
 import { FormControl, Validators, FormBuilder, FormGroup, FormArray } from '@angular/forms';
-import {COMMA, ENTER} from '@angular/cdk/keycodes';
+import { COMMA, ENTER } from '@angular/cdk/keycodes';
 import { MatChipInputEvent } from '@angular/material';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-search-panel',
@@ -12,33 +14,44 @@ import { MatChipInputEvent } from '@angular/material';
   ]
 })
 export class SearchPanelComponent implements OnInit {
+  readonly worldViewerLabels = worldViewerLabels;
+  readonly separatorKeysCodes: number[] = [ENTER, COMMA];
+  readonly world = worldGroup;
+
   @ViewChildren('chipList') chipList;
   @Input() worldSummaryData;
-  worldGroup = 'paradise';
-  selectedQuery = 'Fleet';
-  readonly separatorKeysCodes: number[] = [ENTER, COMMA];
+  worldGroup = this.world.paradise;
+  selectedQuery: string;
   values = [];
   propertyForm: FormGroup;
   worldQueries = [];
-  options: string[] = ['AirlineSpecificProperties', 'CrewFleetName', 'FleetID', 'Identiefier', 'OpsFleetName', 'Version'];
-  filteredOptions = this.options;
-  displayedOptions = this.options;
+  worldObjectProperties = worldObjectProperties;
+  options: string[];
+  filteredOptions: string[] = this.options;
+  displayedOptions: string[] = this.options;
 
   disableAddNewProperty = false;
 
-  constructor(private formBuilder: FormBuilder) {}
+  constructor(
+    private formBuilder: FormBuilder,
+    private router: Router
+  ) {}
 
   ngOnInit() {
-    this.initializeForm();
     this.worldQueries = this.worldSummaryData.map(data => data.propertyName);
-    this.propertyForm.valueChanges.subscribe(form => console.log(this.propertyForm, form));
-
+    this.selectedQuery = this.worldQueries[0];
+    this.initializeForm();
   }
 
   initializeForm() {
+    this.options = this.worldObjectProperties[this.selectedQuery];
+    this.filteredOptions = this.options;
+    this.displayedOptions = this.options;
+    console.log(this.options);
     this.propertyForm = this.formBuilder.group({
       propertyNames: this.formBuilder.array([ this.createNewProperty() ])
     });
+    this.propertyForm.valueChanges.subscribe(form => console.log(this.propertyForm, form));
   }
 
   private _filter(value: string) {
@@ -118,6 +131,14 @@ export class SearchPanelComponent implements OnInit {
         this.chipList._results[index].errorState = true;
       }
     }
+  }
+
+  search() {
+    const parameters = Object.assign({
+      world: this.worldGroup,
+      resultsToBeViewed: this.selectedQuery
+    });
+    this.router.navigate(['world-viewer/search-results', parameters]);
   }
 
 }

@@ -1,23 +1,20 @@
-<div fxLayout="column" fxLayoutAlign="center stretch" class="default-panel world-summary-panel">
-  <div fxFlex="7">
-      <div class="world-summary-header">
-          <span>World View</span>
-      </div>
+<div fxLayout="column" fxLayoutAlign="center stretch" class="world-summary-panel summary-panel-body">
+  <div fxFlex="7" id="div-header" class="div-header">
+    <span>{{worldViewerLabels.worldView}}</span>
   </div>
-  <div fxFlex class="summary-panel-body div-scroll-body">
-      <div *ngIf="!!worldSummaryData.length; else noRecords">
-        <app-sasi-mat-table id="world-summary-table"
-          [columnObjects]="worldSummaryColumns"
-          [data]="worldSummaryData"
-          sortedColumn="propertyName">
-        </app-sasi-mat-table>
-      </div>
-
-      <ng-template #noRecords>
-        <!-- NO RESULT -->
-        <app-no-records-found></app-no-records-found>
-      </ng-template>
-      
-    </div>
+  <div fxFlex class="world-summary-panel div-scroll-body">
+    <app-sasi-mat-table *ngIf="!!worldSummaryData.length; else noRecords"
+      id="world-summary-table"
+      (cellClicked)="goToResults($event)"
+      [columnObjects]="worldSummaryColumns"
+      [data]="worldSummaryData"
+      sortedColumn="propertyName">
+    </app-sasi-mat-table>
+  </div>
 </div>
+
+<ng-template #noRecords>
+  <!-- NO RESULT -->
+  <app-no-records-found *ngIf="!isDataLoading" class="world-summary-panel"></app-no-records-found>
+</ng-template>
 

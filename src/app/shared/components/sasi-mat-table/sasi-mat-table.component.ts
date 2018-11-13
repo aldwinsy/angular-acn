@@ -10,15 +10,16 @@ import { SelectionModel } from '@angular/cdk/collections';
 export class SasiMatTableComponent implements OnInit, AfterViewInit {
   @ViewChild(MatSort) sort: MatSort;
 
-  @Input() public data: any;
+  @Input() public data: any[];
   @Input() public columnObjects: any; // object containing the details of the column (label, propName, type)
-  @Input() public hasSelectAll: any = true;
+  @Input() public hasSelectAll = true;
   @Input() public sortedColumn: string; // set initially sorted column
   @Input() public isSortDisabled = false;
   @Input() public stickyHeader = true;
 
-  @Output() private selectionEvent: any = new EventEmitter<any>();
-  @Output() private sortChange: any = new EventEmitter<any>();
+  @Output() private selectionEvent = new EventEmitter<any>();
+  @Output() private sortChange = new EventEmitter<any>();
+  @Output() private cellClicked = new EventEmitter<any>();
 
   public columnObjectsNoSelect: any;
   public displayedColumns: string[];
@@ -57,6 +58,15 @@ export class SasiMatTableComponent implements OnInit, AfterViewInit {
   sortData(property) {
     console.log(property);
     this.sortChange.emit(property);
+  }
+
+  cellClick(column, cell) {
+    const clickDetails = Object.freeze({
+      cellValue: cell[column.propName],
+      cellColumn: column.label,
+      rowDetails: cell
+    });
+    this.cellClicked.emit(clickDetails);
   }
 
 }

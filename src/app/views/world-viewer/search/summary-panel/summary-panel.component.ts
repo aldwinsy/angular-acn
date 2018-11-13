@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { worldSummaryColumns } from 'sasi/shared/variables/global-variables';
+import { worldSummaryColumns, worldViewerLabels } from 'sasi/shared/variables/global-variables';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-summary-panel',
@@ -10,15 +11,23 @@ import { worldSummaryColumns } from 'sasi/shared/variables/global-variables';
   ]
 })
 export class SummaryPanelComponent implements OnInit {
-  worldSummaryColumns = worldSummaryColumns;
-
+  readonly worldSummaryColumns = worldSummaryColumns;
+  readonly worldViewerLabels = worldViewerLabels;
   @Input() worldSummaryData = [];
 
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
 
+  }
+
+  goToResults(details) {
+    const parameters = Object.assign({
+      world: details['cellColumn'],
+      resultsToBeViewed: details['rowDetails']['propertyName']
+    });
+    this.router.navigate(['world-viewer/search-results', parameters]);
   }
 
 }

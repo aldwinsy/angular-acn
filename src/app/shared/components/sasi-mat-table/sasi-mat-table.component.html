@@ -35,9 +35,9 @@
     <!-- Table Columns Loop -->
     <ng-container  *ngFor="let column of columnObjectsNoSelect" [matColumnDef]="column.propName">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> {{column.label}} </th>
-      <td mat-cell *matCellDef="let cell">
-          <span *ngIf="!column['type']">{{ cell[column.propName] }}</span>
-          <span *ngIf="column['type'] === 'html'" [innerHTML]="cell[column.propName]"></span>
+      <td mat-cell *matCellDef="let cell" (click)="column.clickable && cellClick(column, cell)">
+          <span *ngIf="!column['type']" [ngClass]="{'cell-clickable': column.clickable}">{{ cell[column.propName] }}</span>
+          <span *ngIf="column['type'] === 'html'" [ngClass]="{'cell-clickable': column.clickable}" [innerHTML]="cell[column.propName]"></span>
       </td>
     </ng-container>
   
