@@ -14,7 +14,7 @@
         </mat-button-toggle-group>
       </div>
       <div fxFlex="10">
-        <mat-form-field>
+        <mat-form-field class="div-object-option">
             <mat-select id="property-dropdown" [(value)]="selectedQuery" (selectionChange)="initializeForm()" required>
               <mat-option *ngFor="let query of worldQueries" [value]="query">{{query}}</mat-option>
             </mat-select>
@@ -26,8 +26,8 @@
             <div formArrayName="propertyNames"
               *ngFor="let propertyName of propertyForm.get('propertyNames')['controls']; let i = index;">
               <div [formGroupName]="i" fxLayout fxLayout.xs="column" fxLayoutGap="15px" fxLayoutGap.xs="0">
-                <div fxFlex="15" fxFlexAlign="end">
-                  <mat-form-field floatLabel="never">
+                <div fxFlex="17" fxFlexAlign="end" fxFlexAlign.xs="start" class="property-name-input">
+                  <mat-form-field fxFlex floatLabel="never">
                     <input id="property-name-input" matInput
                       [formControl]="propertyName.controls.property"
                       type="text" required
@@ -46,7 +46,7 @@
                     </mat-autocomplete>
                   </mat-form-field>
                 </div>
-                <div fxFlex="75">
+                <div fxFlex>
                   <mat-form-field *ngIf="propertyName.controls.property.valid" fxFlexFill floatLabel="never">
                     <mat-chip-list id="chip-list" #chipList>
                       <mat-chip *ngFor="let value of propertyName.controls.values.value" removable="true" (removed)="remove(value, i)">
@@ -64,8 +64,8 @@
                     </mat-error>
                   </mat-form-field>
                 </div>
-                <div fxFlex="3">
-                  <button mat-icon-button color="primary" (click)="removeProperty(i)"><mat-icon>delete</mat-icon></button>
+                <div fxFlex="5" fxFlexAlign="end" fxFlexAlign.xs="start" class="div-delete-icon">
+                  <button id="delete-property-icon" mat-icon-button color="primary" (click)="removeProperty(i)"><mat-icon>delete</mat-icon></button>
                 </div>
               </div>
             </div>
