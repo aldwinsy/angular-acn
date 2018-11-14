@@ -38,7 +38,7 @@ export class SearchPanelComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.worldQueries = this.worldSummaryData.map(data => data.propertyName);
+    this.worldQueries = this.worldSummaryData.map(data => data.objectName);
     this.selectedQuery = this.worldQueries[0];
     this.initializeForm();
   }

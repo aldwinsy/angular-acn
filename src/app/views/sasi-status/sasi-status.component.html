@@ -1,15 +1,13 @@
-<!-- <app-banner></app-banner> -->
 <div class="container"
   fxLayout="row"
   fxLayoutGap="3rem"
-  fxFlexFill
   fxLayout.xs="column"
   fxLayoutAlign="center"
   fxLayoutGap.xs="1rem">
-  <div fxFlex="70">
+  <div fxFlex>
     <router-outlet></router-outlet>
   </div>
-  <div class="panel-line-divider"></div>
+  <mat-divider vertical="true"></mat-divider>
   <app-data-report fxFlex="30"></app-data-report>
 </div>
 

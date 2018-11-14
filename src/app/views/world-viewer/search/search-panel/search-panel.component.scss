@@ -5,13 +5,23 @@
 
 .div-header {
   font-weight: bold;
-  min-height: 30px
+  min-height: 30px;
 }
 
-// #property-name-input {
-//   margin-top: 1.6vh!important;
-// }
+.div-delete-icon {
+  text-align: center;
+  padding-bottom: 15px;
+}
 
-// #property-value-input {
-//   margin-top: 1.98vh!important;
-// }
+mat-button-toggle {
+  width: 100px;
+}
+
+.div-object-option, .property-name-input {
+  width: 200px;
+  min-width: 200px;
+}
+
+mat-card {
+  min-height: 300px;
+}

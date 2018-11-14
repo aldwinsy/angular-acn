@@ -63,6 +63,8 @@ mat-card {
     min-height: 80px;
   }
   mat-icon {
-    font-size: 52px;
+    font-size: calc(0.5vw + 5vh);
+    width: calc(0.5vw + 5vh);
+    height: calc(0.5vw + 5vh);
   }
 }

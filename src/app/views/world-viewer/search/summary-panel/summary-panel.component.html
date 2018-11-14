@@ -2,13 +2,13 @@
   <div fxFlex="7" id="div-header" class="div-header">
     <span>{{worldViewerLabels.worldView}}</span>
   </div>
-  <div fxFlex class="world-summary-panel div-scroll-body">
+  <div fxFlex class="world-summary-panel div-all-scroll">
     <app-sasi-mat-table *ngIf="!!worldSummaryData.length; else noRecords"
       id="world-summary-table"
       (cellClicked)="goToResults($event)"
       [columnObjects]="worldSummaryColumns"
       [data]="worldSummaryData"
-      sortedColumn="propertyName">
+      sortedColumn="objectName">
     </app-sasi-mat-table>
   </div>
 </div>

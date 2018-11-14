@@ -3,6 +3,24 @@ table {
   box-shadow: none;
 }
 
+.mat-header-cell {
+  background: #3573c5;
+  color: #FFF;
+  ::ng-deep .mat-sort-header-arrow {
+    color: #FFF;
+  }
+  font-size: 15px;
+}
+
+tr.mat-row:hover {
+  background: -webkit-linear-gradient(top, #ebeff2, #fff);
+}
+
+.cell-clickable {
+  cursor: pointer;
+}
+
+// @TODO: Make columns class dynamic
 .mat-column-select {
   width: 3vw;
 }
@@ -64,18 +82,16 @@ table {
   width: 4vw;
 }
 
-.mat-header-cell {
-  background: #3573c5;
-  color: #FFF;
-  ::ng-deep .mat-sort-header-arrow {
-    color: #FFF;
+.mat-column-objectname {
+  width: 50%;
+  font-weight: bold;
+  &.mat-header-cell {
+    font-weight: normal;
   }
 }
 
-tr.mat-row:hover {
-  background: -webkit-linear-gradient(top, #ebeff2, #fff);
+.mat-column-purgatoryCount, .mat-column-paradiseCount {
+  width: 25%;
 }
 
-.cell-clickable {
-  cursor: pointer;
-}
+

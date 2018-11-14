@@ -10,7 +10,6 @@ import { geFooter } from 'sasi/shared/variables/global-variables';
 })
 export class FooterComponent {
 
-  readonly geLogoSrc = '../../../assets/ge-logo.png';
   readonly geFooter = geFooter;
 
   constructor(
