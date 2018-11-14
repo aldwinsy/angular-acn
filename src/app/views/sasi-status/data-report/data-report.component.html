@@ -1,4 +1,5 @@
-<div fxLayout="column" fxLayoutAlign="start stretch" class="data-report-panel">
+<mat-progress-bar *ngIf="isDataLoading" mode="indeterminate"></mat-progress-bar>
+<div *ngIf="!isDataLoading" fxLayout="column" fxLayoutAlign="start stretch" class="data-report-panel">
   <div fxFlex="7" class="div-header-container">
     <div class="div-header">
       <span id="agent-count" [matBadge]="loadingAgentsCount" matBadgeColor="primary"

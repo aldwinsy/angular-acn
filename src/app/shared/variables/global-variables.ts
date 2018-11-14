@@ -170,7 +170,7 @@ export const publishedWorldColumns = [
 ];
 
 export const sasiStatusLabels = {
-  dataStatus: 'Data Satus',
+  dataStatus: 'Data Status',
   dataAgent: 'Data Agent Report',
   purgatoryParadise: 'Purgatory/Paradise',
   published: 'Published'

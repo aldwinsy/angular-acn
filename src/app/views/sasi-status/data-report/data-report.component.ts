@@ -38,7 +38,7 @@ export class DataReportComponent implements OnInit {
       .subscribe(
         (data: DataAgent[]) => {
           this.dataAgentList = data;
-          console.log('this.dataAgentList --->', this.dataAgentList);
+          this.isDataLoading = false;
         }
       );
   }

@@ -18,7 +18,7 @@ export class SasiStatusService {
 
   getSasiStatusTime(): Observable<any[]> {
     // @TODO: uncomment when actual endpoint is available
-    const url = 'https://api.myjson.com/bins/1hhimc';
+    const url = 'https://api.myjson.com/bins/epi82';
     return this.http.get(url).pipe(
       tap((data: any) => {
         console.log('getSasiStatusTime: ', data);
@@ -30,7 +30,8 @@ export class SasiStatusService {
 
   getSasiStatusWorldObjects(): Observable<any[]> {
     // @TODO: uncomment when actual endpoint is available
-    const url = 'https://api.myjson.com/bins/1blbqc';
+    // const url = 'https://api.myjson.com/bins/1blbqc';
+    const url = 'https://api.myjson.com/bins/1adrlu';
     return this.http.get(url).pipe(
       tap((data: any) => {
         console.log('getSasiStatusWorldObjects: ', data);
