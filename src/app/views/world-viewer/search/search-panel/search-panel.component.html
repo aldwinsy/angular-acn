@@ -26,7 +26,7 @@
             <div formArrayName="propertyNames"
               *ngFor="let propertyName of propertyForm.get('propertyNames')['controls']; let i = index;">
               <div [formGroupName]="i" fxLayout fxLayout.xs="column" fxLayoutGap="15px" fxLayoutGap.xs="0">
-                <div fxFlex="15">
+                <div fxFlex="15" fxFlexAlign="end">
                   <mat-form-field floatLabel="never">
                     <input id="property-name-input" matInput
                       [formControl]="propertyName.controls.property"
