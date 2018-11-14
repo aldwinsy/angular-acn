@@ -42,6 +42,7 @@ import { BannerComponent } from 'sasi/views/sasi-status/banner/banner.component'
     HeaderComponent,
     FooterComponent,
     BannerComponent,
+    PageNotFoundComponent,
     SharedModule
   ],
 

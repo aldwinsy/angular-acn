@@ -68,10 +68,6 @@ describe('DataStatusComponent', () => {
     expect(publishedCard).toBeTruthy();
   });
 
-  it('should navigate to correct URL path when See Details is clicked', () => {
-
-  });
-
   it('should define RouterLinks from template', () => {
     const linkDes = fixture.debugElement.queryAll(By.directive(RouterLinkStubDirective));
     const routerLinks = linkDes.map(de => de.injector.get(RouterLinkStubDirective));

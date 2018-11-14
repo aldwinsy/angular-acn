@@ -1,3 +1,4 @@
+import { RouterTestingModule } from '@angular/router/testing';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SearchPanelComponent } from './search-panel.component';
@@ -11,7 +12,10 @@ describe('SearchPanelComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [ SharedModule ],
+      imports: [
+        SharedModule,
+        RouterTestingModule
+      ],
       declarations: [ SearchPanelComponent ]
     })
     .compileComponents();
@@ -42,17 +46,17 @@ describe('SearchPanelComponent', () => {
 
   it('should filter property typeahead options', () => {
     const propertyTypeahead = fixture.debugElement.query(By.css('#property-name-input'));
-    propertyTypeahead.triggerEventHandler('keyup', {target: {value: 'FleetID'}});
+    propertyTypeahead.triggerEventHandler('keyup', {target: {value: 'subfleetID'}});
     fixture.detectChanges();
-    expect(component.displayedOptions).toContain('FleetID');
+    expect(component.displayedOptions).toContain('subfleetID');
   });
 
   it('should filter property typeahead options', () => {
     component.propertyForm.valueChanges.subscribe(value => {
-      expect(value.propertyNames).toContain(Object({ property: 'FleetID', values: [] }));
+      expect(value.propertyNames).toContain(Object({ property: 'subfleetID', values: [] }));
     });
     const propertyTypeahead = fixture.debugElement.query(By.css('#property-autocomplete'));
-    propertyTypeahead.triggerEventHandler('optionSelected', {option: {value: 'FleetID'}});
+    propertyTypeahead.triggerEventHandler('optionSelected', {option: {value: 'subfleetID'}});
   });
 
 });

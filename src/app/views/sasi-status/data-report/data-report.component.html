@@ -16,7 +16,7 @@
           <mat-card-title>{{dataAgent.name}}</mat-card-title>
           <mat-card-subtitle>{{dataAgent.type}}</mat-card-subtitle>
         </div>
-        <mat-icon *ngIf="dataAgent.status === 'FAILED'" fxFlex="10" color="warn">{{dataAgentCardLabels.errorIcon}}</mat-icon>
+        <mat-icon id="error-icon" *ngIf="dataAgent.status === 'FAILED'" fxFlex="10" color="warn">{{dataAgentCardLabels.errorIcon}}</mat-icon>
       </mat-card-header>
       
       <mat-card-content fxFlex fxLayout fxLayoutAlign="center" fxLayoutGap.xs="5px">

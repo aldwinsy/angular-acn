@@ -1,113 +1,113 @@
 export const worldSummaryData = [
-  {
-    propertyName: 'ATCControlledStation',
-    purgatoryCount: 0,
-    paradiseCount: 0
+  // {
+  //   propertyName: 'atcControlledStation',
+  //   purgatoryCount: 0,
+  //   paradiseCount: 0
 
+  // },
+  {
+    propertyName: 'aircraft',
+    purgatoryCount: 100,
+    paradiseCount: 100
   },
   {
-    propertyName: 'Aircraft',
-    purgatoryCount: 203,
-    paradiseCount: 203
+    propertyName: 'airport',
+    purgatoryCount: 200,
+    paradiseCount: 200
   },
   {
-    propertyName: 'Airport',
-    purgatoryCount: 414,
-    paradiseCount: 414
+    propertyName: 'airportGroup',
+    purgatoryCount: 4000,
+    paradiseCount: 4000
   },
   {
-    propertyName: 'AirportGroup',
-    purgatoryCount: 7,
-    paradiseCount: 7
+    propertyName: 'airportGroupRelationship',
+    purgatoryCount: 10034,
+    paradiseCount: 10034
   },
   {
-    propertyName: 'AirportGroupRelationship',
-    purgatoryCount: 49,
-    paradiseCount: 49
+    propertyName: 'crew',
+    purgatoryCount: 500,
+    paradiseCount: 500
   },
   {
-    propertyName: 'Crew',
-    purgatoryCount: 6373,
-    paradiseCount: 6373
+    propertyName: 'crewBase',
+    purgatoryCount: 600,
+    paradiseCount: 600
   },
   {
-    propertyName: 'CrewBase',
-    purgatoryCount: 6,
-    paradiseCount: 6
+    propertyName: 'fleet',
+    purgatoryCount: 700,
+    paradiseCount: 700
   },
   {
-    propertyName: 'Fleet',
-    purgatoryCount: 4,
-    paradiseCount: 4
+    propertyName: 'fleetCompatibility',
+    purgatoryCount: 50,
+    paradiseCount: 50
   },
   {
-    propertyName: 'FleetCompatibility',
-    purgatoryCount: 12,
-    paradiseCount: 12
+    propertyName: 'flight',
+    purgatoryCount: 10034,
+    paradiseCount: 10034
   },
   {
-    propertyName: 'Flight',
-    purgatoryCount: 12247,
-    paradiseCount: 1247
+    propertyName: 'flightActivity',
+    purgatoryCount: 13400,
+    paradiseCount: 13400
   },
   {
-    propertyName: 'FlightActivity',
-    purgatoryCount: 1,
-    paradiseCount: 1
+    propertyName: 'interSegmentTime',
+    purgatoryCount: 2100,
+    paradiseCount: 2100
   },
   {
-    propertyName: 'InterSegmentTime',
-    purgatoryCount: 0,
-    paradiseCount: 0
+    propertyName: 'maintenance',
+    purgatoryCount: 1100,
+    paradiseCount: 1100
   },
   {
-    propertyName: 'Maintenance',
-    purgatoryCount: 865,
-    paradiseCount: 865
+    propertyName: 'market',
+    purgatoryCount: 100,
+    paradiseCount: 100
   },
   {
-    propertyName: 'Market',
-    purgatoryCount: 0,
-    paradiseCount: 0
+    propertyName: 'nonFly',
+    purgatoryCount: 10034,
+    paradiseCount: 10034
   },
   {
-    propertyName: 'Nonfly',
-    purgatoryCount: 0,
-    paradiseCount: 0
+    propertyName: 'offlineTransportations',
+    purgatoryCount: 10067,
+    paradiseCount: 10067
   },
   {
-    propertyName: 'OfflineTransportation',
-    purgatoryCount: 595,
-    paradiseCount: 595
+    propertyName: 'pairing',
+    purgatoryCount: 1005,
+    paradiseCount: 1005
   },
   {
-    propertyName: 'Pairing',
-    purgatoryCount: 5405,
-    paradiseCount: 5405
+    propertyName: 'passengerConnection',
+    purgatoryCount: 1006,
+    paradiseCount: 1006
+  },
+  // {
+  //   propertyName: 'position',
+  //   purgatoryCount: 3,
+  //   paradiseCount: 3
+  // },
+  {
+    propertyName: 'qualification',
+    purgatoryCount: 1004,
+    paradiseCount: 1004
   },
   {
-    propertyName: 'PassengerConnection',
-    purgatoryCount: 0,
-    paradiseCount: 0
+    propertyName: 'subfleet',
+    purgatoryCount: 10012,
+    paradiseCount: 10012
   },
   {
-    propertyName: 'Position',
-    purgatoryCount: 3,
-    paradiseCount: 3
-  },
-  {
-    propertyName: 'Qualification',
-    purgatoryCount: 164,
-    paradiseCount: 164
-  },
-  {
-    propertyName: 'Subfleet',
-    purgatoryCount: 7,
-    paradiseCount: 7
-  },
-  {
-    propertyName: 'Training',
-    purgatoryCount: 8,
-    paradiseCount: 8
+    propertyName: 'training',
+    purgatoryCount: 100,
+    paradiseCount: 100
   }
 ];

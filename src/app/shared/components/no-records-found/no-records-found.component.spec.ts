@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { NoRecordsFoundComponent } from './no-records-found.component';
+import { SharedModule } from 'sasi/shared/shared.module';
 
 describe('NoRecordsFoundComponent', () => {
   let component: NoRecordsFoundComponent;
@@ -8,7 +9,7 @@ describe('NoRecordsFoundComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NoRecordsFoundComponent ]
+      imports: [ SharedModule ]
     })
     .compileComponents();
   }));

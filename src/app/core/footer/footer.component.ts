@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
-import { geLogoImgSrc, geFooter } from 'sasi/shared/variables/global-variables';
+import { geFooter } from 'sasi/shared/variables/global-variables';
 
 @Component({
   selector: 'app-footer',
@@ -10,7 +10,7 @@ import { geLogoImgSrc, geFooter } from 'sasi/shared/variables/global-variables';
 })
 export class FooterComponent {
 
-  readonly geLogoSrc = geLogoImgSrc;
+  readonly geLogoSrc = '../../../assets/ge-logo.png';
   readonly geFooter = geFooter;
 
   constructor(
