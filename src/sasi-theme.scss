@@ -42,3 +42,7 @@ $dark-theme:   mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
     background: -webkit-linear-gradient(top, #585858, #42423E) !important;
   }
 }
+
+mat-card mat-card-header .mat-card-header-text {
+  margin: 0;
+}
