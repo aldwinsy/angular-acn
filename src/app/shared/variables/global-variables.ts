@@ -46,7 +46,7 @@ export const urls = {
 export const worldSummaryColumns = [
   {
     propName: 'objectName',
-    label: 'World Summary'
+    label: 'Property Name'
   },
   {
     propName: 'purgatoryCount',

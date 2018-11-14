@@ -94,4 +94,7 @@ tr.mat-row:hover {
   width: 25%;
 }
 
-
+td.mat-cell.cdk-column-objectName.mat-column-objectName.ng-star-inserted {
+  font-weight: bold;
+  text-transform: capitalize;
+}

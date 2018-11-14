@@ -16,7 +16,7 @@
       <div fxFlex="10">
         <mat-form-field class="div-object-option">
             <mat-select id="property-dropdown" [(value)]="selectedQuery" (selectionChange)="initializeForm()" required>
-              <mat-option *ngFor="let query of worldQueries" [value]="query">{{query}}</mat-option>
+              <mat-option *ngFor="let query of worldQueries" [value]="query">{{query | titlecase}}</mat-option>
             </mat-select>
           </mat-form-field>  
       </div>

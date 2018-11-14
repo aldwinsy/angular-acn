@@ -33,7 +33,7 @@ export class CoreService {
 
   getDataAgentList(): Observable<DataAgentInterface[]> {
     // @TODO: uncomment when actual endpoint is available
-    const url = 'https://api.myjson.com/bins/ak3r2';
+    const url = 'https://api.myjson.com/bins/hpx02';
     // const url = 'http://localhost:8080/dataAgents';
     return this.http.get(url).pipe(
       tap((data: DataAgentInterface[]) => {
