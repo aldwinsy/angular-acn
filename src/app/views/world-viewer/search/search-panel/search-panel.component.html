@@ -72,15 +72,26 @@
           </div>
         </div>
       </mat-card-content>
-      <button [disabled]="disableAddNewProperty || propertyForm.invalid" mat-icon-button disableRipple="true" color="primary" (click)="addNewProperty()"><mat-icon>add</mat-icon> Add Another</button>
+      <div fxFlex="10" fxLayout="row" fxLayoutAlign="space-between center">
+        <button id="add-another-button"
+                fxFlex="10" fxFlexAlign="end"
+                [disabled]="disableAddNewProperty || propertyForm.invalid" 
+                mat-icon-button
+                disableRipple="true"
+                color="primary"
+                (click)="addNewProperty()"><mat-icon>add</mat-icon>
+                Add Another
+        </button>
+        <div fxFlex></div>
+        <button id="world-search-button"
+                fxFlex="10" fxFlexAlign="end"
+                (click)="search()"
+                mat-raised-button
+                color="primary"
+                [disabled]="propertyForm.invalid || !!!propertyForm.value.propertyNames.length">
+                Search
+        </button>
+      </div>
     </mat-card>
-    <div fxFlex="4" fxFlexAlign="end">
-      <button 
-        id="world-search-button"
-        (click)="search()"
-        mat-raised-button color="primary"
-        [disabled]="propertyForm.invalid || !!!propertyForm.value.propertyNames.length">Search</button>
-    </div>
   </div>
-
 </div>

@@ -4,12 +4,25 @@
 
 .div-header {
   font-weight: bold;
-  .div-header-title {
-    text-align: center;
-  }
+  min-height: 30px;
+}
+
+.div-title {
+  text-align: center;
+  font-weight: bold;
+  min-height: 40px;
 }
 
 #span-nav {
   color: #3573c5;
   cursor: pointer;
+}
+
+#span-world {
+  font-size: 12px;
+  color: gray;
+}
+
+.padding-5px {
+  padding: 0 5px 0 5px;
 }
