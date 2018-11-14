@@ -7,10 +7,6 @@ export interface WorldSummaryInterface {
 export interface TopLevelObject {
   objectName: string;
   objectCount: number;
-  fixed: number;
-  iEmp: number;
-  excl: number;
-  oEpm: number;
 }
 
 export interface Total {
