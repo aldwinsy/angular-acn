@@ -1,7 +1,7 @@
 import { DataAgent } from 'sasi/shared/models/data-agent.model';
 
 export const dataAgentsMock: DataAgent[] = [
-  {
+  /* {
     name: 'Flight Agent',
     context: 'Oct 24 to 26',
     status : 'LOADING',
@@ -50,5 +50,5 @@ export const dataAgentsMock: DataAgent[] = [
     lastEventProcessed : '59 seconds ago',
     delta : '-',
     type: 'Built-in Agent'
-  }
+  } */
 ];

@@ -4,7 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 
 import { SasiMatTableComponent } from 'sasi/shared/components/sasi-mat-table/sasi-mat-table.component';
-
+import { TimeAgoPipe } from 'time-ago-pipe';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { NoRecordsFoundComponent } from './components/no-records-found/no-records-found.component';
@@ -18,8 +18,9 @@ import { NoRecordsFoundComponent } from './components/no-records-found/no-record
 
     /* Components */
     SasiMatTableComponent,
-    NoRecordsFoundComponent
+    NoRecordsFoundComponent,
     /* Pipes */
+    TimeAgoPipe
 
   ],
 
@@ -36,7 +37,8 @@ import { NoRecordsFoundComponent } from './components/no-records-found/no-record
     SasiMatTableComponent,
     NoRecordsFoundComponent,
     FlexLayoutModule,
-    DragDropModule
+    DragDropModule,
+    TimeAgoPipe
   ]
 })
 export class SharedModule { }
