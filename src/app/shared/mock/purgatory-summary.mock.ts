@@ -7,163 +7,83 @@ export const PurgatorySummaryMock = {
   topLevelObjects: [
     {
       objectName: 'aircraft',
-      objectCount: 100,
-      fixed: 0,
-      iEmp: 0,
-      excl: 0,
-      oEpm: 0
+      objectCount: 100
     },
     {
       objectName: 'airport',
-      objectCount: 200,
-      fixed: 0,
-      iEmp: 0,
-      excl: 0,
-      oEpm: 0
+      objectCount: 200
     },
     {
       objectName: 'airportGroup',
-      objectCount: 4000,
-      fixed: 0,
-      iEmp: 0,
-      excl: 0,
-      oEpm: 0
+      objectCount: 4000
     },
     {
       objectName: 'airportGroupRelationship',
-      objectCount: 10034,
-      fixed: 0,
-      iEmp: 0,
-      excl: 0,
-      oEpm: 0
+      objectCount: 10034
     },
     {
       objectName: 'crew',
-      objectCount: 500,
-      fixed: 0,
-      iEmp: 0,
-      excl: 0,
-      oEpm: 0
+      objectCount: 500
     },
     {
       objectName: 'crewBase',
-      objectCount: 600,
-      fixed: 0,
-      iEmp: 0,
-      excl: 0,
-      oEpm: 0
+      objectCount: 600
     },
     {
       objectName: 'fleet',
-      objectCount: 700,
-      fixed: 0,
-      iEmp: 0,
-      excl: 0,
-      oEpm: 0
+      objectCount: 700
     },
     {
       objectName: 'fleetCompatibility',
-      objectCount: 50,
-      fixed: 0,
-      iEmp: 0,
-      excl: 0,
-      oEpm: 0
+      objectCount: 50
     },
     {
       objectName: 'flight',
-      objectCount: 10034,
-      fixed: 0,
-      iEmp: 0,
-      excl: 0,
-      oEpm: 0
+      objectCount: 10034
     },
     {
       objectName: 'flightActivity',
-      objectCount: 13400,
-      fixed: 0,
-      iEmp: 0,
-      excl: 0,
-      oEpm: 0
+      objectCount: 13400
     },
     {
       objectName: 'interSegmentTime',
-      objectCount: 2100,
-      fixed: 0,
-      iEmp: 0,
-      excl: 0,
-      oEpm: 0
+      objectCount: 2100
     },
     {
       objectName: 'maintenance',
-      objectCount: 1100,
-      fixed: 0,
-      iEmp: 0,
-      excl: 0,
-      oEpm: 0
+      objectCount: 1100
     },
     {
       objectName: 'market',
-      objectCount: 100,
-      fixed: 0,
-      iEmp: 0,
-      excl: 0,
-      oEpm: 0
+      objectCount: 100
     },
     {
       objectName: 'nonFly',
-      objectCount: 10034,
-      fixed: 0,
-      iEmp: 0,
-      excl: 0,
-      oEpm: 0
+      objectCount: 10034
     },
     {
       objectName: 'offlineTransportations',
-      objectCount: 10067,
-      fixed: 0,
-      iEmp: 0,
-      excl: 0,
-      oEpm: 0
+      objectCount: 10067
     },
     {
       objectName: 'pairing',
-      objectCount: 1005,
-      fixed: 0,
-      iEmp: 0,
-      excl: 0,
-      oEpm: 0
+      objectCount: 1005
     },
     {
       objectName: 'passengerConnection',
-      objectCount: 1006,
-      fixed: 0,
-      iEmp: 0,
-      excl: 0,
-      oEpm: 0
+      objectCount: 1006
     },
     {
       objectName: 'qualification',
-      objectCount: 1004,
-      fixed: 0,
-      iEmp: 0,
-      excl: 0,
-      oEpm: 0
+      objectCount: 1004
     },
     {
       objectName: 'subfleet',
-      objectCount: 10012,
-      fixed: 0,
-      iEmp: 0,
-      excl: 0,
-      oEpm: 0
+      objectCount: 10012
     },
     {
       objectName: 'training',
-      objectCount: 100,
-      fixed: 0,
-      iEmp: 0,
-      excl: 0,
-      oEpm: 0
+      objectCount: 100
     }
   ],
   total: {

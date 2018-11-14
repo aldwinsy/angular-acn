@@ -83,7 +83,7 @@ describe('SummaryPanelComponent', () => {
     const eventDetails = {
       cellColumn: 'Purgatory',
       rowDetails: {
-        propertyName: 'Fleet'
+        objectName: 'Fleet'
       }
     };
     const navigateSpy = spyOn((<any>component).router, 'navigate');

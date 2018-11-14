@@ -88,8 +88,8 @@ describe('SearchResultsComponent', () => {
     expect(component.object).toBe('fleet');
     const world = fixture.debugElement.query(By.css('#span-world')).nativeElement;
     const object = fixture.debugElement.query(By.css('#span-object')).nativeElement;
-    expect(world.textContent).toContain('Purgatory');
-    expect(object.textContent).toContain('fleet');
+    expect(world.textContent).toContain('PURGATORY');
+    expect(object.textContent).toContain('FLEET');
   });
 
   // @Note: This a way to test routerLink navigation

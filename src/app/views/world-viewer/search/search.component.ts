@@ -38,13 +38,13 @@ export class SearchComponent implements OnInit {
   transformWorldSummary(purgatory: SasiWorldInterface, paradise: SasiWorldInterface): WorldSummaryInterface[] {
     const purgatoryData = purgatory.topLevelObjects.map(object => {
       return {
-        propertyName: object.objectName,
+        objectName: object.objectName,
         purgatoryCount: object.objectCount
       };
     });
     const paradiseData = paradise.topLevelObjects.map(object => {
       return {
-        propertyName: object.objectName,
+        objectName: object.objectName,
         paradiseCount: object.objectCount
       };
     });

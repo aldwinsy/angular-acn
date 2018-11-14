@@ -8,7 +8,7 @@
   </div>
   <div *ngIf="!!dataAgentList.length; else noRecords" fxFlex class="div-scroll-body">
     <mat-card id="agent-card" *ngFor="let dataAgent of dataAgentList" fxLayout="column" fxLayoutAlign="center">
-      <mat-card-header fxFlex="55" fxLayout fxFlexAlign="start center">
+      <mat-card-header fxFlex="55" fxLayout fxLayoutGap="10px" fxFlexAlign="start center">
         <mat-icon fxFlex="10" *ngIf="dataAgent.agentName === 'XML File Agent'" mat-card-avatar>{{dataAgentCardLabels.xmlAgentIcon}}</mat-icon>
         <mat-icon fxFlex="10" *ngIf="dataAgent.agentName === 'Custom Agent' || dataAgent.agentName === 'Flight Agent'" mat-card-avatar>{{dataAgentCardLabels.customAgentIcon}}</mat-icon>
         <mat-icon fxFlex="10" *ngIf="dataAgent.agentName === 'Restart Agent'" mat-card-avatar>{{dataAgentCardLabels.restartAgentIcon}}</mat-icon>

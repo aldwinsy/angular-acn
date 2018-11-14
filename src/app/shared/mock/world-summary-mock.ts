@@ -1,112 +1,112 @@
 export const worldSummaryData = [
   // {
-  //   propertyName: 'atcControlledStation',
+  //   objectName: 'atcControlledStation',
   //   purgatoryCount: 0,
   //   paradiseCount: 0
 
   // },
   {
-    propertyName: 'aircraft',
+    objectName: 'aircraft',
     purgatoryCount: 100,
     paradiseCount: 100
   },
   {
-    propertyName: 'airport',
+    objectName: 'airport',
     purgatoryCount: 200,
     paradiseCount: 200
   },
   {
-    propertyName: 'airportGroup',
+    objectName: 'airportGroup',
     purgatoryCount: 4000,
     paradiseCount: 4000
   },
   {
-    propertyName: 'airportGroupRelationship',
+    objectName: 'airportGroupRelationship',
     purgatoryCount: 10034,
     paradiseCount: 10034
   },
   {
-    propertyName: 'crew',
+    objectName: 'crew',
     purgatoryCount: 500,
     paradiseCount: 500
   },
   {
-    propertyName: 'crewBase',
+    objectName: 'crewBase',
     purgatoryCount: 600,
     paradiseCount: 600
   },
   {
-    propertyName: 'fleet',
+    objectName: 'fleet',
     purgatoryCount: 700,
     paradiseCount: 700
   },
   {
-    propertyName: 'fleetCompatibility',
+    objectName: 'fleetCompatibility',
     purgatoryCount: 50,
     paradiseCount: 50
   },
   {
-    propertyName: 'flight',
+    objectName: 'flight',
     purgatoryCount: 10034,
     paradiseCount: 10034
   },
   {
-    propertyName: 'flightActivity',
+    objectName: 'flightActivity',
     purgatoryCount: 13400,
     paradiseCount: 13400
   },
   {
-    propertyName: 'interSegmentTime',
+    objectName: 'interSegmentTime',
     purgatoryCount: 2100,
     paradiseCount: 2100
   },
   {
-    propertyName: 'maintenance',
+    objectName: 'maintenance',
     purgatoryCount: 1100,
     paradiseCount: 1100
   },
   {
-    propertyName: 'market',
+    objectName: 'market',
     purgatoryCount: 100,
     paradiseCount: 100
   },
   {
-    propertyName: 'nonFly',
+    objectName: 'nonFly',
     purgatoryCount: 10034,
     paradiseCount: 10034
   },
   {
-    propertyName: 'offlineTransportations',
+    objectName: 'offlineTransportations',
     purgatoryCount: 10067,
     paradiseCount: 10067
   },
   {
-    propertyName: 'pairing',
+    objectName: 'pairing',
     purgatoryCount: 1005,
     paradiseCount: 1005
   },
   {
-    propertyName: 'passengerConnection',
+    objectName: 'passengerConnection',
     purgatoryCount: 1006,
     paradiseCount: 1006
   },
   // {
-  //   propertyName: 'position',
+  //   objectName: 'position',
   //   purgatoryCount: 3,
   //   paradiseCount: 3
   // },
   {
-    propertyName: 'qualification',
+    objectName: 'qualification',
     purgatoryCount: 1004,
     paradiseCount: 1004
   },
   {
-    propertyName: 'subfleet',
+    objectName: 'subfleet',
     purgatoryCount: 10012,
     paradiseCount: 10012
   },
   {
-    propertyName: 'training',
+    objectName: 'training',
     purgatoryCount: 100,
     paradiseCount: 100
   }

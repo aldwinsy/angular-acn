@@ -34,7 +34,7 @@ describe('CoreService', () => {
     expect(service).toBeTruthy();
   });
 
-  it('getPurgatorySummary()', () => {
+  it('should get purgatory summary()', () => {
     coreService.getPurgatorySummary().subscribe(response => {
       expect(response).toEqual(PurgatorySummaryMock);
     });
@@ -43,7 +43,7 @@ describe('CoreService', () => {
     req.flush(PurgatorySummaryMock);
   });
 
-  it('getPurgatorySummary()', () => {
+  it('shoul get paradise summary()', () => {
     coreService.getParadiseSummary().subscribe(response => {
       expect(response).toEqual(ParadiseSummaryMock);
     });
