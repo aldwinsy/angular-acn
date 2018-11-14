@@ -45,7 +45,7 @@ export const urls = {
 
 export const worldSummaryColumns = [
   {
-    propName: 'propertyName',
+    propName: 'objectName',
     label: 'World Summary'
   },
   {

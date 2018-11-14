@@ -1,5 +1,5 @@
 export interface WorldSummaryInterface {
-  propertyName: string;
+  objectName: string;
   purgatoryCount: number;
   paradiseCount: number;
 }

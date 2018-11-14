@@ -25,7 +25,7 @@ export class SummaryPanelComponent implements OnInit {
   goToResults(details) {
     const parameters = Object.assign({
       world: details['cellColumn'],
-      resultsToBeViewed: details['rowDetails']['propertyName']
+      resultsToBeViewed: details['rowDetails']['objectName']
     });
     this.router.navigate(['world-viewer/search-results', parameters]);
   }
