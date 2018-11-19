@@ -69,4 +69,7 @@ export class SasiMatTableComponent implements OnInit, AfterViewInit {
     this.cellClicked.emit(clickDetails);
   }
 
+  isNumber(cell) {
+    return typeof cell === 'number';
+  }
 }
