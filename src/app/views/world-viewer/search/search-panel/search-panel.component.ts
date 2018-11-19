@@ -5,6 +5,8 @@ import { COMMA, ENTER } from '@angular/cdk/keycodes';
 import { MatChipInputEvent } from '@angular/material';
 import { Router } from '@angular/router';
 
+import * as _ from 'lodash';
+
 @Component({
   selector: 'app-search-panel',
   templateUrl: './search-panel.component.html',
@@ -47,11 +49,9 @@ export class SearchPanelComponent implements OnInit {
     this.options = this.worldObjectProperties[this.selectedQuery];
     this.filteredOptions = this.options;
     this.displayedOptions = this.options;
-    console.log(this.options);
     this.propertyForm = this.formBuilder.group({
       propertyNames: this.formBuilder.array([ this.createNewProperty() ])
     });
-    this.propertyForm.valueChanges.subscribe(form => console.log(this.propertyForm, form));
   }
 
   private _filter(value: string) {
@@ -134,11 +134,13 @@ export class SearchPanelComponent implements OnInit {
   }
 
   search() {
-    const parameters = Object.assign({
+    const parameters = {
       world: this.worldGroup,
       resultsToBeViewed: this.selectedQuery
-    });
-    this.router.navigate(['world-viewer/search-results', parameters]);
+    };
+    const search = _.reduce(this.propertyForm.value.propertyNames, (acc, obj) => {
+      return { ...acc, [obj.property]: [obj.values].join() };
+    }, parameters);
+    this.router.navigate(['world-viewer/search-results', search]);
   }
-
 }

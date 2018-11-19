@@ -42,12 +42,15 @@ export class SearchResultsComponent implements OnInit {
   resultsColumns: any[];
   resultsData: any[];
 
+  searchParams: Object;
+
   constructor(
     private route: ActivatedRoute,
     private worldViewerService: WorldViewerService
     ) {
     this.route.params.subscribe(params => {
       if (params) {
+        this.searchParams = params;
         this.world = params['world'];
         this.object = params['resultsToBeViewed'];
         this.resultsColumns = this.getResultsColumn(this.object);
