@@ -5,68 +5,85 @@
   fxLayoutGap.xs="5rem">
   <div fxFlex="40" fxLayout="column" fxLayoutGap="1vw" fxLayoutAlign="start">
     <div fxFlex="5" class="div-header">
-      <span>{{sasiConfigLabels.processingParameters}}</span>
+      <span>{{sasiConfigLabels.dataServerAdmin}}</span>
     </div>
-    <mat-card>
+    <mat-card fxFlex class="box-shadow">
       <mat-card-header>
-        <mat-card-title>{{dataServerParametersLabels.title}}</mat-card-title>
+        <mat-card-title>{{dataServerAdminLabels.sasiConfigTitle}}</mat-card-title>
       </mat-card-header>
-      <mat-card-content>
-        <div fxLayout="column" fxLayoutGap="20px" fxLayoutAlign="center" fxLayoutGap.xs="5px">
-          <div fxLayout="row" fxLayoutGap="20px" fxLayoutGap.xs="10px">
-            <div fxFlex="40" fxFlexAlign="center">{{dataServerParametersLabels.sasiHost}}</div>
-            <div fxFlex>
-              <mat-form-field>
-                <input matInput [placeholder]="dataServerParametersLabels.sasiHostPlaceHolder" autocomplete="off" required>
-                <mat-error>{{dataServerParametersLabels.sasiHostErrMsg}</mat-error>
-              </mat-form-field>
-            </div>
+      <mat-card-content fxLayout="column" fxLayoutAlign="center">
+        <div fxLayout="row" fxLayoutGap="20px" fxLayoutGap.xs="10px">
+          <div fxFlex="40">
+            <mat-form-field>
+              <mat-select [placeholder]="dataServerAdminLabels.propertyDropdownPlaceholder">
+                <mat-option value="fileSourcePath">
+                  File Source Path
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
           </div>
-          <div fxLayout="row" fxLayoutGap="20px" fxLayoutGap.xs="10px">
-            <div fxFlex="40" fxFlexAlign="center">{{dataServerParametersLabels.agentName}}</div>
-            <div fxFlex>
-              <mat-form-field>
-                <input matInput [placeholder]="dataServerParametersLabels.agentNamePlaceholder" autocomplete="off" required>
-                <mat-error>{{dataServerParametersLabels.agentNameErrMsg}}</mat-error>
-              </mat-form-field>
-            </div>
+          <div fxFlex>
+            <mat-form-field>
+              <input matInput [placeholder]="dataServerAdminLabels.propertyValuePlaceholder" autocomplete="off" required>
+            </mat-form-field>
           </div>
-          <div fxLayout="row" fxLayoutGap="20px" fxLayoutGap.xs="10px">
-            <div fxFlex="40" fxFlexAlign="center">{{dataServerParametersLabels.worldRefFile}}</div>
-            <div fxFlex>
-              <mat-form-field>
-                <input matInput [placeholder]="dataServerParametersLabels.worldRefFilePlaceholder" autocomplete="off" required>
-                <mat-error>{{dataServerParametersLabels.worldRefFileErrMsg}}</mat-error>
-              </mat-form-field>
-            </div>
+        </div>
+        <div fxLayout="row" fxLayoutGap="20px" fxLayoutGap.xs="10px">
+          <div fxFlex="40" fxFlexAlign="center">
+            {{dataServerAdminLabels.baseDateTime}}
           </div>
-          <div fxLayout="row" fxLayoutGap="20px" fxLayoutGap.xs="10px">
-            <div fxFlex="40" fxFlexAlign="center">{{dataServerParametersLabels.eventSrcDirectory}}</div>
-            <div fxFlex>
+          <div fxFlex>
+            <mat-form-field>
+              <input matInput [placeholder]="dataServerAdminLabels.baseDateTimePlaceholder" autocomplete="off" required>
+            </mat-form-field>
+          </div>
+        </div>
+        <div fxLayout="row" fxLayoutGap="20px" fxLayoutGap.xs="10px">
+          <div fxFlex="40" fxFlexAlign="center">
+            {{dataServerAdminLabels.timeMode}}
+          </div>
+          <div fxFlex>
               <mat-form-field>
-                <input matInput [placeholder]="dataServerParametersLabels.eventSrcDirectoryPlaceHolder" autocomplete="off" required>
-                <mat-error>{{dataServerParametersLabels.eventSrcDirectoryErrMsg}}</mat-error>
+                <mat-select [placeholder]="dataServerAdminLabels.timeModeDropdownPlaceHolder">
+                  <mat-option value="static">
+                    Static
+                  </mat-option>
+                </mat-select>
               </mat-form-field>
-            </div>
           </div>
         </div>
       </mat-card-content>
     </mat-card>
-    <mat-card>
+    <mat-card fxFlex class="box-shadow">
       <mat-card-header>
-        <mat-card-title>
-          {{dataServerParametersLabels.noteTitle}}
-        </mat-card-title>
+        <mat-card-title>{{dataServerAdminLabels.dataWindowSettingsTitle}}</mat-card-title>
       </mat-card-header>
-      <mat-card-content>
-        <ul>
-          <li *ngFor="let note of dataServerParametersLabels.notes">{{note}}</li>
-        </ul>
+      <mat-card-content fxLayout="column">
+        <div fxLayout="row" fxLayoutGap="20px" fxLayoutGap.xs="10px">
+          <div fxFlex="40" fxFlexAlign="center">
+            {{dataServerAdminLabels.daysBackward}}
+          </div>
+          <div fxFlex>
+            <mat-form-field>
+              <input matInput type="number" min="0" autocomplete="off" required>
+            </mat-form-field>
+          </div>
+        </div>
+        <div fxLayout="row" fxLayoutGap="20px" fxLayoutGap.xs="10px">
+          <div fxFlex="40" fxFlexAlign="center">
+            {{dataServerAdminLabels.daysForward}}
+          </div>
+          <div fxFlex>
+            <mat-form-field>
+              <input matInput type="number" min="0" autocomplete="off" required>
+            </mat-form-field>
+          </div>
+        </div>
       </mat-card-content>
     </mat-card>
-    <div fxFlex="5" fxFlexAlign="end" fxLayoutGap="20px">
-      <button mat-raised-button color="warn">{{dataServerParametersLabels.stopBtn}}</button>
-      <button mat-raised-button color="primary">{{dataServerParametersLabels.startBtn}}</button>
+    <div fxFlex="5" fxFlexAlign="end" fxLayoutGap="20px" class="div-file-agent-footer">
+      <button mat-raised-button color="warn">{{dataServerAdminLabels.stopBtn}}</button>
+      <button mat-raised-button color="primary">{{dataServerAdminLabels.startBtn}}</button>
     </div>
   </div>
 

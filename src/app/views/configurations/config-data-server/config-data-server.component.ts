@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { sasiConfigLabels, dataServerParametersLabels, dataServerAgentsLabels } from 'sasi/shared/variables/global-variables';
+import { sasiConfigLabels, dataServerAgentsLabels, dataServerAdminLabels } from 'sasi/shared/variables/global-variables';
 
 @Component({
   selector: 'app-config-data-server',
@@ -12,7 +12,7 @@ import { sasiConfigLabels, dataServerParametersLabels, dataServerAgentsLabels } 
 export class ConfigDataServerComponent implements OnInit {
 
   readonly sasiConfigLabels = sasiConfigLabels;
-  readonly dataServerParametersLabels = dataServerParametersLabels;
+  readonly dataServerAdminLabels = dataServerAdminLabels;
   readonly dataServerAgentsLabels = dataServerAgentsLabels;
   dataAgentColumnObjects = [
     {

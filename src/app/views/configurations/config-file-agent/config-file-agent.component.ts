@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { fileAgentServerAdminLabels, sasiConfigLabels, fileAgentProcessingInfoLabels } from 'sasi/shared/variables/global-variables';
+import { sasiConfigLabels, fileAgentProcessingInfoLabels, fileAgentParametersLabels } from 'sasi/shared/variables/global-variables';
 
 
 @Component({
@@ -12,7 +12,7 @@ import { fileAgentServerAdminLabels, sasiConfigLabels, fileAgentProcessingInfoLa
 })
 export class ConfigFileAgentComponent implements OnInit {
   readonly sasiConfigLabels = sasiConfigLabels;
-  readonly fileAgentServerAdminLabels = fileAgentServerAdminLabels;
+  readonly fileAgentParametersLabels = fileAgentParametersLabels;
   readonly fileAgentProcessingInfoLabels = fileAgentProcessingInfoLabels;
 
   agentStatus = [

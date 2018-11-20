@@ -226,7 +226,7 @@ export const sasiConfigLabels = {
   restartConfig: 'Configuration',
 };
 
-export const dataServerParametersLabels = {
+export const fileAgentParametersLabels = {
   title: 'SASI Parameter',
   sasiHost: 'SASI Host',
   sasiHostPlaceHolder: 'Host',
@@ -256,7 +256,7 @@ export const dataServerAgentsLabels = {
   processBtn: 'Process Files'
 };
 
-export const fileAgentServerAdminLabels = {
+export const dataServerAdminLabels = {
   sasiConfigTitle: 'SASI Configuration Properties',
   propertyDropdownPlaceholder: 'Property',
   propertyValuePlaceholder: 'Value',

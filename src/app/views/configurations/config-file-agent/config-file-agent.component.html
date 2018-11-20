@@ -5,85 +5,68 @@
   fxLayoutGap.xs="1rem">
   <div fxFlex="50" fxLayout="column" fxLayoutGap="1vw" fxLayoutAlign="start">
     <div fxFlex="5" class="div-header">
-      <span>{{sasiConfigLabels.dataServerAdmin}}</span>
+      <span>{{sasiConfigLabels.processingParameters}}</span>
     </div>
-    <mat-card fxFlex class="box-shadow">
+    <mat-card>
       <mat-card-header>
-        <mat-card-title>{{fileAgentServerAdminLabels.sasiConfigTitle}}</mat-card-title>
+        <mat-card-title>{{fileAgentParametersLabels.title}}</mat-card-title>
       </mat-card-header>
-      <mat-card-content fxLayout="column" fxLayoutAlign="center">
-        <div fxLayout="row" fxLayoutGap="20px" fxLayoutGap.xs="10px">
-          <div fxFlex="40">
-            <mat-form-field>
-              <mat-select [placeholder]="fileAgentServerAdminLabels.propertyDropdownPlaceholder">
-                <mat-option value="fileSourcePath">
-                  File Source Path
-                </mat-option>
-              </mat-select>
-            </mat-form-field>
-          </div>
-          <div fxFlex>
-            <mat-form-field>
-              <input matInput [placeholder]="fileAgentServerAdminLabels.propertyValuePlaceholder" autocomplete="off" required>
-            </mat-form-field>
-          </div>
-        </div>
-        <div fxLayout="row" fxLayoutGap="20px" fxLayoutGap.xs="10px">
-          <div fxFlex="40" fxFlexAlign="center">
-            {{fileAgentServerAdminLabels.baseDateTime}}
-          </div>
-          <div fxFlex>
-            <mat-form-field>
-              <input matInput [placeholder]="fileAgentServerAdminLabels.baseDateTimePlaceholder" autocomplete="off" required>
-            </mat-form-field>
-          </div>
-        </div>
-        <div fxLayout="row" fxLayoutGap="20px" fxLayoutGap.xs="10px">
-          <div fxFlex="40" fxFlexAlign="center">
-            {{fileAgentServerAdminLabels.timeMode}}
-          </div>
-          <div fxFlex>
+      <mat-card-content>
+        <div fxLayout="column" fxLayoutGap="20px" fxLayoutAlign="center" fxLayoutGap.xs="5px">
+          <div fxLayout="row" fxLayoutGap="20px" fxLayoutGap.xs="10px">
+            <div fxFlex="40" fxFlexAlign="center">{{fileAgentParametersLabels.sasiHost}}</div>
+            <div fxFlex>
               <mat-form-field>
-                <mat-select [placeholder]="fileAgentServerAdminLabels.timeModeDropdownPlaceHolder">
-                  <mat-option value="static">
-                    Static
-                  </mat-option>
-                </mat-select>
+                <input matInput [placeholder]="fileAgentParametersLabels.sasiHostPlaceHolder" autocomplete="off" required>
+                <mat-error>{{fileAgentParametersLabels.sasiHostErrMsg}</mat-error>
               </mat-form-field>
+            </div>
+          </div>
+          <div fxLayout="row" fxLayoutGap="20px" fxLayoutGap.xs="10px">
+            <div fxFlex="40" fxFlexAlign="center">{{fileAgentParametersLabels.agentName}}</div>
+            <div fxFlex>
+              <mat-form-field>
+                <input matInput [placeholder]="fileAgentParametersLabels.agentNamePlaceholder" autocomplete="off" required>
+                <mat-error>{{fileAgentParametersLabels.agentNameErrMsg}}</mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+          <div fxLayout="row" fxLayoutGap="20px" fxLayoutGap.xs="10px">
+            <div fxFlex="40" fxFlexAlign="center">{{fileAgentParametersLabels.worldRefFile}}</div>
+            <div fxFlex>
+              <mat-form-field>
+                <input matInput [placeholder]="fileAgentParametersLabels.worldRefFilePlaceholder" autocomplete="off" required>
+                <mat-error>{{fileAgentParametersLabels.worldRefFileErrMsg}}</mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+          <div fxLayout="row" fxLayoutGap="20px" fxLayoutGap.xs="10px">
+            <div fxFlex="40" fxFlexAlign="center">{{fileAgentParametersLabels.eventSrcDirectory}}</div>
+            <div fxFlex>
+              <mat-form-field>
+                <input matInput [placeholder]="fileAgentParametersLabels.eventSrcDirectoryPlaceHolder" autocomplete="off" required>
+                <mat-error>{{fileAgentParametersLabels.eventSrcDirectoryErrMsg}}</mat-error>
+              </mat-form-field>
+            </div>
           </div>
         </div>
       </mat-card-content>
     </mat-card>
-    <mat-card fxFlex class="box-shadow">
+    <mat-card>
       <mat-card-header>
-        <mat-card-title>{{fileAgentServerAdminLabels.dataWindowSettingsTitle}}</mat-card-title>
+        <mat-card-title>
+          {{fileAgentParametersLabels.noteTitle}}
+        </mat-card-title>
       </mat-card-header>
-      <mat-card-content fxLayout="column">
-        <div fxLayout="row" fxLayoutGap="20px" fxLayoutGap.xs="10px">
-          <div fxFlex="40" fxFlexAlign="center">
-            {{fileAgentServerAdminLabels.daysBackward}}
-          </div>
-          <div fxFlex>
-            <mat-form-field>
-              <input matInput type="number" min="0" autocomplete="off" required>
-            </mat-form-field>
-          </div>
-        </div>
-        <div fxLayout="row" fxLayoutGap="20px" fxLayoutGap.xs="10px">
-          <div fxFlex="40" fxFlexAlign="center">
-            {{fileAgentServerAdminLabels.daysForward}}
-          </div>
-          <div fxFlex>
-            <mat-form-field>
-              <input matInput type="number" min="0" autocomplete="off" required>
-            </mat-form-field>
-          </div>
-        </div>
+      <mat-card-content>
+        <ul>
+          <li *ngFor="let note of fileAgentParametersLabels.notes">{{note}}</li>
+        </ul>
       </mat-card-content>
     </mat-card>
-    <div fxFlex="5" fxFlexAlign="end" fxLayoutGap="20px" class="div-file-agent-footer">
-      <button mat-raised-button color="warn">{{fileAgentServerAdminLabels.stopBtn}}</button>
-      <button mat-raised-button color="primary">{{fileAgentServerAdminLabels.startBtn}}</button>
+    <div fxFlex="5" fxFlexAlign="end" fxLayoutGap="20px">
+      <button mat-raised-button color="warn">{{fileAgentParametersLabels.stopBtn}}</button>
+      <button mat-raised-button color="primary">{{fileAgentParametersLabels.startBtn}}</button>
     </div>
   </div>
 
