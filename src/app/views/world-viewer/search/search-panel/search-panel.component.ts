@@ -102,7 +102,7 @@ export class SearchPanelComponent implements OnInit {
     this.disableAddNewProperty = false;
   }
 
-  add(event: MatChipInputEvent, index) {
+  addValue(event: MatChipInputEvent, index) {
     const input = event.input;
     const value = event.value;
 
@@ -119,7 +119,7 @@ export class SearchPanelComponent implements OnInit {
     }
   }
 
-  remove(value, index) {
+  removeValue(value, index) {
     const propertyNamesArray = <FormArray>this.propertyForm.controls['propertyNames'];
     const propertyName = <FormGroup>propertyNamesArray.controls[index];
     const deleteIndex = propertyName.controls['values'].value.indexOf(value);

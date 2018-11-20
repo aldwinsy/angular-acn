@@ -34,7 +34,7 @@ describe('CoreService', () => {
     expect(service).toBeTruthy();
   });
 
-  it('should get purgatory summary()', () => {
+  it('should get purgatory summary', () => {
     coreService.getPurgatorySummary().subscribe(response => {
       expect(response).toEqual(PurgatorySummaryMock);
     });
@@ -43,12 +43,23 @@ describe('CoreService', () => {
     req.flush(PurgatorySummaryMock);
   });
 
-  it('shoul get paradise summary()', () => {
+  it('shoul get paradise summary', () => {
     coreService.getParadiseSummary().subscribe(response => {
       expect(response).toEqual(ParadiseSummaryMock);
     });
     const req = httpTestingController.expectOne(urls.paradiseSummary);
     expect(req.request.method).toEqual('GET');
     req.flush(ParadiseSummaryMock);
+  });
+
+  it('should handle error error if request fails', () => {
+    spyOn<any>(coreService, 'handleError').and.callThrough();
+    coreService.getPurgatorySummary().subscribe(() => {},
+    (error) => {
+      expect(error).toBe(`Error status code 0 at ${urls.purgatorySummary}`);
+    });
+    const request = httpTestingController.expectOne(urls.purgatorySummary);
+    request.error(new ErrorEvent(''));
+    expect(coreService['handleError']).toHaveBeenCalled();
   });
 });
