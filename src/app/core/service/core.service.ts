@@ -31,11 +31,18 @@ export class CoreService {
     );
   }
 
+  getPublishedWorld(url: string): Observable<SasiWorldInterface> {
+    return this.http.get(url).pipe(
+      tap((data: SasiWorldInterface) => {
+        console.log('CoreService::getPublishedWorld: ', data);
+      }),
+      catchError(this.handleError)
+    );
+  }
+
   getDataAgentList(): Observable<DataAgentInterface[]> {
     // @TODO: uncomment when actual endpoint is available
-    const url = 'https://api.myjson.com/bins/hpx02';
-    // const url = 'http://localhost:8080/dataAgents';
-    return this.http.get(url).pipe(
+    return this.http.get(urls.dataAgents).pipe(
       tap((data: DataAgentInterface[]) => {
         console.log('getDataAgentList: ', data);
       }),

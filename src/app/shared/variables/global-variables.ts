@@ -35,12 +35,17 @@ export const worldGroup = {
 };
 
 // @TODO: change to actual urls when endpoints are available
+// https://sasi.azure-api.net/sasi/world
+
 export const urls = {
   dataStatus: 'api/v1/data-status',
   worldObjects: 'api/v1/world-objects',
-  dataAgents: 'api/v1/data-agents',
-  purgatorySummary: 'https://sasi.azure-api.net/sasi/world',
-  paradiseSummary: 'https://sasi.azure-api.net/sasi/world'
+  dataAgents: 'https://api.myjson.com/bins/hpx02',
+  purgatorySummary: 'https://api.myjson.com/bins/1c0ys2',
+  paradiseSummary: 'https://api.myjson.com/bins/b1y42',
+  published0Summary: 'https://api.myjson.com/bins/1cmedu',
+  published1Summary: 'https://api.myjson.com/bins/18gd5e',
+  published2Summary: 'https://api.myjson.com/bins/15h74i'
 };
 
 export const worldSummaryColumns = [

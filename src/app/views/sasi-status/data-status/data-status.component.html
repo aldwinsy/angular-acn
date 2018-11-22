@@ -93,28 +93,28 @@
             <img mat-card-avatar class="published-header-image" src="assets/published.png" href="http://www.freepik.com" title="Freepik"/>
             <div fxLayout="column">
               <mat-card-title class="status-card-title">{{sasiStatusCardLabels.published}}</mat-card-title>
-              <span class="span-base-time">{{paradise.baseTime}}</span>
+              <span class="span-base-time">{{published.baseTime}}</span>
             </div>
           </mat-card-header>
           <div class="div-card-time" fxFlex fxLayout="column" fxLayoutAlign="space-evenly">
             <div fxFlex fxFlexAlign="center" fxLayout fxLayoutAlign="space-evenly">
                 <mat-icon class="card-time-icon" fxFlexAlign="center" inline="true">{{sasiStatusCardLabels.lastUpdateTimeIcon}}</mat-icon>
-                <span class="span-padding-10px" fxFlexAlign="center">{{paradise.lastDataUpdateTime}}</span>
+                <span class="span-padding-10px" fxFlexAlign="center">{{published.lastDataUpdateTime}}</span>
             </div>
             <div fxFlex fxLayout fxFlexAlign="center" fxLayoutAlign="center center">
               <mat-icon class="card-time-icon" fxFlexAlign="center" inline="true">{{sasiStatusCardLabels.latestFlightTimeIcon}}</mat-icon>
-              <span class="span-padding-10px" fxFlexAlign="center">{{paradise.latestFlightActualTime}}</span>
+              <span class="span-padding-10px" fxFlexAlign="center">{{published.latestFlightActualTime}}</span>
             </div>
           </div>
 
           <mat-card-content fxFlex="20" fxLayout fxLayoutAlign="center">
             <div fxFlex="49" fxLayout="column" fxLayoutAlign="center">
-              <span class="span-count" fxFlexAlign="center">{{paradise.total.count | number}}</span>
+              <span class="span-count" fxFlexAlign="center">{{published.total.count | number}}</span>
               <span class="span-label" style="padding-top: 10px" fxFlexAlign="center">{{sasiStatusCardLabels.count}}</span>
             </div>
             <mat-divider fxFlex="1" [vertical]="true"></mat-divider>
             <div fxFlex="49" fxLayout="column" fxLayoutAlign="center">
-              <span class="span-count" fxFlexAlign="center">{{paradise.delta | number}}</span>
+              <span class="span-count" fxFlexAlign="center">{{published.delta | number}}</span>
               <span class="span-label" fxFlexAlign="center">{{sasiStatusCardLabels.changes}}</span>
             </div>
           </mat-card-content>

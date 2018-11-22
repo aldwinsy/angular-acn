@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { CoreService } from 'sasi/core/service/core.service';
 import { sasiStatusLabels, sasiStatusCardLabels } from 'sasi/shared/variables/global-variables';
 import { WorldSummaryInterface, SasiWorldInterface } from 'sasi/shared/interfaces/world-summary.interface';
+import { urls } from 'sasi/shared/variables/global-variables';
 import { combineLatest } from 'rxjs';
 import { map } from 'rxjs/operators';
 import * as _ from 'lodash';
@@ -40,33 +41,18 @@ export class DataStatusComponent implements OnInit {
   getWorldSummary() {
     combineLatest(
       this.coreService.getPurgatorySummary(),
-      this.coreService.getParadiseSummary()
+      this.coreService.getParadiseSummary(),
+      this.coreService.getPublishedWorld(urls.published0Summary)
     ).pipe(
-      map(([purgatory, paradise]) => this.transformWorldSummaryForCards(purgatory, paradise))
+      map(([purgatory, paradise, published]) => _.concat(purgatory, paradise, published))
     ).subscribe((data: SasiWorldInterface[]) => {
-      this.purgatory = data[0];
-      this.paradise = data[1];
+      this.purgatory = _.find(data, ['objectType', 'Paradise']);
+      this.paradise = _.find(data, ['objectType', 'Purgatory']);
+      this.published = _.find(data, ['objectType', 'Published 0']);
       this.worldSummary = data;
       this.isDataLoading = false;
-      console.log('this.sasiWorldSummary', this.purgatory, this.paradise);
+      console.log('this.sasiWorldSummary', this.worldSummary);
     });
-  }
-
-  transformWorldSummaryForCards(purgatory: SasiWorldInterface, paradise: SasiWorldInterface): SasiWorldInterface[] {
-    /* const purgatoryData = purgatory.topLevelObjects.map(object => {
-      return {
-        objectName: object.objectName,
-        purgatoryCount: object.objectCount
-      };
-    });
-    const paradiseData = paradise.topLevelObjects.map(object => {
-      return {
-        objectName: object.objectName,
-        paradiseCount: object.objectCount
-      };
-    }); */
-    // return _.merge(purgatoryData, paradiseData);
-    return _.concat(purgatory, paradise);
   }
 
 }
