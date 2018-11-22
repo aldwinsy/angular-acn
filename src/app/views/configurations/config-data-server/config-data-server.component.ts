@@ -1,5 +1,21 @@
+import { combineLatest } from 'rxjs';
+import { ConfigService } from 'sasi/views/configurations/config.service';
 import { Component, OnInit } from '@angular/core';
-import { sasiConfigLabels, dataServerAgentsLabels, dataServerAdminLabels } from 'sasi/shared/variables/global-variables';
+import {
+  sasiConfigLabels,
+  dataServerAgentsLabels,
+  dataServerAdminLabels,
+  dataAgentColumnObjects
+} from 'sasi/shared/variables/global-variables';
+
+interface DataServerProperties {
+  property: string;
+  propertyValue: string;
+  baseDateTime: string;
+  timeMode: string;
+  daysBackward: number;
+  daysForward: number;
+}
 
 @Component({
   selector: 'app-config-data-server',
@@ -14,74 +30,41 @@ export class ConfigDataServerComponent implements OnInit {
   readonly sasiConfigLabels = sasiConfigLabels;
   readonly dataServerAdminLabels = dataServerAdminLabels;
   readonly dataServerAgentsLabels = dataServerAgentsLabels;
-  dataAgentColumnObjects = [
-    {
-      propName: 'select',
-      label: 'Select'
-    },
-    {
-      propName: 'name',
-      label: 'Name'
-    },
-    {
-      propName: 'context',
-      label: 'Context'
-    },
-    {
-      propName: 'status',
-      label: 'Status'
-    },
-    {
-      propName: 'lastAccess',
-      label: 'Last Access'
-    },
-    {
-      propName: 'requiredForDataLoad',
-      label: 'Required For Data Load'
-    },
-    {
-      propName: 'canInitiateRestart',
-      label: 'Can Initiate Restart'
-    },
-    {
-      propName: 'dataLoadSequence',
-      label: 'Data Load Sequence'
-    }
-  ];
+  readonly dataAgentColumnObjects = dataAgentColumnObjects;
 
-  dataAgentData = [
-    {
-      name: 'XML File Agent',
-      context: 'Jul18-July30',
-      status: 'EVENTING',
-      lastAccess: '2018-09018 07:28:57',
-      requiredForDataLoad: 'Yes',
-      canInitiateRestart: 'No',
-      dataLoadSequence: 0
-    },
-    {
-      name: 'Restart Agent',
-      context: '-',
-      status: 'NO CONTEXT',
-      lastAccess: '-',
-      requiredForDataLoad: 'No',
-      canInitiateRestart: 'Yes',
-      dataLoadSequence: 0
-    },
-    {
-      name: 'File Agent',
-      context: 'Jul18-July30',
-      status: 'EVENTING',
-      lastAccess: '2018-09018 07:28:57',
-      requiredForDataLoad: 'Yes',
-      canInitiateRestart: 'No',
-      dataLoadSequence: 0
-    }
-  ];
+  dataAgents = [];
+  dataServerProperties: DataServerProperties;
 
-  constructor() { }
+  isDataLoading = false;
+
+  constructor(
+    private configService: ConfigService
+  ) {
+    this.initializeDataServerProperties();
+  }
 
   ngOnInit() {
+    this.isDataLoading = true;
+    combineLatest(
+      this.configService.getDataServerConfigProperties(),
+      this.configService.getDataServerAgents()
+    ).subscribe(([configProperties, agents]) => {
+        Object.assign(this.dataServerProperties, configProperties);
+        this.dataAgents = agents;
+        this.isDataLoading = false;
+      }
+    );
+  }
+
+  initializeDataServerProperties() {
+    this.dataServerProperties = {
+      property: '',
+      propertyValue: '',
+      baseDateTime: '',
+      timeMode: '',
+      daysBackward: 0,
+      daysForward: 0,
+    };
   }
 
 }

@@ -1,3 +1,4 @@
+<mat-progress-bar *ngIf="isDataLoading" mode="indeterminate"></mat-progress-bar>
 <div fxLayout="row"
   fxLayoutGap="3rem"
   fxLayout.xs="column"
@@ -17,7 +18,10 @@
             <div fxFlex="40" fxFlexAlign="center">{{fileAgentParametersLabels.sasiHost}}</div>
             <div fxFlex>
               <mat-form-field>
-                <input matInput [placeholder]="fileAgentParametersLabels.sasiHostPlaceHolder" autocomplete="off" required>
+                <input matInput
+                  [(value)]="fileAgentParameters.sasiHost"
+                  [placeholder]="fileAgentParametersLabels.sasiHostPlaceHolder"
+                  autocomplete="off" required>
                 <mat-error>{{fileAgentParametersLabels.sasiHostErrMsg}</mat-error>
               </mat-form-field>
             </div>
@@ -26,7 +30,10 @@
             <div fxFlex="40" fxFlexAlign="center">{{fileAgentParametersLabels.agentName}}</div>
             <div fxFlex>
               <mat-form-field>
-                <input matInput [placeholder]="fileAgentParametersLabels.agentNamePlaceholder" autocomplete="off" required>
+                <input matInput
+                  [(value)]="fileAgentParameters.agentName"
+                  [placeholder]="fileAgentParametersLabels.agentNamePlaceholder"
+                  autocomplete="off" required>
                 <mat-error>{{fileAgentParametersLabels.agentNameErrMsg}}</mat-error>
               </mat-form-field>
             </div>
@@ -35,7 +42,10 @@
             <div fxFlex="40" fxFlexAlign="center">{{fileAgentParametersLabels.worldRefFile}}</div>
             <div fxFlex>
               <mat-form-field>
-                <input matInput [placeholder]="fileAgentParametersLabels.worldRefFilePlaceholder" autocomplete="off" required>
+                <input matInput
+                  [(value)]="fileAgentParameters.worldRefFile"
+                  [placeholder]="fileAgentParametersLabels.worldRefFilePlaceholder"
+                  autocomplete="off" required>
                 <mat-error>{{fileAgentParametersLabels.worldRefFileErrMsg}}</mat-error>
               </mat-form-field>
             </div>
@@ -44,7 +54,10 @@
             <div fxFlex="40" fxFlexAlign="center">{{fileAgentParametersLabels.eventSrcDirectory}}</div>
             <div fxFlex>
               <mat-form-field>
-                <input matInput [placeholder]="fileAgentParametersLabels.eventSrcDirectoryPlaceHolder" autocomplete="off" required>
+                <input matInput
+                  [(value)]="fileAgentParameters.eventSourceDirectory"
+                  [placeholder]="fileAgentParametersLabels.eventSrcDirectoryPlaceHolder"
+                  autocomplete="off" required>
                 <mat-error>{{fileAgentParametersLabels.eventSrcDirectoryErrMsg}}</mat-error>
               </mat-form-field>
             </div>
@@ -84,13 +97,9 @@
       </mat-card-header>
       <mat-card-content>
         <mat-list>
-          <mat-list-item *ngFor="let agent of agentStatus">
-            <mat-icon *ngIf="agent.status === 'STOPPED'" color="warn" mat-list-icon>{{fileAgentProcessingInfoLabels.stoppedStatusIcon}}</mat-icon>
-            <mat-icon *ngIf="agent.status === 'RUNNING'" color="primary" mat-list-icon>{{fileAgentProcessingInfoLabels.runningStatusIcon}}</mat-icon>
-            <mat-icon *ngIf="agent.status === 'IDLE'" color="accent" mat-list-icon>{{fileAgentProcessingInfoLabels.idleStatusIcon}}</mat-icon>
-            <h4 mat-line>{{agent.name}}</h4>
-            <p mat-line> {{agent.status}} </p>
-          </mat-list-item>
+          <ng-container *ngTemplateOutlet="agentStatus; context: {agentStatus: fileAgentParameters.agentStatus.worldLoading , title: fileAgentProcessingInfoLabels.worldLoading}"></ng-container>
+          <ng-container *ngTemplateOutlet="agentStatus; context: {agentStatus: fileAgentParameters.agentStatus.eventRecording , title: fileAgentProcessingInfoLabels.eventRecording}"></ng-container>
+          <ng-container *ngTemplateOutlet="agentStatus; context: {agentStatus: fileAgentParameters.agentStatus.eventProcessing , title: fileAgentProcessingInfoLabels.eventProcessing}"></ng-container>
         </mat-list>
       </mat-card-content>
     </mat-card>
@@ -100,3 +109,13 @@
     </div>
   </div>
 </div>
+
+<ng-template #agentStatus let-agentStatus="agentStatus" let-title="title">
+  <mat-list-item>
+    <mat-icon *ngIf="agentStatus === 'STOPPED'" color="warn" mat-list-icon>{{fileAgentProcessingInfoLabels.stoppedStatusIcon}}</mat-icon>
+    <mat-icon *ngIf="agentStatus === 'RUNNING'" color="primary" mat-list-icon>{{fileAgentProcessingInfoLabels.runningStatusIcon}}</mat-icon>
+    <mat-icon *ngIf="agentStatus === 'IDLE'" color="accent" mat-list-icon>{{fileAgentProcessingInfoLabels.idleStatusIcon}}</mat-icon>
+    <h4 mat-line>{{title}}</h4>
+    <p mat-line> {{agentStatus | uppercase}} </p>
+  </mat-list-item>
+</ng-template>

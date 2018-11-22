@@ -1,8 +1,9 @@
+<mat-progress-bar *ngIf="isDataLoading" mode="indeterminate"></mat-progress-bar>
 <div fxLayout="row"
   fxLayoutGap="3rem"
   fxLayout.xs="column"
   fxLayoutAlign="center"
-  fxLayoutGap.xs="5rem">
+  fxLayoutGap.xs="1rem">
   <div fxFlex="40" fxLayout="column" fxLayoutGap="1vw" fxLayoutAlign="start">
     <div fxFlex="5" class="div-header">
       <span>{{sasiConfigLabels.dataServerAdmin}}</span>
@@ -15,16 +16,24 @@
         <div fxLayout="row" fxLayoutGap="20px" fxLayoutGap.xs="10px">
           <div fxFlex="40">
             <mat-form-field>
-              <mat-select [placeholder]="dataServerAdminLabels.propertyDropdownPlaceholder">
-                <mat-option value="fileSourcePath">
+              <mat-select 
+                [placeholder]="dataServerAdminLabels.propertyDropdownPlaceholder" 
+                [(value)]="dataServerProperties.property">
+                <mat-option value="FileSourcePath">
                   File Source Path
+                </mat-option>
+                <mat-option value="option2">
+                  Option2
                 </mat-option>
               </mat-select>
             </mat-form-field>
           </div>
           <div fxFlex>
             <mat-form-field>
-              <input matInput [placeholder]="dataServerAdminLabels.propertyValuePlaceholder" autocomplete="off" required>
+              <input matInput
+                [(value)]="dataServerProperties.propertyValue"
+                [placeholder]="dataServerAdminLabels.propertyValuePlaceholder"
+                autocomplete="off" required>
             </mat-form-field>
           </div>
         </div>
@@ -34,7 +43,10 @@
           </div>
           <div fxFlex>
             <mat-form-field>
-              <input matInput [placeholder]="dataServerAdminLabels.baseDateTimePlaceholder" autocomplete="off" required>
+              <input matInput
+                [(value)]="dataServerProperties.baseDateTime"
+                [placeholder]="dataServerAdminLabels.baseDateTimePlaceholder"
+                autocomplete="off" required>
             </mat-form-field>
           </div>
         </div>
@@ -44,7 +56,9 @@
           </div>
           <div fxFlex>
               <mat-form-field>
-                <mat-select [placeholder]="dataServerAdminLabels.timeModeDropdownPlaceHolder">
+                <mat-select 
+                  [(value)]="dataServerProperties.timeMode"
+                  [placeholder]="dataServerAdminLabels.timeModeDropdownPlaceHolder">
                   <mat-option value="static">
                     Static
                   </mat-option>
@@ -65,7 +79,10 @@
           </div>
           <div fxFlex>
             <mat-form-field>
-              <input matInput type="number" min="0" autocomplete="off" required>
+              <input matInput class="text-align-center"
+                [(value)]="dataServerProperties.daysBackward"
+                type="number" min="0"
+                autocomplete="off" required>
             </mat-form-field>
           </div>
         </div>
@@ -75,7 +92,10 @@
           </div>
           <div fxFlex>
             <mat-form-field>
-              <input matInput type="number" min="0" autocomplete="off" required>
+              <input matInput class="text-align-center"
+                [(value)]="dataServerProperties.daysBackward"
+                type="number" min="0"
+                autocomplete="off" required>
             </mat-form-field>
           </div>
         </div>
@@ -89,20 +109,26 @@
 
   <mat-divider vertical="true"></mat-divider>
 
-  <div fxFlexAlign="start" fxFlex fxLayout="column" fxLayoutGap="1vw" fxLayoutGap.xs="0.3vw" fxLayoutAlign="center">
+  <div fxFlex fxLayout="column" fxLayoutGap="1vw" fxLayoutGap.xs="0.3vw">
     <div fxFlex="4" class="div-header">
       <span>{{dataServerAgentsLabels.title}}</span>
     </div>
-      <app-sasi-mat-table 
+    <div fxFlex *ngIf="!!dataAgents.length; else elseTemplate">
+      <app-sasi-mat-table
         [columnObjects]="dataAgentColumnObjects"
-        [data]="dataAgentData"
+        [data]="dataAgents"
         [hasSelectAll]="false"
-        sortedColumn="name"
+        sortedColumn="agentName"
         stickyHeader="false">
       </app-sasi-mat-table>
+    </div>
     <div fxFlex="5" fxFlexAlign="end" fxLayoutGap="20px">
       <button mat-raised-button color="accent">{{dataServerAgentsLabels.restartBtn}}</button>
       <button mat-raised-button color="primary">{{dataServerAgentsLabels.processBtn}}</button>
     </div>
   </div>
 </div>
+
+<ng-template #elseTemplate>
+  <app-no-records-found class="no-records-panel"></app-no-records-found>
+</ng-template>

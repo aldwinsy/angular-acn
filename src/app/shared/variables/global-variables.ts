@@ -258,12 +258,12 @@ export const dataServerAgentsLabels = {
 
 export const dataServerAdminLabels = {
   sasiConfigTitle: 'SASI Configuration Properties',
-  propertyDropdownPlaceholder: 'Property',
+  propertyDropdownPlaceholder: 'Source',
   propertyValuePlaceholder: 'Value',
   baseDateTime: 'Base Date/Time',
   baseDateTimePlaceholder: 'yyyy-MM-dd HH:mm',
   timeMode: 'Time Mode',
-  timeModeDropdownPlaceHolder: 'Property',
+  timeModeDropdownPlaceHolder: 'Value',
   dataWindowSettingsTitle: 'Data Window Settings',
   daysBackward: 'Days Backward',
   daysForward: 'Days Forward',
@@ -276,6 +276,9 @@ export const fileAgentProcessingInfoLabels = {
   stoppedStatusIcon: 'cancel',
   runningStatusIcon: 'check_circle',
   idleStatusIcon: 'timelapse',
+  worldLoading: 'WorldLoading',
+  eventRecording: 'Event Recording',
+  eventProcessing: 'Event Processing',
   restartBtn: 'Restart Agent',
   processBtn: 'Process Files'
 };
@@ -1351,5 +1354,37 @@ export const worldObjectProperties = {
   ]
 };
 
-
-
+export const dataAgentColumnObjects = [
+  {
+    propName: 'select',
+    label: ''
+  },
+  {
+    propName: 'agentName',
+    label: 'Name'
+  },
+  {
+    propName: 'context',
+    label: 'Context'
+  },
+  {
+    propName: 'status',
+    label: 'Status'
+  },
+  {
+    propName: 'lastRequest',
+    label: 'Last Access'
+  },
+  {
+    propName: 'hasDataLoad',
+    label: 'Required For Data Load'
+  },
+  {
+    propName: 'canInitiateDataLoad',
+    label: 'Can Initiate Restart'
+  },
+  {
+    propName: 'dataLoadSequence',
+    label: 'Data Load Sequence'
+  }
+];
