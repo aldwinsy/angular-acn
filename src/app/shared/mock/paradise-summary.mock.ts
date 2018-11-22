@@ -22,6 +22,10 @@ export const ParadiseSummaryMock = {
       objectCount: 10034
     },
     {
+      objectName: 'atcControlledStation',
+      objectCount: 450
+    },
+    {
       objectName: 'crew',
       objectCount: 500
     },
@@ -72,6 +76,10 @@ export const ParadiseSummaryMock = {
     {
       objectName: 'passengerConnection',
       objectCount: 1006
+    },
+    {
+      objectName: 'position',
+      objectCount: 600
     },
     {
       objectName: 'qualification',

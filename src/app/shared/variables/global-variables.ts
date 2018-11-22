@@ -35,17 +35,17 @@ export const worldGroup = {
 };
 
 // @TODO: change to actual urls when endpoints are available
-// https://sasi.azure-api.net/sasi/world
+// Azure APIM still uses mock data
 
 export const urls = {
   dataStatus: 'api/v1/data-status',
   worldObjects: 'api/v1/world-objects',
-  dataAgents: 'https://api.myjson.com/bins/hpx02',
-  purgatorySummary: 'https://api.myjson.com/bins/1c0ys2',
-  paradiseSummary: 'https://api.myjson.com/bins/b1y42',
-  published0Summary: 'https://api.myjson.com/bins/1cmedu',
-  published1Summary: 'https://api.myjson.com/bins/18gd5e',
-  published2Summary: 'https://api.myjson.com/bins/15h74i'
+  dataAgents: 'https://sasi.azure-api.net/api/v1/agents/tenant/zz',
+  purgatorySummary: 'https://sasi.azure-api.net/api/v1/world/tenant/zz/type/purgatory',
+  paradiseSummary: 'https://sasi.azure-api.net/api/v1/world/tenant/zz/type/paradise',
+  published0Summary: 'https://sasi.azure-api.net/api/v1/world/tenant/zz/type/published0',
+  published1Summary: 'https://sasi.azure-api.net/api/v1/world/tenant/zz/type/published1',
+  published2Summary: 'https://sasi.azure-api.net/api/v1/world/tenant/zz/type/published2'
 };
 
 export const worldSummaryColumns = [
