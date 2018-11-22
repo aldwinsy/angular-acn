@@ -90,7 +90,6 @@ describe('SearchPanelComponent', () => {
       expect(value.propertyNames).toContain(Object({ property: 'aircraftID', values: [] }));
     });
     removeValueIcon.click();
-    fixture.detectChanges();
   });
 
   it('should enable add new property button when previous property form is valid', () => {
