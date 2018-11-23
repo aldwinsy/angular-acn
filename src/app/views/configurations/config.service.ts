@@ -19,7 +19,7 @@ export class ConfigService {
     );
   }
 
-  putDataServerConfigProperties(config: any): Observable<any> {
+  updateDataServerConfigProperties(config: any): Observable<any> {
     return this.http.put('https://api.myjson.com/bins/6ikxu', config).pipe(
       tap((data: any) => {
         console.log('ConfigService::putDataServerConfigProperties: ', data);

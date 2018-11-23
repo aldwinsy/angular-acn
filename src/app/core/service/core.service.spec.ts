@@ -30,8 +30,7 @@ describe('CoreService', () => {
   });
 
   it('should be created', () => {
-    const service: CoreService = TestBed.get(CoreService);
-    expect(service).toBeTruthy();
+    expect(coreService).toBeTruthy();
   });
 
   it('should get purgatory summary', () => {
