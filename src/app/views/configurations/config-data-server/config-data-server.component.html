@@ -130,5 +130,5 @@
 </div>
 
 <ng-template #elseTemplate>
-  <app-no-records-found class="no-records-panel"></app-no-records-found>
+  <app-no-records-found *ngIf="!isDataLoading" class="no-records-panel"></app-no-records-found>
 </ng-template>

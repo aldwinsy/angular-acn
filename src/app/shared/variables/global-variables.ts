@@ -38,7 +38,7 @@ export const worldGroup = {
 // @TODO: change to actual urls when endpoints are available
 export const urls = {
   dataStatus: 'api/v1/data-status',
-  worldObjects: 'api/v1/world-objects',
+  worldService: 'https://sasi.azure-api.net/api/v1/world',
   dataAgents: 'api/v1/data-agents',
   purgatorySummary: 'https://sasi.azure-api.net/sasi/world',
   paradiseSummary: 'https://sasi.azure-api.net/sasi/world'
