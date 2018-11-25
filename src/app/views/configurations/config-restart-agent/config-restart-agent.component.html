@@ -1,3 +1,4 @@
+<mat-progress-bar *ngIf="isDataLoading" mode="indeterminate"></mat-progress-bar>
 <div fxLayout="row"
   fxLayoutGap="3rem"
   fxLayout.xs="column"
@@ -11,14 +12,14 @@
       <mat-card-content fxLayout="column" fxLayoutGap="2vw" fxLayoutAlign="center stretch" fxLayoutGap.xs="5px">
         <div fxFlex>
           <div fxLayout="row" fxLayoutGap="1vw" fxLayoutGap.xs="10px">
-            <div fxFlex="40" fxFlexAlign="center">{{restartAgentStatusLabels.currentServerTime}}</div>
-            <div fxFlex> 2018-09-12 19:32</div>
+            <div fxFlex="40" fxFlexAlign="center">{{ restartAgentStatusLabels.currentServerTime }}</div>
+            <div fxFlex>{{ restartAgentStatus.currentServerTime }}</div>
           </div>
         </div>
         <div fxFlex>
           <div fxLayout="row" fxLayoutGap="1vw" fxLayoutGap.xs="10px">
-            <div fxFlex="40" fxFlexAlign="center">{{restartAgentStatusLabels.nextRestartTime}}</div>
-            <div fxFlex> 2018-09-12 19:32</div>
+            <div fxFlex="40" fxFlexAlign="center">{{ restartAgentStatusLabels.nextRestartTime }}</div>
+            <div fxFlex>{{ restartAgentStatus.nextRestartTime }}</div>
           </div>
         </div>
       </mat-card-content>
@@ -35,21 +36,22 @@
       <mat-card-content fxLayout="column" fxLayoutGap="2vw" fxLayoutAlign="center stretch" fxLayoutGap.xs="5px">
         <div fxFlex>
           <div fxLayout="row" fxLayoutGap="1vw" fxLayoutGap.xs="10px">
-            <div fxFlex="40" fxFlexAlign="center">{{restartAgentConfigLabels.sasiDataServerUrl}}</div>
-            <div fxFlex>/sasi-server/data</div>
+            <div fxFlex="40" fxFlexAlign="center">{{ restartAgentConfigLabels.sasiDataServerUrl }}</div>
+            <div fxFlex> {{ restartAgentConfig.sasiDataServerUrl }} </div>
           </div>
         </div>
         <div fxFlex>
           <div fxLayout="row" fxLayoutGap="1vw" fxLayoutGap.xs="10px">
             <div fxFlex="40" fxFlexAlign="center">{{restartAgentConfigLabels.agentName}}</div>
-            <div fxFlex>Restart Agent</div>
+            <div fxFlex>{{ restartAgentConfig.agentName }}</div>
           </div>
         </div>
         <div fxFlex>
           <div fxLayout="row" fxLayoutGap="1vw" fxLayoutGap.xs="10px">
             <div fxFlex="40" fxFlexAlign="center">{{restartAgentConfigLabels.restartOption}}</div>
             <mat-form-field>
-              <mat-select [placeholder]="restartAgentConfigLabels.restartOptionDropdownPlaceholder">
+              <mat-select [(value)]="restartAgentConfig.restartOption"
+                [placeholder]="restartAgentConfigLabels.restartOptionDropdownPlaceholder" >
                 <mat-option value="daily">
                   Daily (24-hour clock)
                 </mat-option>
@@ -64,7 +66,8 @@
           <div fxLayout="row" fxLayoutGap="1vw" fxLayoutGap.xs="10px">
             <div fxFlex="40" fxFlexAlign="center">{{restartAgentConfigLabels.restartOptionTime}}</div>
             <mat-form-field>
-              <input matInput [placeholder]="restartAgentConfigLabels.restartOptionTimePlaceholder" autocomplete="off"/>
+              <input matInput [(value)]="restartAgentConfig.restartTime"
+                [placeholder]="restartAgentConfigLabels.restartOptionTimePlaceholder" autocomplete="off"/>
             </mat-form-field>
           </div>
         </div>

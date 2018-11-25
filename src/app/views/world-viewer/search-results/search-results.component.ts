@@ -39,8 +39,12 @@ export class SearchResultsComponent implements OnInit {
   world: string;
   object: string;
 
-  resultsColumns: any[];
-  resultsData: any[];
+  resultsColumns: any[] = [];
+  resultsData: any[] = [];
+
+  searchParams: Object;
+
+  isDataLoading = false;
 
   constructor(
     private route: ActivatedRoute,
@@ -48,6 +52,7 @@ export class SearchResultsComponent implements OnInit {
     ) {
     this.route.params.subscribe(params => {
       if (params) {
+        this.searchParams = params;
         this.world = params['world'];
         this.object = params['resultsToBeViewed'];
         this.resultsColumns = this.getResultsColumn(this.object);
@@ -56,8 +61,10 @@ export class SearchResultsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.worldViewerService.getWorldObjects(this.object).subscribe(data => {
+    this.isDataLoading = true;
+    this.worldViewerService.getWorldObjects(this.world, this.object).subscribe(data => {
       this.resultsData = data;
+      this.isDataLoading = false;
     });
   }
 

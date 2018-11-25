@@ -2,6 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { NoRecordsFoundComponent } from './no-records-found.component';
 import { SharedModule } from 'sasi/shared/shared.module';
+import { By } from '@angular/platform-browser';
 
 describe('NoRecordsFoundComponent', () => {
   let component: NoRecordsFoundComponent;
@@ -22,5 +23,11 @@ describe('NoRecordsFoundComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should show no records icon', () => {
+    const noRecordsIcon = fixture.debugElement.query(By.css('mat-icon'));
+    expect(noRecordsIcon).toBeTruthy();
+    expect(noRecordsIcon.nativeElement.textContent).toBe('event_note');
   });
 });

@@ -1,6 +1,22 @@
+import { fileAgentParametersLabels } from 'sasi/shared/variables/global-variables';
+import { ConfigService } from 'sasi/views/configurations/config.service';
 import { Component, OnInit } from '@angular/core';
-import { fileAgentServerAdminLabels, sasiConfigLabels, fileAgentProcessingInfoLabels } from 'sasi/shared/variables/global-variables';
+import { sasiConfigLabels, fileAgentProcessingInfoLabels } from 'sasi/shared/variables/global-variables';
 
+interface FileAgentSASIParameters {
+  sasiHost: string;
+  agentName: string;
+  worldRefFile: string;
+  eventSourceDirectory: string;
+  isStarted: boolean;
+  agentStatus: FileAgentStatus;
+}
+
+interface FileAgentStatus {
+  eventProcessing: string;
+  eventRecording: string;
+  worldLoading: string;
+}
 
 @Component({
   selector: 'app-config-file-agent',
@@ -12,28 +28,36 @@ import { fileAgentServerAdminLabels, sasiConfigLabels, fileAgentProcessingInfoLa
 })
 export class ConfigFileAgentComponent implements OnInit {
   readonly sasiConfigLabels = sasiConfigLabels;
-  readonly fileAgentServerAdminLabels = fileAgentServerAdminLabels;
+  readonly fileAgentParametersLabels = fileAgentParametersLabels;
   readonly fileAgentProcessingInfoLabels = fileAgentProcessingInfoLabels;
 
-  agentStatus = [
-    {
-      name: 'World Loading',
-      status: 'STOPPED',
-    },
-    {
-      name: 'Event Recording',
-      status: 'RUNNING',
-    },
-    {
-      name: 'Event Processing',
-      status: 'IDLE',
-    }
-  ];
+  fileAgentParameters: FileAgentSASIParameters;
+  isDataLoading = false;
 
-
-  constructor() { }
-
-  ngOnInit() {
+  constructor(private configService: ConfigService) {
+    this.initializeFileAgentParameters();
   }
 
+  ngOnInit() {
+    this.isDataLoading = true;
+    this.configService.getFileAgent().subscribe((data: any) => {
+      Object.assign(this.fileAgentParameters, data);
+      this.isDataLoading = false;
+    });
+  }
+
+  initializeFileAgentParameters() {
+    this.fileAgentParameters = {
+      sasiHost: '',
+      agentName: '',
+      worldRefFile: '',
+      eventSourceDirectory: '',
+      isStarted: false,
+      agentStatus: {
+        eventProcessing: '--',
+        eventRecording: '--',
+        worldLoading: '--'
+      }
+    };
+  }
 }
