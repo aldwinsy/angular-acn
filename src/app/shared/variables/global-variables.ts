@@ -40,7 +40,7 @@ export const worldGroup = {
 export const urls = {
   dataStatus: 'api/v1/data-status',
   worldObjects: 'api/v1/world-objects',
-  dataAgents: 'https://sasi.azure-api.net/api/v1/agents/tenant/zz',
+  dataAgents: 'https://sasi.azure-api.net/api/v1/config/tenant/zz/agents',
   purgatorySummary: 'https://sasi.azure-api.net/api/v1/world/tenant/zz/type/purgatory',
   paradiseSummary: 'https://sasi.azure-api.net/api/v1/world/tenant/zz/type/paradise',
   published0Summary: 'https://sasi.azure-api.net/api/v1/world/tenant/zz/type/published0',
