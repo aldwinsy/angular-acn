@@ -16,3 +16,11 @@
   height: 32px;
   width: 32px;
 }
+
+.mat-progress-bar {
+  height: 7px;
+  position: fixed;
+  top: 90px;
+  right: 0;
+  z-index: 100;
+}

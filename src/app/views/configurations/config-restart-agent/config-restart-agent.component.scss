@@ -2,3 +2,11 @@
   font-weight: bold;
   min-height: 30px;
 }
+
+.mat-progress-bar {
+  height: 7px;
+  position: fixed;
+  top: 90px;
+  right: 0;
+  z-index: 100;
+}

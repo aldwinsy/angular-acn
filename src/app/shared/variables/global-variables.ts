@@ -31,7 +31,8 @@ export const headerNavItems = [
 
 export const worldGroup = {
   paradise: 'Paradise',
-  purgatory: 'Purgatory'
+  purgatory: 'Purgatory',
+  published: 'Published'
 };
 
 // @TODO: change to actual urls when endpoints are available
@@ -40,6 +41,7 @@ export const worldGroup = {
 export const urls = {
   dataStatus: 'api/v1/data-status',
   worldObjects: 'api/v1/world-objects',
+  worldService: 'https://sasi.azure-api.net/api/v1/world',
   dataAgents: 'https://sasi.azure-api.net/api/v1/config/tenant/zz/agents',
   purgatorySummary: 'https://sasi.azure-api.net/api/v1/world/tenant/zz/type/purgatory',
   paradiseSummary: 'https://sasi.azure-api.net/api/v1/world/tenant/zz/type/paradise',
@@ -230,7 +232,7 @@ export const sasiConfigLabels = {
   restartConfig: 'Configuration',
 };
 
-export const dataServerParametersLabels = {
+export const fileAgentParametersLabels = {
   title: 'SASI Parameter',
   sasiHost: 'SASI Host',
   sasiHostPlaceHolder: 'Host',
@@ -260,14 +262,14 @@ export const dataServerAgentsLabels = {
   processBtn: 'Process Files'
 };
 
-export const fileAgentServerAdminLabels = {
+export const dataServerAdminLabels = {
   sasiConfigTitle: 'SASI Configuration Properties',
-  propertyDropdownPlaceholder: 'Property',
+  propertyDropdownPlaceholder: 'Source',
   propertyValuePlaceholder: 'Value',
   baseDateTime: 'Base Date/Time',
   baseDateTimePlaceholder: 'yyyy-MM-dd HH:mm',
   timeMode: 'Time Mode',
-  timeModeDropdownPlaceHolder: 'Property',
+  timeModeDropdownPlaceHolder: 'Value',
   dataWindowSettingsTitle: 'Data Window Settings',
   daysBackward: 'Days Backward',
   daysForward: 'Days Forward',
@@ -280,6 +282,9 @@ export const fileAgentProcessingInfoLabels = {
   stoppedStatusIcon: 'cancel',
   runningStatusIcon: 'check_circle',
   idleStatusIcon: 'timelapse',
+  worldLoading: 'WorldLoading',
+  eventRecording: 'Event Recording',
+  eventProcessing: 'Event Processing',
   restartBtn: 'Restart Agent',
   processBtn: 'Process Files'
 };
@@ -310,132 +315,132 @@ export const worldViewerLabels = {
 export const fleetResultsColumn = [
   {
     propName: 'fleetID',
-    label: 'fleetID'
+    label: 'Fleet ID'
   },
   {
     propName: 'crewFleetName',
-    label: 'crewFleetName'
+    label: 'Crew Fleet Name'
   },
   {
     propName: 'identifier',
-    label: 'identifier'
+    label: 'Identifier'
   },
   {
     propName: 'opsFleetName',
-    label: 'opsFleetName'
+    label: 'Ops Fleet Name'
   },
   {
     propName: 'version',
-    label: 'version'
+    label: 'Version'
   },
   {
     propName: 'withinFleetSwapCost',
-    label: 'withinFleetSwapCost'
+    label: 'Within Fleet Swap Cost'
   }
 ];
 
 export const atcControlledStationResultsColumn = [
   {
     propName: 'atcControlledStationID',
-    label: 'atcControlledStationID'
+    label: 'ATC Controlled Station ID'
   },
   {
     propName: 'airportID',
-    label: 'airportID'
+    label: 'Airport ID'
   },
   {
     propName: 'stationCode',
-    label: 'stationCode'
+    label: 'Station Code'
   },
   {
     propName: 'stationControlType',
-    label: 'stationControlType'
+    label: 'Station Control Type'
   },
   {
     propName: 'identifier',
-    label: 'identifier'
+    label: 'Identifier'
   },
   {
     propName: 'isSubstitutionAllowed',
-    label: 'isSubstitutionAllowed'
+    label: 'Substitution Allowed'
   },
   {
     propName: 'version',
-    label: 'version'
+    label: 'Version'
   }
 ];
 
 export const aircraftResultsColumn = [
   {
     propName: 'aircraftID',
-    label: 'aircraftID'
+    label: 'Aircraft ID'
   },
   {
     propName: 'identifier',
-    label: 'identifier'
+    label: 'Identifier'
   },
   {
     propName: 'isCorrectiveActionRequired',
-    label: 'isCorrectiveActionRequired'
+    label: 'Corrective Action Required'
   },
   {
     propName: 'subfleetID',
-    label: 'subfleetID'
+    label: 'Subfleet ID'
   },
   {
     propName: 'tail',
-    label: 'tail'
+    label: 'Tail'
   },
   {
     propName: 'version',
-    label: 'version'
+    label: 'Version'
   }
 ];
 
 export const airportResultsColumn = [
   {
     propName: 'airportID',
-    label: 'airportID'
+    label: 'Airport ID'
   },
   {
     propName: 'airportGroupID',
-    label: 'airportGroupID'
+    label: 'Airport Group ID'
   },
   {
     propName: 'city',
-    label: 'city',
+    label: 'City',
   },
   {
     propName: 'code',
-    label: 'code'
+    label: 'Code'
   },
   {
     propName: 'country',
-    label: 'country'
+    label: 'Country'
   },
   {
     propName: 'identifier',
-    label: 'identifier'
+    label: 'Identifier'
   },
   {
     propName: 'isAllowableSubfleets',
-    label: 'isAllowableSubfleets'
+    label: 'Allowable Subfleets'
   },
   {
     propName: 'isCrewCustomsCheckRequired',
-    label: 'isCrewCustomsCheckRequired'
+    label: 'Crew Customs Check Required'
   },
   {
     propName: 'isHub',
-    label: 'isHub'
+    label: 'Hub'
   },
   {
     propName: 'isInternational',
-    label: 'isInternational'
+    label: 'International'
   },
   {
     propName: 'isServiced',
-    label: 'isServiced'
+    label: 'Serviced'
   },
   {
     propName: 'name',
@@ -443,661 +448,661 @@ export const airportResultsColumn = [
   },
   {
     propName: 'offsetGMT',
-    label: 'offsetGMT'
+    label: 'Offset GMT'
   },
   {
     propName: 'version',
-    label: 'version'
+    label: 'Version'
   }
 ];
 
 export const airportGroupResultsColumn = [
   {
     propName: 'airportGroupID',
-    label: 'airportGroupID'
+    label: 'Airport Group ID'
   },
   {
     propName: 'identifier',
-    label: 'identifier'
+    label: 'Identifier'
   },
   {
     propName: 'version',
-    label: 'version'
+    label: 'Version'
   }
 ];
 
 export const airportGroupRelationshipResultsColumn = [
   {
     propName: 'airportGroupRelationshipID',
-    label: 'airportGroupRelationshipID'
+    label: 'Airport Group Relationship ID'
   },
   {
     propName: 'identifier',
-    label: 'identifier'
+    label: 'Identifier'
   },
   {
     propName: 'inflightTokens',
-    label: 'inflightTokens'
+    label: 'Inflight Tokens'
   },
   {
     propName: 'operationalTokens',
-    label: 'operationalTokens'
+    label: 'Operational Tokens'
   },
   {
     propName: 'pilotTokens',
-    label: 'pilotTokens'
+    label: 'Pilot Tokens'
   },
   {
     propName: 'version',
-    label: 'version'
+    label: 'Version'
   }
 ];
 
 export const crewResultsColumn = [
   {
     propName: 'crewID',
-    label: 'crewID'
+    label: 'Crew ID'
   },
   {
     propName: 'dateOfBirth',
-    label: 'dateOfBirth'
+    label: 'Date Of Birth'
   },
   {
     propName: 'employeeID',
-    label: 'employeeId'
+    label: 'Employee ID'
   },
   {
     propName: 'identifier',
-    label: 'identifier'
+    label: 'Identifier'
   },
   {
     propName: 'name',
-    label: 'name'
+    label: 'Name'
   },
   {
     propName: 'positionType',
-    label: 'positionType'
+    label: 'Position Type'
   },
   {
     propName: 'version',
-    label: 'version'
+    label: 'Version'
   }
 ];
 
 export const crewBaseResultsColumn = [
   {
     propName: 'baseID',
-    label: 'baseID'
+    label: 'Base ID'
   },
   {
     propName: 'code',
-    label: 'code'
+    label: 'Code'
   },
   {
     propName: 'identifier',
-    label: 'identifier'
+    label: 'Identifier'
   },
   {
     propName: 'name',
-    label: 'name'
+    label: 'Name'
   },
   {
     propName: 'version',
-    label: 'version'
+    label: 'Version'
   }
 ];
 
 export const fleetCompatibilityResultsColumn = [
   {
     propName: 'fleetCompatibilityID',
-    label: 'fleetCompatibilityID'
+    label: 'Fleet Compatibility ID'
   },
   {
     propName: 'fleetCompatibilityType',
-    label: 'fleetCompatibilityType'
+    label: 'Fleet Compatibility Type'
   },
   {
     propName: 'fleetID',
-    label: 'fleetID'
+    label: 'Fleet ID'
   },
   {
     propName: 'identifier',
-    label: 'identifier'
+    label: 'Identifier'
   },
   {
     propName: 'version',
-    label: 'version'
+    label: 'Version'
   }
 ];
 
 export const flightResultsColumn = [
   {
     propName: 'flightID',
-    label: 'flightID'
+    label: 'Flight ID'
   },
   {
     propName: 'aircraftID',
-    label: 'aircraftID'
+    label: 'Aircraft ID'
   },
   {
     propName: 'arrDateTimeAct',
-    label: 'arrDateTimeAct'
+    label: 'Arr Date Time Act'
   },
   {
     propName: 'arrDateTimeEst',
-    label: 'arrDateTimeEst'
+    label: 'Arr Date Time Est'
   },
   {
     propName: 'arrDateTimeSch',
-    label: 'arrDateTimeSch'
+    label: 'Arr Date Time Sch'
   },
   {
     propName: 'arrDate',
-    label: 'arrDate'
+    label: 'Arr Date'
   },
   {
     propName: 'canDeadHead',
-    label: 'canDeadHead'
+    label: 'Dead Head'
   },
   {
-    propName: 'carrierCode',
-    label: 'carrierCode'
+    propName: 'arrierCode',
+    label: 'Carrier Code'
   },
   {
     propName: 'destAirportID',
-    label: 'destAirportID'
+    label: 'Dest Airport ID'
   },
   {
     propName: 'dptDateTimeAct',
-    label: 'dptDateTimeAct'
+    label: 'Dpt Date Time Act'
   },
   {
-    propName: 'dptDateTimeEst',
-    label: 'dptDateTimeEst'
+    propName: 'ptDateTimeEst',
+    label: 'Dpt Date Time Est'
   },
   {
     propName: 'dptDateTimeSch',
-    label: 'dptDateTimeSch'
+    label: 'Dpt Date Time Sch'
   },
   {
     propName: 'dptGate',
-    label: 'dptGate'
+    label: 'Dpt Gate'
   },
   {
     propName: 'flightClass',
-    label: 'flightClass'
+    label: 'Flight Class'
   },
   {
     propName: 'flightNumber',
-    label: 'flightNumber'
+    label: 'Flight Number'
   },
   {
     propName: 'flightState',
-    label: 'flightState'
+    label: 'Flight State'
   },
   {
     propName: 'identifier',
-    label: 'identifier'
+    label: 'Identifier'
   },
   {
     propName: 'inControl',
-    label: 'inControl'
+    label: 'Control'
   },
   {
     propName: 'isCanceled',
-    label: 'isCanceled'
+    label: 'Canceled'
   },
   {
     propName: 'multiDepartureCode',
-    label: 'multiDepartureCode'
+    label: 'Multi Departure Code'
   },
   {
     propName: 'offDateTime',
-    label: 'offDateTime'
+    label: 'Off Date Time'
   },
   {
     propName: 'onDateTime',
-    label: 'onDateTime'
+    label: 'On Date Time'
   },
   {
     propName: 'operationDate',
-    label: 'operationDate'
+    label: 'Operation Date'
   },
   {
     propName: 'origAirportID',
-    label: 'origAirportID'
+    label: 'Orig Airport ID'
   },
   {
     propName: 'serviceType',
-    label: 'serviceType'
+    label: 'Service Type'
   },
   {
     propName: 'subfleetID',
-    label: 'subfleetID'
+    label: 'Subfleet ID'
   },
   {
     propName: 'version',
-    label: 'version'
+    label: 'Version'
   }
 ];
 
 export const flightActivityResultsColumn = [
   {
     propName: 'flightActivityID',
-    label: 'flightActivityID'
+    label: 'Flight Activity ID'
   },
   {
     propName: 'category',
-    label: 'category'
+    label: 'Category'
   },
   {
     propName: 'identifier',
-    label: 'identifier'
+    label: 'Identifier'
   },
   {
     propName: 'type',
-    label: 'type'
+    label: 'Type'
   },
   {
     propName: 'version',
-    label: 'version'
+    label: 'Version'
   }
 ];
 
 export const interSegmentTimeResultsColumn = [
   {
     propName: 'version',
-    label: 'version'
+    label: 'Version'
   }
 ];
 
 export const maintenanceResultsColumn = [
   {
     propName: 'maintenanceID',
-    label: 'maintenanceID'
+    label: 'Maintenance ID'
   },
   {
     propName: 'priority',
-    label: 'priority'
+    label: 'Priority'
   },
   {
     propName: 'airportID',
-    label: 'airportID'
+    label: 'Airport ID'
   },
   {
     propName: 'aircraftID',
-    label: 'aircraftID'
+    label: 'Aircraft ID'
   },
   {
     propName: 'identifier',
-    label: 'identifier'
+    label: 'Identifier'
   },
   {
     propName: 'startDateTime',
-    label: 'startDateTime'
+    label: 'Start Date Time'
   },
   {
     propName: 'endDateTime',
-    label: 'endDateTime'
+    label: 'End Date Time'
   },
   {
     propName: 'version',
-    label: 'version'
+    label: 'Version'
   }
 ];
 
 export const marketResultsColumn = [
   {
     propName: 'marketID',
-    label: 'marketID'
+    label: 'Market ID'
   },
   {
     propName: 'origAirportID',
-    label: 'origAirportID'
+    label: 'Orig Airport ID'
   },
   {
     propName: 'destAirportID',
-    label: 'destAirportID'
+    label: 'Dest Airport ID'
   },
   {
     propName: 'distance',
-    label: 'distance'
+    label: 'Distance'
   },
   {
     propName: 'identifier',
-    label: 'identifier'
+    label: 'Identifier'
   },
   {
     propName: 'version',
-    label: 'version'
+    label: 'Version'
   }
 ];
 
 export const nonFlyResultsColumn = [
   {
     propName: 'nonflyID',
-    label: 'nonflyID'
+    label: 'Nonfly ID'
   },
   {
     propName: 'changeability',
-    label: 'changeability'
+    label: 'Changeability'
   },
   {
     propName: 'code',
-    label: 'code'
+    label: 'Code'
   },
   {
     propName: 'destAirportID',
-    label: 'destAirportID'
+    label: 'Dest Airport ID'
   },
   {
     propName: 'endDateTime',
-    label: 'endDateTime'
+    label: 'End Date Time'
   },
   {
     propName: 'identifier',
-    label: 'identifier'
+    label: 'Identifier'
   },
   {
     propName: 'isDutyTime',
-    label: 'isDutyTime'
+    label: 'DutyTime'
   },
   {
     propName: 'label',
-    label: 'label'
+    label: 'Label'
   },
   {
     propName: 'origAirportID',
-    label: 'origAirportID'
+    label: 'Orig Airport ID'
   },
   {
     propName: 'startDateTime',
-    label: 'startDateTime'
+    label: 'Start Date Time'
   },
   {
     propName: 'version',
-    label: 'version'
+    label: 'Version'
   }
 ];
 
 export const offlineTransportationResultsColumn = [
   {
     propName: 'offlineTransportationID',
-    label: 'offlineTransportationID'
+    label: 'Offline Transportation ID'
   },
   {
     propName: 'cost',
-    label: 'cost'
+    label: 'Cost'
   },
   {
     propName: 'destAirportID',
-    label: 'destAirportID'
+    label: 'Dest Airport ID'
   },
   {
     propName: 'durationInMinutes',
-    label: 'durationInMinutes'
+    label: 'Duration In Minutes'
   },
   {
     propName: 'identifier',
-    label: 'identifier'
+    label: 'Identifier'
   },
   {
     propName: 'isCanceled',
-    label: 'isCanceled'
+    label: 'Canceled'
   },
   {
     propName: 'isPenalized',
-    label: 'isPenalized'
+    label: 'Penalized'
   },
   {
     propName: 'isSchedulingResource',
-    label: 'isSchedulingResource'
+    label: 'Scheduling Resource'
   },
   {
     propName: 'name',
-    label: 'name'
+    label: 'Name'
   },
   {
     propName: 'offlineTransportationType',
-    label: 'offlineTransportationType'
+    label: 'Offline Transportation Type'
   },
   {
     propName: 'origAirportID',
-    label: 'origAirportID'
+    label: 'Orig Airport ID'
   },
   {
     propName: 'positionType',
-    label: 'positionType'
+    label: 'Position Type'
   },
   {
     propName: 'startDateTime',
-    label: 'startDateTime'
+    label: 'Start Date Time'
   },
   {
     propName: 'version',
-    label: 'version'
+    label: 'Version'
   }
 ];
 
 export const pairingResultsColumn = [
   {
     propName: 'pairingID',
-    label: 'pairingID'
+    label: 'Pairing ID'
   },
   {
     propName: 'baseID',
-    label: 'baseID'
+    label: 'Base ID'
   },
   {
     propName: 'destAirportID',
-    label: 'destAirportID'
+    label: 'Dest Airport ID'
   },
   {
     propName: 'identifier',
-    label: 'identifier'
+    label: 'Identifier'
   },
   {
     propName: 'name',
-    label: 'name'
+    label: 'Name'
   },
   {
     propName: 'origAirportID',
-    label: 'origAirportID'
+    label: 'Orig Airport ID'
   },
   {
     propName: 'positionType',
-    label: 'positionType'
+    label: 'Position Type'
   },
   {
     propName: 'startDate',
-    label: 'startDate'
+    label: 'Start Date'
   },
   {
     propName: 'version',
-    label: 'version'
+    label: 'Version'
   }
 ];
 
 export const passengerConnectionResultsColumn = [
   {
     propName: 'passengerConnectionID',
-    label: 'passengerConnectionID'
+    label: 'Passenger Connection ID'
   },
   {
     propName: 'identifier',
-    label: 'identifier'
+    label: 'Identifier'
   },
   {
     propName: 'connectToFlightID',
-    label: 'connectToFlightID'
+    label: 'Connect To Flight ID'
   },
   {
     propName: 'connectFromFlightID',
-    label: 'connectFromFlightID'
+    label: 'Connect From Flight ID'
   },
   {
     propName: 'version',
-    label: 'version'
+    label: 'Version'
   }
 ];
 
 export const positionResultsColumn = [
   {
     propName: 'positionID',
-    label: 'positionID'
+    label: 'Position ID'
   },
   {
     propName: 'code',
-    label: 'code'
+    label: 'Code'
   },
   {
     propName: 'identifier',
-    label: 'identifier'
+    label: 'Identifier'
   },
   {
     propName: 'name',
-    label: 'name'
+    label: 'Name'
   },
   {
     propName: 'rank',
-    label: 'rank'
+    label: 'Rank'
   },
   {
     propName: 'type',
-    label: 'type'
+    label: 'Type'
   },
   {
     propName: 'version',
-    label: 'version'
+    label: 'Version'
   }
 ];
 
 export const qualificationResultsColumn = [
   {
     propName: 'qualificationID',
-    label: 'qualificationID'
+    label: 'Qualification ID'
   },
   {
     propName: 'identifier',
-    label: 'identifier'
+    label: 'Identifier'
   },
   {
     propName: 'name',
-    label: 'name'
+    label: 'Name'
   },
   {
     propName: 'problemLevel',
-    label: 'problemLevel'
+    label: 'Problem Level'
   },
   {
     propName: 'problemType',
-    label: 'problemType'
+    label: 'Problem Type'
   },
   {
     propName: 'semantics',
-    label: 'semantics'
+    label: 'Semantics'
   },
   {
     propName: 'verifyIsInEffectAt',
-    label: 'verifyIsInEffectAt'
+    label: 'Verify Is In Effect At'
   },
   {
     propName: 'version',
-    label: 'version'
+    label: 'Version'
   }
 ];
 
 export const subfleetResultsColumn = [
   {
     propName: 'subfleetID',
-    label: 'subfleetID'
+    label: 'Subfleet ID'
   },
   {
     propName: 'airspeed',
-    label: 'airspeed'
+    label: 'Airspeed'
   },
   {
     propName: 'bodyType',
-    label: 'bodyType'
+    label: 'Body Type'
   },
   {
     propName: 'code',
-    label: 'code'
+    label: 'Code'
   },
   {
     propName: 'domesticToInternationalTurnTime',
-    label: 'domesticToInternationalTurnTime'
+    label: 'Domestic To International Turn Time'
   },
   {
     propName: 'domesticTurnTime',
-    label: 'domesticTurnTime'
+    label: 'Domestic Turn Time'
   },
   {
     propName: 'fleetID',
-    label: 'fleetID'
+    label: 'Fleet ID'
   },
   {
     propName: 'iataTypeDefault',
-    label: 'iataTypeDefault'
+    label: 'IATA Type Default'
   },
   {
     propName: 'identifier',
-    label: 'identifier'
+    label: 'Identifier'
   },
   {
-    propName: 'InternationalToDomesticTurnTime',
-    label: 'InternationalToDomesticTurnTime'
+    propName: 'internationalToDomesticTurnTime',
+    label: 'International To Domestic Turn Time'
   },
   {
     propName: 'internationalTurnTime',
-    label: 'internationalTurnTime'
+    label: 'International Turn Time'
   },
   {
     propName: 'range',
-    label: 'range'
+    label: 'Range'
   },
   {
     propName: 'restFacility',
-    label: 'restFacility'
+    label: 'Rest Facility'
   },
   {
     propName: 'version',
-    label: 'version'
+    label: 'Version'
   }
 ];
 
 export const trainingResultsColumn = [
   {
     propName: 'trainingID',
-    label: 'trainingID'
+    label: 'Training ID'
   },
   {
     propName: 'identifier',
-    label: 'identifier'
+    label: 'Identifier'
   },
   {
     propName: 'isAssignable',
-    label: 'isAssignable'
+    label: 'Assignable'
   },
   {
     propName: 'isFlightSpecific',
-    label: 'isFlightSpecific'
+    label: 'Flight Specific'
   },
   {
     propName: 'isTraineePartOfComplement',
-    label: 'isTraineePartOfComplement'
+    label: 'Trainee Part of Complement'
   },
   {
     propName: 'isTrainerPartOfComplement',
-    label: 'isTrainerPartOfComplement'
+    label: 'Trainer Part of Complement'
   },
   {
     propName: 'name',
-    label: 'name'
+    label: 'Name'
   },
   {
     propName: 'version',
-    label: 'version'
+    label: 'Version'
   }
 ];
 
@@ -1355,5 +1360,37 @@ export const worldObjectProperties = {
   ]
 };
 
-
-
+export const dataAgentColumnObjects = [
+  {
+    propName: 'select',
+    label: ''
+  },
+  {
+    propName: 'agentName',
+    label: 'Name'
+  },
+  {
+    propName: 'context',
+    label: 'Context'
+  },
+  {
+    propName: 'status',
+    label: 'Status'
+  },
+  {
+    propName: 'lastRequest',
+    label: 'Last Access'
+  },
+  {
+    propName: 'hasDataLoad',
+    label: 'Required For Data Load'
+  },
+  {
+    propName: 'canInitiateDataLoad',
+    label: 'Can Initiate Restart'
+  },
+  {
+    propName: 'dataLoadSequence',
+    label: 'Data Load Sequence'
+  }
+];

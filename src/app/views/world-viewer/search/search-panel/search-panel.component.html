@@ -11,6 +11,7 @@
         <mat-button-toggle-group name="world" [(value)]="worldGroup">
           <mat-button-toggle [value]="world.paradise">{{world.paradise}}</mat-button-toggle>
           <mat-button-toggle [value]="world.purgatory">{{world.purgatory}}</mat-button-toggle>
+          <mat-button-toggle [value]="world.published">{{world.published}}</mat-button-toggle>
         </mat-button-toggle-group>
       </div>
       <div fxFlex="10">
@@ -46,10 +47,10 @@
                     </mat-autocomplete>
                   </mat-form-field>
                 </div>
-                <div fxFlex>
+                <div fxFlex fxLayout="row" fxLayoutAlign="start center">
                   <mat-form-field *ngIf="propertyName.controls.property.valid" fxFlexFill floatLabel="never">
                     <mat-chip-list id="chip-list" #chipList>
-                      <mat-chip *ngFor="let value of propertyName.controls.values.value" removable="true" (removed)="remove(value, i)">
+                      <mat-chip *ngFor="let value of propertyName.controls.values.value" removable="true" (removed)="removeValue(value, i)">
                         {{value}}
                         <mat-icon matChipRemove>cancel</mat-icon>
                       </mat-chip>
@@ -57,7 +58,7 @@
                         [matChipInputFor]="chipList"
                         [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
                         matChipInputAddOnBlur="true"
-                        (matChipInputTokenEnd)="add($event, i)">
+                        (matChipInputTokenEnd)="addValue($event, i)">
                     </mat-chip-list>
                     <mat-error>
                         Valid property value is required
