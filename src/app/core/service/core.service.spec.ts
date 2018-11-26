@@ -9,6 +9,7 @@ import { CoreService } from './core.service';
 import { urls } from 'sasi/shared/variables/global-variables';
 import { PurgatorySummaryMock } from 'sasi/shared/mock/purgatory-summary.mock';
 import { ParadiseSummaryMock } from 'sasi/shared/mock/paradise-summary.mock';
+import { PublishedSummaryMock } from 'sasi/shared/mock/published-summary.mock';
 
 describe('CoreService', () => {
   let httpClient: HttpClient;
@@ -49,6 +50,15 @@ describe('CoreService', () => {
     const req = httpTestingController.expectOne(urls.paradiseSummary);
     expect(req.request.method).toEqual('GET');
     req.flush(ParadiseSummaryMock);
+  });
+
+  it('should get published summary', () => {
+    coreService.getPublishedWorld(urls.published0Summary).subscribe(response => {
+      expect(response).toEqual(PublishedSummaryMock);
+    });
+    const req = httpTestingController.expectOne(urls.published0Summary);
+    expect(req.request.method).toEqual('GET');
+    req.flush(PublishedSummaryMock);
   });
 
   it('should handle error error if request fails', () => {

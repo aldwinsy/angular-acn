@@ -1,7 +1,7 @@
 import { Observable, throwError } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { urls } from 'sasi/shared/variables/global-variables';
+import { urls, tenant } from 'sasi/shared/variables/global-variables';
 import { tap, catchError } from 'rxjs/operators';
 
 @Injectable({
@@ -13,7 +13,7 @@ export class WorldViewerService {
 
   getWorldObjects(world, object): Observable<any> {
 
-    return this.http.get(`${urls.worldService}/tenant/zz/type/${world}/${object}`).pipe(
+    return this.http.get(`${urls.worldService}/tenant/${tenant}/type/${world}/${object}`).pipe(
       tap((data: any) => {
         console.log(`getWorldSummaryData:${world}:${object}::`, data);
       }),

@@ -6,6 +6,8 @@ export const geLogoImgSrc = 'http://www.stickpng.com/assets/images/5847f7ffcef10
 
 export const geFooter = '© 2018 GENERAL ELECTRIC';
 
+export const tenant = 'co';
+
 export const headerNavItems = [
   {
     id: 'sasi-status',
@@ -1394,3 +1396,20 @@ export const dataAgentColumnObjects = [
     label: 'Data Load Sequence'
   }
 ];
+
+export interface PublishedWorldInterface {
+  propertyName: string;
+  published_0_Events: string;
+  published_0_Obj: number;
+  published_1_Events: string;
+  published_1_Obj: number;
+  published_2_Events: string;
+  published_2_Obj: number;
+}
+
+export interface PublishedStatusTimeInterface {
+  propertyName: string;
+  published_0_Time: string;
+  published_1_Time: string;
+  published_2_Time: string;
+}

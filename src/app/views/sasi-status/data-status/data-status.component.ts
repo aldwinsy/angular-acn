@@ -28,9 +28,6 @@ export class DataStatusComponent implements OnInit {
   worldSummary: SasiWorldInterface[];
   isDataLoading = false;
 
-  // @Input() statusTime = [];
-  // @Input() worldObjects = [];
-
   constructor(private coreService: CoreService) { }
 
   ngOnInit() {
@@ -44,14 +41,14 @@ export class DataStatusComponent implements OnInit {
       this.coreService.getParadiseSummary(),
       this.coreService.getPublishedWorld(urls.published0Summary)
     ).pipe(
-      map(([purgatory, paradise, published]) => _.concat(purgatory, paradise, published))
-    ).subscribe((data: SasiWorldInterface[]) => {
-      this.purgatory = _.find(data, ['objectType', 'Paradise']);
-      this.paradise = _.find(data, ['objectType', 'Purgatory']);
-      this.published = _.find(data, ['objectType', 'Published 0']);
-      this.worldSummary = data;
+      map(([purgatory, paradise, published]) => {
+        this.purgatory = purgatory;
+        this.paradise = paradise;
+        this.published = published;
+        this.worldSummary = [purgatory, paradise, published];
+      })
+    ).subscribe(() => {
       this.isDataLoading = false;
-      console.log('this.sasiWorldSummary', this.worldSummary);
     });
   }
 

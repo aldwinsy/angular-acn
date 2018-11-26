@@ -1,24 +1,24 @@
-import { By } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { CoreService } from 'sasi/core/service/core.service';
+import { ParadiseSummaryMock } from 'sasi/shared/mock/paradise-summary.mock';
+import { PurgatorySummaryMock } from 'sasi/shared/mock/purgatory-summary.mock';
+import { By } from '@angular/platform-browser';
 import { SharedModule } from 'sasi/shared/shared.module';
 import { RouterTestingModule } from '@angular/router/testing';
 import { Location } from '@angular/common';
 import { async, ComponentFixture, TestBed, fakeAsync, tick } from '@angular/core/testing';
 
 import { PurgatoryParadiseComponent } from 'sasi/views/sasi-status/data-status/purgatory-paradise/purgatory-paradise.component';
-import { SasiStatusService } from 'sasi/views/sasi-status/sasi-status.service';
 import { of } from 'rxjs';
-import { dataStatus } from 'sasi/shared/mock/data-status.mock';
-import { sasiWorldObjects } from 'sasi/shared/mock/sasi-world-objects-mock';
 import { DataStatusComponent } from 'sasi/views/sasi-status/data-status/data-status.component';
 
 
 describe('PurgatoryParadiseComponent', () => {
   let component: PurgatoryParadiseComponent;
   let fixture: ComponentFixture<PurgatoryParadiseComponent>;
-  const sasiStatusServiceSpy = jasmine.createSpyObj('SasiStatusService', [
-    'getSasiStatusWorldObjects',
-    'getSasiStatusTime'
+  const coreServiceSpy = jasmine.createSpyObj('CoreService', [
+    'getPurgatorySummary',
+    'getParadiseSummary'
   ]);
 
   beforeEach(async(() => {
@@ -33,7 +33,7 @@ describe('PurgatoryParadiseComponent', () => {
       declarations: [ PurgatoryParadiseComponent, DataStatusComponent ],
       providers: [
         Location,
-        { provide: SasiStatusService, useValue: sasiStatusServiceSpy }
+        { provide: CoreService, useValue: coreServiceSpy }
       ]
     })
     .compileComponents();
@@ -42,8 +42,8 @@ describe('PurgatoryParadiseComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(PurgatoryParadiseComponent);
     component = fixture.componentInstance;
-    sasiStatusServiceSpy.getSasiStatusTime.and.returnValue(of(dataStatus));
-    sasiStatusServiceSpy.getSasiStatusWorldObjects.and.returnValue(of(sasiWorldObjects));
+    coreServiceSpy.getPurgatorySummary.and.returnValue(of(PurgatorySummaryMock));
+    coreServiceSpy.getParadiseSummary.and.returnValue(of(ParadiseSummaryMock));
     fixture.detectChanges();
   });
 
@@ -51,9 +51,10 @@ describe('PurgatoryParadiseComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should call getSasiStatusTime() and getSasiStatusWorldObjects() on init', () => {
-    expect(sasiStatusServiceSpy.getSasiStatusTime).toHaveBeenCalled();
-    expect(sasiStatusServiceSpy.getSasiStatusWorldObjects).toHaveBeenCalled();
+  it('should get paradise and purgatory data on init', () => {
+    expect(coreServiceSpy.getPurgatorySummary).toHaveBeenCalled();
+    expect(coreServiceSpy.getParadiseSummary).toHaveBeenCalled();
+    expect(component.worldObjects).not.toBe([]);
   });
 
   it('should contain sasi status time and world table', () => {

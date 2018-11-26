@@ -6,6 +6,11 @@ import { By } from '@angular/platform-browser';
 import { SharedModule } from 'sasi/shared/shared.module';
 import { RouterTestingModule } from '@angular/router/testing';
 import { Directive, Input, HostListener } from '@angular/core';
+import { CoreService } from 'sasi/core/service/core.service';
+import { of } from 'rxjs';
+import { ParadiseSummaryMock } from 'sasi/shared/mock/paradise-summary.mock';
+import { PurgatorySummaryMock } from 'sasi/shared/mock/purgatory-summary.mock';
+import { PublishedSummaryMock } from 'sasi/shared/mock/published-summary.mock';
 
 @Directive({
   // tslint:disable-next-line:directive-selector
@@ -22,6 +27,11 @@ export class RouterLinkStubDirective {
 describe('DataStatusComponent', () => {
   let component: DataStatusComponent;
   let fixture: ComponentFixture<DataStatusComponent>;
+  const coreServiceSpy = jasmine.createSpyObj('SasiStatusService', [
+    'getPurgatorySummary',
+    'getParadiseSummary',
+    'getPublishedWorld'
+  ]);
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -38,6 +48,9 @@ describe('DataStatusComponent', () => {
         PurgatoryParadiseComponent,
         PublishedComponent,
         RouterLinkStubDirective
+      ],
+      providers: [
+        { provide: CoreService, useValue: coreServiceSpy}
       ]
     })
     .compileComponents();
@@ -46,11 +59,20 @@ describe('DataStatusComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(DataStatusComponent);
     component = fixture.componentInstance;
+    coreServiceSpy.getPurgatorySummary.and.returnValue(of(PurgatorySummaryMock));
+    coreServiceSpy.getParadiseSummary.and.returnValue(of(ParadiseSummaryMock));
+    coreServiceSpy.getPublishedWorld.and.returnValue(of(PublishedSummaryMock));
     fixture.detectChanges();
   });
 
   it('should create data status component', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should get world summaries on init', () => {
+    expect(coreServiceSpy.getPurgatorySummary).toHaveBeenCalled();
+    expect(coreServiceSpy.getParadiseSummary).toHaveBeenCalled();
+    expect(coreServiceSpy.getPublishedWorld).toHaveBeenCalled();
   });
 
   it('should display purgatory card', () => {

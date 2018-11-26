@@ -16,46 +16,9 @@ export class SasiStatusService {
     private http: HttpClient
   ) { }
 
-  getSasiStatusTime(): Observable<any[]> {
-    // @TODO: uncomment when actual endpoint is available
-    const url = 'https://api.myjson.com/bins/epi82';
-    return this.http.get(url).pipe(
-      tap((data: any) => {
-        console.log('getSasiStatusTime: ', data);
-      }),
-      catchError(this.handleError)
-    );
-    // return of(dataStatus);
-  }
-
-  getSasiStatusWorldObjects(): Observable<any[]> {
-    // @TODO: uncomment when actual endpoint is available
-    // const url = 'https://api.myjson.com/bins/1blbqc';
-    const url = 'https://api.myjson.com/bins/1adrlu';
-    return this.http.get(url).pipe(
-      tap((data: any) => {
-        console.log('getSasiStatusWorldObjects: ', data);
-      }),
-      catchError(this.handleError)
-    );
-    // return of(sasiWorldObjects);
-  }
-
-  getSasiStatusAgentList(): Observable<any[]> {
-    // @TODO: uncomment when actual endpoint is available
-    const url = 'https://api.myjson.com/bins/1bq978';
-    return this.http.get(url).pipe(
-      tap((data: any) => {
-        console.log('getSasiStatusAgentList: ', data);
-      }),
-      catchError(this.handleError)
-    );
-    // return of(dataAgentsMock);
-  }
-
-  private handleError(error: Response) {
-    console.log('SasiStatusService::handleError::', error);
-    const message = `Error status code ${error.status} at ${error.url}`;
-    return throwError(message);
-  }
+  // private handleError(error: Response) {
+  //   console.log('SasiStatusService::handleError::', error);
+  //   const message = `Error status code ${error.status} at ${error.url}`;
+  //   return throwError(message);
+  // }
 }
