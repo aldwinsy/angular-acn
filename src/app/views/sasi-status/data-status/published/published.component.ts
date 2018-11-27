@@ -4,13 +4,13 @@ import {
   publishedWorldColumns,
   sasiStatusLabels,
   urls,
-  PublishedStatusTimeInterface,
-  PublishedWorldInterface
+  IPublishedStatusTime,
+  IPublishedWorld
 } from 'sasi/shared/variables/global-variables';
 import { combineLatest } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { CoreService } from 'sasi/core/service/core.service';
-import { SasiWorld } from 'sasi/shared/interfaces/world-summary.interface';
+import { ISasiWorld } from 'sasi/shared/interfaces/world-summary.interface';
 
 import * as _ from 'lodash';
 
@@ -28,8 +28,8 @@ export class PublishedComponent implements OnInit {
   readonly publishedWorldColumns = publishedWorldColumns;
   readonly sasiStatusLink = '/sasi-status';
 
-  statusTime: PublishedStatusTimeInterface[] = [];
-  worldObjects: PublishedWorldInterface[] = [];
+  statusTime: IPublishedStatusTime[] = [];
+  worldObjects: IPublishedWorld[] = [];
   dataAgentList = [];
   isDataLoading = false;
 
@@ -49,34 +49,35 @@ export class PublishedComponent implements OnInit {
     });
   }
 
-  transformWorldSummary(published0, published1, published2): PublishedWorldInterface[] {
+  transformWorldSummary(published0, published1, published2): IPublishedWorld[] {
     this.statusTime = this.setSasiStatusTime(published0, published1, published2);
     // Add logic for total and previous world
-    const published_0 = published0.topLevelObjects.map(object => {
-      return {
-        propertyName: object.objectName,
-        published_0_Events: '-',
-        published_0_Obj: object.objectCount
-      };
-    });
-    const published_1 = published1.topLevelObjects.map(object => {
-      return {
-        propertyName: object.objectName,
-        published_1_Events: '-',
-        published_1_Obj: object.objectCount
-      };
-    });
-    const published_2 = published2.topLevelObjects.map(object => {
-      return {
-        propertyName: object.objectName,
-        published_2_Events: '-',
-        published_2_Obj: object.objectCount
-      };
-    });
+    const published_0 = this.setPublishedData(published0, 'published_0_Obj');
+    const published_1 = this.setPublishedData(published1, 'published_1_Obj');
+    const published_2 = this.setPublishedData(published2, 'published_2_Obj');
     return _.merge(published_0, published_1, published_2);
   }
 
-  setSasiStatusTime(p0: SasiWorld, p1: SasiWorld, p2: SasiWorld): PublishedStatusTimeInterface[] {
+  setPublishedData(published: ISasiWorld, type: string) {
+    let publishedData;
+    publishedData = published.topLevelObjects.map(object => {
+      return {
+        propertyName: object.objectName,
+        [type]: object.objectCount
+      };
+    });
+    publishedData.splice(0, 0, {
+      propertyName: 'Total',
+      [type]: published.total,
+    });
+    publishedData.splice(1, 0, {
+      propertyName: 'Δ from previous world',
+      [type]: published.delta,
+    });
+    return publishedData;
+  }
+
+  setSasiStatusTime(p0: ISasiWorld, p1: ISasiWorld, p2: ISasiWorld): IPublishedStatusTime[] {
     return [
       {
         propertyName: 'Base Time',

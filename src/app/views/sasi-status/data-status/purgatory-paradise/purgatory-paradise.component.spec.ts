@@ -1,4 +1,3 @@
-import { HttpClientModule } from '@angular/common/http';
 import { CoreService } from 'sasi/core/service/core.service';
 import { ParadiseSummaryMock } from 'sasi/shared/mock/paradise-summary.mock';
 import { PurgatorySummaryMock } from 'sasi/shared/mock/purgatory-summary.mock';
@@ -28,7 +27,6 @@ describe('PurgatoryParadiseComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        HttpClientModule,
         SharedModule,
         RouterTestingModule.withRoutes([
           { path: 'sasi-status', component: DataStatusComponent }

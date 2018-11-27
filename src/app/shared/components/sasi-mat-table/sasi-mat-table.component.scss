@@ -82,9 +82,9 @@ tr.mat-row:hover {
   width: 4vw;
 }
 
-.mat-column-objectname {
-  width: 50%;
+.mat-column-objectName, .mat-column-propertyName {
   font-weight: bold;
+  text-transform: capitalize;
   &.mat-header-cell {
     font-weight: normal;
   }
@@ -92,9 +92,4 @@ tr.mat-row:hover {
 
 .mat-column-purgatoryCount, .mat-column-paradiseCount {
   width: 25%;
-}
-
-td.mat-cell.cdk-column-objectName.mat-column-objectName.ng-star-inserted {
-  font-weight: bold;
-  text-transform: capitalize;
 }

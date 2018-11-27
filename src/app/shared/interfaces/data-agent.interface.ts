@@ -1,4 +1,4 @@
-export interface DataAgent {
+export interface IDataAgent {
     agentName: string;
     context: string;
     status: string;

@@ -154,24 +154,12 @@ export const publishedWorldColumns = [
     label: ''
   },
   {
-    propName: 'published_0_Events',
-    label: 'Events'
-  },
-  {
     propName: 'published_0_Obj',
     label: 'Objects'
   },
   {
-    propName: 'published_1_Events',
-    label: 'Events'
-  },
-  {
     propName: 'published_1_Obj',
     label: 'Objects'
-  },
-  {
-    propName: 'published_2_Events',
-    label: 'Events'
   },
   {
     propName: 'published_2_Obj',
@@ -713,6 +701,42 @@ export const flightActivityResultsColumn = [
 ];
 
 export const interSegmentTimeResultsColumn = [
+  {
+    propName: 'interSegmentTimeID',
+    label: 'Inter Segment Time ID'
+  },
+  {
+    propName: 'name',
+    label: 'Name'
+  },
+  {
+    propName: 'rerouteMinutes',
+    label: 'Reroute Minutes'
+  },
+  {
+    propName: 'dayOfOpsDetectionMinutes',
+    label: 'Day Of Ops Detection Minutes'
+  },
+  {
+    propName: 'dayOfOpsRerouteMinutes',
+    label: 'Day Of Ops Reroute Minutes'
+  },
+  {
+    propName: 'detectionMinutes',
+    label: 'Detection Minutes'
+  },
+  {
+    propName: 'identifier',
+    label: 'Identifier'
+  },
+  {
+    propName: 'priority',
+    label: 'Priority'
+  },
+  {
+    propName: 'type',
+    label: 'Type'
+  },
   {
     propName: 'version',
     label: 'Version'
@@ -1398,7 +1422,7 @@ export const dataAgentColumnObjects = [
   }
 ];
 
-export interface PublishedWorldInterface {
+export interface IPublishedWorld {
   propertyName: string;
   published_0_Events: string;
   published_0_Obj: number;
@@ -1408,7 +1432,7 @@ export interface PublishedWorldInterface {
   published_2_Obj: number;
 }
 
-export interface PublishedStatusTimeInterface {
+export interface IPublishedStatusTime {
   propertyName: string;
   published_0_Time: string;
   published_1_Time: string;

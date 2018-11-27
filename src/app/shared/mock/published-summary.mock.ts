@@ -3,6 +3,7 @@ export const PublishedSummaryMock = {
   baseTime: '2015-03-18 11:10Z',
   lastDataUpdateTime: '2018-07-30 09:07Z',
   latestFlightActualTime: '2018-07-30 09:07Z',
+  total: 27658,
   delta: 0,
   topLevelObjects: [
     {
@@ -93,8 +94,5 @@ export const PublishedSummaryMock = {
       objectName: 'training',
       objectCount: 100
     }
-  ],
-  total: {
-    count: 27658
-  }
+  ]
 };

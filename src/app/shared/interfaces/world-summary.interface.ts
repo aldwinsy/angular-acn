@@ -1,51 +1,21 @@
-export interface WorldSummary {
-  objectName: string;
-  purgatoryCount: number;
-  paradiseCount: number;
-}
-
-export interface TopLevelObject {
+export interface ITopLevelObject {
   objectName: string;
   objectCount: number;
 }
 
-export interface Total {
-  // events: number;
-  count: number;
-}
-
-export interface SasiWorld {
+export interface ISasiWorld {
   objectType: string;
   baseTime: string;
   lastDataUpdateTime: string;
   latestFlightActualTime: string;
   delta: number;
-  topLevelObjects: TopLevelObject[];
-  total: Total;
+  topLevelObjects: ITopLevelObject[];
+  total: number;
 }
 
 // status page
 
-export interface SasiWorldSummary {
-  paradiseEvents: string;
-  paradiseObj: number;
-  propertyName: string;
-  purgatoryEvents: string;
-  purgatoryObj: number;
-  validationExcl: string;
-  validationFixed: string;
-  validationIEPM: string;
-  validationOEPM: string;
-}
-
-export interface SasiStatusTime {
-  propertyName: string;
-  purgatoryTime: string;
-  paradiseTime: string;
-  qSize: string;
-}
-
-export interface ValidationInfo {
+export interface IValidationInfo {
   qSize: number;
   qMs: number;
   max0: number;
@@ -54,7 +24,7 @@ export interface ValidationInfo {
   min1: number;
 }
 
-export interface ValidationDetail {
+export interface IValidationDetail {
   propertyName: string;
   validationIEPM: string;
   validationExcl: string;
@@ -62,12 +32,12 @@ export interface ValidationDetail {
   validationOEPM: string;
 }
 
-export interface WorldValidation {
-  validationInfo: ValidationInfo;
-  validationDetails: ValidationDetail[];
+export interface IWorldValidation {
+  validationInfo: IValidationInfo;
+  validationDetails: IValidationDetail[];
 }
 
-export interface WorldEvents {
+export interface IWorldEvents {
   propertyName: string;
   eventCount: string;
 }

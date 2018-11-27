@@ -3,15 +3,14 @@ import { combineLatest } from 'rxjs';
 import { map } from 'rxjs/operators';
 import * as _ from 'lodash';
 import { purgatoryParadiseWorldColumns, purgatoryParadiseTimeColumns, sasiStatusLabels } from 'sasi/shared/variables/global-variables';
-import { SasiStatusService } from 'sasi/views/sasi-status/sasi-status.service';
-import { SasiWorld,
-  SasiWorldSummary,
-  SasiStatusTime,
-  WorldEvents,
-  WorldValidation,
-  ValidationInfo
+import { ISasiWorld,
+  IWorldEvents,
+  IWorldValidation,
+  IValidationInfo,
+  IValidationDetail
 } from 'sasi/shared/interfaces/world-summary.interface';
 import { CoreService } from 'sasi/core/service/core.service';
+import { SasiStatusTime, SasiWorldSummary } from 'sasi/shared/models/world-summary.model';
 
 @Component({
   selector: 'app-purgatory',
@@ -30,11 +29,10 @@ export class PurgatoryParadiseComponent implements OnInit {
 
   statusTime: SasiStatusTime[] = [];
   worldObjects: SasiWorldSummary[] = [];
-  dataAgentList = [];
   isDataLoading = false;
 
   // TODO: Insert private coreService: CoreService
-  constructor(private coreService: CoreService, private sasiStatusService: SasiStatusService) { }
+  constructor(private coreService: CoreService) { }
 
   ngOnInit() {
     this.isDataLoading = true;
@@ -56,11 +54,11 @@ export class PurgatoryParadiseComponent implements OnInit {
   }
 
   transformWorldSummary(
-    purgatory: SasiWorld,
-    paradise: SasiWorld,
-    purgatoryEvents: WorldEvents[],
-    paradiseEvents: WorldEvents[],
-    validation: WorldValidation
+    purgatory: ISasiWorld,
+    paradise: ISasiWorld,
+    purgatoryEvents: IWorldEvents[],
+    paradiseEvents: IWorldEvents[],
+    validation: IWorldValidation
   ): SasiWorldSummary[] {
     this.statusTime = this.setSasiStatusTime(purgatory, paradise, validation.validationInfo);
     const purgatoryData = this.setPurgatoryData(purgatory, purgatoryEvents, validation.validationDetails);
@@ -68,7 +66,7 @@ export class PurgatoryParadiseComponent implements OnInit {
     return _.merge(purgatoryData, paradiseData);
   }
 
-  setSasiStatusTime(purgatory: SasiWorld, paradise: SasiWorld, validation: ValidationInfo): SasiStatusTime[] {
+  setSasiStatusTime(purgatory: ISasiWorld, paradise: ISasiWorld, validation: IValidationInfo): SasiStatusTime[] {
     return [
       {
         propertyName: 'Base Time',
@@ -113,10 +111,11 @@ export class PurgatoryParadiseComponent implements OnInit {
         validationOEPM: this.getValidationCount(object.objectName, validation, 'validationOEPM'),
       };
     });
+    // For Total row
     purgatoryData.splice(0, 0, {
       propertyName: 'Total',
-      purgatoryObj: purgatory.total.count,
-      purgatoryEvents: purgatory.total.events,
+      purgatoryObj: purgatory.total,
+      purgatoryEvents: this.getEventCount('Total', purgatoryEvents),
       validationExcl: this.getValidationCount('Total', validation, 'validationExcl'),
       validationFixed: this.getValidationCount('Total', validation, 'validationFixed'),
       validationIEPM: this.getValidationCount('Total', validation, 'validationIEPM'),
@@ -128,7 +127,7 @@ export class PurgatoryParadiseComponent implements OnInit {
     return purgatoryData;
   }
 
-  setParadiseData(paradise: SasiWorld, paradiseEvents: WorldEvents[]) {
+  setParadiseData(paradise: ISasiWorld, paradiseEvents: IWorldEvents[]) {
     let paradiseData;
     paradiseData = paradise.topLevelObjects.map(object => {
       return {
@@ -139,22 +138,23 @@ export class PurgatoryParadiseComponent implements OnInit {
     });
     paradiseData.splice(0, 0, {
       propertyName: 'Total',
-      paradiseObj: paradise.total.count,
-      paradiseEvents: '-'
+      paradiseObj: paradise.total,
+      paradiseEvents: this.getEventCount('Total', paradiseEvents),
     });
     paradiseData.splice(1, 0, {
       propertyName: 'Δ from previous world',
       paradiseObj: paradise.delta,
+      paradiseEvents: this.getEventCount('Δ from previous world', paradiseEvents),
     });
     return paradiseData;
   }
 
-  getEventCount(objectName: string, purgatoryEvents: WorldEvents[]) {
+  getEventCount(objectName: string, purgatoryEvents: IWorldEvents[]) {
     const object = _.find(purgatoryEvents, ['propertyName', objectName]);
     return object ? object.eventCount : '--';
   }
 
-  getValidationCount(objectName: string, purgatoryValidation: WorldValidation, validationType: string) {
+  getValidationCount(objectName: string, purgatoryValidation: IValidationDetail[], validationType: string) {
     const object = _.find(purgatoryValidation, ['propertyName', objectName]);
     return object ? object[validationType] : '--';
   }

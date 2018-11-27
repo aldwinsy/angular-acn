@@ -1,7 +1,7 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CoreService } from 'sasi/core/service/core.service';
 import { sasiStatusLabels, sasiStatusCardLabels } from 'sasi/shared/variables/global-variables';
-import { WorldSummary, SasiWorld } from 'sasi/shared/interfaces/world-summary.interface';
+import { ISasiWorld } from 'sasi/shared/interfaces/world-summary.interface';
 import { urls } from 'sasi/shared/variables/global-variables';
 import { combineLatest } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -21,11 +21,10 @@ export class DataStatusComponent implements OnInit {
   readonly purgatoryParadiseLink = '/sasi-status/purgatory-paradise';
   readonly publishedLink = '/sasi-status/published';
 
-  // worldSummaryData: WorldSummary[];
-  purgatory: SasiWorld;
-  paradise: SasiWorld;
-  published: SasiWorld;
-  worldSummary: SasiWorld[];
+  purgatory: ISasiWorld;
+  paradise: ISasiWorld;
+  published: ISasiWorld;
+
   isDataLoading = false;
 
   constructor(private coreService: CoreService) { }
@@ -45,7 +44,6 @@ export class DataStatusComponent implements OnInit {
         this.purgatory = purgatory;
         this.paradise = paradise;
         this.published = published;
-        this.worldSummary = [purgatory, paradise, published];
       })
     ).subscribe(() => {
       this.isDataLoading = false;
