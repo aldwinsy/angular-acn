@@ -10,7 +10,7 @@ import {
 import { combineLatest } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { CoreService } from 'sasi/core/service/core.service';
-import { SasiWorldInterface } from 'sasi/shared/interfaces/world-summary.interface';
+import { SasiWorld } from 'sasi/shared/interfaces/world-summary.interface';
 
 import * as _ from 'lodash';
 
@@ -76,7 +76,7 @@ export class PublishedComponent implements OnInit {
     return _.merge(published_0, published_1, published_2);
   }
 
-  setSasiStatusTime(p0: SasiWorldInterface, p1: SasiWorldInterface, p2: SasiWorldInterface): PublishedStatusTimeInterface[] {
+  setSasiStatusTime(p0: SasiWorld, p1: SasiWorld, p2: SasiWorld): PublishedStatusTimeInterface[] {
     return [
       {
         propertyName: 'Base Time',

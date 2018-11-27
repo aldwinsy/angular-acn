@@ -1,5 +1,4 @@
-export interface DataAgentInterface {
-
+export interface DataAgent {
     agentName: string;
     context: string;
     status: string;
@@ -7,5 +6,4 @@ export interface DataAgentInterface {
     hasDataLoad: boolean;
     canInitiateDataLoad: boolean;
     dataLoadSequence: number;
-
 }

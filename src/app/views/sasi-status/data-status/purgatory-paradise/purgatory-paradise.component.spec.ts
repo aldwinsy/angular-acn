@@ -11,6 +11,8 @@ import { async, ComponentFixture, TestBed, fakeAsync, tick } from '@angular/core
 import { PurgatoryParadiseComponent } from 'sasi/views/sasi-status/data-status/purgatory-paradise/purgatory-paradise.component';
 import { of } from 'rxjs';
 import { DataStatusComponent } from 'sasi/views/sasi-status/data-status/data-status.component';
+import { worldValidation } from 'sasi/shared/mock/world-validation.mock';
+import { worldEventsMock } from 'sasi/shared/mock/world-events.mock';
 
 
 describe('PurgatoryParadiseComponent', () => {
@@ -18,7 +20,9 @@ describe('PurgatoryParadiseComponent', () => {
   let fixture: ComponentFixture<PurgatoryParadiseComponent>;
   const coreServiceSpy = jasmine.createSpyObj('CoreService', [
     'getPurgatorySummary',
-    'getParadiseSummary'
+    'getParadiseSummary',
+    'getWorldEvents',
+    'getWorldValidation'
   ]);
 
   beforeEach(async(() => {
@@ -44,6 +48,8 @@ describe('PurgatoryParadiseComponent', () => {
     component = fixture.componentInstance;
     coreServiceSpy.getPurgatorySummary.and.returnValue(of(PurgatorySummaryMock));
     coreServiceSpy.getParadiseSummary.and.returnValue(of(ParadiseSummaryMock));
+    coreServiceSpy.getWorldEvents.and.returnValue(of(worldEventsMock));
+    coreServiceSpy.getWorldValidation.and.returnValue(of(worldValidation));
     fixture.detectChanges();
   });
 
@@ -54,7 +60,19 @@ describe('PurgatoryParadiseComponent', () => {
   it('should get paradise and purgatory data on init', () => {
     expect(coreServiceSpy.getPurgatorySummary).toHaveBeenCalled();
     expect(coreServiceSpy.getParadiseSummary).toHaveBeenCalled();
+    expect(coreServiceSpy.getWorldEvents).toHaveBeenCalled();
+    expect(coreServiceSpy.getWorldValidation).toHaveBeenCalled();
     expect(component.worldObjects).not.toBe([]);
+  });
+
+  it('should transform and set status time and objects', () => {
+    spyOn(component, 'setParadiseData').and.callThrough();
+    spyOn(component, 'setPurgatoryData').and.callThrough();
+    spyOn(component, 'setSasiStatusTime').and.callThrough();
+    component.ngOnInit();
+    expect(component.setParadiseData).toHaveBeenCalled();
+    expect(component.setPurgatoryData).toHaveBeenCalled();
+    expect(component.setSasiStatusTime).toHaveBeenCalled();
   });
 
   it('should contain sasi status time and world table', () => {

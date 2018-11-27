@@ -6,10 +6,12 @@ import {
 } from '@angular/common/http/testing';
 
 import { CoreService } from './core.service';
-import { urls } from 'sasi/shared/variables/global-variables';
+import { urls, tenant } from 'sasi/shared/variables/global-variables';
 import { PurgatorySummaryMock } from 'sasi/shared/mock/purgatory-summary.mock';
 import { ParadiseSummaryMock } from 'sasi/shared/mock/paradise-summary.mock';
 import { PublishedSummaryMock } from 'sasi/shared/mock/published-summary.mock';
+import { worldEventsMock } from 'sasi/shared/mock/world-events.mock';
+import { worldValidation } from 'sasi/shared/mock/world-validation.mock';
 
 describe('CoreService', () => {
   let httpClient: HttpClient;
@@ -59,6 +61,25 @@ describe('CoreService', () => {
     const req = httpTestingController.expectOne(urls.published0Summary);
     expect(req.request.method).toEqual('GET');
     req.flush(PublishedSummaryMock);
+  });
+
+  it('should get world events', () => {
+    const type = 'purgatory';
+    coreService.getWorldEvents(type).subscribe(response => {
+      expect(response).toEqual(worldEventsMock);
+    });
+    const req = httpTestingController.expectOne(`${urls.sasiBaseUrl}/sasi/tenant/${tenant}/type/${type}/events`);
+    expect(req.request.method).toEqual('GET');
+    req.flush(worldEventsMock);
+  });
+
+  it('should get world validation', () => {
+    coreService.getWorldValidation().subscribe(response => {
+      expect(response).toEqual(worldValidation);
+    });
+    const req = httpTestingController.expectOne(`${urls.sasiBaseUrl}/sasi/tenant/${tenant}/validation`);
+    expect(req.request.method).toEqual('GET');
+    req.flush(worldValidation);
   });
 
   it('should handle error error if request fails', () => {

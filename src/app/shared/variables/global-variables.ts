@@ -41,6 +41,7 @@ export const worldGroup = {
 // Azure APIM still uses mock data
 
 export const urls = {
+  sasiBaseUrl: 'https://sasi.azure-api.net/api/v1',
   dataStatus: 'api/v1/data-status',
   worldObjects: 'api/v1/world-objects',
   worldService: 'https://sasi.azure-api.net/api/v1/world',
