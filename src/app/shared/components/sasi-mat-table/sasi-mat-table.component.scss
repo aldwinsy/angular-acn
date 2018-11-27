@@ -58,28 +58,10 @@ tr.mat-row:hover {
   width: 4vw;
 }
 
-.mat-column-publish_0_Time {
+.mat-column-published_0_Time, .mat-column-published_0_Obj,
+.mat-column-published_1_Time, .mat-column-published_1_Obj,
+.mat-column-published_2_Time, .mat-column-published_2_Obj {
   width: 8vw;
-}
-
-.mat-column-publish_0_Events, .mat-column-publish_0_Obj {
-  width: 4vw;
-}
-
-.mat-column-publish_1_Time {
-  width: 8vw;
-}
-
-.mat-column-publish_1_Events, .mat-column-publish_1_Obj {
-  width: 4vw;
-}
-
-.mat-column-publish_2_Time {
-  width: 8vw;
-}
-
-.mat-column-publish_2_Events, .mat-column-publish_2_Obj {
-  width: 4vw;
 }
 
 .mat-column-objectName, .mat-column-propertyName {
