@@ -58,8 +58,8 @@ export class PurgatoryParadiseComponent implements OnInit {
   transformWorldSummary(
     purgatory: SasiWorld,
     paradise: SasiWorld,
-    purgatoryEvents: WorldEvents,
-    paradiseEvents: WorldEvents,
+    purgatoryEvents: WorldEvents[],
+    paradiseEvents: WorldEvents[],
     validation: WorldValidation
   ): SasiWorldSummary[] {
     this.statusTime = this.setSasiStatusTime(purgatory, paradise, validation.validationInfo);
@@ -128,7 +128,7 @@ export class PurgatoryParadiseComponent implements OnInit {
     return purgatoryData;
   }
 
-  setParadiseData(paradise: SasiWorld, paradiseEvents: WorldEvents) {
+  setParadiseData(paradise: SasiWorld, paradiseEvents: WorldEvents[]) {
     let paradiseData;
     paradiseData = paradise.topLevelObjects.map(object => {
       return {
@@ -149,7 +149,7 @@ export class PurgatoryParadiseComponent implements OnInit {
     return paradiseData;
   }
 
-  getEventCount(objectName: string, purgatoryEvents: WorldEvents) {
+  getEventCount(objectName: string, purgatoryEvents: WorldEvents[]) {
     const object = _.find(purgatoryEvents, ['propertyName', objectName]);
     return object ? object.eventCount : '--';
   }

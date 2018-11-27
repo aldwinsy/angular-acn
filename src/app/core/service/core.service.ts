@@ -50,9 +50,9 @@ export class CoreService {
     );
   }
 
-  getWorldEvents(world): Observable<WorldEvents> {
+  getWorldEvents(world): Observable<WorldEvents[]> {
     return this.http.get(`${urls.sasiBaseUrl}/sasi/tenant/${tenant}/type/${world}/events`).pipe(
-      tap((data: WorldEvents) => {
+      tap((data: WorldEvents[]) => {
         console.log('CoreService::getWorldEvents: ', data);
       }),
       catchError(this.handleError)
