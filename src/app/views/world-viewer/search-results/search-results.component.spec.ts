@@ -55,7 +55,7 @@ class DummyComponent {
 describe('SearchResultsComponent', () => {
   let component: SearchResultsComponent;
   let fixture: ComponentFixture<SearchResultsComponent>;
-  const worldServiceSpy = jasmine.createSpyObj('WorldViewerService', ['getWorldObjects'])
+  const worldServiceSpy = jasmine.createSpyObj('WorldViewerService', ['getWorldObjects']);
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
