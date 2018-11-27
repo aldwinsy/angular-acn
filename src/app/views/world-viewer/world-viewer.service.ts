@@ -12,7 +12,6 @@ export class WorldViewerService {
   constructor(private http: HttpClient) { }
 
   getWorldObjects(world, object): Observable<any> {
-
     return this.http.get(`${urls.worldService}/tenant/${tenant}/type/${world}/${object}`).pipe(
       tap((data: any) => {
         console.log(`getWorldSummaryData:${world}:${object}::`, data);
