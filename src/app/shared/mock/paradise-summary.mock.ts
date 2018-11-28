@@ -3,6 +3,7 @@ export const ParadiseSummaryMock = {
   baseTime: '2015-03-18 11:10Z',
   lastDataUpdateTime: '2018-07-30 09:07Z',
   latestFlightActualTime: '2018-07-30 09:07Z',
+  total: 27658,
   delta: 0,
   topLevelObjects: [
     {
@@ -20,6 +21,10 @@ export const ParadiseSummaryMock = {
     {
       objectName: 'airportGroupRelationship',
       objectCount: 10034
+    },
+    {
+      objectName: 'atcControlledStation',
+      objectCount: 450
     },
     {
       objectName: 'crew',
@@ -74,6 +79,10 @@ export const ParadiseSummaryMock = {
       objectCount: 1006
     },
     {
+      objectName: 'position',
+      objectCount: 600
+    },
+    {
       objectName: 'qualification',
       objectCount: 1004
     },
@@ -85,9 +94,5 @@ export const ParadiseSummaryMock = {
       objectName: 'training',
       objectCount: 100
     }
-  ],
-  total: {
-    events: 0,
-    count: 27658
-  }
+  ]
 };

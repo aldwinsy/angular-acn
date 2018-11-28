@@ -4,7 +4,7 @@ import { TestBed } from '@angular/core/testing';
 import { WorldViewerService } from './world-viewer.service';
 import { HttpTestingController, HttpClientTestingModule } from '@angular/common/http/testing';
 import { fleetMock } from 'sasi/shared/mock/world-objects-mock';
-import { urls } from 'sasi/shared/variables/global-variables';
+import { urls, tenant } from 'sasi/shared/variables/global-variables';
 
 describe('WorldViewerService', () => {
   let httpClient: HttpClient;
@@ -36,7 +36,7 @@ describe('WorldViewerService', () => {
       expect(response).toEqual(fleetMock);
     });
     // @TODO: Update url when when config endpoint is available
-    const req = httpTestingController.expectOne(`${urls.worldService}/tenant/zz/type/${world}/${object}`);
+    const req = httpTestingController.expectOne(`${urls.worldService}/tenant/${tenant}/type/${world}/${object}`);
     expect(req.request.method).toEqual('GET');
     req.flush(fleetMock);
   });

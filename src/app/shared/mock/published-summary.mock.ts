@@ -1,5 +1,5 @@
-export const PurgatorySummaryMock = {
-  objectType: 'Purgatory',
+export const PublishedSummaryMock = {
+  objectType: 'Published 0',
   baseTime: '2015-03-18 11:10Z',
   lastDataUpdateTime: '2018-07-30 09:07Z',
   latestFlightActualTime: '2018-07-30 09:07Z',
@@ -67,7 +67,7 @@ export const PurgatorySummaryMock = {
       objectCount: 10034
     },
     {
-      objectName: 'offlineTransportations',
+      objectName: 'offlineTransportation',
       objectCount: 10067
     },
     {

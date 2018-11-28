@@ -1,4 +1,5 @@
-<div fxLayout="column" fxLayoutAlign="start stretch" class="data-report-panel">
+<mat-progress-bar *ngIf="isDataLoading" mode="indeterminate"></mat-progress-bar>
+<div *ngIf="!isDataLoading" fxLayout="column" fxLayoutAlign="start stretch" class="data-report-panel">
   <div fxFlex="7" class="div-header-container">
     <div class="div-header">
       <span id="agent-count" [matBadge]="loadingAgentsCount" matBadgeColor="primary"
@@ -9,11 +10,11 @@
   <div *ngIf="!!dataAgentList.length; else noRecords" fxFlex class="div-scroll-body">
     <mat-card id="agent-card" *ngFor="let dataAgent of dataAgentList" fxLayout="column" fxLayoutAlign="center">
       <mat-card-header fxFlex="55" fxLayout fxLayoutGap="10px" fxFlexAlign="start center">
-        <mat-icon fxFlex="10" *ngIf="dataAgent.name === 'XML File Agent'" mat-card-avatar>{{dataAgentCardLabels.xmlAgentIcon}}</mat-icon>
-        <mat-icon fxFlex="10" *ngIf="dataAgent.name === 'Custom Agent' || dataAgent.name === 'Flight Agent'" mat-card-avatar>{{dataAgentCardLabels.customAgentIcon}}</mat-icon>
-        <mat-icon fxFlex="10" *ngIf="dataAgent.name === 'Restart Agent'" mat-card-avatar>{{dataAgentCardLabels.restartAgentIcon}}</mat-icon>
+        <mat-icon fxFlex="10" *ngIf="dataAgent.agentName === 'XML File Agent'" mat-card-avatar>{{dataAgentCardLabels.xmlAgentIcon}}</mat-icon>
+        <mat-icon fxFlex="10" *ngIf="dataAgent.agentName === 'Custom Agent' || dataAgent.agentName === 'Flight Agent'" mat-card-avatar>{{dataAgentCardLabels.customAgentIcon}}</mat-icon>
+        <mat-icon fxFlex="10" *ngIf="dataAgent.agentName === 'Restart Agent'" mat-card-avatar>{{dataAgentCardLabels.restartAgentIcon}}</mat-icon>
         <div fxFlex>
-          <mat-card-title>{{dataAgent.name}}</mat-card-title>
+          <mat-card-title>{{dataAgent.agentName}}</mat-card-title>
           <mat-card-subtitle>{{dataAgent.type}}</mat-card-subtitle>
         </div>
         <mat-icon id="error-icon" *ngIf="dataAgent.status === 'FAILED'" fxFlex="10" color="warn">{{dataAgentCardLabels.errorIcon}}</mat-icon>
@@ -32,7 +33,7 @@
         <mat-divider fxFlex="1" [vertical]="true"></mat-divider>
         <div fxFlex="32" fxLayout="column" fxLayoutAlign="center">
             <span class="span-label" fxFlexAlign="center">{{dataAgentCardLabels.lastRequest}}</span>
-          <span class="span-detail" fxFlexAlign="center">{{dataAgent.lastRequest}}</span>
+          <span class="span-detail" fxFlexAlign="center">{{dataAgent.lastRequest | timeAgo}}</span>
           
         </div>
       </mat-card-content>

@@ -3,7 +3,9 @@ import { combineLatest } from 'rxjs';
 import { map } from 'rxjs/operators';
 import * as _ from 'lodash';
 import { CoreService } from 'sasi/core/service/core.service';
-import { WorldSummaryInterface, SasiWorldInterface } from 'sasi/shared/interfaces/world-summary.interface';
+import { ISasiWorld } from 'sasi/shared/interfaces/world-summary.interface';
+import { WorldSummary } from 'sasi/shared/models/world-summary.model';
+
 
 @Component({
   selector: 'app-search',
@@ -14,7 +16,7 @@ import { WorldSummaryInterface, SasiWorldInterface } from 'sasi/shared/interface
   ]
 })
 export class SearchComponent implements OnInit {
-  worldSummaryData: WorldSummaryInterface[];
+  worldSummaryData: WorldSummary[];
   isDataLoading = false;
   constructor(private coreService: CoreService) {}
 
@@ -35,7 +37,7 @@ export class SearchComponent implements OnInit {
     });
   }
 
-  transformWorldSummary(purgatory: SasiWorldInterface, paradise: SasiWorldInterface): WorldSummaryInterface[] {
+  transformWorldSummary(purgatory: ISasiWorld, paradise: ISasiWorld): WorldSummary[] {
     const purgatoryData = purgatory.topLevelObjects.map(object => {
       return {
         objectName: object.objectName,

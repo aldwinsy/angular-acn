@@ -1,27 +1,31 @@
 export class DataAgent {
 
-  name = '';
-  context = '';
-  status = '';
-  lastRequest = '';
-  lastEventRecorded = '';
-  lastEventProcessed = '';
-  delta = '';
-  type = '';
+  agentName: string;
+  context: string;
+  status: string;
+  lastRequest: string;
+  hasDataLoad: boolean;
+  canInitiateDataLoad: boolean;
+  dataLoadSequence: number;
+  type: string;
 
   constructor (item: any) {
-    this.name = item.name;
+    this.agentName = item.agentName;
     this.context = item.context;
     this.status = item.status;
     this.lastRequest = item.lastRequest;
-    this.lastEventRecorded = item.lastEventRecorded;
-    this.lastEventProcessed = item.lastEventProcessed;
-    this.delta = item.delta;
-    this.type = item.type;
+    this.hasDataLoad = item.hasDataLoad;
+    this.canInitiateDataLoad = item.canInitiateDataLoad;
+    this.dataLoadSequence = item.dataLoadSequence;
+    this.type = this.getType(item.agentName);
   }
 
-  /* getMomentDuration (date: String) {
-    // insert logic to return moment duration
-  } */
+  getType(agentName): string {
+    if (agentName === 'XML File Agent' || agentName === 'Restart Agent') {
+      return 'Built-in Agent';
+    } else {
+      return 'Custom Agent';
+    }
+  }
 
 }

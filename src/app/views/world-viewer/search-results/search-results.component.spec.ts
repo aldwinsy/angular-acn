@@ -36,6 +36,7 @@ import {
   subfleetResultsColumn,
   trainingResultsColumn
 } from 'sasi/shared/variables/global-variables';
+import { fleetMock } from 'sasi/shared/mock/world-objects-mock';
 
 
 class ActivatedRouteMock {
@@ -54,11 +55,11 @@ class DummyComponent {
 describe('SearchResultsComponent', () => {
   let component: SearchResultsComponent;
   let fixture: ComponentFixture<SearchResultsComponent>;
+  const worldServiceSpy = jasmine.createSpyObj('WorldViewerService', ['getWorldObjects']);
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        HttpClientModule,
         SharedModule,
         RouterTestingModule.withRoutes([
           { path: 'world-viewer', component: DummyComponent }
@@ -67,7 +68,7 @@ describe('SearchResultsComponent', () => {
       declarations: [ SearchResultsComponent, DummyComponent ],
       providers: [
         { provide: ActivatedRoute, useClass: ActivatedRouteMock },
-        WorldViewerService
+        { provide: WorldViewerService, useValue: worldServiceSpy }
       ]
     })
     .compileComponents();
@@ -76,11 +77,17 @@ describe('SearchResultsComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(SearchResultsComponent);
     component = fixture.componentInstance;
+    worldServiceSpy.getWorldObjects.and.returnValue(of(fleetMock));
     fixture.detectChanges();
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should get search results on init', () => {
+    expect(worldServiceSpy.getWorldObjects).toHaveBeenCalled();
+    expect(component.resultsData).toBe(fleetMock);
   });
 
   it('should set world and results to be viewed on init', () => {

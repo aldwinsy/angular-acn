@@ -6,6 +6,8 @@ export const geLogoImgSrc = 'http://www.stickpng.com/assets/images/5847f7ffcef10
 
 export const geFooter = '© 2018 GENERAL ELECTRIC';
 
+export const tenant = 'co';
+
 export const headerNavItems = [
   {
     id: 'sasi-status',
@@ -36,18 +38,25 @@ export const worldGroup = {
 };
 
 // @TODO: change to actual urls when endpoints are available
+// Azure APIM still uses mock data
+
 export const urls = {
+  sasiBaseUrl: 'https://sasi.azure-api.net/api/v1',
   dataStatus: 'api/v1/data-status',
+  worldObjects: 'api/v1/world-objects',
   worldService: 'https://sasi.azure-api.net/api/v1/world',
-  dataAgents: 'api/v1/data-agents',
-  purgatorySummary: 'https://sasi.azure-api.net/sasi/world',
-  paradiseSummary: 'https://sasi.azure-api.net/sasi/world'
+  dataAgents: 'https://sasi.azure-api.net/api/v1/config/tenant/zz/agents',
+  purgatorySummary: 'https://sasi.azure-api.net/api/v1/world/tenant/zz/type/purgatory',
+  paradiseSummary: 'https://sasi.azure-api.net/api/v1/world/tenant/zz/type/paradise',
+  published0Summary: 'https://sasi.azure-api.net/api/v1/world/tenant/zz/type/published0',
+  published1Summary: 'https://sasi.azure-api.net/api/v1/world/tenant/zz/type/published1',
+  published2Summary: 'https://sasi.azure-api.net/api/v1/world/tenant/zz/type/published2'
 };
 
 export const worldSummaryColumns = [
   {
     propName: 'objectName',
-    label: 'World Summary'
+    label: 'Property Name'
   },
   {
     propName: 'purgatoryCount',
@@ -145,24 +154,12 @@ export const publishedWorldColumns = [
     label: ''
   },
   {
-    propName: 'published_0_Events',
-    label: 'Events'
-  },
-  {
     propName: 'published_0_Obj',
     label: 'Objects'
   },
   {
-    propName: 'published_1_Events',
-    label: 'Events'
-  },
-  {
     propName: 'published_1_Obj',
     label: 'Objects'
-  },
-  {
-    propName: 'published_2_Events',
-    label: 'Events'
   },
   {
     propName: 'published_2_Obj',
@@ -171,7 +168,7 @@ export const publishedWorldColumns = [
 ];
 
 export const sasiStatusLabels = {
-  dataStatus: 'Data Satus',
+  dataStatus: 'Data Status',
   dataAgent: 'Data Agent Report',
   purgatoryParadise: 'Purgatory/Paradise',
   published: 'Published'
@@ -704,6 +701,42 @@ export const flightActivityResultsColumn = [
 ];
 
 export const interSegmentTimeResultsColumn = [
+  {
+    propName: 'interSegmentTimeID',
+    label: 'Inter Segment Time ID'
+  },
+  {
+    propName: 'name',
+    label: 'Name'
+  },
+  {
+    propName: 'rerouteMinutes',
+    label: 'Reroute Minutes'
+  },
+  {
+    propName: 'dayOfOpsDetectionMinutes',
+    label: 'Day Of Ops Detection Minutes'
+  },
+  {
+    propName: 'dayOfOpsRerouteMinutes',
+    label: 'Day Of Ops Reroute Minutes'
+  },
+  {
+    propName: 'detectionMinutes',
+    label: 'Detection Minutes'
+  },
+  {
+    propName: 'identifier',
+    label: 'Identifier'
+  },
+  {
+    propName: 'priority',
+    label: 'Priority'
+  },
+  {
+    propName: 'type',
+    label: 'Type'
+  },
   {
     propName: 'version',
     label: 'Version'
@@ -1388,3 +1421,20 @@ export const dataAgentColumnObjects = [
     label: 'Data Load Sequence'
   }
 ];
+
+export interface IPublishedWorld {
+  propertyName: string;
+  published_0_Events: string;
+  published_0_Obj: number;
+  published_1_Events: string;
+  published_1_Obj: number;
+  published_2_Events: string;
+  published_2_Obj: number;
+}
+
+export interface IPublishedStatusTime {
+  propertyName: string;
+  published_0_Time: string;
+  published_1_Time: string;
+  published_2_Time: string;
+}
